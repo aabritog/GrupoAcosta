@@ -141,52 +141,54 @@
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
 
-
-            SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion) values (" & TXTCliente.Text & ", '2') returning nid"
-            sId_solicitud = ""
-
-            objCGenerica.accederBD(SQLGuardar, sId_solicitud)
-
-            nId_solicitud = CInt(Trim(sId_solicitud))
-
-
-            SQLGuardar = "insert into solicitud_historial (nid_solicitud, nid_estado, d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
-
-            objCGenerica.accederBD(SQLGuardar)
-
-            SQLGuardar = "insert into solicitud_historial_movimiento (nid_solicitud,nid_movimiento,d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
-
-            objCGenerica.accederBD(SQLGuardar)
-
             While nIndice < DGVSolicitudes.RowCount
 
                 If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
                     'SQLGuardar = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
+
                     If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
                         MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
                         Exit Sub
-                    Else
-                        SQLGuardar = "insert into solicitud_producto (nid_solicitud, nid_producto, n_cantidad_requerida, s_existencia) values (" & nId_solicitud & ", " & DGVSolicitudes.Rows(nIndice).Cells("nid").Value & ", " & DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value & ", '2')"
-                        objCGenerica.accederBD(SQLGuardar)
-                    End If
 
+                    Else
+
+                        SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion) values (" & TXTCliente.Text & ", '2') returning nid"
+                        sId_solicitud = ""
+
+                        objCGenerica.accederBD(SQLGuardar, sId_solicitud)
+
+                        nId_solicitud = CInt(Trim(sId_solicitud))
+
+                        SQLGuardar = "insert into solicitud_historial (nid_solicitud, nid_estado, d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+
+                        objCGenerica.accederBD(SQLGuardar)
+
+                        SQLGuardar = "insert into solicitud_historial_movimiento (nid_solicitud,nid_movimiento,d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+
+                        objCGenerica.accederBD(SQLGuardar)
+
+                        While nIndice < DGVSolicitudes.RowCount
+
+                            If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
+                                'SQLGuardar = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
+                                If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
+                                    MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
+                                    Exit Sub
+                                Else
+                                    SQLGuardar = "insert into solicitud_producto (nid_solicitud, nid_producto, n_cantidad_requerida, s_existencia) values (" & nId_solicitud & ", " & DGVSolicitudes.Rows(nIndice).Cells("nid").Value & ", " & DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value & ", '2')"
+                                    objCGenerica.accederBD(SQLGuardar)
+                                End If
+
+                            End If
+
+                            nIndice = 1 + nIndice
+
+                        End While
+
+                    End If
                 End If
-                nIndice = 1 + nIndice
 
             End While
-
-            'While nTexto < DGVSolicitudes.RowCount
-
-            '    If DGVSolicitudes.Rows(nTexto).Cells("escribir").Value = "1" Then
-            '        'SQLGuardar = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
-            '        SQLGuardar = "insert into solicitud_producto (nid_solicitud, nid_producto, n_cantidad_requerida, s_existencia) values (" & nId_solicitud & ", " & DGVSolicitudes.Rows(nIndice).Cells("nid").Value & ",  " & DGVSolicitudes.Rows(nTexto).Cells("nid").Value & " , '2')"
-            '        objCGenerica.accederBD(SQLGuardar)
-            '    End If
-            '    nTexto = 1 + nTexto
-
-            'End While
-
-            'mostrarDGVSolicitudes()
 
             BTNCancelar_Click(sender, e)
 
@@ -233,7 +235,6 @@
         DGVSolicitudes.Enabled = True
         'Se limpia la seleccion del DataGridView
         DGVSolicitudes.ClearSelection()
-
         CMBCliente.DataSource = Nothing
         nAction = 0
 

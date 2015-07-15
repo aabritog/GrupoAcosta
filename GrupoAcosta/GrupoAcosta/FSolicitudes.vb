@@ -235,6 +235,7 @@
         DGVSolicitudes.Enabled = True
         'Se limpia la seleccion del DataGridView
         DGVSolicitudes.ClearSelection()
+        DGVSolicitudes.Columns.Clear()
         CMBCliente.DataSource = Nothing
         nAction = 0
 

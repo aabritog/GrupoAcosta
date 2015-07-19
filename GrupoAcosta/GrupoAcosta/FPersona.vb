@@ -634,6 +634,11 @@ Public Class FPersona
     Private Sub DTPFecha_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPFecha.Leave
         DTPFecha_CloseUp(sender, e)
     End Sub
+
+    Private Sub BNTReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BNTReporte.Click
+        FReporte.nombre_reporte = "Visualizar_Persona"
+        FReporte.ShowDialog()
+    End Sub
 End Class
 
 

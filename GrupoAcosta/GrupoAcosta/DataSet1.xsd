@@ -77,7 +77,17 @@
               <Mapping SourceColumn="nid_departamento" DataSetColumn="nid_departamento" />
               <Mapping SourceColumn="s_activo" DataSetColumn="s_activo" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        nid, s_descripcion, s_descripcioncorta, d_fecha, nid_departamento, s_activo
+FROM            "public".cargo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clienteTableAdapter" GeneratorDataComponentClassName="clienteTableAdapter" Name="cliente" UserDataComponentName="clienteTableAdapter">
             <MainSource>
@@ -1480,6 +1490,103 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V__persona_departamento_cargoTableAdapter" GeneratorDataComponentClassName="V__persona_departamento_cargoTableAdapter" Name="V__persona_departamento_cargo" UserDataComponentName="V__persona_departamento_cargoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "nid", "s_nombre1", "s_nombre2", "s_apellido1", "s_apellido2", "s_nacionalidad", "s_dni", "d_fecha_nacimiento", "s_correo", "s_sexo", "nid_cargo", "s_cargo", "nid_departamento", "s_departamento" FROM "public"."V__persona_departamento_cargo"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nid" DataSetColumn="nid" />
+              <Mapping SourceColumn="s_nombre1" DataSetColumn="s_nombre1" />
+              <Mapping SourceColumn="s_nombre2" DataSetColumn="s_nombre2" />
+              <Mapping SourceColumn="s_apellido1" DataSetColumn="s_apellido1" />
+              <Mapping SourceColumn="s_apellido2" DataSetColumn="s_apellido2" />
+              <Mapping SourceColumn="s_nacionalidad" DataSetColumn="s_nacionalidad" />
+              <Mapping SourceColumn="s_dni" DataSetColumn="s_dni" />
+              <Mapping SourceColumn="d_fecha_nacimiento" DataSetColumn="d_fecha_nacimiento" />
+              <Mapping SourceColumn="s_correo" DataSetColumn="s_correo" />
+              <Mapping SourceColumn="s_sexo" DataSetColumn="s_sexo" />
+              <Mapping SourceColumn="nid_cargo" DataSetColumn="nid_cargo" />
+              <Mapping SourceColumn="s_cargo" DataSetColumn="s_cargo" />
+              <Mapping SourceColumn="nid_departamento" DataSetColumn="nid_departamento" />
+              <Mapping SourceColumn="s_departamento" DataSetColumn="s_departamento" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByAllPerson" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAllPerson" GeneratorSourceName="FillByAllPerson" GetMethodModifier="Public" GetMethodName="GetDataByAllPerson" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAllPerson" UserSourceName="FillByAllPerson">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "nid", "s_nombre1", "s_nombre2", "s_apellido1", "s_apellido2", "s_nacionalidad", "s_dni", "d_fecha_nacimiento", "s_correo", "s_sexo", "nid_cargo", "s_cargo", "nid_departamento", "s_departamento" FROM "public"."V__persona_departamento_cargo"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_usuario_persona_rolTableAdapter" GeneratorDataComponentClassName="V_usuario_persona_rolTableAdapter" Name="V_usuario_persona_rol" UserDataComponentName="V_usuario_persona_rolTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "nid", "nid_persona", "s_clave", "nid_rol", "s_seudonimo", "s_rol", "s_nombre", "s_dni", "d_fecha_nacimiento", "s_correo", "s_sexo", "nid_cargo", "s_nacionalidad" FROM "public"."V_usuario_persona_rol"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nid" DataSetColumn="nid" />
+              <Mapping SourceColumn="nid_persona" DataSetColumn="nid_persona" />
+              <Mapping SourceColumn="s_clave" DataSetColumn="s_clave" />
+              <Mapping SourceColumn="nid_rol" DataSetColumn="nid_rol" />
+              <Mapping SourceColumn="s_seudonimo" DataSetColumn="s_seudonimo" />
+              <Mapping SourceColumn="s_rol" DataSetColumn="s_rol" />
+              <Mapping SourceColumn="s_nombre" DataSetColumn="s_nombre" />
+              <Mapping SourceColumn="s_dni" DataSetColumn="s_dni" />
+              <Mapping SourceColumn="d_fecha_nacimiento" DataSetColumn="d_fecha_nacimiento" />
+              <Mapping SourceColumn="s_correo" DataSetColumn="s_correo" />
+              <Mapping SourceColumn="s_sexo" DataSetColumn="s_sexo" />
+              <Mapping SourceColumn="nid_cargo" DataSetColumn="nid_cargo" />
+              <Mapping SourceColumn="s_nacionalidad" DataSetColumn="s_nacionalidad" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByAllUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAllUsuario" GeneratorSourceName="FillByAllUsuario" GetMethodModifier="Public" GetMethodName="GetDataByAllUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAllUsuario" UserSourceName="FillByAllUsuario">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "nid", "nid_persona", "s_clave", "nid_rol", "s_seudonimo", "s_rol", "s_nombre", "s_dni", "d_fecha_nacimiento", "s_correo", "s_sexo", "nid_cargo", "s_nacionalidad" FROM "public"."V_usuario_persona_rol"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter" GeneratorDataComponentClassName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter" Name="V_SolicitudProducto_Solicitudes_Producto" UserDataComponentName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "nid", "nid_solicitud", "cliente", "nid_producto", "s_producto", "n_cantidad_requerida", "s_existencia" FROM "public"."V_SolicitudProducto_Solicitudes_Producto"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nid" DataSetColumn="nid" />
+              <Mapping SourceColumn="nid_solicitud" DataSetColumn="nid_solicitud" />
+              <Mapping SourceColumn="cliente" DataSetColumn="cliente" />
+              <Mapping SourceColumn="nid_producto" DataSetColumn="nid_producto" />
+              <Mapping SourceColumn="s_producto" DataSetColumn="s_producto" />
+              <Mapping SourceColumn="n_cantidad_requerida" DataSetColumn="n_cantidad_requerida" />
+              <Mapping SourceColumn="s_existencia" DataSetColumn="s_existencia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -2028,6 +2135,178 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="s_activo" msprop:Generator_ColumnVarNameInTable="columns_activo" msprop:Generator_ColumnPropNameInRow="s_activo" msprop:Generator_ColumnPropNameInTable="s_activoColumn" msprop:Generator_UserColumnName="s_activo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V__persona_departamento_cargo" msprop:Generator_TableClassName="V__persona_departamento_cargoDataTable" msprop:Generator_TableVarName="tableV__persona_departamento_cargo" msprop:Generator_RowChangedName="V__persona_departamento_cargoRowChanged" msprop:Generator_TablePropName="V__persona_departamento_cargo" msprop:Generator_RowDeletingName="V__persona_departamento_cargoRowDeleting" msprop:Generator_RowChangingName="V__persona_departamento_cargoRowChanging" msprop:Generator_RowEvHandlerName="V__persona_departamento_cargoRowChangeEventHandler" msprop:Generator_RowDeletedName="V__persona_departamento_cargoRowDeleted" msprop:Generator_RowClassName="V__persona_departamento_cargoRow" msprop:Generator_UserTableName="V__persona_departamento_cargo" msprop:Generator_RowEvArgName="V__persona_departamento_cargoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
+              <xs:element name="s_nombre1" msprop:Generator_ColumnVarNameInTable="columns_nombre1" msprop:Generator_ColumnPropNameInRow="s_nombre1" msprop:Generator_ColumnPropNameInTable="s_nombre1Column" msprop:Generator_UserColumnName="s_nombre1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_nombre2" msprop:Generator_ColumnVarNameInTable="columns_nombre2" msprop:Generator_ColumnPropNameInRow="s_nombre2" msprop:Generator_ColumnPropNameInTable="s_nombre2Column" msprop:Generator_UserColumnName="s_nombre2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_apellido1" msprop:Generator_ColumnVarNameInTable="columns_apellido1" msprop:Generator_ColumnPropNameInRow="s_apellido1" msprop:Generator_ColumnPropNameInTable="s_apellido1Column" msprop:Generator_UserColumnName="s_apellido1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_apellido2" msprop:Generator_ColumnVarNameInTable="columns_apellido2" msprop:Generator_ColumnPropNameInRow="s_apellido2" msprop:Generator_ColumnPropNameInTable="s_apellido2Column" msprop:Generator_UserColumnName="s_apellido2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_nacionalidad" msprop:Generator_ColumnVarNameInTable="columns_nacionalidad" msprop:Generator_ColumnPropNameInRow="s_nacionalidad" msprop:Generator_ColumnPropNameInTable="s_nacionalidadColumn" msprop:Generator_UserColumnName="s_nacionalidad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_dni" msprop:Generator_ColumnVarNameInTable="columns_dni" msprop:Generator_ColumnPropNameInRow="s_dni" msprop:Generator_ColumnPropNameInTable="s_dniColumn" msprop:Generator_UserColumnName="s_dni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="d_fecha_nacimiento" msprop:Generator_ColumnVarNameInTable="columnd_fecha_nacimiento" msprop:Generator_ColumnPropNameInRow="d_fecha_nacimiento" msprop:Generator_ColumnPropNameInTable="d_fecha_nacimientoColumn" msprop:Generator_UserColumnName="d_fecha_nacimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="s_correo" msprop:Generator_ColumnVarNameInTable="columns_correo" msprop:Generator_ColumnPropNameInRow="s_correo" msprop:Generator_ColumnPropNameInTable="s_correoColumn" msprop:Generator_UserColumnName="s_correo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_sexo" msprop:Generator_ColumnVarNameInTable="columns_sexo" msprop:Generator_ColumnPropNameInRow="s_sexo" msprop:Generator_ColumnPropNameInTable="s_sexoColumn" msprop:Generator_UserColumnName="s_sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_cargo" msprop:Generator_ColumnVarNameInTable="columnnid_cargo" msprop:Generator_ColumnPropNameInRow="nid_cargo" msprop:Generator_ColumnPropNameInTable="nid_cargoColumn" msprop:Generator_UserColumnName="nid_cargo" type="xs:int" minOccurs="0" />
+              <xs:element name="s_cargo" msprop:Generator_ColumnVarNameInTable="columns_cargo" msprop:Generator_ColumnPropNameInRow="s_cargo" msprop:Generator_ColumnPropNameInTable="s_cargoColumn" msprop:Generator_UserColumnName="s_cargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_departamento" msprop:Generator_ColumnVarNameInTable="columnnid_departamento" msprop:Generator_ColumnPropNameInRow="nid_departamento" msprop:Generator_ColumnPropNameInTable="nid_departamentoColumn" msprop:Generator_UserColumnName="nid_departamento" type="xs:long" minOccurs="0" />
+              <xs:element name="s_departamento" msprop:Generator_ColumnVarNameInTable="columns_departamento" msprop:Generator_ColumnPropNameInRow="s_departamento" msprop:Generator_ColumnPropNameInTable="s_departamentoColumn" msprop:Generator_UserColumnName="s_departamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_usuario_persona_rol" msprop:Generator_TableClassName="V_usuario_persona_rolDataTable" msprop:Generator_TableVarName="tableV_usuario_persona_rol" msprop:Generator_TablePropName="V_usuario_persona_rol" msprop:Generator_RowDeletingName="V_usuario_persona_rolRowDeleting" msprop:Generator_RowChangingName="V_usuario_persona_rolRowChanging" msprop:Generator_RowEvHandlerName="V_usuario_persona_rolRowChangeEventHandler" msprop:Generator_RowDeletedName="V_usuario_persona_rolRowDeleted" msprop:Generator_UserTableName="V_usuario_persona_rol" msprop:Generator_RowChangedName="V_usuario_persona_rolRowChanged" msprop:Generator_RowEvArgName="V_usuario_persona_rolRowChangeEvent" msprop:Generator_RowClassName="V_usuario_persona_rolRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
+              <xs:element name="nid_persona" msprop:Generator_ColumnVarNameInTable="columnnid_persona" msprop:Generator_ColumnPropNameInRow="nid_persona" msprop:Generator_ColumnPropNameInTable="nid_personaColumn" msprop:Generator_UserColumnName="nid_persona" type="xs:int" minOccurs="0" />
+              <xs:element name="s_clave" msprop:Generator_ColumnVarNameInTable="columns_clave" msprop:Generator_ColumnPropNameInRow="s_clave" msprop:Generator_ColumnPropNameInTable="s_claveColumn" msprop:Generator_UserColumnName="s_clave" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_rol" msprop:Generator_ColumnVarNameInTable="columnnid_rol" msprop:Generator_ColumnPropNameInRow="nid_rol" msprop:Generator_ColumnPropNameInTable="nid_rolColumn" msprop:Generator_UserColumnName="nid_rol" type="xs:int" minOccurs="0" />
+              <xs:element name="s_seudonimo" msprop:Generator_ColumnVarNameInTable="columns_seudonimo" msprop:Generator_ColumnPropNameInRow="s_seudonimo" msprop:Generator_ColumnPropNameInTable="s_seudonimoColumn" msprop:Generator_UserColumnName="s_seudonimo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_rol" msprop:Generator_ColumnVarNameInTable="columns_rol" msprop:Generator_ColumnPropNameInRow="s_rol" msprop:Generator_ColumnPropNameInTable="s_rolColumn" msprop:Generator_UserColumnName="s_rol" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_nombre" msprop:Generator_ColumnVarNameInTable="columns_nombre" msprop:Generator_ColumnPropNameInRow="s_nombre" msprop:Generator_ColumnPropNameInTable="s_nombreColumn" msprop:Generator_UserColumnName="s_nombre" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4095" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_dni" msprop:Generator_ColumnVarNameInTable="columns_dni" msprop:Generator_ColumnPropNameInRow="s_dni" msprop:Generator_ColumnPropNameInTable="s_dniColumn" msprop:Generator_UserColumnName="s_dni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="d_fecha_nacimiento" msprop:Generator_ColumnVarNameInTable="columnd_fecha_nacimiento" msprop:Generator_ColumnPropNameInRow="d_fecha_nacimiento" msprop:Generator_ColumnPropNameInTable="d_fecha_nacimientoColumn" msprop:Generator_UserColumnName="d_fecha_nacimiento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="s_correo" msprop:Generator_ColumnVarNameInTable="columns_correo" msprop:Generator_ColumnPropNameInRow="s_correo" msprop:Generator_ColumnPropNameInTable="s_correoColumn" msprop:Generator_UserColumnName="s_correo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_sexo" msprop:Generator_ColumnVarNameInTable="columns_sexo" msprop:Generator_ColumnPropNameInRow="s_sexo" msprop:Generator_ColumnPropNameInTable="s_sexoColumn" msprop:Generator_UserColumnName="s_sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_cargo" msprop:Generator_ColumnVarNameInTable="columnnid_cargo" msprop:Generator_ColumnPropNameInRow="nid_cargo" msprop:Generator_ColumnPropNameInTable="nid_cargoColumn" msprop:Generator_UserColumnName="nid_cargo" type="xs:int" minOccurs="0" />
+              <xs:element name="s_nacionalidad" msprop:Generator_ColumnVarNameInTable="columns_nacionalidad" msprop:Generator_ColumnPropNameInRow="s_nacionalidad" msprop:Generator_ColumnPropNameInTable="s_nacionalidadColumn" msprop:Generator_UserColumnName="s_nacionalidad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_TableClassName="V_SolicitudProducto_Solicitudes_ProductoDataTable" msprop:Generator_TableVarName="tableV_SolicitudProducto_Solicitudes_Producto" msprop:Generator_TablePropName="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_RowDeletingName="V_SolicitudProducto_Solicitudes_ProductoRowDeleting" msprop:Generator_RowChangingName="V_SolicitudProducto_Solicitudes_ProductoRowChanging" msprop:Generator_RowEvHandlerName="V_SolicitudProducto_Solicitudes_ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="V_SolicitudProducto_Solicitudes_ProductoRowDeleted" msprop:Generator_UserTableName="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_RowChangedName="V_SolicitudProducto_Solicitudes_ProductoRowChanged" msprop:Generator_RowEvArgName="V_SolicitudProducto_Solicitudes_ProductoRowChangeEvent" msprop:Generator_RowClassName="V_SolicitudProducto_Solicitudes_ProductoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
+              <xs:element name="nid_solicitud" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud" msprop:Generator_ColumnPropNameInRow="nid_solicitud" msprop:Generator_ColumnPropNameInTable="nid_solicitudColumn" msprop:Generator_UserColumnName="nid_solicitud" type="xs:int" minOccurs="0" />
+              <xs:element name="cliente" msprop:Generator_ColumnVarNameInTable="columncliente" msprop:Generator_ColumnPropNameInRow="cliente" msprop:Generator_ColumnPropNameInTable="clienteColumn" msprop:Generator_UserColumnName="cliente" type="xs:int" minOccurs="0" />
+              <xs:element name="nid_producto" msprop:Generator_ColumnVarNameInTable="columnnid_producto" msprop:Generator_ColumnPropNameInRow="nid_producto" msprop:Generator_ColumnPropNameInTable="nid_productoColumn" msprop:Generator_UserColumnName="nid_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="s_producto" msprop:Generator_ColumnVarNameInTable="columns_producto" msprop:Generator_ColumnPropNameInRow="s_producto" msprop:Generator_ColumnPropNameInTable="s_productoColumn" msprop:Generator_UserColumnName="s_producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="n_cantidad_requerida" msprop:Generator_ColumnVarNameInTable="columnn_cantidad_requerida" msprop:Generator_ColumnPropNameInRow="n_cantidad_requerida" msprop:Generator_ColumnPropNameInTable="n_cantidad_requeridaColumn" msprop:Generator_UserColumnName="n_cantidad_requerida" type="xs:int" minOccurs="0" />
+              <xs:element name="s_existencia" msprop:Generator_ColumnVarNameInTable="columns_existencia" msprop:Generator_ColumnPropNameInRow="s_existencia" msprop:Generator_ColumnPropNameInTable="s_existenciaColumn" msprop:Generator_UserColumnName="s_existencia" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />

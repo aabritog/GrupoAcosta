@@ -78,6 +78,7 @@ Partial Class FPersona
         Me.TXTNacionalidad = New System.Windows.Forms.TextBox()
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
+        Me.BNTReporte = New System.Windows.Forms.Button()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
@@ -712,11 +713,24 @@ Partial Class FPersona
         Me.TXTNacionalidad.TabIndex = 13
         Me.TXTNacionalidad.Visible = False
         '
+        'BNTReporte
+        '
+        Me.BNTReporte.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BNTReporte.Location = New System.Drawing.Point(652, 272)
+        Me.BNTReporte.Margin = New System.Windows.Forms.Padding(4)
+        Me.BNTReporte.Name = "BNTReporte"
+        Me.BNTReporte.Size = New System.Drawing.Size(74, 33)
+        Me.BNTReporte.TabIndex = 23
+        Me.BNTReporte.Text = "Ver"
+        Me.TTFPersona.SetToolTip(Me.BNTReporte, "Presione aquí para habilitar los campos para aregar una nueva persona")
+        Me.BNTReporte.UseVisualStyleBackColor = True
+        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(880, 615)
+        Me.Controls.Add(Me.BNTReporte)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)
         Me.Controls.Add(Me.TXTSexo)
@@ -800,5 +814,6 @@ Partial Class FPersona
     Friend WithEvents BTNAgregarTelefono As System.Windows.Forms.Button
     Friend WithEvents LVTelefonos As System.Windows.Forms.ListView
     Friend WithEvents TTFPersona As System.Windows.Forms.ToolTip
+    Friend WithEvents BNTReporte As System.Windows.Forms.Button
 
 End Class

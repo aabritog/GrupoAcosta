@@ -26,7 +26,10 @@
 
     Private Sub mostrarDGVSolicitudes()
 
-        Dim sCadenaSQL As String = "select nid, s_descripcion, s_descripcioncorta from producto where s_activo = '1' order by s_descripcion"
+        'Dim sCadenaSQL As String = "select nid, s_descripcion, s_descripcioncorta from producto where s_activo = '1' order by s_descripcion"
+
+        Dim sCadenaSQL As String = "select p.nid, p.s_descripcion, p.s_descripcioncorta from producto p inner join solicitud_producto s on p.nid= s.nid_solicitud where s_activo = '1' order by p.s_descripcion"
+
 
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
 

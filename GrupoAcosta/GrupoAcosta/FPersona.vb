@@ -223,6 +223,10 @@ Public Class FPersona
         Dim sSQLAddtelefono_persona As String
         Dim sId_persona As String
         Dim nId_persona As Integer
+        Dim sExistePersonaDni As String
+        Dim sSQLVerificarExistencia As String
+        Dim sSQLGuardar As String
+        Dim SQLActualizar As String
 
         If Len(TXTNombre1.Text) = 0 Then
             MsgBox("Ingrese el primer nombre", MsgBoxStyle.Information)
@@ -280,12 +284,22 @@ Public Class FPersona
 
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
+            sExistePersonaDni = ""
+            'Antes de agregar a la nueva persona se verifica que no exista una persona con el mismo documento nacional de identificación (CI).
+            '.................................................................................................................................
+            sSQLVerificarExistencia = "SELECT s_dni FROM persona WHERE s_dni='" & TXTCI.Text & "'"
+            objCGenerica.accederBD(sSQLVerificarExistencia, sExistePersonaDni)
 
-            Dim SQLGuardar As String = ""
-            SQLGuardar = "insert into persona (s_nombre1, s_nombre2, s_apellido1, s_apellido2, s_dni, d_fecha_nacimiento, s_correo, s_sexo, nid_cargo, s_activo, s_nacionalidad) values ('" & TXTNombre1.Text & "', '" & TXTNombre2.Text & "', '" & TXTApellido1.Text & "','" & TXTApellido2.Text & "', '" & TXTCI.Text & "', '" & TXTFechaNacimiento.Text & "', '" & TXTCorreo.Text & "', '" & TXTSexo.Text & "', " & TXTCargo.Text & ", '1', '" & TXTNacionalidad.Text & "') returning nid"
+            If sExistePersonaDni <> "" Then
+                MsgBox("Ya existe una persona con la misma cedula de identidad, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sSQLGuardar = "insert into persona (s_nombre1, s_nombre2, s_apellido1, s_apellido2, s_dni, d_fecha_nacimiento, s_correo, s_sexo, nid_cargo, s_activo, s_nacionalidad) values ('" & TXTNombre1.Text & "', '" & TXTNombre2.Text & "', '" & TXTApellido1.Text & "','" & TXTApellido2.Text & "', '" & TXTCI.Text & "', '" & TXTFechaNacimiento.Text & "', '" & TXTCorreo.Text & "', '" & TXTSexo.Text & "', " & TXTCargo.Text & ", '1', '" & TXTNacionalidad.Text & "') returning nid"
             sId_persona = ""
 
-            objCGenerica.accederBD(SQLGuardar, sId_persona)
+            objCGenerica.accederBD(sSQLGuardar, sId_persona)
 
             'Se recupera el nid de la persona que se acaba de agregar.
             nId_persona = CInt(Trim(sId_persona))
@@ -310,8 +324,19 @@ Public Class FPersona
             'Si la acción es modificar (modificar registr existente).
 
         ElseIf nAction = 2 Then
+            sExistePersonaDni = ""
 
-            Dim SQLActualizar As String = ""
+            'Rutina utilizada para verificar que en caso de que se vaya a modificar la CI, dicha CI no le pertenezca a otra persona registrada en sistema.
+            '.................................................................................................................................
+            sSQLVerificarExistencia = "SELECT nid FROM persona where s_dni = '" & TXTCI.Text & "' EXCEPT SELECT nid FROM persona WHERE s_dni='" & DGVPersona.CurrentRow.Cells("s_dni").Value & "' "
+
+            objCGenerica.accederBD(sSQLVerificarExistencia, sExistePersonaDni)
+            If sExistePersonaDni <> "" Then
+                MsgBox("Ya existe una persona con la misma cedula de identidad, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
             SQLActualizar = "UPDATE persona SET s_nombre1='" & TXTNombre1.Text & "',s_nombre2='" & TXTNombre2.Text & "',s_apellido1='" & TXTApellido1.Text & "',s_apellido2='" & TXTApellido2.Text & "',s_dni='" & TXTCI.Text & "',d_fecha_nacimiento='" & TXTFechaNacimiento.Text & "',s_correo='" & TXTCorreo.Text & "',s_sexo='" & TXTSexo.Text & "',nid_cargo=" & TXTCargo.Text & " WHERE nid=" & DGVPersona.CurrentRow.Cells("nid").Value & ""
 
             objCGenerica.accederBD(SQLActualizar)
@@ -346,19 +371,26 @@ Public Class FPersona
 
     Private Sub BTNModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNModificar.Click
 
+        Dim sVerificarPersonaUsuario As String
+        Dim sPersonaUsuario As String = ""
+
+
         'La variable nAction = 2 porque se va a realizar el proceso de modificación
         nAction = 2
 
         'Se habilitan/deshabilitan los objetos
-        TXTNombre1.Enabled = True
-        TXTNombre2.Enabled = True
-        TXTApellido1.Enabled = True
-        TXTApellido2.Enabled = True
-        TXTNacionalidad.Enabled = True
-        TXTCI.Enabled = True
+
+        If sPersonaUsuario <> "" Then 'Si la persona es usuario del sistema, no se podran modificar sus datos basicos.
+            TXTNombre1.Enabled = True
+            TXTNombre2.Enabled = True
+            TXTApellido1.Enabled = True
+            TXTApellido2.Enabled = True
+            TXTNacionalidad.Enabled = True
+            TXTCI.Enabled = True
+            CMBNacionalidad.Enabled = True
+        End If
         TXTCorreo.Enabled = True
         DTPFecha.Enabled = True
-        CMBNacionalidad.Enabled = True
         CMBSexo.Enabled = True
         CMBDepartamento.Enabled = True
         CMBCargo.Enabled = True
@@ -369,6 +401,9 @@ Public Class FPersona
         BTNModificar.Enabled = False
         TXTBuscar.Enabled = False
         BTNGuardar.Enabled = True
+
+        sVerificarPersonaUsuario = "SELECT nid_persona FROM usuario where nid_persona = " & DGVPersona.CurrentRow.Cells("nid").Value & ""
+        objCGenerica.accederBD(sVerificarPersonaUsuario, sPersonaUsuario)
 
         cargarCMBDepartamento()
 
@@ -403,12 +438,23 @@ Public Class FPersona
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
 
-        'Se declara el elemento eliminar para registros 
-        Dim SQLEliminarPersona As String = ""
+        Dim sSQLEliminarPersona As String
+        Dim sVerificarPersonaUsuario As String
+        Dim sPersonaUsuario As String = ""
+
+        'Antes de proceder a eliminar a la persona seleccionada se verifica si la misma no es usuario del sistema.
+        sVerificarPersonaUsuario = "SELECT nid_persona FROM usuario where nid_persona = " & DGVPersona.CurrentRow.Cells("nid").Value & ""
+        objCGenerica.accederBD(sVerificarPersonaUsuario, sPersonaUsuario)
+
+        If sPersonaUsuario <> "" Then
+            MsgBox("No se puede eliminar la persona seleccionada porque es usuario del sistema.", MsgBoxStyle.Information)
+            Exit Sub
+        End If
+
+        sSQLEliminarPersona = "DELETE FROM persona WHERE nid=" & DGVPersona.CurrentRow.Cells("nid").Value & ""
 
         If MsgBox("¿Esta seguro de querer eliminar a esta persona?. No se podran recuperar los datos.", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            SQLEliminarPersona = "DELETE FROM persona WHERE nid=" & DGVPersona.CurrentRow.Cells("nid").Value & ""
-            objCGenerica.accederBD(SQLEliminarPersona)
+            objCGenerica.accederBD(sSQLEliminarPersona)
             cargarDGVPersona()
             BTNCancelar_Click(sender, e)
             MsgBox("Se ha eliminado la persona exitosamente.", MsgBoxStyle.Information)

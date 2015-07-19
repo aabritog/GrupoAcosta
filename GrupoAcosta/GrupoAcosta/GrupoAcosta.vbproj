@@ -123,6 +123,12 @@
     <Compile Include="FEstado_Solicitud.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FIngreso.Designer.vb">
+      <DependentUpon>FIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FMovimiento.Designer.vb">
       <DependentUpon>FMovimiento.vb</DependentUpon>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FEstado_Solicitud.resx">
       <DependentUpon>FEstado_Solicitud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FIngreso.resx">
+      <DependentUpon>FIngreso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FMovimiento.resx">
       <DependentUpon>FMovimiento.vb</DependentUpon>

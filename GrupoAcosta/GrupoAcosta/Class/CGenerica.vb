@@ -1,5 +1,8 @@
 ﻿Public Class CGenerica
 
+    'Variables globales
+    Friend nId_usuario As Integer = 0
+
     Public DatosDataTableComboBox As New DataTable
     Public DatosBindingSourceComboBox As New BindingSource
 
@@ -43,7 +46,9 @@
                 Dim drReader As Odbc.OdbcDataReader = cComando.ExecuteReader
 
                 If drReader.HasRows Then
-                    sValorRetorno = CStr(drReader(0))
+                    sValorRetorno = Trim(CStr(drReader(0)))
+                Else
+                    sValorRetorno = ""
                 End If
                 drReader.Close()
                 dsnConexion.Close()

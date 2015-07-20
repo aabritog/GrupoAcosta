@@ -1528,7 +1528,7 @@ FROM            "public".cargo</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_usuario_persona_rolTableAdapter" GeneratorDataComponentClassName="V_usuario_persona_rolTableAdapter" Name="V_usuario_persona_rol" UserDataComponentName="V_usuario_persona_rolTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_usuario_persona_rol1TableAdapter" GeneratorDataComponentClassName="V_usuario_persona_rol1TableAdapter" Name="V_usuario_persona_rol1" UserDataComponentName="V_usuario_persona_rol1TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
@@ -1554,38 +1554,47 @@ FROM            "public".cargo</CommandText>
               <Mapping SourceColumn="nid_cargo" DataSetColumn="nid_cargo" />
               <Mapping SourceColumn="s_nacionalidad" DataSetColumn="s_nacionalidad" />
             </Mappings>
-            <Sources>
-              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByAllUsuario" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByAllUsuario" GeneratorSourceName="FillByAllUsuario" GetMethodModifier="Public" GetMethodName="GetDataByAllUsuario" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByAllUsuario" UserSourceName="FillByAllUsuario">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT "nid", "nid_persona", "s_clave", "nid_rol", "s_seudonimo", "s_rol", "s_nombre", "s_dni", "d_fecha_nacimiento", "s_correo", "s_sexo", "nid_cargo", "s_nacionalidad" FROM "public"."V_usuario_persona_rol"</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </Sources>
+            <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter" GeneratorDataComponentClassName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter" Name="V_SolicitudProducto_Solicitudes_Producto" UserDataComponentName="V_SolicitudProducto_Solicitudes_ProductoTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_detalle_solicitudTableAdapter" GeneratorDataComponentClassName="V_detalle_solicitudTableAdapter" Name="V_detalle_solicitud" UserDataComponentName="V_detalle_solicitudTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT "nid", "nid_solicitud", "cliente", "nid_producto", "s_producto", "n_cantidad_requerida", "s_existencia" FROM "public"."V_SolicitudProducto_Solicitudes_Producto"</CommandText>
+                    <CommandText>SELECT "nid_solicitud", "d_fecha_solicitud", "s_verificacion_solicitud", "nid_cliente", "s_cliente", "s_rif", "s_direccion", "nid_municipio", "s_municipio", "nid_estado", "s_estado", "nid_producto", "s_descripcion", "nid_solicitud_producto", "n_cantidad_requerida_producto", "s_existencia_producto" FROM "public"."V_detalle_solicitud"</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="nid" DataSetColumn="nid" />
               <Mapping SourceColumn="nid_solicitud" DataSetColumn="nid_solicitud" />
-              <Mapping SourceColumn="cliente" DataSetColumn="cliente" />
+              <Mapping SourceColumn="d_fecha_solicitud" DataSetColumn="d_fecha_solicitud" />
+              <Mapping SourceColumn="s_verificacion_solicitud" DataSetColumn="s_verificacion_solicitud" />
+              <Mapping SourceColumn="nid_cliente" DataSetColumn="nid_cliente" />
+              <Mapping SourceColumn="s_cliente" DataSetColumn="s_cliente" />
+              <Mapping SourceColumn="s_rif" DataSetColumn="s_rif" />
+              <Mapping SourceColumn="s_direccion" DataSetColumn="s_direccion" />
+              <Mapping SourceColumn="nid_municipio" DataSetColumn="nid_municipio" />
+              <Mapping SourceColumn="s_municipio" DataSetColumn="s_municipio" />
+              <Mapping SourceColumn="nid_estado" DataSetColumn="nid_estado" />
+              <Mapping SourceColumn="s_estado" DataSetColumn="s_estado" />
               <Mapping SourceColumn="nid_producto" DataSetColumn="nid_producto" />
-              <Mapping SourceColumn="s_producto" DataSetColumn="s_producto" />
-              <Mapping SourceColumn="n_cantidad_requerida" DataSetColumn="n_cantidad_requerida" />
-              <Mapping SourceColumn="s_existencia" DataSetColumn="s_existencia" />
+              <Mapping SourceColumn="s_descripcion" DataSetColumn="s_descripcion" />
+              <Mapping SourceColumn="nid_solicitud_producto" DataSetColumn="nid_solicitud_producto" />
+              <Mapping SourceColumn="n_cantidad_requerida_producto" DataSetColumn="n_cantidad_requerida_producto" />
+              <Mapping SourceColumn="s_existencia_producto" DataSetColumn="s_existencia_producto" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByDetallesSolicitud" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByDetallesSolicitud" GeneratorSourceName="FillByDetallesSolicitud" GetMethodModifier="Public" GetMethodName="GetDataByDetallesSolicitud" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByDetallesSolicitud" UserSourceName="FillByDetallesSolicitud">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT "nid_solicitud", "d_fecha_solicitud", "s_verificacion_solicitud", "nid_cliente", "s_cliente", "s_rif", "s_direccion", "nid_municipio", "s_municipio", "nid_estado", "s_estado", "nid_producto", "s_descripcion", "nid_solicitud_producto", "n_cantidad_requerida_producto", "s_existencia_producto" FROM "public"."V_detalle_solicitud"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -2224,7 +2233,7 @@ FROM            "public".cargo</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="V_usuario_persona_rol" msprop:Generator_TableClassName="V_usuario_persona_rolDataTable" msprop:Generator_TableVarName="tableV_usuario_persona_rol" msprop:Generator_TablePropName="V_usuario_persona_rol" msprop:Generator_RowDeletingName="V_usuario_persona_rolRowDeleting" msprop:Generator_RowChangingName="V_usuario_persona_rolRowChanging" msprop:Generator_RowEvHandlerName="V_usuario_persona_rolRowChangeEventHandler" msprop:Generator_RowDeletedName="V_usuario_persona_rolRowDeleted" msprop:Generator_UserTableName="V_usuario_persona_rol" msprop:Generator_RowChangedName="V_usuario_persona_rolRowChanged" msprop:Generator_RowEvArgName="V_usuario_persona_rolRowChangeEvent" msprop:Generator_RowClassName="V_usuario_persona_rolRow">
+        <xs:element name="V_usuario_persona_rol1" msprop:Generator_TableClassName="V_usuario_persona_rol1DataTable" msprop:Generator_TableVarName="tableV_usuario_persona_rol1" msprop:Generator_RowChangedName="V_usuario_persona_rol1RowChanged" msprop:Generator_TablePropName="V_usuario_persona_rol1" msprop:Generator_RowDeletingName="V_usuario_persona_rol1RowDeleting" msprop:Generator_RowChangingName="V_usuario_persona_rol1RowChanging" msprop:Generator_RowEvHandlerName="V_usuario_persona_rol1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_usuario_persona_rol1RowDeleted" msprop:Generator_RowClassName="V_usuario_persona_rol1Row" msprop:Generator_UserTableName="V_usuario_persona_rol1" msprop:Generator_RowEvArgName="V_usuario_persona_rol1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
@@ -2291,7 +2300,7 @@ FROM            "public".cargo</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_TableClassName="V_SolicitudProducto_Solicitudes_ProductoDataTable" msprop:Generator_TableVarName="tableV_SolicitudProducto_Solicitudes_Producto" msprop:Generator_TablePropName="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_RowDeletingName="V_SolicitudProducto_Solicitudes_ProductoRowDeleting" msprop:Generator_RowChangingName="V_SolicitudProducto_Solicitudes_ProductoRowChanging" msprop:Generator_RowEvHandlerName="V_SolicitudProducto_Solicitudes_ProductoRowChangeEventHandler" msprop:Generator_RowDeletedName="V_SolicitudProducto_Solicitudes_ProductoRowDeleted" msprop:Generator_UserTableName="V_SolicitudProducto_Solicitudes_Producto" msprop:Generator_RowChangedName="V_SolicitudProducto_Solicitudes_ProductoRowChanged" msprop:Generator_RowEvArgName="V_SolicitudProducto_Solicitudes_ProductoRowChangeEvent" msprop:Generator_RowClassName="V_SolicitudProducto_Solicitudes_ProductoRow">
+        <xs:element name="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_TableClassName="V_SolicitudProducto_Solicitudes_Producto1DataTable" msprop:Generator_TableVarName="tableV_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowChangedName="V_SolicitudProducto_Solicitudes_Producto1RowChanged" msprop:Generator_TablePropName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowDeletingName="V_SolicitudProducto_Solicitudes_Producto1RowDeleting" msprop:Generator_RowChangingName="V_SolicitudProducto_Solicitudes_Producto1RowChanging" msprop:Generator_RowEvHandlerName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_SolicitudProducto_Solicitudes_Producto1RowDeleted" msprop:Generator_RowClassName="V_SolicitudProducto_Solicitudes_Producto1Row" msprop:Generator_UserTableName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowEvArgName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
@@ -2307,6 +2316,70 @@ FROM            "public".cargo</CommandText>
               </xs:element>
               <xs:element name="n_cantidad_requerida" msprop:Generator_ColumnVarNameInTable="columnn_cantidad_requerida" msprop:Generator_ColumnPropNameInRow="n_cantidad_requerida" msprop:Generator_ColumnPropNameInTable="n_cantidad_requeridaColumn" msprop:Generator_UserColumnName="n_cantidad_requerida" type="xs:int" minOccurs="0" />
               <xs:element name="s_existencia" msprop:Generator_ColumnVarNameInTable="columns_existencia" msprop:Generator_ColumnPropNameInRow="s_existencia" msprop:Generator_ColumnPropNameInTable="s_existenciaColumn" msprop:Generator_UserColumnName="s_existencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_detalle_solicitud" msprop:Generator_TableClassName="V_detalle_solicitudDataTable" msprop:Generator_TableVarName="tableV_detalle_solicitud" msprop:Generator_TablePropName="V_detalle_solicitud" msprop:Generator_RowDeletingName="V_detalle_solicitudRowDeleting" msprop:Generator_RowChangingName="V_detalle_solicitudRowChanging" msprop:Generator_RowEvHandlerName="V_detalle_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="V_detalle_solicitudRowDeleted" msprop:Generator_UserTableName="V_detalle_solicitud" msprop:Generator_RowChangedName="V_detalle_solicitudRowChanged" msprop:Generator_RowEvArgName="V_detalle_solicitudRowChangeEvent" msprop:Generator_RowClassName="V_detalle_solicitudRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nid_solicitud" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud" msprop:Generator_ColumnPropNameInRow="nid_solicitud" msprop:Generator_ColumnPropNameInTable="nid_solicitudColumn" msprop:Generator_UserColumnName="nid_solicitud" type="xs:long" minOccurs="0" />
+              <xs:element name="d_fecha_solicitud" msprop:Generator_ColumnVarNameInTable="columnd_fecha_solicitud" msprop:Generator_ColumnPropNameInRow="d_fecha_solicitud" msprop:Generator_ColumnPropNameInTable="d_fecha_solicitudColumn" msprop:Generator_UserColumnName="d_fecha_solicitud" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="s_verificacion_solicitud" msprop:Generator_ColumnVarNameInTable="columns_verificacion_solicitud" msprop:Generator_ColumnPropNameInRow="s_verificacion_solicitud" msprop:Generator_ColumnPropNameInTable="s_verificacion_solicitudColumn" msprop:Generator_UserColumnName="s_verificacion_solicitud" type="xs:int" minOccurs="0" />
+              <xs:element name="nid_cliente" msprop:Generator_ColumnVarNameInTable="columnnid_cliente" msprop:Generator_ColumnPropNameInRow="nid_cliente" msprop:Generator_ColumnPropNameInTable="nid_clienteColumn" msprop:Generator_UserColumnName="nid_cliente" type="xs:long" minOccurs="0" />
+              <xs:element name="s_cliente" msprop:Generator_ColumnVarNameInTable="columns_cliente" msprop:Generator_ColumnPropNameInRow="s_cliente" msprop:Generator_ColumnPropNameInTable="s_clienteColumn" msprop:Generator_UserColumnName="s_cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_rif" msprop:Generator_ColumnVarNameInTable="columns_rif" msprop:Generator_ColumnPropNameInRow="s_rif" msprop:Generator_ColumnPropNameInTable="s_rifColumn" msprop:Generator_UserColumnName="s_rif" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="s_direccion" msprop:Generator_ColumnVarNameInTable="columns_direccion" msprop:Generator_ColumnPropNameInRow="s_direccion" msprop:Generator_ColumnPropNameInTable="s_direccionColumn" msprop:Generator_UserColumnName="s_direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_municipio" msprop:Generator_ColumnVarNameInTable="columnnid_municipio" msprop:Generator_ColumnPropNameInRow="nid_municipio" msprop:Generator_ColumnPropNameInTable="nid_municipioColumn" msprop:Generator_UserColumnName="nid_municipio" type="xs:long" minOccurs="0" />
+              <xs:element name="s_municipio" msprop:Generator_ColumnVarNameInTable="columns_municipio" msprop:Generator_ColumnPropNameInRow="s_municipio" msprop:Generator_ColumnPropNameInTable="s_municipioColumn" msprop:Generator_UserColumnName="s_municipio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_estado" msprop:Generator_ColumnVarNameInTable="columnnid_estado" msprop:Generator_ColumnPropNameInRow="nid_estado" msprop:Generator_ColumnPropNameInTable="nid_estadoColumn" msprop:Generator_UserColumnName="nid_estado" type="xs:long" minOccurs="0" />
+              <xs:element name="s_estado" msprop:Generator_ColumnVarNameInTable="columns_estado" msprop:Generator_ColumnPropNameInRow="s_estado" msprop:Generator_ColumnPropNameInTable="s_estadoColumn" msprop:Generator_UserColumnName="s_estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_producto" msprop:Generator_ColumnVarNameInTable="columnnid_producto" msprop:Generator_ColumnPropNameInRow="nid_producto" msprop:Generator_ColumnPropNameInTable="nid_productoColumn" msprop:Generator_UserColumnName="nid_producto" type="xs:long" minOccurs="0" />
+              <xs:element name="s_descripcion" msprop:Generator_ColumnVarNameInTable="columns_descripcion" msprop:Generator_ColumnPropNameInRow="s_descripcion" msprop:Generator_ColumnPropNameInTable="s_descripcionColumn" msprop:Generator_UserColumnName="s_descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_solicitud_producto" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud_producto" msprop:Generator_ColumnPropNameInRow="nid_solicitud_producto" msprop:Generator_ColumnPropNameInTable="nid_solicitud_productoColumn" msprop:Generator_UserColumnName="nid_solicitud_producto" type="xs:long" minOccurs="0" />
+              <xs:element name="n_cantidad_requerida_producto" msprop:Generator_ColumnVarNameInTable="columnn_cantidad_requerida_producto" msprop:Generator_ColumnPropNameInRow="n_cantidad_requerida_producto" msprop:Generator_ColumnPropNameInTable="n_cantidad_requerida_productoColumn" msprop:Generator_UserColumnName="n_cantidad_requerida_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="s_existencia_producto" msprop:Generator_ColumnVarNameInTable="columns_existencia_producto" msprop:Generator_ColumnPropNameInRow="s_existencia_producto" msprop:Generator_ColumnPropNameInTable="s_existencia_productoColumn" msprop:Generator_UserColumnName="s_existencia_producto" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="1" />

@@ -28,7 +28,7 @@
 
         'Dim sCadenaSQL As String = "select nid, s_descripcion, s_descripcioncorta from producto where s_activo = '1' order by s_descripcion"
 
-        Dim sCadenaSQL As String = "select p.nid, p.s_descripcion, p.s_descripcioncorta from producto p inner join solicitud_producto s on p.nid= s.nid_solicitud where s_activo = '1' order by p.s_descripcion"
+        Dim sCadenaSQL As String = "select p.nid, p.s_descripcion, p.s_descripcioncorta from producto p where s_activo = '1' order by p.s_descripcion"
 
 
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
@@ -155,7 +155,7 @@
 
                     Else
 
-                        SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion) values (" & TXTCliente.Text & ", '2') returning nid"
+                        SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha) values (" & TXTCliente.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
                         sId_solicitud = ""
 
                         objCGenerica.accederBD(SQLGuardar, sId_solicitud)
@@ -173,7 +173,6 @@
                         While nIndice < DGVSolicitudes.RowCount
 
                             If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
-                                'SQLGuardar = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
                                 If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
                                     MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
                                     Exit Sub
@@ -314,9 +313,16 @@
         BTNCancelar.Enabled = True
     End Sub
 
-
-
     Private Sub BTNCreacion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub BNTReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BNTReporteSolicitudes.Click
+
+        FReporteDetalleSolicitud.nombre_reporte = "Visualizar_Solicitudes"
+
+        FReporteDetalleSolicitud.ShowDialog()
+
+    End Sub
+
 End Class

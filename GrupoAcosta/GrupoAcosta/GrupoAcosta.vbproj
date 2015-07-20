@@ -100,6 +100,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FCargo.Designer.vb">
       <DependentUpon>FCargo.vb</DependentUpon>
     </Compile>
@@ -180,6 +183,12 @@
     <Compile Include="FReporte.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FReporteDetalleSolicitud.Designer.vb">
+      <DependentUpon>FReporteDetalleSolicitud.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FReporteDetalleSolicitud.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FRol.Designer.vb">
       <DependentUpon>FRol.vb</DependentUpon>
     </Compile>
@@ -243,24 +252,18 @@
     <Compile Include="FSolicitudes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\RDetalleSolicitud.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RDetalleSolicitud.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPersona.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RPersona.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="Reports\RSolicitudProducto.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RSolicitudProducto.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RUsuario.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RUsuario.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -303,6 +306,9 @@
     <EmbeddedResource Include="FReporte.resx">
       <DependentUpon>FReporte.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FReporteDetalleSolicitud.resx">
+      <DependentUpon>FReporteDetalleSolicitud.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRol.resx">
       <DependentUpon>FRol.vb</DependentUpon>
     </EmbeddedResource>
@@ -333,18 +339,14 @@
     <EmbeddedResource Include="FSolicitudes.resx">
       <DependentUpon>FSolicitudes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDetalleSolicitud.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RDetalleSolicitud.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPersona.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPersona.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RSolicitudProducto.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RSolicitudProducto.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RUsuario.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RUsuario.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

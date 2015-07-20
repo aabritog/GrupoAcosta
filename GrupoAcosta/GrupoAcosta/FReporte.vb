@@ -24,14 +24,15 @@ Public Class FReporte
         End Try
     End Sub
 
-
-    Private Sub FReporte_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub CRVVisorReportes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CRVVisorReportes.Load
 
         If nombre_reporte = "Visualizar_Persona" Then
             ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RPersona.rpt"
             llenarDSInformacionPersona(ruta) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
+
         End If
 
     End Sub
+
 End Class

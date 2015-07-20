@@ -40,6 +40,7 @@ Partial Class FSolicitudes
         Me.GBSolicitudes = New System.Windows.Forms.GroupBox()
         Me.DGVSolicitudes = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BNTReporteSolicitudes = New System.Windows.Forms.Button()
         Me.GBNuevaSolicitud.SuspendLayout()
         Me.GBSolicitudes.SuspendLayout()
         CType(Me.DGVSolicitudes, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -249,11 +250,23 @@ Partial Class FSolicitudes
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
         '
+        'BNTReporteSolicitudes
+        '
+        Me.BNTReporteSolicitudes.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BNTReporteSolicitudes.Location = New System.Drawing.Point(655, 436)
+        Me.BNTReporteSolicitudes.Margin = New System.Windows.Forms.Padding(4)
+        Me.BNTReporteSolicitudes.Name = "BNTReporteSolicitudes"
+        Me.BNTReporteSolicitudes.Size = New System.Drawing.Size(74, 33)
+        Me.BNTReporteSolicitudes.TabIndex = 36
+        Me.BNTReporteSolicitudes.Text = "Ver"
+        Me.BNTReporteSolicitudes.UseVisualStyleBackColor = True
+        '
         'FSolicitudes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(986, 505)
+        Me.Controls.Add(Me.BNTReporteSolicitudes)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBSolicitudes)
         Me.Controls.Add(Me.TXTCliente)
@@ -289,4 +302,5 @@ Partial Class FSolicitudes
     Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
     Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents BNTReporteSolicitudes As System.Windows.Forms.Button
 End Class

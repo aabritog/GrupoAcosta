@@ -225,6 +225,8 @@ Public Class FPersona
         Dim nId_persona As Integer
         Dim sExistePersonaDni As String
         Dim sSQLVerificarExistencia As String
+        Dim sExistePersonaCargo As String
+        Dim sSQLVerificarExistenciaPersonaCargo As String
         Dim sSQLGuardar As String
         Dim SQLActualizar As String
 
@@ -296,6 +298,18 @@ Public Class FPersona
             End If
             '.................................................................................................................................
 
+            sExistePersonaCargo = ""
+            'Antes de agregar a la nueva persona se verifica que no exista una persona con el mismo cargo (cargo).
+            '.................................................................................................................................
+            sSQLVerificarExistenciaPersonaCargo = "SELECT nid_cargo FROM persona WHERE nid_cargo='" & TXTCargo.Text & "'"
+            objCGenerica.accederBD(sSQLVerificarExistenciaPersonaCargo, sExistePersonaCargo)
+
+            If sExistePersonaCargo <> "" Then
+                MsgBox("Ya existe una persona con el mismo cargo, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
             sSQLGuardar = "insert into persona (s_nombre1, s_nombre2, s_apellido1, s_apellido2, s_dni, d_fecha_nacimiento, s_correo, s_sexo, nid_cargo, s_activo, s_nacionalidad) values ('" & TXTNombre1.Text & "', '" & TXTNombre2.Text & "', '" & TXTApellido1.Text & "','" & TXTApellido2.Text & "', '" & TXTCI.Text & "', '" & TXTFechaNacimiento.Text & "', '" & TXTCorreo.Text & "', '" & TXTSexo.Text & "', " & TXTCargo.Text & ", '1', '" & TXTNacionalidad.Text & "') returning nid"
             sId_persona = ""
 
@@ -333,6 +347,18 @@ Public Class FPersona
             objCGenerica.accederBD(sSQLVerificarExistencia, sExistePersonaDni)
             If sExistePersonaDni <> "" Then
                 MsgBox("Ya existe una persona con la misma cedula de identidad, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sExistePersonaCargo = ""
+            'Antes de agregar a la nueva persona se verifica que no exista una persona con el mismo cargo (cargo).
+            '.................................................................................................................................
+            sSQLVerificarExistenciaPersonaCargo = "SELECT nid_cargo FROM persona WHERE nid_cargo='" & TXTCargo.Text & "'EXCEPT SELECT nid FROM persona WHERE nid_cargo='" & DGVPersona.CurrentRow.Cells("nid_cargo").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExistenciaPersonaCargo, sExistePersonaCargo)
+
+            If sExistePersonaCargo <> "" Then
+                MsgBox("Ya existe una persona con el mismo cargo, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
                 Exit Sub
             End If
             '.................................................................................................................................

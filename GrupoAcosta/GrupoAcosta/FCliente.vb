@@ -1,4 +1,6 @@
-﻿Public Class FCliente
+﻿Imports GrupoAcosta.CGenerica
+
+Public Class FCliente
 
     Dim objCGenerica As CGenerica = New CGenerica
 
@@ -47,42 +49,42 @@
 
         'Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
 
-            Dim dtDGVCliente As New DataTable
-            Dim bsDGVCliente As New BindingSource
-            Dim BCDGVCliente As New DataGridViewButtonColumn()
+        Dim dtDGVCliente As New DataTable
+        Dim bsDGVCliente As New BindingSource
+        Dim BCDGVCliente As New DataGridViewButtonColumn()
 
-            objCGenerica.cargarComboBoxDataGridView(sCadenaSQL, dtDGVCliente, bsDGVCliente)
-            bsDGVClienteFilter = bsDGVCliente
+        objCGenerica.cargarComboBoxDataGridView(sCadenaSQL, dtDGVCliente, bsDGVCliente)
+        bsDGVClienteFilter = bsDGVCliente
 
-            With DGVCliente
-                .Columns.Clear()
-                .RowHeadersVisible = False
-                .ReadOnly = True
-                .AllowUserToAddRows = False
-                .AllowUserToResizeColumns = False
-                .AllowUserToResizeRows = False
-                .MultiSelect = False
-                '.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
-                .DataSource = bsDGVCliente
-                .ClearSelection()
+        With DGVCliente
+            .Columns.Clear()
+            .RowHeadersVisible = False
+            .ReadOnly = True
+            .AllowUserToAddRows = False
+            .AllowUserToResizeColumns = False
+            .AllowUserToResizeRows = False
+            .MultiSelect = False
+            '.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
+            .DataSource = bsDGVCliente
+            .ClearSelection()
 
-            End With
+        End With
 
-            With DGVCliente.Columns("nid")
-                .Visible = False
-                .HeaderText = "NID"
-                .Width = "90"
-                .DisplayIndex = "0"
+        With DGVCliente.Columns("nid")
+            .Visible = False
+            .HeaderText = "NID"
+            .Width = "90"
+            .DisplayIndex = "0"
 
-            End With
-            With DGVCliente.Columns("s_cliente")
-                '.Visible = True
-                .HeaderText = "Cliente"
-                .Width = "180"
-                .DisplayIndex = "1"
+        End With
+        With DGVCliente.Columns("s_cliente")
+            '.Visible = True
+            .HeaderText = "Cliente"
+            .Width = "180"
+            .DisplayIndex = "1"
 
-            End With
+        End With
 
         With DGVCliente.Columns("s_provincia")
             .HeaderText = "Provincia"
@@ -150,7 +152,7 @@
 
     Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
 
-        
+
         nAction = 1
 
         cargarCMBProvincia()
@@ -179,6 +181,8 @@
         Dim sSQLAddtelefono_cliente As String
         Dim sId_cliente As String
         Dim nId_cliente As Integer
+        Dim sExisteClienteDescripcion As String
+        Dim sSQLVerificarExisteClienteDescripcion As String
 
         If Len(TXTCliente.Text) = 0 Then
             MsgBox("Rellene el campo Cliente", MsgBoxStyle.Information)
@@ -213,6 +217,18 @@
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
 
+            sExisteClienteDescripcion = ""
+            'Antes de agregar un cliente se verifica que no exista un cliente con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteClienteDescripcion = "SELECT s_cliente FROM cliente WHERE s_cliente='" & TXTCliente.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteClienteDescripcion, sExisteClienteDescripcion)
+
+            If sExisteClienteDescripcion <> "" Then
+                MsgBox("Ya existe un cliente con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
             Dim SQLGuardar As String = ""
             SQLGuardar = "insert into cliente (s_cliente, nid_municipio, s_rif, s_direccion) values ('" & TXTCliente.Text & "', " & TXTMunicipio.Text & ", '" & TXTRif.Text & "', '" & TXTDireccion.Text & "') returning nid"
             sId_cliente = ""
@@ -242,6 +258,18 @@
             'Si la acción es modificar (modificar registr existente).
 
         ElseIf nAction = 2 Then
+
+            sExisteClienteDescripcion = ""
+            'Antes de agregar un cliente se verifica que no exista un cliente con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteClienteDescripcion = "SELECT s_cliente FROM cliente WHERE s_cliente='" & TXTCliente.Text & " 'EXCEPT SELECT nid FROM cliente WHERE s_cliente='" & DGVCliente.CurrentRow.Cells("s_cliente").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteClienteDescripcion, sExisteClienteDescripcion)
+
+            If sExisteClienteDescripcion <> "" Then
+                MsgBox("Ya existe un cliente con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
 
             Dim SQLActualizar As String = ""
             SQLActualizar = "UPDATE cliente SET s_cliente='" & TXTCliente.Text & "', nid_municipio= " & TXTMunicipio.Text & " , s_rif = '" & TXTRif.Text & "', s_direccion= '" & TXTDireccion.Text & "' WHERE nid=" & DGVCliente.CurrentRow.Cells("nid").Value & ""

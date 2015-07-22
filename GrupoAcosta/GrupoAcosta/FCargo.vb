@@ -1,4 +1,6 @@
-﻿Public Class FCargo
+﻿Imports GrupoAcosta.CGenerica
+
+Public Class FCargo
 
     Dim objCGenerica As CGenerica = New CGenerica
 
@@ -70,7 +72,7 @@
                 .DisplayIndex = "2"
 
             End With
-          
+
             With DGVCargo.Columns("nid_departamento")
                 .Visible = False
                 .HeaderText = "ID Departamento"
@@ -112,6 +114,11 @@
 
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
+        Dim sExisteCargoDescripcion As String
+        Dim sSQLVerificarExisteCargoDescripcion As String
+        Dim sExisteCargoDepartamento As String
+        Dim sSQLVerificarExisteCargoDepartamento As String
+
         If Len(TXTDescripcion.Text) = 0 Then
             MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
             TXTDescripcion.Focus()
@@ -133,6 +140,30 @@
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
 
+            sExisteCargoDescripcion = ""
+            'Antes de agregar un cargo se verifica que no exista un cargo con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteCargoDescripcion = "SELECT s_descripcion FROM cargo WHERE s_descripcion='" & TXTDescripcion.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteCargoDescripcion, sExisteCargoDescripcion)
+
+            If sExisteCargoDescripcion <> "" Then
+                MsgBox("Ya existe un cargo con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sExisteCargoDepartamento = ""
+            'Antes de agregar un cargo se verifica que no exista este cargo en un departamento (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteCargoDepartamento = "SELECT nid_departamento FROM cargo WHERE nid_departamento='" & TXTDepartamento.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteCargoDepartamento, sExisteCargoDepartamento)
+
+            If sExisteCargoDescripcion <> "" Then
+                MsgBox("Ya existe este cargo en un departamento, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
             Dim SQLGuardar As String = ""
             SQLGuardar = "insert into cargo (s_descripcion, s_descripcioncorta, d_fecha, nid_departamento, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', " & TXTDepartamento.Text & ", '1')"
 
@@ -149,6 +180,30 @@
             'Si la acción es modificar (modificar registr existente).
 
         ElseIf nAction = 2 Then
+
+            sExisteCargoDescripcion = ""
+            'Antes de agregar un cargo se verifica que no exista un cargo con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteCargoDescripcion = "SELECT s_descripcion FROM cargo WHERE s_descripcion='" & TXTDescripcion.Text & "' EXCEPT SELECT nid FROM cargo WHERE s_descripcion='" & DGVCargo.CurrentRow.Cells("s_descripcion").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteCargoDescripcion, sExisteCargoDescripcion)
+
+            If sExisteCargoDescripcion <> "" Then
+                MsgBox("Ya existe un cargo con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sExisteCargoDepartamento = ""
+            'Antes de agregar un cargo se verifica que no exista este cargo en un departamento (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteCargoDepartamento = "SELECT nid_departamento FROM cargo WHERE nid_departamento='" & TXTDepartamento.Text & " 'EXCEPT SELECT nid FROM cargo WHERE nid_departamento='" & DGVCargo.CurrentRow.Cells("nid_departamento").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteCargoDepartamento, sExisteCargoDepartamento)
+
+            If sExisteCargoDescripcion <> "" Then
+                MsgBox("Ya existe este cargo en un departamento, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
 
             Dim SQLActualizar As String = ""
             SQLActualizar = "UPDATE cargo SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "',nid_departamento=" & TXTDepartamento.Text & " WHERE nid=" & DGVCargo.CurrentRow.Cells("nid").Value & ""

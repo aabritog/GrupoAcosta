@@ -79,6 +79,9 @@ Public Class FDepartamento
 
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
+        Dim sExisteDepartamentoDescripcion As String
+        Dim sSQLVerificarExisteDepartamentoDescripcion As String
+
         If Len(TXTDescripcion.Text) = 0 Then
             MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
             TXTDescripcion.Focus()
@@ -93,6 +96,18 @@ Public Class FDepartamento
 
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
+
+            sExisteDepartamentoDescripcion = ""
+            'Antes de agregar un departamento se verifica que no exista un departamento con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteDepartamentoDescripcion = "SELECT s_descripcion FROM departamento WHERE s_descripcion='" & TXTDescripcion.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteDepartamentoDescripcion, sExisteDepartamentoDescripcion)
+
+            If sExisteDepartamentoDescripcion <> "" Then
+                MsgBox("Ya existe un departamento con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
 
             Dim SQLGuardar As String = ""
             SQLGuardar = "insert into departamento (s_descripcion, s_descripcioncorta, d_fecha, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1')"
@@ -110,6 +125,18 @@ Public Class FDepartamento
             'Si la acción es modificar (modificar registr existente).
 
         ElseIf nAction = 2 Then
+
+            sExisteDepartamentoDescripcion = ""
+            'Antes de agregar un departamento se verifica que no exista un departamento con la misma dexcripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteDepartamentoDescripcion = "SELECT s_descripcion FROM departamento WHERE s_descripcion='" & TXTDescripcion.Text & " 'EXCEPT SELECT nid FROM departamento WHERE s_descripcion='" & DGVDepartamento.CurrentRow.Cells("s_descripcion").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteDepartamentoDescripcion, sExisteDepartamentoDescripcion)
+
+            If sExisteDepartamentoDescripcion <> "" Then
+                MsgBox("Ya existe un departamento con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
 
             Dim SQLActualizar As String = ""
             SQLActualizar = "UPDATE departamento SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "' WHERE nid=" & DGVDepartamento.CurrentRow.Cells("nid").Value & ""

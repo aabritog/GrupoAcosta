@@ -1,5 +1,7 @@
-﻿Public Class FUsuario
+﻿Imports GrupoAcosta.CGenerica
 
+Public Class FUsuario
+    Dim objCGenerica As CGenerica = New CGenerica
     Dim DatosDataTableDGVUsuario As New DataTable
     Dim DatosBindingSourceDGVUsuario As New BindingSource
     Dim DatosDataTableCMBRol As New DataTable
@@ -179,6 +181,11 @@
 
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
+        Dim sExisteUsuarioSeudonimo As String
+        Dim sSQLVerificarExisteUsuarioSeudonimo As String
+        Dim sExisteUsuarioRol As String
+        Dim sSQLVerificarExisteUsuarioRol As String
+
         If Len(TXTSeudonimo.Text) = 0 Then
             MsgBox("Rellene el campo Seudonimo", MsgBoxStyle.Information)
             TXTSeudonimo.Focus()
@@ -206,6 +213,30 @@
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
 
+            sExisteUsuarioSeudonimo = ""
+            'Antes de agregar al usuario se verifica que no exista un usuario con el mismo seudonimo (seudonimo).
+            '.................................................................................................................................
+            sSQLVerificarExisteUsuarioSeudonimo = "SELECT s_seudonimo FROM usuario WHERE s_seudonimo='" & TXTSeudonimo.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteUsuarioSeudonimo, sExisteUsuarioSeudonimo)
+
+            If sExisteUsuarioSeudonimo <> "" Then
+                MsgBox("Ya existe un usuario con el mismo seudonimo, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sExisteUsuarioRol = ""
+            'Antes de agregar al usuario se verifica que no exista un usurio con el mismo rol (rol).
+            '.................................................................................................................................
+            sSQLVerificarExisteUsuarioRol = "SELECT nid_rol FROM usuario WHERE nid_rol='" & TXTRol.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteUsuarioRol, sExisteUsuarioRol)
+
+            If sExisteUsuarioSeudonimo <> "" Then
+                MsgBox("Ya existe un usuario con el mismo rol, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
             Dim SQLGuardar As String = ""
             SQLGuardar = "insert into usuario (s_seudonimo, s_clave, nid_rol, s_activo, nid_persona) values ('" & TXTSeudonimo.Text & "', MD5('" & TXTClave.Text & "'), " & TXTRol.Text & ", '1', " & TXTPersonasNoUsuarios.Text & ")"
             'MD5('" & TBClave1.Text & "')
@@ -223,6 +254,29 @@
 
         ElseIf nAction = 2 Then
 
+            sExisteUsuarioSeudonimo = ""
+            'Rutina utilizada para verificar que en caso de que se vaya a modificar el seudonimo, dicho seudonimo no le pertenezca a otro usuario registrado en sistema.
+            '.................................................................................................................................
+            sSQLVerificarExisteUsuarioSeudonimo = "SELECT s_seudonimo FROM usuario WHERE s_seudonimo='" & TXTSeudonimo.Text & "' EXCEPT SELECT nid FROM usuario WHERE s_seudonimo='" & DGVUsuario.CurrentRow.Cells("s_seudonimo").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteUsuarioSeudonimo, sExisteUsuarioSeudonimo)
+
+            If sExisteUsuarioSeudonimo <> "" Then
+                MsgBox("Ya existe un usuario con el mismo seudonimo, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
+
+            sExisteUsuarioRol = ""
+            'Rutina utilizada para verificar que en caso de que se vaya a modificar el rol, dicho rol no le pertenezca a otro usuario registrado en sistema.
+            '.................................................................................................................................
+            sSQLVerificarExisteUsuarioRol = "SELECT nid_rol FROM usuario WHERE nid_rol='" & TXTRol.Text & "' EXCEPT SELECT nid FROM usuario WHERE nid_rol='" & DGVUsuario.CurrentRow.Cells("nid_rol").Value & "' "
+            objCGenerica.accederBD(sSQLVerificarExisteUsuarioRol, sExisteUsuarioRol)
+
+            If sExisteUsuarioRol <> "" Then
+                MsgBox("Ya existe un usuario con el mismo rol, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
             Dim SQLActualizar As String = ""
             SQLActualizar = "UPDATE usuario SET s_seudonimo='" & TXTSeudonimo.Text & "',s_clave='" & TXTClave.Text & "', nid_rol= " & TXTRol.Text & " WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""
 
@@ -371,7 +425,7 @@
 
     End Sub
 
-   
+
     Private Sub TXTSeudonimo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTSeudonimo.TextChanged
 
         If Len(TXTSeudonimo.Text) = 0 Then
@@ -412,7 +466,7 @@
 
     End Sub
 
-   
+
 
     Private Sub DGVUsuario_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVUsuario.CellClick
 

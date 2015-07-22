@@ -1,4 +1,6 @@
-﻿Public Class FProveedores
+﻿Imports GrupoAcosta.CGenerica
+
+Public Class FProveedores
 
     Dim objCGenerica As CGenerica = New CGenerica
 
@@ -10,12 +12,12 @@
 
         Dim sCadenaSQL As String = "select d.nid, d.s_descripcion, d.s_descripcioncorta, s_rif, s_direccion from proveedores d where d.s_activo = '1' order by s_descripcion"
 
-            Dim dtDGVProveedores As New DataTable
-            Dim bsDGVProveedores As New BindingSource
-            Dim BCDGVProveedores As New DataGridViewButtonColumn()
+        Dim dtDGVProveedores As New DataTable
+        Dim bsDGVProveedores As New BindingSource
+        Dim BCDGVProveedores As New DataGridViewButtonColumn()
 
-            objCGenerica.cargarComboBoxDataGridView(sCadenaSQL, dtDGVProveedores, bsDGVProveedores)
-            bsDGVProveedoresFilter = bsDGVProveedores
+        objCGenerica.cargarComboBoxDataGridView(sCadenaSQL, dtDGVProveedores, bsDGVProveedores)
+        bsDGVProveedoresFilter = bsDGVProveedores
 
         With DGVProveedores
             .Columns.Clear()
@@ -32,48 +34,48 @@
 
         End With
 
-            With DGVProveedores.Columns("nid")
-                .Visible = False
-                .HeaderText = "NID"
-                .Width = "90"
+        With DGVProveedores.Columns("nid")
+            .Visible = False
+            .HeaderText = "NID"
+            .Width = "90"
             .DisplayIndex = "0"
             .ReadOnly = True
 
-            End With
-            With DGVProveedores.Columns("s_descripcion")
-                '.Visible = True
-                .HeaderText = "Descripcion"
-                .Width = "180"
+        End With
+        With DGVProveedores.Columns("s_descripcion")
+            '.Visible = True
+            .HeaderText = "Descripcion"
+            .Width = "180"
             .DisplayIndex = "1"
             .ReadOnly = True
 
-            End With
-            With DGVProveedores.Columns("s_descripcioncorta")
-                '.Visible = True
-                .HeaderText = "Descripcion Corta"
-                .Width = "180"
+        End With
+        With DGVProveedores.Columns("s_descripcioncorta")
+            '.Visible = True
+            .HeaderText = "Descripcion Corta"
+            .Width = "180"
             .DisplayIndex = "2"
             .ReadOnly = True
 
-            End With
+        End With
 
-            With DGVProveedores.Columns("s_rif")
-                '.Visible = True
-                .HeaderText = "Rif"
-                .Width = "180"
+        With DGVProveedores.Columns("s_rif")
+            '.Visible = True
+            .HeaderText = "Rif"
+            .Width = "180"
             .DisplayIndex = "3"
             .ReadOnly = True
 
-            End With
+        End With
 
-            With DGVProveedores.Columns("s_direccion")
-                '.Visible = True
-                .HeaderText = "Direccion"
-                .Width = "180"
+        With DGVProveedores.Columns("s_direccion")
+            '.Visible = True
+            .HeaderText = "Direccion"
+            .Width = "180"
             .DisplayIndex = "4"
             .ReadOnly = True
 
-            End With
+        End With
 
         With BCDGVProveedores
             .Name = "telefono"
@@ -84,13 +86,13 @@
 
         End With
 
-            'With DGVProveedores.Columns("d_fecha")
-            '    '.Visible = True
-            '    .HeaderText = "Fecha"
-            '    .Width = "180"
-            '    .DisplayIndex = "3"
+        'With DGVProveedores.Columns("d_fecha")
+        '    '.Visible = True
+        '    .HeaderText = "Fecha"
+        '    .Width = "180"
+        '    .DisplayIndex = "3"
 
-            'End With
+        'End With
 
         DGVProveedores.Columns.Add(BCDGVProveedores)
         'DGVProveedores.CurrentRow.Cells("telefono").Selected = True
@@ -124,6 +126,8 @@
         Dim sSQLAddtelefono_proveedores As String
         Dim sId_proveedor As String
         Dim nId_proveedor As Integer
+        Dim sExisteProveedorDescripcion As String
+        Dim sSQLVerificarExisteProveedorDescripcion As String
 
         If Len(TXTDescripcion.Text) = 0 Then
             MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
@@ -157,6 +161,18 @@
 
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
+
+            sExisteProveedorDescripcion = ""
+            'Antes de agregar un proveedor se verifica que no exista un proveedor con la misma descripcion (descripcion).
+            '.................................................................................................................................
+            sSQLVerificarExisteProveedorDescripcion = "SELECT s_descripcion FROM proveedores WHERE s_descripcion ='" & TXTDescripcion.Text & " '"
+            objCGenerica.accederBD(sSQLVerificarExisteProveedorDescripcion, sExisteProveedorDescripcion)
+
+            If sExisteProveedorDescripcion <> "" Then
+                MsgBox("Ya existe un proveedor con la misma descripcion, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+                Exit Sub
+            End If
+            '.................................................................................................................................
 
             Dim SQLGuardar As String = ""
             SQLGuardar = "insert into proveedores (s_descripcion, s_descripcioncorta, d_fecha, s_activo, s_rif, s_direccion) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1', '" & TXTRif.Text & "', '" & TXTDireccion.Text & "') returning nid"

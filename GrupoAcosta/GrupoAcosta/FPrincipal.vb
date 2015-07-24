@@ -57,7 +57,7 @@
     End Sub
 
     Private Sub SolicitudesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SolicitudesToolStripMenuItem.Click
-        FSolicitudes.ShowDialog()
+
     End Sub
 
     Private Sub RolesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RolesToolStripMenuItem.Click
@@ -66,5 +66,13 @@
 
     Private Sub RolesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RolesToolStripMenuItem1.Click
         FRol.ShowDialog()
+    End Sub
+
+    Private Sub CrearToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearToolStripMenuItem.Click
+        FSolicitudes.ShowDialog()
+    End Sub
+
+    Private Sub ConsultarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultarToolStripMenuItem.Click
+
     End Sub
 End Class

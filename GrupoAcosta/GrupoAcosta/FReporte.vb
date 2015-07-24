@@ -6,7 +6,7 @@ Imports CrystalDecisions.Windows
 
 Public Class FReporte
 
-    Friend nombre_reporte As String = ""
+    Friend sNombre_reporte As String = ""
 
     Dim ruta As String
     Dim rpt As New ReportDocument
@@ -24,15 +24,60 @@ Public Class FReporte
         End Try
     End Sub
 
+
+    Friend Sub ListadoSolicitudes(ByVal ruta As String)
+        Dim miDs As DataSet1 = New DataSet1
+        Dim ta As New DataSet1TableAdapters.v_detalle_solicitudTableAdapter
+
+        Try
+            ta.FillByListadoSolicitudes(miDs.v_detalle_solicitud)
+            rpt.Load(ruta)
+            rpt.SetDataSource(miDs)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+    Friend Sub DetalleSolicitud2(ByVal ruta As String, ByRef nIdSolicitud As Integer)
+        Dim miDs As DataSet1 = New DataSet1
+        Dim ta As New DataSet1TableAdapters.v_detalle_solicitudTableAdapter
+
+        Try
+            ta.FillByDetalleSolicitud2(miDs.v_detalle_solicitud, nIdSolicitud)
+            rpt.Load(ruta)
+            rpt.SetDataSource(miDs)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
+
     Private Sub CRVVisorReportes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CRVVisorReportes.Load
 
-        If nombre_reporte = "Visualizar_Persona" Then
+        If sNombre_reporte = "Visualizar_Persona" Then
             ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RPersona.rpt"
             llenarDSInformacionPersona(ruta) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
 
         End If
 
+        If sNombre_reporte = "Visualizar_Solicitudes" Then
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitud.rpt"
+            ListadoSolicitudes(ruta) : CRVVisorReportes.ReportSource = rpt
+            Exit Sub
+        End If
+
+        'Reporte que muestra el detalle de una solicitud especifica
+        If sNombre_reporte = "RDetalleSolicitud2" Then
+            Me.Text = "Grupo Acosta C.A - Detalle de solicitud"
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitud2.rpt"
+            DetalleSolicitud2(ruta, FSolicitudes.nId_solicitud) : CRVVisorReportes.ReportSource = rpt
+            Exit Sub
+        End If
+
     End Sub
+
 
 End Class

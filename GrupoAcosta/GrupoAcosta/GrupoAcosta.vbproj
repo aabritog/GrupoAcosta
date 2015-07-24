@@ -183,12 +183,6 @@
     <Compile Include="FReporte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FReporteDetalleSolicitud.Designer.vb">
-      <DependentUpon>FReporteDetalleSolicitud.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FReporteDetalleSolicitud.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FRol.Designer.vb">
       <DependentUpon>FRol.vb</DependentUpon>
     </Compile>
@@ -252,11 +246,19 @@
     <Compile Include="FSolicitudes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\RDetalleSolicitud2.vb">
+      <DependentUpon>RDetalleSolicitud2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Reports\RDetalleSolicitud.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RDetalleSolicitud.rpt</DependentUpon>
       <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Reports\RPersona.vb">
       <AutoGen>True</AutoGen>
@@ -306,9 +308,6 @@
     <EmbeddedResource Include="FReporte.resx">
       <DependentUpon>FReporte.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FReporteDetalleSolicitud.resx">
-      <DependentUpon>FReporteDetalleSolicitud.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRol.resx">
       <DependentUpon>FRol.vb</DependentUpon>
     </EmbeddedResource>
@@ -339,9 +338,15 @@
     <EmbeddedResource Include="FSolicitudes.resx">
       <DependentUpon>FSolicitudes.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDetalleSolicitud2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RDetalleSolicitud2.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDetalleSolicitud.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RDetalleSolicitud.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPersona.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

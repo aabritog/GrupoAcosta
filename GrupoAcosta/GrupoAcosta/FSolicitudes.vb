@@ -3,6 +3,7 @@
     Dim objCGenerica As CGenerica = New CGenerica
 
     Dim bsDGVSolicitudesFilter As New BindingSource
+    Friend nId_solicitud As Integer
 
     Public nAction As Integer
 
@@ -129,7 +130,7 @@
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
         Dim sId_solicitud As String
-        Dim nId_solicitud As Integer
+
         Dim SQLGuardar As String = ""
         Dim nIndice As Integer = 0
         Dim nTexto As String = "0"
@@ -197,6 +198,14 @@
             nAction = 0
 
             MsgBox("Se ha agregado la solicitud exitosamente.", MsgBoxStyle.Information)
+
+            If MsgBox("¿Desea ver el detalle de la solicitud creada?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                FReporte.sNombre_reporte = "RDetalleSolicitud2"
+                FReporte.ShowDialog()
+                Me.Dispose()
+            Else
+                Me.Dispose()
+            End If
 
             'Si la acción es modificar (modificar registr existente).
 
@@ -306,6 +315,7 @@
     Private Sub FSolicitudes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         mostrarDGVSolicitudes()
         DGVSolicitudes.ClearSelection()
+        BTNAgregar_Click(sender, e)
     End Sub
     Private Sub DGVSolicitudes_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVSolicitudes.CellClick
         BTNModificar.Enabled = True
@@ -319,10 +329,10 @@
 
     Private Sub BNTReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BNTReporteSolicitudes.Click
 
-        FReporteDetalleSolicitud.nombre_reporte = "Visualizar_Solicitudes"
-
-        FReporteDetalleSolicitud.ShowDialog()
+        FReporte.sNombre_reporte = "Visualizar_Solicitudes"
+        FReporte.ShowDialog()
 
     End Sub
 
+   
 End Class

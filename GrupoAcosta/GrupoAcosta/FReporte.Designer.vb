@@ -35,6 +35,7 @@ Partial Class FReporte
         Me.CRVVisorReportes.Name = "CRVVisorReportes"
         Me.CRVVisorReportes.Size = New System.Drawing.Size(809, 487)
         Me.CRVVisorReportes.TabIndex = 0
+        Me.CRVVisorReportes.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None
         '
         'FReporte
         '

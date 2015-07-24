@@ -33,6 +33,8 @@ Partial Class FPrincipal
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolicitudesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CrearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,8 +49,6 @@ Partial Class FPrincipal
         Me.RolesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerFechaHoraActual = New System.Windows.Forms.Timer(Me.components)
-        Me.CrearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SSFPrincipal.SuspendLayout()
         Me.MSFPrincipal.SuspendLayout()
         Me.SuspendLayout()
@@ -122,6 +122,18 @@ Partial Class FPrincipal
         Me.SolicitudesToolStripMenuItem.Name = "SolicitudesToolStripMenuItem"
         Me.SolicitudesToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
         Me.SolicitudesToolStripMenuItem.Text = "Solicitudes"
+        '
+        'CrearToolStripMenuItem
+        '
+        Me.CrearToolStripMenuItem.Name = "CrearToolStripMenuItem"
+        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CrearToolStripMenuItem.Text = "Crear"
+        '
+        'ConsultarToolStripMenuItem
+        '
+        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'ConfiguraciónToolStripMenuItem
         '
@@ -208,18 +220,6 @@ Partial Class FPrincipal
         '
         'TimerFechaHoraActual
         '
-        '
-        'CrearToolStripMenuItem
-        '
-        Me.CrearToolStripMenuItem.Name = "CrearToolStripMenuItem"
-        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.CrearToolStripMenuItem.Text = "Crear"
-        '
-        'ConsultarToolStripMenuItem
-        '
-        Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'FPrincipal
         '

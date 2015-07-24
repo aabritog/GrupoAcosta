@@ -662,7 +662,7 @@ Public Class FPersona
     End Sub
 
     Private Sub BNTReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BNTReporte.Click
-        FReporte.nombre_reporte = "Visualizar_Persona"
+        FReporte.sNombre_reporte = "Visualizar_Persona"
         FReporte.ShowDialog()
     End Sub
 End Class

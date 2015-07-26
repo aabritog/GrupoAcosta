@@ -71,7 +71,6 @@ Partial Class FPersona
         Me.LBLNombre1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TXTFechaNacimiento = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TXTCargo = New System.Windows.Forms.TextBox()
         Me.TXTSexo = New System.Windows.Forms.TextBox()
         Me.TXTDepartamento = New System.Windows.Forms.TextBox()
@@ -79,12 +78,13 @@ Partial Class FPersona
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
         Me.BNTReporte = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GBPersona
@@ -536,6 +536,7 @@ Partial Class FPersona
         '
         'TXTNombre1
         '
+        Me.TXTNombre1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTNombre1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTNombre1.Enabled = False
         Me.TXTNombre1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -661,14 +662,6 @@ Partial Class FPersona
         Me.TXTFechaNacimiento.TabIndex = 8
         Me.TXTFechaNacimiento.Visible = False
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(548, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(320, 184)
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
-        '
         'TXTCargo
         '
         Me.TXTCargo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -725,17 +718,28 @@ Partial Class FPersona
         Me.TTFPersona.SetToolTip(Me.BNTReporte, "Presione aquí para habilitar los campos para aregar una nueva persona")
         Me.BNTReporte.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(483, 22)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(380, 238)
+        Me.PictureBox1.TabIndex = 24
+        Me.PictureBox1.TabStop = False
+        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(880, 615)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BNTReporte)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)
         Me.Controls.Add(Me.TXTSexo)
         Me.Controls.Add(Me.TXTCargo)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TXTFechaNacimiento)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBNuevoRegistro)
@@ -752,8 +756,8 @@ Partial Class FPersona
         Me.GBNuevoRegistro.ResumeLayout(False)
         Me.GBNuevoRegistro.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -792,7 +796,6 @@ Partial Class FPersona
     Friend WithEvents DataSet1BindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents DataSet1 As GrupoAcosta.DataSet1
     Friend WithEvents TXTFechaNacimiento As System.Windows.Forms.TextBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents TXTCargo As System.Windows.Forms.TextBox
     Friend WithEvents TXTSexo As System.Windows.Forms.TextBox
     Friend WithEvents CMBDepartamento As System.Windows.Forms.ComboBox
@@ -815,5 +818,6 @@ Partial Class FPersona
     Friend WithEvents LVTelefonos As System.Windows.Forms.ListView
     Friend WithEvents TTFPersona As System.Windows.Forms.ToolTip
     Friend WithEvents BNTReporte As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

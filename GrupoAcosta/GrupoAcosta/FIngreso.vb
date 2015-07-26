@@ -6,24 +6,55 @@ Public Class FIngreso
     Dim objCGenerica As CGenerica = New CGenerica
 
 
-    Friend id_persona As Integer = 0
+    'Friend nId_persona As Integer = 0
+    Friend sId_persona As String = ""
     'Friend id_usuario As Integer = 0
     Friend aliasUser As String = ""
     Friend nombrePersona As String = ""
     Friend apellidoPersona As String = ""
     Friend id_rol As Integer = 0
     Friend nombre_rol As String = ""
+
+
+    Friend nId_usuario As Integer
+    Friend nId_persona As Integer
+    Friend nId_cargo As Integer
+    Friend nId_rol As Integer
+    Friend s_Seudonimo As String
+    Friend s_Rol As String
+    Friend s_Nombre As String
+
+    'Friend s_Clave As String
+    'Friend s_Dni As String
+    'Friend d_fecha_nacimiento As Date
+    'Friend s_Correo As String
+    'Friend s_Sexo As String
+    'Friend s_Nacionalidad As String
+
+    Dim s_Campo1 As String = ""
+    Dim s_Campo2 As String = ""
+    Dim s_Campo3 As String = ""
+    Dim s_Campo4 As String = ""
+    Dim s_Campo5 As String = ""
+    Dim s_Campo6 As String = ""
+    Dim s_Campo7 As String = ""
+    Dim s_Campo8 As String = ""
+
+
+
+
+
+
+
     Dim nlogin_errado As Integer = 0
     Dim m_campos_obligatorios As String = "Debe rellenar los campos obligatorios"             'Para los campos obligatorios *.
     Dim DatosDataTableCBAlias As New DataTable
     Dim DatosBindingSourceCBAlias As New BindingSource
     Dim RespaldarRestaurar As String = ""
 
-
-
     Private Sub cargarCMBAlias()
 
-        Dim sCadenaSQL As String = "SELECT s_seudonimo FROM usuario WHERE s_activo='1' ORDER BY s_seudonimo"
+        Dim sCadenaSQL As String = "SELECT nid, s_seudonimo FROM usuario WHERE s_activo='1' ORDER BY s_seudonimo"
         Dim dtCMBAlias As New DataTable
         Dim bsCMBAlias As New BindingSource
 
@@ -39,11 +70,12 @@ Public Class FIngreso
     End Sub
 
 
-    Private Sub BTNAccesar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAcceder.Click
+    Friend Sub BTNAccesar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAcceder.Click
 
         Dim sSQLAccesarSistema As String
         Dim sAccederSistema As String
         Dim sSQLDatosPersona As String
+
 
         If Len(TBAlias.Text) = 0 Then
             MsgBox(m_campos_obligatorios, MsgBoxStyle.Information)
@@ -57,40 +89,39 @@ Public Class FIngreso
         End If
 
 
-        sSQLAccesarSistema = "SELECT nid_persona, nid, s_seudonimo FROM usuario WHERE s_seudonimo ='" & TBAlias.Text & "' AND s_clave = MD5('" & TBClave.Text & "')"
+        sSQLAccesarSistema = "SELECT nid_persona, nid, s_seudonimo FROM usuario WHERE nid =" & CBAlias.SelectedValue & " AND s_clave = '" & TBClave.Text & "'"
         sAccederSistema = ""
 
         If nlogin_errado <= 1 Then
 
+            objCGenerica.accederBD(sSQLAccesarSistema, sId_persona)
 
-            objCGenerica.accederBD(sSQLAccesarSistema, sAccederSistema)
+            If sId_persona <> "" Then
+                nId_persona = CInt(sId_persona)
+            End If
 
             'Si no coinciden las credenciales ingresadas con ningun usuario de la tabla
-            If sAccederSistema = "" Then
+            If sId_persona = "" Then
                 'TBAlias.Clear()
                 TBClave.Clear()
                 TBAlias.Focus()
                 nlogin_errado = nlogin_errado + 1
                 MsgBox("Alias o clave errada, verifique. Intentos restantes: " & 3 - nlogin_errado & "")
             Else
-
                 'ME TRAIGO TODOS LOS DATOS PARA CARGAR LA BARRA DE ESTADO DE LA FPRINCIPAL
-                sSQLDatosPersona = "SELECT nombres,apellidos,id_rol,nombre_rol,alias FROM v_usuario_rol__persona WHERE id_persona=" & id_persona & ""
+                sSQLDatosPersona = "SELECT nid_usuario, nid_persona, nid_rol, s_seudonimo, s_rol, s_nombre, '' as sCampo7, '' as sCampo8 FROM v_usuario_persona_rol WHERE nid_persona=" & nId_persona & ""
+                objCGenerica.recuperarCamposBD(sSQLDatosPersona, s_Campo1, s_Campo2, s_Campo3, s_Campo4, s_Campo5, s_Campo6)
 
+                nId_usuario = CInt(s_Campo1)
+                nId_persona = CInt(s_Campo2)
+                nId_rol = CInt(s_Campo3)
+                s_Seudonimo = s_Campo4
+                s_Rol = s_Campo5
+                s_Nombre = s_Campo6
 
-                '    Dim comando2 As New Odbc.OdbcCommand(SQLPersonas, Conexion)
-                '    reader = comando2.ExecuteReader
-                '    If reader.HasRows Then
-                '        nombrePersona = Trim(reader("nombres"))
-                '        apellidoPersona = Trim(reader("apellidos"))
-                '        nombre_rol = Trim(reader("nombre_rol"))
-                '        aliasUser = Trim(reader("alias"))
-                '        id_rol = reader("id_rol")
-                '        'FPrincipal.
-                '    End If
-                '    reader.Close()
-                '    Conexion.Close()
-                'End Using
+                FPrincipal.ShowDialog()
+             
+
 
             End If
 
@@ -104,8 +135,7 @@ Public Class FIngreso
 
 
     Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
-        'FSaliendo.ShowDialog()
-        'End
+        Me.Dispose()
     End Sub
 
 

@@ -9,7 +9,9 @@
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
-        Me.Close()
+        Me.Dispose()
+        FIngreso.TBAlias.Clear()
+        FIngreso.TBClave.Clear()
     End Sub
 
     Private Sub DepartamentosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DepartamentosToolStripMenuItem.Click
@@ -30,10 +32,13 @@
 
     Private Sub FPrincipal_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TimerFechaHoraActual.Enabled = True
+        TSSLUsuario.Text = "Usuario: " & FIngreso.s_Nombre & " | "
+        TSSLAlias.Text = "Alias: " & FIngreso.s_Seudonimo & " | "
+        TSSLRol.Text = "Rol: " & FIngreso.s_Rol & " | "
     End Sub
 
     Private Sub TimerHoraActual_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerFechaHoraActual.Tick
-        TSSLFechaHoraActual.Text = "| Fecha/hora actual:  " & Date.Now & " | "
+        TSSLFechaHoraActual.Text = "Fecha/hora actual:  " & Date.Now & " | "
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem1.Click
@@ -74,5 +79,13 @@
 
     Private Sub ConsultarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultarToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox4.Click
+
+    End Sub
+
+    Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
+        FCliente.ShowDialog()
     End Sub
 End Class

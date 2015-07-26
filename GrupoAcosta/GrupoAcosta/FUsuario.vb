@@ -238,7 +238,7 @@ Public Class FUsuario
             '.................................................................................................................................
 
             Dim SQLGuardar As String = ""
-            SQLGuardar = "insert into usuario (s_seudonimo, s_clave, nid_rol, s_activo, nid_persona) values ('" & TXTSeudonimo.Text & "', MD5('" & TXTClave.Text & "'), " & TXTRol.Text & ", '1', " & TXTPersonasNoUsuarios.Text & ")"
+            SQLGuardar = "insert into usuario (s_seudonimo, s_clave, nid_rol, s_activo, nid_persona) values ('" & TXTSeudonimo.Text & "', '" & TXTClave.Text & "', " & TXTRol.Text & ", '1', " & TXTPersonasNoUsuarios.Text & ")"
             'MD5('" & TBClave1.Text & "')
             accederBD(SQLGuardar)
 
@@ -257,7 +257,7 @@ Public Class FUsuario
             sExisteUsuarioSeudonimo = ""
             'Rutina utilizada para verificar que en caso de que se vaya a modificar el seudonimo, dicho seudonimo no le pertenezca a otro usuario registrado en sistema.
             '.................................................................................................................................
-            sSQLVerificarExisteUsuarioSeudonimo = "SELECT s_seudonimo FROM usuario WHERE s_seudonimo='" & TXTSeudonimo.Text & "' EXCEPT SELECT nid FROM usuario WHERE s_seudonimo='" & DGVUsuario.CurrentRow.Cells("s_seudonimo").Value & "' "
+            sSQLVerificarExisteUsuarioSeudonimo = "SELECT s_seudonimo FROM usuario WHERE s_seudonimo='" & TXTSeudonimo.Text & "' EXCEPT SELECT s_seudonimo FROM usuario WHERE s_seudonimo='" & DGVUsuario.CurrentRow.Cells("s_seudonimo").Value & "' "
             objCGenerica.accederBD(sSQLVerificarExisteUsuarioSeudonimo, sExisteUsuarioSeudonimo)
 
             If sExisteUsuarioSeudonimo <> "" Then
@@ -269,13 +269,13 @@ Public Class FUsuario
             sExisteUsuarioRol = ""
             'Rutina utilizada para verificar que en caso de que se vaya a modificar el rol, dicho rol no le pertenezca a otro usuario registrado en sistema.
             '.................................................................................................................................
-            sSQLVerificarExisteUsuarioRol = "SELECT nid_rol FROM usuario WHERE nid_rol='" & TXTRol.Text & "' EXCEPT SELECT nid FROM usuario WHERE nid_rol='" & DGVUsuario.CurrentRow.Cells("nid_rol").Value & "' "
-            objCGenerica.accederBD(sSQLVerificarExisteUsuarioRol, sExisteUsuarioRol)
+            'sSQLVerificarExisteUsuarioRol = "SELECT nid_rol FROM usuario WHERE nid_rol='" & TXTRol.Text & "' EXCEPT SELECT nid FROM usuario WHERE nid_rol='" & DGVUsuario.CurrentRow.Cells("nid_rol").Value & "' "
+            'objCGenerica.accederBD(sSQLVerificarExisteUsuarioRol, sExisteUsuarioRol)
 
-            If sExisteUsuarioRol <> "" Then
-                MsgBox("Ya existe un usuario con el mismo rol, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
-                Exit Sub
-            End If
+            'If sExisteUsuarioRol <> "" Then
+            '    MsgBox("Ya existe un usuario con el mismo rol, verifique.", MsgBoxStyle.Exclamation, "Advertencia")
+            '    Exit Sub
+            'End If
             '.................................................................................................................................
             Dim SQLActualizar As String = ""
             SQLActualizar = "UPDATE usuario SET s_seudonimo='" & TXTSeudonimo.Text & "',s_clave='" & TXTClave.Text & "', nid_rol= " & TXTRol.Text & " WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""

@@ -210,16 +210,16 @@ Partial Class FIngreso
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Navy
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(12, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(216, 20)
+        Me.Label3.Size = New System.Drawing.Size(138, 20)
         Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Departamento de Enfermería"
+        Me.Label3.Text = "Grupo Acosta C.A"
         '
         'PictureBox3
         '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Navy
+        Me.PictureBox3.BackColor = System.Drawing.Color.Yellow
         Me.PictureBox3.Location = New System.Drawing.Point(-65, 6)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(535, 6)
@@ -228,7 +228,7 @@ Partial Class FIngreso
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Silver
+        Me.PictureBox1.BackColor = System.Drawing.Color.DarkKhaki
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
@@ -252,7 +252,8 @@ Partial Class FIngreso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        'Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.dyn_marca_agua_conf
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.CancelButton = Me.BTNSalir
         Me.ClientSize = New System.Drawing.Size(435, 211)
         Me.ControlBox = False
@@ -266,10 +267,8 @@ Partial Class FIngreso
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FIngreso"
-        Me.Opacity = 0.0R
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Departamento de Enfermería - Servicio Médico"
+        Me.Text = "Grupo Acosta C.A - Iniciar sesión"
         Me.GBIniciarSesion.ResumeLayout(False)
         Me.GBIniciarSesion.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

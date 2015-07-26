@@ -62,6 +62,46 @@
 
     End Sub
 
+    'Función que permite ejecutar intrucciones SQL en la Base de Datos.
+    Public Sub recuperarCamposBD(ByVal sCadenaSQL As String, Optional ByRef sCampo1 As String = "", Optional ByRef sCampo2 As String = "", Optional ByRef sCampo3 As String = "", Optional ByRef sCampo4 As String = "", Optional ByRef sCampo5 As String = "", Optional ByRef sCampo6 As String = "", Optional ByRef sCampo7 As String = "", Optional ByRef sCampo8 As String = "")
+
+        Try
+            Using dsnConexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
+                dsnConexion.Open()
+                Dim cComando As New Odbc.OdbcCommand(sCadenaSQL, dsnConexion)
+                Dim drReader As Odbc.OdbcDataReader = cComando.ExecuteReader
+
+                If drReader.HasRows Then
+                    sCampo1 = Trim(CStr(drReader(0)))
+                    sCampo2 = Trim(CStr(drReader(1)))
+                    sCampo3 = Trim(CStr(drReader(2)))
+                    sCampo4 = Trim(CStr(drReader(3)))
+                    sCampo5 = Trim(CStr(drReader(4)))
+                    sCampo6 = Trim(CStr(drReader(5)))
+                    sCampo7 = Trim(CStr(drReader(6)))
+                    sCampo8 = Trim(CStr(drReader(7)))
+                Else
+                    sCampo1 = ""
+                    sCampo2 = ""
+                    sCampo3 = ""
+                    sCampo4 = ""
+                    sCampo5 = ""
+                    sCampo6 = ""
+                    sCampo7 = ""
+                    sCampo8 = ""
+                End If
+                drReader.Close()
+                dsnConexion.Close()
+            End Using
+
+        Catch
+            'sValorRetorno = ""
+            MsgBox("Error al ejecutar la siguiente instrucción SQL: " & sCadenaSQL, MsgBoxStyle.Exclamation)
+
+        End Try
+
+    End Sub
+
     'Funcion que permite cargar un ComboBox a partir de una consulta SQL, un DataTable y un BindingSource.
     Public Sub cargarComboBoxDataGridView(ByVal sCadenaSQL As String, ByRef dtComboBox As DataTable, ByRef bsComboBox As BindingSource)
 

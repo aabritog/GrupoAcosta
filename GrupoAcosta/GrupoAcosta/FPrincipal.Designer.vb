@@ -32,6 +32,7 @@ Partial Class FPrincipal
         Me.MSFPrincipal = New System.Windows.Forms.MenuStrip()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SolicitudesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -49,17 +50,14 @@ Partial Class FPrincipal
         Me.RolesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TimerFechaHoraActual = New System.Windows.Forms.Timer(Me.components)
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.SSFPrincipal.SuspendLayout()
         Me.MSFPrincipal.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SSFPrincipal
@@ -105,7 +103,7 @@ Partial Class FPrincipal
         '
         Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(230, 27)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(227, 27)
         Me.ToolStripStatusLabel5.Text = "GRUPO ACOSTA C.A - RIF J-000000-1"
         '
         'MSFPrincipal
@@ -136,6 +134,15 @@ Partial Class FPrincipal
         Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(99, 24)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
+        'ClientesToolStripMenuItem
+        '
+        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.Olive
+        Me.ClientesToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White
+        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
+        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
+        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        '
         'SolicitudesToolStripMenuItem
         '
         Me.SolicitudesToolStripMenuItem.BackColor = System.Drawing.Color.Olive
@@ -152,7 +159,7 @@ Partial Class FPrincipal
         Me.CrearToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CrearToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.CrearToolStripMenuItem.Name = "CrearToolStripMenuItem"
-        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
         Me.CrearToolStripMenuItem.Text = "Crear"
         '
         'ConsultarToolStripMenuItem
@@ -161,7 +168,7 @@ Partial Class FPrincipal
         Me.ConsultarToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultarToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
         '
         'ConfiguraciónToolStripMenuItem
@@ -252,14 +259,14 @@ Partial Class FPrincipal
         '
         Me.RolesToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
-        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(133, 24)
         Me.RolesToolStripMenuItem.Text = "Usuarios"
         '
         'RolesToolStripMenuItem1
         '
         Me.RolesToolStripMenuItem1.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem1.Name = "RolesToolStripMenuItem1"
-        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(133, 24)
         Me.RolesToolStripMenuItem1.Text = "Roles"
         '
         'CerrarSesiónToolStripMenuItem
@@ -273,24 +280,14 @@ Partial Class FPrincipal
         'TimerFechaHoraActual
         '
         '
-        'PictureBox1
+        'PictureBox4
         '
-        Me.PictureBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(952, 440)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 238)
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.Yellow
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 34)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(1366, 3)
-        Me.PictureBox3.TabIndex = 28
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox4.BackColor = System.Drawing.Color.Yellow
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 674)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(1366, 2)
+        Me.PictureBox4.TabIndex = 30
+        Me.PictureBox4.TabStop = False
         '
         'PictureBox2
         '
@@ -301,34 +298,25 @@ Partial Class FPrincipal
         Me.PictureBox2.TabIndex = 29
         Me.PictureBox2.TabStop = False
         '
-        'PictureBox4
+        'PictureBox3
         '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Yellow
-        Me.PictureBox4.Location = New System.Drawing.Point(0, 674)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(1366, 2)
-        Me.PictureBox4.TabIndex = 30
-        Me.PictureBox4.TabStop = False
-        '
-        'ClientesToolStripMenuItem
-        '
-        Me.ClientesToolStripMenuItem.BackColor = System.Drawing.Color.Olive
-        Me.ClientesToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClientesToolStripMenuItem.ForeColor = System.Drawing.Color.White
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(71, 24)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
+        Me.PictureBox3.BackColor = System.Drawing.Color.Yellow
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 34)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(1366, 3)
+        Me.PictureBox3.TabIndex = 28
+        Me.PictureBox3.TabStop = False
         '
         'FPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(1350, 748)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.SSFPrincipal)
         Me.Controls.Add(Me.MSFPrincipal)
         Me.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -342,10 +330,9 @@ Partial Class FPrincipal
         Me.SSFPrincipal.PerformLayout()
         Me.MSFPrincipal.ResumeLayout(False)
         Me.MSFPrincipal.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -376,7 +363,6 @@ Partial Class FPrincipal
     Friend WithEvents RolesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CrearToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ConsultarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox

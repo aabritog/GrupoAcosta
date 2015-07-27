@@ -59,6 +59,7 @@ Partial Class FProveedores
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GroupBox1.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GroupBox1.Controls.Add(Me.LBLValidarDescripcioncorta)
         Me.GroupBox1.Controls.Add(Me.LBCamposObligatorios)
@@ -119,6 +120,7 @@ Partial Class FProveedores
         '
         'LVTelefono
         '
+        Me.LVTelefono.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.LVTelefono.Location = New System.Drawing.Point(281, 173)
         Me.LVTelefono.Name = "LVTelefono"
         Me.LVTelefono.Size = New System.Drawing.Size(150, 28)
@@ -171,6 +173,7 @@ Partial Class FProveedores
         '
         'TXTDireccion
         '
+        Me.TXTDireccion.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDireccion.Enabled = False
         Me.TXTDireccion.Location = New System.Drawing.Point(185, 133)
@@ -181,6 +184,7 @@ Partial Class FProveedores
         '
         'TXTRif
         '
+        Me.TXTRif.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTRif.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTRif.Enabled = False
         Me.TXTRif.Location = New System.Drawing.Point(185, 94)
@@ -222,6 +226,7 @@ Partial Class FProveedores
         '
         'TXTDescripcionCorta
         '
+        Me.TXTDescripcionCorta.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTDescripcionCorta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcionCorta.Enabled = False
         Me.TXTDescripcionCorta.Location = New System.Drawing.Point(185, 61)
@@ -232,6 +237,7 @@ Partial Class FProveedores
         '
         'TXTDescripcion
         '
+        Me.TXTDescripcion.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcion.Enabled = False
         Me.TXTDescripcion.Location = New System.Drawing.Point(185, 24)
@@ -262,6 +268,7 @@ Partial Class FProveedores
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GroupBox3.Controls.Add(Me.BTNAgregar)
         Me.GroupBox3.Controls.Add(Me.BTNSalir)
         Me.GroupBox3.Controls.Add(Me.BTNGuardar)
@@ -358,6 +365,7 @@ Partial Class FProveedores
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Location = New System.Drawing.Point(550, 174)
         Me.TXTBuscar.Name = "TXTBuscar"
@@ -366,6 +374,7 @@ Partial Class FProveedores
         '
         'GBDRol
         '
+        Me.GBDRol.BackColor = System.Drawing.Color.DarkKhaki
         Me.GBDRol.Controls.Add(Me.DGVProveedores)
         Me.GBDRol.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBDRol.Location = New System.Drawing.Point(16, 273)
@@ -377,6 +386,7 @@ Partial Class FProveedores
         '
         'DGVProveedores
         '
+        Me.DGVProveedores.BackgroundColor = System.Drawing.Color.DarkKhaki
         Me.DGVProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVProveedores.Location = New System.Drawing.Point(6, 21)
         Me.DGVProveedores.Name = "DGVProveedores"
@@ -387,6 +397,7 @@ Partial Class FProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
         Me.ClientSize = New System.Drawing.Size(757, 491)
         Me.Controls.Add(Me.GBDRol)
         Me.Controls.Add(Me.LBLBuscar)
@@ -394,7 +405,7 @@ Partial Class FProveedores
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FProveedores"
-        Me.Text = "Módulo Proveedores-Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PROVEEDORES"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)

@@ -26,9 +26,9 @@ Partial Class FSolicitudes
         Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.LBLValidarCliente = New System.Windows.Forms.Label()
         Me.LBCamposObligatorios = New System.Windows.Forms.Label()
+        Me.TXTCliente = New System.Windows.Forms.TextBox()
         Me.CMBCliente = New System.Windows.Forms.ComboBox()
         Me.LBLCliente = New System.Windows.Forms.Label()
-        Me.TXTCliente = New System.Windows.Forms.TextBox()
         Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.BTNSalir = New System.Windows.Forms.Button()
         Me.BTNGuardar = New System.Windows.Forms.Button()
@@ -49,15 +49,17 @@ Partial Class FSolicitudes
         '
         'GBNuevaSolicitud
         '
+        Me.GBNuevaSolicitud.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GBNuevaSolicitud.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBNuevaSolicitud.Controls.Add(Me.LBLValidarCliente)
         Me.GBNuevaSolicitud.Controls.Add(Me.LBCamposObligatorios)
+        Me.GBNuevaSolicitud.Controls.Add(Me.TXTCliente)
         Me.GBNuevaSolicitud.Controls.Add(Me.CMBCliente)
         Me.GBNuevaSolicitud.Controls.Add(Me.LBLCliente)
         Me.GBNuevaSolicitud.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBNuevaSolicitud.Location = New System.Drawing.Point(12, 12)
         Me.GBNuevaSolicitud.Name = "GBNuevaSolicitud"
-        Me.GBNuevaSolicitud.Size = New System.Drawing.Size(682, 102)
+        Me.GBNuevaSolicitud.Size = New System.Drawing.Size(639, 102)
         Me.GBNuevaSolicitud.TabIndex = 3
         Me.GBNuevaSolicitud.TabStop = False
         Me.GBNuevaSolicitud.Text = "Nueva Solicitud"
@@ -67,7 +69,7 @@ Partial Class FSolicitudes
         Me.LBCamposObligatoriosAst.AutoSize = True
         Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(649, 72)
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(533, 72)
         Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
         Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
         Me.LBCamposObligatoriosAst.TabIndex = 46
@@ -89,11 +91,22 @@ Partial Class FSolicitudes
         Me.LBCamposObligatorios.AutoSize = True
         Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatorios.Location = New System.Drawing.Point(503, 72)
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(396, 72)
         Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
         Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
         Me.LBCamposObligatorios.TabIndex = 45
         Me.LBCamposObligatorios.Text = "Campos Obligatorios"
+        '
+        'TXTCliente
+        '
+        Me.TXTCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.TXTCliente.Enabled = False
+        Me.TXTCliente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TXTCliente.Location = New System.Drawing.Point(547, 51)
+        Me.TXTCliente.Name = "TXTCliente"
+        Me.TXTCliente.Size = New System.Drawing.Size(66, 20)
+        Me.TXTCliente.TabIndex = 32
+        Me.TXTCliente.Visible = False
         '
         'CMBCliente
         '
@@ -115,17 +128,6 @@ Partial Class FSolicitudes
         Me.LBLCliente.Size = New System.Drawing.Size(48, 20)
         Me.LBLCliente.TabIndex = 4
         Me.LBLCliente.Text = "Cliente"
-        '
-        'TXTCliente
-        '
-        Me.TXTCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.TXTCliente.Enabled = False
-        Me.TXTCliente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTCliente.Location = New System.Drawing.Point(713, 49)
-        Me.TXTCliente.Name = "TXTCliente"
-        Me.TXTCliente.Size = New System.Drawing.Size(66, 20)
-        Me.TXTCliente.TabIndex = 32
-        Me.TXTCliente.Visible = False
         '
         'BTNAgregar
         '
@@ -201,7 +203,7 @@ Partial Class FSolicitudes
         '
         Me.LBLBuscar.AutoSize = True
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(756, 231)
+        Me.LBLBuscar.Location = New System.Drawing.Point(709, 235)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(97, 20)
@@ -210,33 +212,37 @@ Partial Class FSolicitudes
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(713, 271)
+        Me.TXTBuscar.Location = New System.Drawing.Point(655, 267)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(188, 20)
         Me.TXTBuscar.TabIndex = 32
         '
         'GBSolicitudes
         '
+        Me.GBSolicitudes.BackColor = System.Drawing.Color.DarkKhaki
         Me.GBSolicitudes.Controls.Add(Me.DGVSolicitudes)
         Me.GBSolicitudes.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBSolicitudes.Location = New System.Drawing.Point(12, 133)
         Me.GBSolicitudes.Name = "GBSolicitudes"
-        Me.GBSolicitudes.Size = New System.Drawing.Size(682, 271)
+        Me.GBSolicitudes.Size = New System.Drawing.Size(639, 271)
         Me.GBSolicitudes.TabIndex = 34
         Me.GBSolicitudes.TabStop = False
         Me.GBSolicitudes.Text = "Solicitud Productos"
         '
         'DGVSolicitudes
         '
+        Me.DGVSolicitudes.BackgroundColor = System.Drawing.Color.DarkKhaki
         Me.DGVSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVSolicitudes.Location = New System.Drawing.Point(6, 24)
         Me.DGVSolicitudes.Name = "DGVSolicitudes"
-        Me.DGVSolicitudes.Size = New System.Drawing.Size(670, 241)
+        Me.DGVSolicitudes.Size = New System.Drawing.Size(627, 241)
         Me.DGVSolicitudes.TabIndex = 23
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
@@ -253,7 +259,7 @@ Partial Class FSolicitudes
         'BNTReporteSolicitudes
         '
         Me.BNTReporteSolicitudes.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BNTReporteSolicitudes.Location = New System.Drawing.Point(655, 436)
+        Me.BNTReporteSolicitudes.Location = New System.Drawing.Point(713, 294)
         Me.BNTReporteSolicitudes.Margin = New System.Windows.Forms.Padding(4)
         Me.BNTReporteSolicitudes.Name = "BNTReporteSolicitudes"
         Me.BNTReporteSolicitudes.Size = New System.Drawing.Size(74, 33)
@@ -265,16 +271,17 @@ Partial Class FSolicitudes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(986, 505)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(850, 484)
         Me.Controls.Add(Me.BNTReporteSolicitudes)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBSolicitudes)
-        Me.Controls.Add(Me.TXTCliente)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GBNuevaSolicitud)
         Me.Name = "FSolicitudes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO SOLICITUDES"
         Me.GBNuevaSolicitud.ResumeLayout(False)
         Me.GBNuevaSolicitud.PerformLayout()
         Me.GBSolicitudes.ResumeLayout(False)

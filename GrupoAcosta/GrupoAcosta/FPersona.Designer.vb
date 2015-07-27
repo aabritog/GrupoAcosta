@@ -77,18 +77,16 @@ Partial Class FPersona
         Me.TXTNacionalidad = New System.Windows.Forms.TextBox()
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
-        Me.BNTReporte = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GBPersona
         '
+        Me.GBPersona.BackColor = System.Drawing.Color.DarkKhaki
         Me.GBPersona.Controls.Add(Me.DGVPersona)
         Me.GBPersona.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBPersona.Location = New System.Drawing.Point(14, 426)
@@ -102,6 +100,7 @@ Partial Class FPersona
         '
         'DGVPersona
         '
+        Me.DGVPersona.BackgroundColor = System.Drawing.Color.DarkKhaki
         Me.DGVPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVPersona.Location = New System.Drawing.Point(8, 21)
         Me.DGVPersona.Margin = New System.Windows.Forms.Padding(4)
@@ -189,6 +188,7 @@ Partial Class FPersona
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTBuscar.Location = New System.Drawing.Point(484, 392)
@@ -211,6 +211,7 @@ Partial Class FPersona
         '
         'GBNuevoRegistro
         '
+        Me.GBNuevoRegistro.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GBNuevoRegistro.Controls.Add(Me.LVTelefonos)
         Me.GBNuevoRegistro.Controls.Add(Me.Label1)
         Me.GBNuevoRegistro.Controls.Add(Me.BTNAgregarTelefono)
@@ -256,6 +257,7 @@ Partial Class FPersona
         '
         'LVTelefonos
         '
+        Me.LVTelefonos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LVTelefonos.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LVTelefonos.Location = New System.Drawing.Point(271, 252)
         Me.LVTelefonos.MultiSelect = False
@@ -459,6 +461,7 @@ Partial Class FPersona
         '
         'TXTCorreo
         '
+        Me.TXTCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.TXTCorreo.Enabled = False
         Me.TXTCorreo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -483,6 +486,7 @@ Partial Class FPersona
         '
         'TXTCI
         '
+        Me.TXTCI.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTCI.Enabled = False
         Me.TXTCI.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTCI.Location = New System.Drawing.Point(246, 157)
@@ -505,6 +509,7 @@ Partial Class FPersona
         '
         'TXTApellido2
         '
+        Me.TXTApellido2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTApellido2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTApellido2.Enabled = False
         Me.TXTApellido2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -515,6 +520,7 @@ Partial Class FPersona
         '
         'TXTApellido1
         '
+        Me.TXTApellido1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTApellido1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTApellido1.Enabled = False
         Me.TXTApellido1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -525,6 +531,7 @@ Partial Class FPersona
         '
         'TXTNombre2
         '
+        Me.TXTNombre2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTNombre2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTNombre2.Enabled = False
         Me.TXTNombre2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -638,6 +645,7 @@ Partial Class FPersona
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
@@ -706,36 +714,13 @@ Partial Class FPersona
         Me.TXTNacionalidad.TabIndex = 13
         Me.TXTNacionalidad.Visible = False
         '
-        'BNTReporte
-        '
-        Me.BNTReporte.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BNTReporte.Location = New System.Drawing.Point(652, 272)
-        Me.BNTReporte.Margin = New System.Windows.Forms.Padding(4)
-        Me.BNTReporte.Name = "BNTReporte"
-        Me.BNTReporte.Size = New System.Drawing.Size(74, 33)
-        Me.BNTReporte.TabIndex = 23
-        Me.BNTReporte.Text = "Ver"
-        Me.TTFPersona.SetToolTip(Me.BNTReporte, "Presione aquí para habilitar los campos para aregar una nueva persona")
-        Me.BNTReporte.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(483, 22)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(380, 238)
-        Me.PictureBox1.TabIndex = 24
-        Me.PictureBox1.TabStop = False
-        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
         Me.ClientSize = New System.Drawing.Size(880, 615)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.BNTReporte)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)
         Me.Controls.Add(Me.TXTSexo)
@@ -750,14 +735,13 @@ Partial Class FPersona
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FPersona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Módulo Persona - Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PERSONA"
         Me.GBPersona.ResumeLayout(False)
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBNuevoRegistro.ResumeLayout(False)
         Me.GBNuevoRegistro.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataSet1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -817,7 +801,5 @@ Partial Class FPersona
     Friend WithEvents BTNAgregarTelefono As System.Windows.Forms.Button
     Friend WithEvents LVTelefonos As System.Windows.Forms.ListView
     Friend WithEvents TTFPersona As System.Windows.Forms.ToolTip
-    Friend WithEvents BNTReporte As System.Windows.Forms.Button
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class

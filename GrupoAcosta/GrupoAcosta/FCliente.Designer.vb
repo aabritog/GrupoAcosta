@@ -23,6 +23,9 @@ Partial Class FCliente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBCliente = New System.Windows.Forms.GroupBox()
+        Me.LBLValidarProvincia = New System.Windows.Forms.Label()
+        Me.CMBProvincia = New System.Windows.Forms.ComboBox()
+        Me.LBLProvincia = New System.Windows.Forms.Label()
         Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.LBCamposObligatorios = New System.Windows.Forms.Label()
         Me.LVTelefono = New System.Windows.Forms.ListView()
@@ -52,9 +55,6 @@ Partial Class FCliente
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
         Me.GBC = New System.Windows.Forms.GroupBox()
         Me.DGVCliente = New System.Windows.Forms.DataGridView()
-        Me.LBLProvincia = New System.Windows.Forms.Label()
-        Me.CMBProvincia = New System.Windows.Forms.ComboBox()
-        Me.LBLValidarProvincia = New System.Windows.Forms.Label()
         Me.TXTProvincia = New System.Windows.Forms.TextBox()
         Me.GBCliente.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -64,6 +64,7 @@ Partial Class FCliente
         '
         'GBCliente
         '
+        Me.GBCliente.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GBCliente.Controls.Add(Me.LBLValidarProvincia)
         Me.GBCliente.Controls.Add(Me.CMBProvincia)
         Me.GBCliente.Controls.Add(Me.LBLProvincia)
@@ -92,6 +93,38 @@ Partial Class FCliente
         Me.GBCliente.TabStop = False
         Me.GBCliente.Text = "Nuevo Cliente"
         '
+        'LBLValidarProvincia
+        '
+        Me.LBLValidarProvincia.AutoSize = True
+        Me.LBLValidarProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLValidarProvincia.ForeColor = System.Drawing.Color.Red
+        Me.LBLValidarProvincia.Location = New System.Drawing.Point(438, 60)
+        Me.LBLValidarProvincia.Name = "LBLValidarProvincia"
+        Me.LBLValidarProvincia.Size = New System.Drawing.Size(14, 18)
+        Me.LBLValidarProvincia.TabIndex = 47
+        Me.LBLValidarProvincia.Text = "*"
+        '
+        'CMBProvincia
+        '
+        Me.CMBProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CMBProvincia.Enabled = False
+        Me.CMBProvincia.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CMBProvincia.FormattingEnabled = True
+        Me.CMBProvincia.Location = New System.Drawing.Point(153, 61)
+        Me.CMBProvincia.Name = "CMBProvincia"
+        Me.CMBProvincia.Size = New System.Drawing.Size(259, 25)
+        Me.CMBProvincia.TabIndex = 46
+        '
+        'LBLProvincia
+        '
+        Me.LBLProvincia.AutoSize = True
+        Me.LBLProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLProvincia.Location = New System.Drawing.Point(16, 61)
+        Me.LBLProvincia.Name = "LBLProvincia"
+        Me.LBLProvincia.Size = New System.Drawing.Size(63, 20)
+        Me.LBLProvincia.TabIndex = 45
+        Me.LBLProvincia.Text = "Provincia:"
+        '
         'LBCamposObligatoriosAst
         '
         Me.LBCamposObligatoriosAst.AutoSize = True
@@ -116,6 +149,7 @@ Partial Class FCliente
         '
         'LVTelefono
         '
+        Me.LVTelefono.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.LVTelefono.Location = New System.Drawing.Point(245, 211)
         Me.LVTelefono.Name = "LVTelefono"
         Me.LVTelefono.Size = New System.Drawing.Size(167, 24)
@@ -157,6 +191,7 @@ Partial Class FCliente
         '
         'TXTDireccion
         '
+        Me.TXTDireccion.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDireccion.Enabled = False
         Me.TXTDireccion.Location = New System.Drawing.Point(153, 175)
@@ -199,6 +234,7 @@ Partial Class FCliente
         '
         'TXTRif
         '
+        Me.TXTRif.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTRif.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTRif.Enabled = False
         Me.TXTRif.Location = New System.Drawing.Point(153, 137)
@@ -241,6 +277,7 @@ Partial Class FCliente
         '
         'TXTCliente
         '
+        Me.TXTCliente.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTCliente.Enabled = False
         Me.TXTCliente.Location = New System.Drawing.Point(153, 24)
@@ -282,6 +319,7 @@ Partial Class FCliente
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.GroupBox2.Controls.Add(Me.BTNAgregar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNGuardar)
@@ -377,6 +415,7 @@ Partial Class FCliente
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Location = New System.Drawing.Point(524, 194)
         Me.TXTBuscar.Name = "TXTBuscar"
@@ -385,6 +424,7 @@ Partial Class FCliente
         '
         'GBC
         '
+        Me.GBC.BackColor = System.Drawing.Color.DarkKhaki
         Me.GBC.Controls.Add(Me.DGVCliente)
         Me.GBC.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBC.Location = New System.Drawing.Point(12, 284)
@@ -396,43 +436,12 @@ Partial Class FCliente
         '
         'DGVCliente
         '
+        Me.DGVCliente.BackgroundColor = System.Drawing.Color.DarkKhaki
         Me.DGVCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVCliente.Location = New System.Drawing.Point(6, 27)
         Me.DGVCliente.Name = "DGVCliente"
         Me.DGVCliente.Size = New System.Drawing.Size(520, 174)
         Me.DGVCliente.TabIndex = 23
-        '
-        'LBLProvincia
-        '
-        Me.LBLProvincia.AutoSize = True
-        Me.LBLProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLProvincia.Location = New System.Drawing.Point(16, 61)
-        Me.LBLProvincia.Name = "LBLProvincia"
-        Me.LBLProvincia.Size = New System.Drawing.Size(63, 20)
-        Me.LBLProvincia.TabIndex = 45
-        Me.LBLProvincia.Text = "Provincia:"
-        '
-        'CMBProvincia
-        '
-        Me.CMBProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CMBProvincia.Enabled = False
-        Me.CMBProvincia.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CMBProvincia.FormattingEnabled = True
-        Me.CMBProvincia.Location = New System.Drawing.Point(153, 61)
-        Me.CMBProvincia.Name = "CMBProvincia"
-        Me.CMBProvincia.Size = New System.Drawing.Size(259, 25)
-        Me.CMBProvincia.TabIndex = 46
-        '
-        'LBLValidarProvincia
-        '
-        Me.LBLValidarProvincia.AutoSize = True
-        Me.LBLValidarProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLValidarProvincia.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarProvincia.Location = New System.Drawing.Point(438, 60)
-        Me.LBLValidarProvincia.Name = "LBLValidarProvincia"
-        Me.LBLValidarProvincia.Size = New System.Drawing.Size(14, 18)
-        Me.LBLValidarProvincia.TabIndex = 47
-        Me.LBLValidarProvincia.Text = "*"
         '
         'TXTProvincia
         '
@@ -449,6 +458,7 @@ Partial Class FCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
         Me.ClientSize = New System.Drawing.Size(741, 492)
         Me.Controls.Add(Me.TXTProvincia)
         Me.Controls.Add(Me.GBC)
@@ -458,7 +468,7 @@ Partial Class FCliente
         Me.Controls.Add(Me.GBCliente)
         Me.Controls.Add(Me.TXTMunicipio)
         Me.Name = "FCliente"
-        Me.Text = "Módulo Cliente- Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO CLIENTE"
         Me.GBCliente.ResumeLayout(False)
         Me.GBCliente.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

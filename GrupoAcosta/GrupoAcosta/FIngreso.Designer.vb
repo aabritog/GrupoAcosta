@@ -252,8 +252,8 @@ Partial Class FIngreso
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA
-        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CancelButton = Me.BTNSalir
         Me.ClientSize = New System.Drawing.Size(435, 211)
         Me.ControlBox = False
@@ -268,7 +268,7 @@ Partial Class FIngreso
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FIngreso"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Grupo Acosta C.A - Iniciar sesión"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - INICIAR SESIÓN"
         Me.GBIniciarSesion.ResumeLayout(False)
         Me.GBIniciarSesion.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)

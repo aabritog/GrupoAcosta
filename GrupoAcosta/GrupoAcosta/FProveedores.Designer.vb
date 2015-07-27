@@ -120,7 +120,7 @@ Partial Class FProveedores
         '
         'LVTelefono
         '
-        Me.LVTelefono.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.LVTelefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LVTelefono.Location = New System.Drawing.Point(281, 173)
         Me.LVTelefono.Name = "LVTelefono"
         Me.LVTelefono.Size = New System.Drawing.Size(150, 28)
@@ -173,7 +173,7 @@ Partial Class FProveedores
         '
         'TXTDireccion
         '
-        Me.TXTDireccion.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDireccion.Enabled = False
         Me.TXTDireccion.Location = New System.Drawing.Point(185, 133)
@@ -184,7 +184,7 @@ Partial Class FProveedores
         '
         'TXTRif
         '
-        Me.TXTRif.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTRif.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTRif.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTRif.Enabled = False
         Me.TXTRif.Location = New System.Drawing.Point(185, 94)
@@ -226,7 +226,7 @@ Partial Class FProveedores
         '
         'TXTDescripcionCorta
         '
-        Me.TXTDescripcionCorta.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTDescripcionCorta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDescripcionCorta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcionCorta.Enabled = False
         Me.TXTDescripcionCorta.Location = New System.Drawing.Point(185, 61)
@@ -237,7 +237,7 @@ Partial Class FProveedores
         '
         'TXTDescripcion
         '
-        Me.TXTDescripcion.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcion.Enabled = False
         Me.TXTDescripcion.Location = New System.Drawing.Point(185, 24)

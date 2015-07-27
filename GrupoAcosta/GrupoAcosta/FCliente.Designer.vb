@@ -106,6 +106,7 @@ Partial Class FCliente
         '
         'CMBProvincia
         '
+        Me.CMBProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CMBProvincia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBProvincia.Enabled = False
         Me.CMBProvincia.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -255,6 +256,7 @@ Partial Class FCliente
         '
         'CMBMunicipio
         '
+        Me.CMBMunicipio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CMBMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBMunicipio.Enabled = False
         Me.CMBMunicipio.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

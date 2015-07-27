@@ -110,6 +110,7 @@ Partial Class FSolicitudes
         '
         'CMBCliente
         '
+        Me.CMBCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.CMBCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CMBCliente.Enabled = False
         Me.CMBCliente.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

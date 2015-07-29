@@ -135,4 +135,8 @@
             cargarDGVTelefono()
         End If
     End Sub
+
+    Private Sub LBValidarTelefono_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBValidarTelefono.Click
+
+    End Sub
 End Class

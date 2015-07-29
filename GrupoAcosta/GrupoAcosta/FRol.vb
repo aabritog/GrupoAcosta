@@ -236,5 +236,7 @@ Public Class FRol
     Private Sub TXTDescripcionCorta_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTDescripcionCorta.KeyPress
         objCGenerica.SoloLetra(e)
     End Sub
+
+
 End Class
 

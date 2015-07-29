@@ -44,7 +44,8 @@ Partial Class FReporte
         Me.ClientSize = New System.Drawing.Size(809, 487)
         Me.Controls.Add(Me.CRVVisorReportes)
         Me.Name = "FReporte"
-        Me.Text = "FReporte"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO REPORTE"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 

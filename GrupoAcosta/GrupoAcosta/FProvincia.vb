@@ -210,4 +210,8 @@
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
     End Sub
+
+    Private Sub LBCamposObligatorios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBCamposObligatorios.Click
+
+    End Sub
 End Class

@@ -36,9 +36,10 @@ Partial Class FPersonasUsuarios
         '
         'GBPersonasUsuarios
         '
+        Me.GBPersonasUsuarios.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBPersonasUsuarios.Controls.Add(Me.DGVPersonasNoUsuarios)
         Me.GBPersonasUsuarios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBPersonasUsuarios.Location = New System.Drawing.Point(13, 87)
+        Me.GBPersonasUsuarios.Location = New System.Drawing.Point(13, 73)
         Me.GBPersonasUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.GBPersonasUsuarios.Name = "GBPersonasUsuarios"
         Me.GBPersonasUsuarios.Padding = New System.Windows.Forms.Padding(4)
@@ -49,6 +50,7 @@ Partial Class FPersonasUsuarios
         '
         'DGVPersonasNoUsuarios
         '
+        Me.DGVPersonasNoUsuarios.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVPersonasNoUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVPersonasNoUsuarios.Location = New System.Drawing.Point(7, 22)
         Me.DGVPersonasNoUsuarios.Margin = New System.Windows.Forms.Padding(4)
@@ -58,18 +60,20 @@ Partial Class FPersonasUsuarios
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(13, 49)
+        Me.TXTBuscar.Location = New System.Drawing.Point(20, 40)
         Me.TXTBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(171, 25)
+        Me.TXTBuscar.Size = New System.Drawing.Size(225, 25)
         Me.TXTBuscar.TabIndex = 11
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNSeleccionar)
-        Me.GroupBox1.Location = New System.Drawing.Point(356, 27)
+        Me.GroupBox1.Location = New System.Drawing.Point(356, 13)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
@@ -103,8 +107,9 @@ Partial Class FPersonasUsuarios
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(33, 25)
+        Me.LBLBuscar.Location = New System.Drawing.Point(77, 16)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(117, 20)
@@ -115,7 +120,8 @@ Partial Class FPersonasUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(564, 335)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(564, 322)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TXTBuscar)
@@ -124,7 +130,7 @@ Partial Class FPersonasUsuarios
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FPersonasUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Módulo Personas-Usuarios  - Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PERSONA NO USUARIO"
         Me.GBPersonasUsuarios.ResumeLayout(False)
         CType(Me.DGVPersonasNoUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

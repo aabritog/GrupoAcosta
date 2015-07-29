@@ -23,6 +23,8 @@ Partial Class FCargo
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
+        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
         Me.LBLValidarDescripcioncorta = New System.Windows.Forms.Label()
         Me.LBLValidarDepartamento = New System.Windows.Forms.Label()
         Me.TXTDepartamento = New System.Windows.Forms.TextBox()
@@ -52,6 +54,10 @@ Partial Class FCargo
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GroupBox1.Controls.Add(Me.LBCamposObligatoriosAst)
+        Me.GroupBox1.Controls.Add(Me.LBCamposObligatorios)
         Me.GroupBox1.Controls.Add(Me.LBLValidarDescripcioncorta)
         Me.GroupBox1.Controls.Add(Me.LBLValidarDepartamento)
         Me.GroupBox1.Controls.Add(Me.TXTDepartamento)
@@ -63,19 +69,44 @@ Partial Class FCargo
         Me.GroupBox1.Controls.Add(Me.LBLDescripcionCorta)
         Me.GroupBox1.Controls.Add(Me.LBLDescripcion)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 1)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(489, 143)
+        Me.GroupBox1.Size = New System.Drawing.Size(547, 167)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nuevo Cargo"
         '
+        'LBCamposObligatoriosAst
+        '
+        Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(478, 149)
+        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
+        Me.LBCamposObligatoriosAst.TabIndex = 46
+        Me.LBCamposObligatoriosAst.Text = "*"
+        '
+        'LBCamposObligatorios
+        '
+        Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(326, 149)
+        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
+        Me.LBCamposObligatorios.TabIndex = 45
+        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
+        '
         'LBLValidarDescripcioncorta
         '
         Me.LBLValidarDescripcioncorta.AutoSize = True
+        Me.LBLValidarDescripcioncorta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarDescripcioncorta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarDescripcioncorta.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDescripcioncorta.Location = New System.Drawing.Point(328, 61)
+        Me.LBLValidarDescripcioncorta.Location = New System.Drawing.Point(478, 61)
         Me.LBLValidarDescripcioncorta.Name = "LBLValidarDescripcioncorta"
         Me.LBLValidarDescripcioncorta.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarDescripcioncorta.TabIndex = 33
@@ -84,9 +115,10 @@ Partial Class FCargo
         'LBLValidarDepartamento
         '
         Me.LBLValidarDepartamento.AutoSize = True
+        Me.LBLValidarDepartamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarDepartamento.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarDepartamento.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDepartamento.Location = New System.Drawing.Point(328, 109)
+        Me.LBLValidarDepartamento.Location = New System.Drawing.Point(478, 108)
         Me.LBLValidarDepartamento.Name = "LBLValidarDepartamento"
         Me.LBLValidarDepartamento.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarDepartamento.TabIndex = 32
@@ -97,7 +129,7 @@ Partial Class FCargo
         Me.TXTDepartamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTDepartamento.Enabled = False
         Me.TXTDepartamento.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTDepartamento.Location = New System.Drawing.Point(371, 109)
+        Me.TXTDepartamento.Location = New System.Drawing.Point(469, 85)
         Me.TXTDepartamento.Name = "TXTDepartamento"
         Me.TXTDepartamento.Size = New System.Drawing.Size(66, 20)
         Me.TXTDepartamento.TabIndex = 31
@@ -111,25 +143,27 @@ Partial Class FCargo
         Me.CMBDepartamento.FormattingEnabled = True
         Me.CMBDepartamento.Location = New System.Drawing.Point(185, 106)
         Me.CMBDepartamento.Name = "CMBDepartamento"
-        Me.CMBDepartamento.Size = New System.Drawing.Size(121, 25)
+        Me.CMBDepartamento.Size = New System.Drawing.Size(266, 25)
         Me.CMBDepartamento.TabIndex = 3
         '
         'LBLDepartamento
         '
         Me.LBLDepartamento.AutoSize = True
+        Me.LBLDepartamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLDepartamento.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLDepartamento.Location = New System.Drawing.Point(15, 114)
         Me.LBLDepartamento.Name = "LBLDepartamento"
-        Me.LBLDepartamento.Size = New System.Drawing.Size(87, 20)
+        Me.LBLDepartamento.Size = New System.Drawing.Size(90, 20)
         Me.LBLDepartamento.TabIndex = 29
-        Me.LBLDepartamento.Text = "Departamento"
+        Me.LBLDepartamento.Text = "Departamento:"
         '
         'LBLValidarDescripcion
         '
         Me.LBLValidarDescripcion.AutoSize = True
+        Me.LBLValidarDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarDescripcion.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDescripcion.Location = New System.Drawing.Point(328, 19)
+        Me.LBLValidarDescripcion.Location = New System.Drawing.Point(478, 19)
         Me.LBLValidarDescripcion.Name = "LBLValidarDescripcion"
         Me.LBLValidarDescripcion.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarDescripcion.TabIndex = 28
@@ -137,49 +171,54 @@ Partial Class FCargo
         '
         'TXTDescripcionCorta
         '
+        Me.TXTDescripcionCorta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDescripcionCorta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcionCorta.Enabled = False
         Me.TXTDescripcionCorta.Location = New System.Drawing.Point(185, 61)
         Me.TXTDescripcionCorta.MaxLength = 15
         Me.TXTDescripcionCorta.Name = "TXTDescripcionCorta"
-        Me.TXTDescripcionCorta.Size = New System.Drawing.Size(121, 25)
+        Me.TXTDescripcionCorta.Size = New System.Drawing.Size(266, 25)
         Me.TXTDescripcionCorta.TabIndex = 2
         '
         'TXTDescripcion
         '
+        Me.TXTDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDescripcion.Enabled = False
         Me.TXTDescripcion.Location = New System.Drawing.Point(185, 19)
         Me.TXTDescripcion.MaxLength = 30
         Me.TXTDescripcion.Name = "TXTDescripcion"
-        Me.TXTDescripcion.Size = New System.Drawing.Size(121, 25)
+        Me.TXTDescripcion.Size = New System.Drawing.Size(266, 25)
         Me.TXTDescripcion.TabIndex = 1
         '
         'LBLDescripcionCorta
         '
         Me.LBLDescripcionCorta.AutoSize = True
+        Me.LBLDescripcionCorta.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLDescripcionCorta.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLDescripcionCorta.Location = New System.Drawing.Point(15, 68)
         Me.LBLDescripcionCorta.Name = "LBLDescripcionCorta"
-        Me.LBLDescripcionCorta.Size = New System.Drawing.Size(107, 20)
+        Me.LBLDescripcionCorta.Size = New System.Drawing.Size(110, 20)
         Me.LBLDescripcionCorta.TabIndex = 4
-        Me.LBLDescripcionCorta.Text = "Descripción Corta"
+        Me.LBLDescripcionCorta.Text = "Descripción Corta:"
         '
         'LBLDescripcion
         '
         Me.LBLDescripcion.AutoSize = True
+        Me.LBLDescripcion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLDescripcion.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLDescripcion.Location = New System.Drawing.Point(15, 29)
         Me.LBLDescripcion.Name = "LBLDescripcion"
-        Me.LBLDescripcion.Size = New System.Drawing.Size(74, 20)
+        Me.LBLDescripcion.Size = New System.Drawing.Size(77, 20)
         Me.LBLDescripcion.TabIndex = 3
-        Me.LBLDescripcion.Text = "Descripción"
+        Me.LBLDescripcion.Text = "Descripción:"
         '
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(27, 168)
+        Me.LBLBuscar.Location = New System.Drawing.Point(27, 190)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(123, 20)
@@ -188,33 +227,39 @@ Partial Class FCargo
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(210, 168)
+        Me.TXTBuscar.Location = New System.Drawing.Point(206, 190)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(176, 20)
+        Me.TXTBuscar.Size = New System.Drawing.Size(257, 20)
         Me.TXTBuscar.TabIndex = 27
         '
         'GBCargos
         '
+        Me.GBCargos.BackColor = System.Drawing.Color.DarkKhaki
+        Me.GBCargos.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBCargos.Controls.Add(Me.DGVCargo)
         Me.GBCargos.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBCargos.Location = New System.Drawing.Point(16, 207)
+        Me.GBCargos.Location = New System.Drawing.Point(12, 225)
         Me.GBCargos.Name = "GBCargos"
-        Me.GBCargos.Size = New System.Drawing.Size(485, 204)
+        Me.GBCargos.Size = New System.Drawing.Size(559, 204)
         Me.GBCargos.TabIndex = 29
         Me.GBCargos.TabStop = False
         Me.GBCargos.Text = "Cargos en el Sistema"
         '
         'DGVCargo
         '
+        Me.DGVCargo.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVCargo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVCargo.Location = New System.Drawing.Point(6, 24)
         Me.DGVCargo.Name = "DGVCargo"
-        Me.DGVCargo.Size = New System.Drawing.Size(473, 175)
+        Me.DGVCargo.Size = New System.Drawing.Size(547, 175)
         Me.DGVCargo.TabIndex = 23
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox2.Controls.Add(Me.BTNAgregar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNGuardar)
@@ -222,9 +267,9 @@ Partial Class FCargo
         Me.GroupBox2.Controls.Add(Me.BTNModificar)
         Me.GroupBox2.Controls.Add(Me.BTNEliminar)
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(518, 78)
+        Me.GroupBox2.Location = New System.Drawing.Point(577, 111)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(93, 254)
+        Me.GroupBox2.Size = New System.Drawing.Size(87, 254)
         Me.GroupBox2.TabIndex = 30
         Me.GroupBox2.TabStop = False
         '
@@ -302,14 +347,17 @@ Partial Class FCargo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(619, 415)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
+        Me.ClientSize = New System.Drawing.Size(669, 431)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GBCargos)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FCargo"
-        Me.Text = "Módulo Cargo - Grupo Acosta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO CARGO"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GBCargos.ResumeLayout(False)
@@ -341,4 +389,6 @@ Partial Class FCargo
     Friend WithEvents TXTDepartamento As System.Windows.Forms.TextBox
     Friend WithEvents LBLValidarDepartamento As System.Windows.Forms.Label
     Friend WithEvents LBLValidarDescripcioncorta As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
 End Class

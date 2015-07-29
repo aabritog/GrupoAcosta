@@ -36,41 +36,46 @@ Partial Class FTelefonoProveedores
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GroupBox2.Controls.Add(Me.DGVTelefono)
         Me.GroupBox2.Controls.Add(Me.TXTTelefono)
         Me.GroupBox2.Controls.Add(Me.LBValidarTelefono)
+        Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(280, 203)
+        Me.GroupBox2.Size = New System.Drawing.Size(337, 203)
         Me.GroupBox2.TabIndex = 29
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ingrese teléfono:"
         '
         'DGVTelefono
         '
+        Me.DGVTelefono.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVTelefono.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVTelefono.Location = New System.Drawing.Point(16, 78)
         Me.DGVTelefono.Name = "DGVTelefono"
-        Me.DGVTelefono.Size = New System.Drawing.Size(240, 109)
+        Me.DGVTelefono.Size = New System.Drawing.Size(293, 119)
         Me.DGVTelefono.TabIndex = 26
         Me.DGVTelefono.TabStop = False
         Me.DGVTelefono.Visible = False
         '
         'TXTTelefono
         '
+        Me.TXTTelefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTTelefono.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTTelefono.Location = New System.Drawing.Point(16, 31)
         Me.TXTTelefono.MaxLength = 11
         Me.TXTTelefono.Name = "TXTTelefono"
-        Me.TXTTelefono.Size = New System.Drawing.Size(160, 25)
+        Me.TXTTelefono.Size = New System.Drawing.Size(293, 25)
         Me.TXTTelefono.TabIndex = 1
         '
         'LBValidarTelefono
         '
         Me.LBValidarTelefono.AutoSize = True
+        Me.LBValidarTelefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarTelefono.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarTelefono.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarTelefono.Location = New System.Drawing.Point(178, 38)
+        Me.LBValidarTelefono.Location = New System.Drawing.Point(317, 31)
         Me.LBValidarTelefono.Name = "LBValidarTelefono"
         Me.LBValidarTelefono.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarTelefono.TabIndex = 25
@@ -78,11 +83,12 @@ Partial Class FTelefonoProveedores
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
-        Me.GroupBox1.Location = New System.Drawing.Point(313, 43)
+        Me.GroupBox1.Location = New System.Drawing.Point(355, 50)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(105, 103)
+        Me.GroupBox1.Size = New System.Drawing.Size(86, 103)
         Me.GroupBox1.TabIndex = 30
         Me.GroupBox1.TabStop = False
         '
@@ -91,7 +97,7 @@ Partial Class FTelefonoProveedores
         Me.BTNCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(13, 57)
+        Me.BTNCancelar.Location = New System.Drawing.Point(7, 57)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -102,7 +108,7 @@ Partial Class FTelefonoProveedores
         'BTNAgregar
         '
         Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNAgregar.Location = New System.Drawing.Point(13, 15)
+        Me.BTNAgregar.Location = New System.Drawing.Point(7, 16)
         Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNAgregar.Name = "BTNAgregar"
         Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
@@ -115,11 +121,13 @@ Partial Class FTelefonoProveedores
         Me.AcceptButton = Me.BTNAgregar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.ClientSize = New System.Drawing.Size(453, 221)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "FTelefonoProveedores"
-        Me.Text = "Módulo Telefono-Proveedores-Grupo Acosta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO TELÉFONO-PROVEEDOR"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DGVTelefono, System.ComponentModel.ISupportInitialize).EndInit()

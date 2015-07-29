@@ -60,6 +60,7 @@ Partial Class FUsuario
         '
         'GBUsuario
         '
+        Me.GBUsuario.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBUsuario.Controls.Add(Me.DGVUsuario)
         Me.GBUsuario.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBUsuario.Location = New System.Drawing.Point(12, 272)
@@ -71,6 +72,7 @@ Partial Class FUsuario
         '
         'DGVUsuario
         '
+        Me.DGVUsuario.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVUsuario.Location = New System.Drawing.Point(6, 19)
         Me.DGVUsuario.Name = "DGVUsuario"
@@ -79,6 +81,7 @@ Partial Class FUsuario
         '
         'GBNuevoUsuario
         '
+        Me.GBNuevoUsuario.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBNuevoUsuario.Controls.Add(Me.TXTRol)
         Me.GBNuevoUsuario.Controls.Add(Me.TXTPersonasNoUsuarios)
         Me.GBNuevoUsuario.Controls.Add(Me.LBLCamposObligatorios)
@@ -109,7 +112,7 @@ Partial Class FUsuario
         '
         Me.TXTRol.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTRol.Enabled = False
-        Me.TXTRol.Location = New System.Drawing.Point(365, 141)
+        Me.TXTRol.Location = New System.Drawing.Point(499, 138)
         Me.TXTRol.Name = "TXTRol"
         Me.TXTRol.Size = New System.Drawing.Size(43, 25)
         Me.TXTRol.TabIndex = 27
@@ -131,6 +134,7 @@ Partial Class FUsuario
         'LBLCamposObligatorios
         '
         Me.LBLCamposObligatorios.AutoSize = True
+        Me.LBLCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCamposObligatorios.ForeColor = System.Drawing.Color.Red
         Me.LBLCamposObligatorios.Location = New System.Drawing.Point(408, 228)
@@ -142,9 +146,10 @@ Partial Class FUsuario
         'LBLValidarRol
         '
         Me.LBLValidarRol.AutoSize = True
+        Me.LBLValidarRol.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarRol.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarRol.Location = New System.Drawing.Point(343, 145)
+        Me.LBLValidarRol.Location = New System.Drawing.Point(357, 145)
         Me.LBLValidarRol.Name = "LBLValidarRol"
         Me.LBLValidarRol.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarRol.TabIndex = 23
@@ -186,6 +191,7 @@ Partial Class FUsuario
         'LBLPSeleccionada
         '
         Me.LBLPSeleccionada.AutoSize = True
+        Me.LBLPSeleccionada.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLPSeleccionada.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLPSeleccionada.Location = New System.Drawing.Point(14, 217)
         Me.LBLPSeleccionada.Name = "LBLPSeleccionada"
@@ -196,7 +202,7 @@ Partial Class FUsuario
         'LBLNinguno
         '
         Me.LBLNinguno.AutoSize = True
-        Me.LBLNinguno.BackColor = System.Drawing.SystemColors.Control
+        Me.LBLNinguno.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLNinguno.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLNinguno.ForeColor = System.Drawing.Color.MidnightBlue
         Me.LBLNinguno.Location = New System.Drawing.Point(152, 217)
@@ -229,6 +235,7 @@ Partial Class FUsuario
         '
         'TXTClave
         '
+        Me.TXTClave.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTClave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTClave.Enabled = False
         Me.TXTClave.Location = New System.Drawing.Point(137, 64)
@@ -241,6 +248,7 @@ Partial Class FUsuario
         '
         'TXTConfirmarClave
         '
+        Me.TXTConfirmarClave.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTConfirmarClave.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTConfirmarClave.Enabled = False
         Me.TXTConfirmarClave.Location = New System.Drawing.Point(137, 102)
@@ -251,10 +259,11 @@ Partial Class FUsuario
         '
         'TXTSeudonimo
         '
+        Me.TXTSeudonimo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTSeudonimo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTSeudonimo.Enabled = False
         Me.TXTSeudonimo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSeudonimo.Location = New System.Drawing.Point(137, 24)
+        Me.TXTSeudonimo.Location = New System.Drawing.Point(134, 29)
         Me.TXTSeudonimo.MaxLength = 10
         Me.TXTSeudonimo.Name = "TXTSeudonimo"
         Me.TXTSeudonimo.Size = New System.Drawing.Size(123, 25)
@@ -263,8 +272,9 @@ Partial Class FUsuario
         'LBLROl
         '
         Me.LBLROl.AutoSize = True
+        Me.LBLROl.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLROl.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLROl.Location = New System.Drawing.Point(14, 149)
+        Me.LBLROl.Location = New System.Drawing.Point(14, 145)
         Me.LBLROl.Name = "LBLROl"
         Me.LBLROl.Size = New System.Drawing.Size(31, 20)
         Me.LBLROl.TabIndex = 3
@@ -273,6 +283,7 @@ Partial Class FUsuario
         'LBLConfirmarCLave
         '
         Me.LBLConfirmarCLave.AutoSize = True
+        Me.LBLConfirmarCLave.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLConfirmarCLave.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLConfirmarCLave.Location = New System.Drawing.Point(14, 104)
         Me.LBLConfirmarCLave.Name = "LBLConfirmarCLave"
@@ -283,6 +294,7 @@ Partial Class FUsuario
         'LBLCLave
         '
         Me.LBLCLave.AutoSize = True
+        Me.LBLCLave.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCLave.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCLave.Location = New System.Drawing.Point(14, 69)
         Me.LBLCLave.Name = "LBLCLave"
@@ -293,6 +305,7 @@ Partial Class FUsuario
         'LBLSeudonimo
         '
         Me.LBLSeudonimo.AutoSize = True
+        Me.LBLSeudonimo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLSeudonimo.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLSeudonimo.Location = New System.Drawing.Point(14, 32)
         Me.LBLSeudonimo.Name = "LBLSeudonimo"
@@ -302,18 +315,20 @@ Partial Class FUsuario
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Enabled = False
-        Me.TXTBuscar.Location = New System.Drawing.Point(615, 214)
+        Me.TXTBuscar.Location = New System.Drawing.Point(591, 214)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(198, 20)
+        Me.TXTBuscar.Size = New System.Drawing.Size(223, 20)
         Me.TXTBuscar.TabIndex = 9
         '
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(620, 191)
+        Me.LBLBuscar.Location = New System.Drawing.Point(616, 191)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(181, 20)
@@ -322,22 +337,23 @@ Partial Class FUsuario
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNEliminar)
         Me.GroupBox1.Controls.Add(Me.BTNModificar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Controls.Add(Me.BTNNuevo)
-        Me.GroupBox1.Location = New System.Drawing.Point(719, 268)
+        Me.GroupBox1.Location = New System.Drawing.Point(728, 268)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(111, 215)
+        Me.GroupBox1.Size = New System.Drawing.Size(86, 215)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(21, 182)
+        Me.BTNSalir.Location = New System.Drawing.Point(6, 182)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(75, 27)
         Me.BTNSalir.TabIndex = 11
@@ -348,7 +364,7 @@ Partial Class FUsuario
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(21, 147)
+        Me.BTNCancelar.Location = New System.Drawing.Point(6, 147)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(75, 29)
         Me.BTNCancelar.TabIndex = 10
@@ -358,7 +374,7 @@ Partial Class FUsuario
         'BTNEliminar
         '
         Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEliminar.Location = New System.Drawing.Point(21, 114)
+        Me.BTNEliminar.Location = New System.Drawing.Point(6, 114)
         Me.BTNEliminar.Name = "BTNEliminar"
         Me.BTNEliminar.Size = New System.Drawing.Size(75, 27)
         Me.BTNEliminar.TabIndex = 9
@@ -368,7 +384,7 @@ Partial Class FUsuario
         'BTNModificar
         '
         Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNModificar.Location = New System.Drawing.Point(21, 80)
+        Me.BTNModificar.Location = New System.Drawing.Point(6, 80)
         Me.BTNModificar.Name = "BTNModificar"
         Me.BTNModificar.Size = New System.Drawing.Size(75, 28)
         Me.BTNModificar.TabIndex = 7
@@ -378,7 +394,7 @@ Partial Class FUsuario
         'BTNGuardar
         '
         Me.BTNGuardar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNGuardar.Location = New System.Drawing.Point(21, 47)
+        Me.BTNGuardar.Location = New System.Drawing.Point(6, 47)
         Me.BTNGuardar.Name = "BTNGuardar"
         Me.BTNGuardar.Size = New System.Drawing.Size(75, 27)
         Me.BTNGuardar.TabIndex = 7
@@ -388,7 +404,7 @@ Partial Class FUsuario
         'BTNNuevo
         '
         Me.BTNNuevo.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNNuevo.Location = New System.Drawing.Point(21, 16)
+        Me.BTNNuevo.Location = New System.Drawing.Point(6, 16)
         Me.BTNNuevo.Name = "BTNNuevo"
         Me.BTNNuevo.Size = New System.Drawing.Size(75, 25)
         Me.BTNNuevo.TabIndex = 6
@@ -399,7 +415,9 @@ Partial Class FUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(842, 486)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(821, 486)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
@@ -407,7 +425,7 @@ Partial Class FUsuario
         Me.Controls.Add(Me.GBUsuario)
         Me.Name = "FUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Módulo Usuario - Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO USUARIO"
         Me.GBUsuario.ResumeLayout(False)
         CType(Me.DGVUsuario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBNuevoUsuario.ResumeLayout(False)

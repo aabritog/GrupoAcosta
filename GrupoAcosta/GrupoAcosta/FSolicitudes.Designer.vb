@@ -50,6 +50,7 @@ Partial Class FSolicitudes
         'GBNuevaSolicitud
         '
         Me.GBNuevaSolicitud.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.GBNuevaSolicitud.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBNuevaSolicitud.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBNuevaSolicitud.Controls.Add(Me.LBLValidarCliente)
         Me.GBNuevaSolicitud.Controls.Add(Me.LBCamposObligatorios)
@@ -67,6 +68,7 @@ Partial Class FSolicitudes
         'LBCamposObligatoriosAst
         '
         Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
         Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(533, 72)
@@ -78,6 +80,7 @@ Partial Class FSolicitudes
         'LBLValidarCliente
         '
         Me.LBLValidarCliente.AutoSize = True
+        Me.LBLValidarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarCliente.ForeColor = System.Drawing.Color.Red
         Me.LBLValidarCliente.Location = New System.Drawing.Point(533, 30)
@@ -89,6 +92,7 @@ Partial Class FSolicitudes
         'LBCamposObligatorios
         '
         Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
         Me.LBCamposObligatorios.Location = New System.Drawing.Point(396, 72)
@@ -123,6 +127,7 @@ Partial Class FSolicitudes
         'LBLCliente
         '
         Me.LBLCliente.AutoSize = True
+        Me.LBLCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCliente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCliente.Location = New System.Drawing.Point(15, 35)
         Me.LBLCliente.Name = "LBLCliente"
@@ -203,6 +208,7 @@ Partial Class FSolicitudes
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLBuscar.Location = New System.Drawing.Point(709, 235)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -213,7 +219,7 @@ Partial Class FSolicitudes
         '
         'TXTBuscar
         '
-        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Location = New System.Drawing.Point(655, 267)
         Me.TXTBuscar.Name = "TXTBuscar"
@@ -223,6 +229,7 @@ Partial Class FSolicitudes
         'GBSolicitudes
         '
         Me.GBSolicitudes.BackColor = System.Drawing.Color.DarkKhaki
+        Me.GBSolicitudes.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBSolicitudes.Controls.Add(Me.DGVSolicitudes)
         Me.GBSolicitudes.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBSolicitudes.Location = New System.Drawing.Point(12, 133)
@@ -234,7 +241,7 @@ Partial Class FSolicitudes
         '
         'DGVSolicitudes
         '
-        Me.DGVSolicitudes.BackgroundColor = System.Drawing.Color.DarkKhaki
+        Me.DGVSolicitudes.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVSolicitudes.Location = New System.Drawing.Point(6, 24)
         Me.DGVSolicitudes.Name = "DGVSolicitudes"
@@ -243,19 +250,19 @@ Partial Class FSolicitudes
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Controls.Add(Me.BTNEliminar)
         Me.GroupBox1.Controls.Add(Me.BTNModificar)
-        Me.GroupBox1.Location = New System.Drawing.Point(88, 421)
+        Me.GroupBox1.Location = New System.Drawing.Point(82, 410)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(514, 56)
         Me.GroupBox1.TabIndex = 35
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
         '
         'BNTReporteSolicitudes
         '
@@ -273,7 +280,7 @@ Partial Class FSolicitudes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
-        Me.ClientSize = New System.Drawing.Size(850, 484)
+        Me.ClientSize = New System.Drawing.Size(850, 472)
         Me.Controls.Add(Me.BNTReporteSolicitudes)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBSolicitudes)

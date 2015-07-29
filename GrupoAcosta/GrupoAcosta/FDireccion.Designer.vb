@@ -23,7 +23,9 @@ Partial Class FDireccion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBNuevaDireccion = New System.Windows.Forms.GroupBox()
+        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.LBLValidarCliente = New System.Windows.Forms.Label()
+        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
         Me.TXTCliente = New System.Windows.Forms.TextBox()
         Me.CMBCliente = New System.Windows.Forms.ComboBox()
         Me.LBLValidarDireccion = New System.Windows.Forms.Label()
@@ -49,7 +51,10 @@ Partial Class FDireccion
         '
         'GBNuevaDireccion
         '
+        Me.GBNuevaDireccion.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBNuevaDireccion.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBNuevaDireccion.Controls.Add(Me.LBLValidarCliente)
+        Me.GBNuevaDireccion.Controls.Add(Me.LBCamposObligatorios)
         Me.GBNuevaDireccion.Controls.Add(Me.TXTCliente)
         Me.GBNuevaDireccion.Controls.Add(Me.CMBCliente)
         Me.GBNuevaDireccion.Controls.Add(Me.LBLValidarDireccion)
@@ -59,28 +64,53 @@ Partial Class FDireccion
         Me.GBNuevaDireccion.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBNuevaDireccion.Location = New System.Drawing.Point(12, 12)
         Me.GBNuevaDireccion.Name = "GBNuevaDireccion"
-        Me.GBNuevaDireccion.Size = New System.Drawing.Size(450, 112)
+        Me.GBNuevaDireccion.Size = New System.Drawing.Size(533, 137)
         Me.GBNuevaDireccion.TabIndex = 2
         Me.GBNuevaDireccion.TabStop = False
         Me.GBNuevaDireccion.Text = "Nueva Direccion"
         '
+        'LBCamposObligatoriosAst
+        '
+        Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(446, 109)
+        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
+        Me.LBCamposObligatoriosAst.TabIndex = 48
+        Me.LBCamposObligatoriosAst.Text = "*"
+        '
         'LBLValidarCliente
         '
         Me.LBLValidarCliente.AutoSize = True
+        Me.LBLValidarCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarCliente.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarCliente.Location = New System.Drawing.Point(326, 32)
+        Me.LBLValidarCliente.Location = New System.Drawing.Point(444, 30)
         Me.LBLValidarCliente.Name = "LBLValidarCliente"
         Me.LBLValidarCliente.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarCliente.TabIndex = 33
         Me.LBLValidarCliente.Text = "*"
+        '
+        'LBCamposObligatorios
+        '
+        Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(313, 109)
+        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
+        Me.LBCamposObligatorios.TabIndex = 47
+        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
         '
         'TXTCliente
         '
         Me.TXTCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTCliente.Enabled = False
         Me.TXTCliente.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTCliente.Location = New System.Drawing.Point(361, 32)
+        Me.TXTCliente.Location = New System.Drawing.Point(461, 53)
         Me.TXTCliente.Name = "TXTCliente"
         Me.TXTCliente.Size = New System.Drawing.Size(66, 20)
         Me.TXTCliente.TabIndex = 32
@@ -94,15 +124,16 @@ Partial Class FDireccion
         Me.CMBCliente.FormattingEnabled = True
         Me.CMBCliente.Location = New System.Drawing.Point(176, 30)
         Me.CMBCliente.Name = "CMBCliente"
-        Me.CMBCliente.Size = New System.Drawing.Size(121, 25)
+        Me.CMBCliente.Size = New System.Drawing.Size(262, 25)
         Me.CMBCliente.TabIndex = 31
         '
         'LBLValidarDireccion
         '
         Me.LBLValidarDireccion.AutoSize = True
+        Me.LBLValidarDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarDireccion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarDireccion.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDireccion.Location = New System.Drawing.Point(326, 80)
+        Me.LBLValidarDireccion.Location = New System.Drawing.Point(444, 76)
         Me.LBLValidarDireccion.Name = "LBLValidarDireccion"
         Me.LBLValidarDireccion.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarDireccion.TabIndex = 28
@@ -110,45 +141,49 @@ Partial Class FDireccion
         '
         'TXTDireccion
         '
+        Me.TXTDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTDireccion.Enabled = False
         Me.TXTDireccion.Location = New System.Drawing.Point(176, 76)
         Me.TXTDireccion.MaxLength = 30
         Me.TXTDireccion.Name = "TXTDireccion"
-        Me.TXTDireccion.Size = New System.Drawing.Size(121, 25)
+        Me.TXTDireccion.Size = New System.Drawing.Size(262, 25)
         Me.TXTDireccion.TabIndex = 5
         '
         'LBLCliente
         '
         Me.LBLCliente.AutoSize = True
+        Me.LBLCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCliente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCliente.Location = New System.Drawing.Point(15, 35)
         Me.LBLCliente.Name = "LBLCliente"
-        Me.LBLCliente.Size = New System.Drawing.Size(48, 20)
+        Me.LBLCliente.Size = New System.Drawing.Size(51, 20)
         Me.LBLCliente.TabIndex = 4
-        Me.LBLCliente.Text = "Cliente"
+        Me.LBLCliente.Text = "Cliente:"
         '
         'LBLDireccion
         '
         Me.LBLDireccion.AutoSize = True
+        Me.LBLDireccion.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLDireccion.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLDireccion.Location = New System.Drawing.Point(15, 79)
         Me.LBLDireccion.Name = "LBLDireccion"
-        Me.LBLDireccion.Size = New System.Drawing.Size(61, 20)
+        Me.LBLDireccion.Size = New System.Drawing.Size(64, 20)
         Me.LBLDireccion.TabIndex = 3
-        Me.LBLDireccion.Text = "Direccion"
+        Me.LBLDireccion.Text = "Direccion:"
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox2.Controls.Add(Me.BTNAgregar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNGuardar)
         Me.GroupBox2.Controls.Add(Me.BTNCancelar)
         Me.GroupBox2.Controls.Add(Me.BTNModificar)
         Me.GroupBox2.Controls.Add(Me.BTNEliminar)
-        Me.GroupBox2.Location = New System.Drawing.Point(479, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(551, 92)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(93, 254)
+        Me.GroupBox2.Size = New System.Drawing.Size(85, 254)
         Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
         '
@@ -225,8 +260,9 @@ Partial Class FDireccion
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(27, 149)
+        Me.LBLBuscar.Location = New System.Drawing.Point(27, 166)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(123, 20)
@@ -235,43 +271,49 @@ Partial Class FDireccion
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(188, 149)
+        Me.TXTBuscar.Location = New System.Drawing.Point(188, 166)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(176, 20)
+        Me.TXTBuscar.Size = New System.Drawing.Size(262, 20)
         Me.TXTBuscar.TabIndex = 30
         '
         'GBCDireccionCliente
         '
+        Me.GBCDireccionCliente.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBCDireccionCliente.Controls.Add(Me.DGVDireccion)
         Me.GBCDireccionCliente.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBCDireccionCliente.Location = New System.Drawing.Point(12, 184)
+        Me.GBCDireccionCliente.Location = New System.Drawing.Point(12, 204)
         Me.GBCDireccionCliente.Name = "GBCDireccionCliente"
-        Me.GBCDireccionCliente.Size = New System.Drawing.Size(450, 206)
+        Me.GBCDireccionCliente.Size = New System.Drawing.Size(533, 206)
         Me.GBCDireccionCliente.TabIndex = 32
         Me.GBCDireccionCliente.TabStop = False
-        Me.GBCDireccionCliente.Text = "Direccion Clientes"
+        Me.GBCDireccionCliente.Text = "Clientes"
         '
         'DGVDireccion
         '
+        Me.DGVDireccion.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVDireccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVDireccion.Location = New System.Drawing.Point(6, 24)
         Me.DGVDireccion.Name = "DGVDireccion"
-        Me.DGVDireccion.Size = New System.Drawing.Size(433, 174)
+        Me.DGVDireccion.Size = New System.Drawing.Size(521, 174)
         Me.DGVDireccion.TabIndex = 23
         '
         'FDireccion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 393)
+        Me.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(648, 415)
         Me.Controls.Add(Me.GBCDireccionCliente)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GBNuevaDireccion)
         Me.Name = "FDireccion"
-        Me.Text = "FDireccion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO DIRECCION-CLIENTE"
         Me.GBNuevaDireccion.ResumeLayout(False)
         Me.GBNuevaDireccion.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -300,4 +342,6 @@ Partial Class FDireccion
     Friend WithEvents GBCDireccionCliente As System.Windows.Forms.GroupBox
     Friend WithEvents DGVDireccion As System.Windows.Forms.DataGridView
     Friend WithEvents LBLValidarCliente As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
 End Class

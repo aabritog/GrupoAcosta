@@ -23,7 +23,9 @@ Partial Class FProvincia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GBNuevaProvincia = New System.Windows.Forms.GroupBox()
+        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.LBLValidarProvincia = New System.Windows.Forms.Label()
+        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
         Me.TXTProvincia = New System.Windows.Forms.TextBox()
         Me.LBLProvincia = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -45,43 +47,73 @@ Partial Class FProvincia
         '
         'GBNuevaProvincia
         '
+        Me.GBNuevaProvincia.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBNuevaProvincia.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBNuevaProvincia.Controls.Add(Me.LBLValidarProvincia)
+        Me.GBNuevaProvincia.Controls.Add(Me.LBCamposObligatorios)
         Me.GBNuevaProvincia.Controls.Add(Me.TXTProvincia)
         Me.GBNuevaProvincia.Controls.Add(Me.LBLProvincia)
         Me.GBNuevaProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBNuevaProvincia.Location = New System.Drawing.Point(12, 12)
         Me.GBNuevaProvincia.Name = "GBNuevaProvincia"
-        Me.GBNuevaProvincia.Size = New System.Drawing.Size(353, 88)
+        Me.GBNuevaProvincia.Size = New System.Drawing.Size(450, 98)
         Me.GBNuevaProvincia.TabIndex = 2
         Me.GBNuevaProvincia.TabStop = False
         Me.GBNuevaProvincia.Text = "Nueva Provincia"
         '
+        'LBCamposObligatoriosAst
+        '
+        Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(419, 74)
+        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
+        Me.LBCamposObligatoriosAst.TabIndex = 48
+        Me.LBCamposObligatoriosAst.Text = "*"
+        '
         'LBLValidarProvincia
         '
         Me.LBLValidarProvincia.AutoSize = True
+        Me.LBLValidarProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarProvincia.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarProvincia.Location = New System.Drawing.Point(320, 42)
+        Me.LBLValidarProvincia.Location = New System.Drawing.Point(419, 41)
         Me.LBLValidarProvincia.Name = "LBLValidarProvincia"
         Me.LBLValidarProvincia.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarProvincia.TabIndex = 28
         Me.LBLValidarProvincia.Text = "*"
         '
+        'LBCamposObligatorios
+        '
+        Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(277, 74)
+        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
+        Me.LBCamposObligatorios.TabIndex = 47
+        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
+        '
         'TXTProvincia
         '
+        Me.TXTProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTProvincia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTProvincia.Enabled = False
-        Me.TXTProvincia.Location = New System.Drawing.Point(162, 37)
+        Me.TXTProvincia.Location = New System.Drawing.Point(153, 37)
         Me.TXTProvincia.MaxLength = 30
         Me.TXTProvincia.Name = "TXTProvincia"
-        Me.TXTProvincia.Size = New System.Drawing.Size(121, 25)
+        Me.TXTProvincia.Size = New System.Drawing.Size(249, 25)
         Me.TXTProvincia.TabIndex = 5
         '
         'LBLProvincia
         '
         Me.LBLProvincia.AutoSize = True
+        Me.LBLProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLProvincia.Location = New System.Drawing.Point(15, 42)
+        Me.LBLProvincia.Location = New System.Drawing.Point(15, 37)
         Me.LBLProvincia.Name = "LBLProvincia"
         Me.LBLProvincia.Size = New System.Drawing.Size(60, 20)
         Me.LBLProvincia.TabIndex = 3
@@ -89,15 +121,16 @@ Partial Class FProvincia
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox2.Controls.Add(Me.BTNAgregar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNGuardar)
         Me.GroupBox2.Controls.Add(Me.BTNCancelar)
         Me.GroupBox2.Controls.Add(Me.BTNModificar)
         Me.GroupBox2.Controls.Add(Me.BTNEliminar)
-        Me.GroupBox2.Location = New System.Drawing.Point(384, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(479, 57)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(93, 254)
+        Me.GroupBox2.Size = New System.Drawing.Size(86, 254)
         Me.GroupBox2.TabIndex = 24
         Me.GroupBox2.TabStop = False
         '
@@ -174,6 +207,7 @@ Partial Class FProvincia
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLBuscar.Location = New System.Drawing.Point(39, 126)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
@@ -184,43 +218,48 @@ Partial Class FProvincia
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Location = New System.Drawing.Point(174, 126)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(176, 20)
+        Me.TXTBuscar.Size = New System.Drawing.Size(240, 20)
         Me.TXTBuscar.TabIndex = 31
         '
         'GBCProvincia
         '
+        Me.GBCProvincia.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBCProvincia.Controls.Add(Me.DGVProvincia)
         Me.GBCProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBCProvincia.Location = New System.Drawing.Point(12, 164)
         Me.GBCProvincia.Name = "GBCProvincia"
-        Me.GBCProvincia.Size = New System.Drawing.Size(366, 136)
+        Me.GBCProvincia.Size = New System.Drawing.Size(450, 156)
         Me.GBCProvincia.TabIndex = 33
         Me.GBCProvincia.TabStop = False
         Me.GBCProvincia.Text = "Provincias en el Sistema"
         '
         'DGVProvincia
         '
+        Me.DGVProvincia.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVProvincia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVProvincia.Location = New System.Drawing.Point(6, 24)
         Me.DGVProvincia.Name = "DGVProvincia"
-        Me.DGVProvincia.Size = New System.Drawing.Size(347, 102)
+        Me.DGVProvincia.Size = New System.Drawing.Size(438, 123)
         Me.DGVProvincia.TabIndex = 23
         '
         'FProvincia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(482, 307)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(574, 323)
         Me.Controls.Add(Me.GBCProvincia)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GBNuevaProvincia)
         Me.Name = "FProvincia"
-        Me.Text = "Módulo Provincia-Grupo Acosta"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PROVINCIA"
         Me.GBNuevaProvincia.ResumeLayout(False)
         Me.GBNuevaProvincia.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -245,4 +284,6 @@ Partial Class FProvincia
     Friend WithEvents TXTBuscar As System.Windows.Forms.TextBox
     Friend WithEvents GBCProvincia As System.Windows.Forms.GroupBox
     Friend WithEvents DGVProvincia As System.Windows.Forms.DataGridView
+    Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
 End Class

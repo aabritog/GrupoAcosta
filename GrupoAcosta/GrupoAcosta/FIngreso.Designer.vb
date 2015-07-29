@@ -133,6 +133,7 @@ Partial Class FIngreso
         'LBClaveObligatorio
         '
         Me.LBClaveObligatorio.AutoSize = True
+        Me.LBClaveObligatorio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBClaveObligatorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBClaveObligatorio.ForeColor = System.Drawing.Color.Red
         Me.LBClaveObligatorio.Location = New System.Drawing.Point(234, 66)
@@ -144,6 +145,7 @@ Partial Class FIngreso
         'LBAliasObligatorio
         '
         Me.LBAliasObligatorio.AutoSize = True
+        Me.LBAliasObligatorio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBAliasObligatorio.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBAliasObligatorio.ForeColor = System.Drawing.Color.Red
         Me.LBAliasObligatorio.Location = New System.Drawing.Point(234, 28)
@@ -188,6 +190,7 @@ Partial Class FIngreso
         'Label10
         '
         Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
         Me.Label10.Location = New System.Drawing.Point(118, 10)
@@ -199,6 +202,7 @@ Partial Class FIngreso
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Location = New System.Drawing.Point(17, 11)
         Me.Label9.Name = "Label9"

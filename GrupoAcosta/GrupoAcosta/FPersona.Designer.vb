@@ -87,6 +87,7 @@ Partial Class FPersona
         'GBPersona
         '
         Me.GBPersona.BackColor = System.Drawing.Color.DarkKhaki
+        Me.GBPersona.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBPersona.Controls.Add(Me.DGVPersona)
         Me.GBPersona.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBPersona.Location = New System.Drawing.Point(14, 426)
@@ -100,7 +101,7 @@ Partial Class FPersona
         '
         'DGVPersona
         '
-        Me.DGVPersona.BackgroundColor = System.Drawing.Color.DarkKhaki
+        Me.DGVPersona.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVPersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVPersona.Location = New System.Drawing.Point(8, 21)
         Me.DGVPersona.Margin = New System.Windows.Forms.Padding(4)
@@ -188,21 +189,22 @@ Partial Class FPersona
         '
         'TXTBuscar
         '
-        Me.TXTBuscar.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTBuscar.Location = New System.Drawing.Point(484, 392)
+        Me.TXTBuscar.Location = New System.Drawing.Point(519, 389)
         Me.TXTBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(242, 25)
+        Me.TXTBuscar.Size = New System.Drawing.Size(252, 25)
         Me.TXTBuscar.TabIndex = 4
         Me.TTFPersona.SetToolTip(Me.TXTBuscar, "Escriba aquí para buscar una persona del listado")
         '
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(503, 368)
+        Me.LBLBuscar.Location = New System.Drawing.Point(554, 369)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(186, 20)
@@ -212,6 +214,7 @@ Partial Class FPersona
         'GBNuevoRegistro
         '
         Me.GBNuevoRegistro.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.GBNuevoRegistro.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBNuevoRegistro.Controls.Add(Me.LVTelefonos)
         Me.GBNuevoRegistro.Controls.Add(Me.Label1)
         Me.GBNuevoRegistro.Controls.Add(Me.BTNAgregarTelefono)
@@ -250,7 +253,7 @@ Partial Class FPersona
         Me.GBNuevoRegistro.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBNuevoRegistro.Location = New System.Drawing.Point(14, 11)
         Me.GBNuevoRegistro.Name = "GBNuevoRegistro"
-        Me.GBNuevoRegistro.Size = New System.Drawing.Size(463, 407)
+        Me.GBNuevoRegistro.Size = New System.Drawing.Size(498, 407)
         Me.GBNuevoRegistro.TabIndex = 5
         Me.GBNuevoRegistro.TabStop = False
         Me.GBNuevoRegistro.Text = "Registrar nueva persona"
@@ -262,7 +265,7 @@ Partial Class FPersona
         Me.LVTelefonos.Location = New System.Drawing.Point(271, 252)
         Me.LVTelefonos.MultiSelect = False
         Me.LVTelefonos.Name = "LVTelefonos"
-        Me.LVTelefonos.Size = New System.Drawing.Size(135, 29)
+        Me.LVTelefonos.Size = New System.Drawing.Size(177, 29)
         Me.LVTelefonos.TabIndex = 17
         Me.LVTelefonos.UseCompatibleStateImageBehavior = False
         Me.LVTelefonos.Visible = False
@@ -270,6 +273,7 @@ Partial Class FPersona
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(16, 261)
         Me.Label1.Name = "Label1"
@@ -293,9 +297,10 @@ Partial Class FPersona
         'LBCamposObligatoriosAst
         '
         Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(445, 388)
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(456, 388)
         Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
         Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
         Me.LBCamposObligatoriosAst.TabIndex = 18
@@ -315,6 +320,7 @@ Partial Class FPersona
         'LBCamposObligatorios
         '
         Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
         Me.LBCamposObligatorios.Location = New System.Drawing.Point(323, 386)
@@ -326,9 +332,10 @@ Partial Class FPersona
         'LBValidarCargo
         '
         Me.LBValidarCargo.AutoSize = True
+        Me.LBValidarCargo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarCargo.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarCargo.Location = New System.Drawing.Point(412, 359)
+        Me.LBValidarCargo.Location = New System.Drawing.Point(454, 353)
         Me.LBValidarCargo.Name = "LBValidarCargo"
         Me.LBValidarCargo.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarCargo.TabIndex = 29
@@ -337,9 +344,10 @@ Partial Class FPersona
         'LBValidarDpto
         '
         Me.LBValidarDpto.AutoSize = True
+        Me.LBValidarDpto.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarDpto.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarDpto.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarDpto.Location = New System.Drawing.Point(412, 326)
+        Me.LBValidarDpto.Location = New System.Drawing.Point(454, 318)
         Me.LBValidarDpto.Name = "LBValidarDpto"
         Me.LBValidarDpto.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarDpto.TabIndex = 28
@@ -348,9 +356,10 @@ Partial Class FPersona
         'LBValidarSexo
         '
         Me.LBValidarSexo.AutoSize = True
+        Me.LBValidarSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarSexo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarSexo.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarSexo.Location = New System.Drawing.Point(412, 291)
+        Me.LBValidarSexo.Location = New System.Drawing.Point(454, 285)
         Me.LBValidarSexo.Name = "LBValidarSexo"
         Me.LBValidarSexo.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarSexo.TabIndex = 27
@@ -359,9 +368,10 @@ Partial Class FPersona
         'LBValidarFechaNacimiento
         '
         Me.LBValidarFechaNacimiento.AutoSize = True
+        Me.LBValidarFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarFechaNacimiento.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarFechaNacimiento.Location = New System.Drawing.Point(412, 196)
+        Me.LBValidarFechaNacimiento.Location = New System.Drawing.Point(454, 190)
         Me.LBValidarFechaNacimiento.Name = "LBValidarFechaNacimiento"
         Me.LBValidarFechaNacimiento.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarFechaNacimiento.TabIndex = 25
@@ -370,9 +380,10 @@ Partial Class FPersona
         'LBValidarCi
         '
         Me.LBValidarCi.AutoSize = True
+        Me.LBValidarCi.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarCi.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarCi.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarCi.Location = New System.Drawing.Point(412, 164)
+        Me.LBValidarCi.Location = New System.Drawing.Point(454, 159)
         Me.LBValidarCi.Name = "LBValidarCi"
         Me.LBValidarCi.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarCi.TabIndex = 24
@@ -381,9 +392,10 @@ Partial Class FPersona
         'LBValidarApellido2
         '
         Me.LBValidarApellido2.AutoSize = True
+        Me.LBValidarApellido2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarApellido2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarApellido2.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarApellido2.Location = New System.Drawing.Point(412, 132)
+        Me.LBValidarApellido2.Location = New System.Drawing.Point(454, 128)
         Me.LBValidarApellido2.Name = "LBValidarApellido2"
         Me.LBValidarApellido2.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarApellido2.TabIndex = 23
@@ -392,9 +404,10 @@ Partial Class FPersona
         'LBValidarApellido1
         '
         Me.LBValidarApellido1.AutoSize = True
+        Me.LBValidarApellido1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarApellido1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarApellido1.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarApellido1.Location = New System.Drawing.Point(412, 98)
+        Me.LBValidarApellido1.Location = New System.Drawing.Point(454, 90)
         Me.LBValidarApellido1.Name = "LBValidarApellido1"
         Me.LBValidarApellido1.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarApellido1.TabIndex = 22
@@ -403,9 +416,10 @@ Partial Class FPersona
         'LBValidarNombre1
         '
         Me.LBValidarNombre1.AutoSize = True
+        Me.LBValidarNombre1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBValidarNombre1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBValidarNombre1.ForeColor = System.Drawing.Color.Red
-        Me.LBValidarNombre1.Location = New System.Drawing.Point(412, 33)
+        Me.LBValidarNombre1.Location = New System.Drawing.Point(454, 26)
         Me.LBValidarNombre1.Name = "LBValidarNombre1"
         Me.LBValidarNombre1.Size = New System.Drawing.Size(14, 18)
         Me.LBValidarNombre1.TabIndex = 19
@@ -419,13 +433,14 @@ Partial Class FPersona
         Me.CMBDepartamento.FormattingEnabled = True
         Me.CMBDepartamento.Location = New System.Drawing.Point(190, 318)
         Me.CMBDepartamento.Name = "CMBDepartamento"
-        Me.CMBDepartamento.Size = New System.Drawing.Size(216, 25)
+        Me.CMBDepartamento.Size = New System.Drawing.Size(258, 25)
         Me.CMBDepartamento.TabIndex = 20
         Me.TTFPersona.SetToolTip(Me.CMBDepartamento, "Seleccione aquí para seleccionar el departamento al cual pertenece la persona")
         '
         'LBLDepartamento
         '
         Me.LBLDepartamento.AutoSize = True
+        Me.LBLDepartamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLDepartamento.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLDepartamento.Location = New System.Drawing.Point(16, 327)
         Me.LBLDepartamento.Name = "LBLDepartamento"
@@ -441,7 +456,7 @@ Partial Class FPersona
         Me.CMBCargo.FormattingEnabled = True
         Me.CMBCargo.Location = New System.Drawing.Point(190, 351)
         Me.CMBCargo.Name = "CMBCargo"
-        Me.CMBCargo.Size = New System.Drawing.Size(216, 25)
+        Me.CMBCargo.Size = New System.Drawing.Size(258, 25)
         Me.CMBCargo.TabIndex = 21
         Me.TTFPersona.SetToolTip(Me.CMBCargo, "Seleccione aquí para seleccionar el cargo que tiene asignado la persona dentro en" & _
                 " la empresa")
@@ -455,7 +470,7 @@ Partial Class FPersona
         Me.CMBSexo.Items.AddRange(New Object() {"", "Femenino", "Masculino"})
         Me.CMBSexo.Location = New System.Drawing.Point(190, 284)
         Me.CMBSexo.Name = "CMBSexo"
-        Me.CMBSexo.Size = New System.Drawing.Size(216, 25)
+        Me.CMBSexo.Size = New System.Drawing.Size(258, 25)
         Me.CMBSexo.TabIndex = 17
         Me.TTFPersona.SetToolTip(Me.CMBSexo, "Seleccione aquí para seleccionar el sexo de la persona")
         '
@@ -467,7 +482,7 @@ Partial Class FPersona
         Me.TXTCorreo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTCorreo.Location = New System.Drawing.Point(190, 224)
         Me.TXTCorreo.Name = "TXTCorreo"
-        Me.TXTCorreo.Size = New System.Drawing.Size(216, 25)
+        Me.TXTCorreo.Size = New System.Drawing.Size(258, 25)
         Me.TXTCorreo.TabIndex = 16
         '
         'DTPFecha
@@ -479,7 +494,7 @@ Partial Class FPersona
         Me.DTPFecha.MaxDate = New Date(2050, 12, 31, 0, 0, 0, 0)
         Me.DTPFecha.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
         Me.DTPFecha.Name = "DTPFecha"
-        Me.DTPFecha.Size = New System.Drawing.Size(216, 25)
+        Me.DTPFecha.Size = New System.Drawing.Size(258, 25)
         Me.DTPFecha.TabIndex = 15
         Me.TTFPersona.SetToolTip(Me.DTPFecha, "Seleccione/escriba aquí la fecha de nacimiento de la persona a registrar")
         Me.DTPFecha.Value = New Date(1940, 1, 1, 0, 0, 0, 0)
@@ -491,7 +506,7 @@ Partial Class FPersona
         Me.TXTCI.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTCI.Location = New System.Drawing.Point(246, 157)
         Me.TXTCI.Name = "TXTCI"
-        Me.TXTCI.Size = New System.Drawing.Size(160, 25)
+        Me.TXTCI.Size = New System.Drawing.Size(202, 25)
         Me.TXTCI.TabIndex = 14
         '
         'CMBNacionalidad
@@ -515,7 +530,7 @@ Partial Class FPersona
         Me.TXTApellido2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTApellido2.Location = New System.Drawing.Point(190, 125)
         Me.TXTApellido2.Name = "TXTApellido2"
-        Me.TXTApellido2.Size = New System.Drawing.Size(216, 25)
+        Me.TXTApellido2.Size = New System.Drawing.Size(258, 25)
         Me.TXTApellido2.TabIndex = 12
         '
         'TXTApellido1
@@ -526,7 +541,7 @@ Partial Class FPersona
         Me.TXTApellido1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTApellido1.Location = New System.Drawing.Point(190, 91)
         Me.TXTApellido1.Name = "TXTApellido1"
-        Me.TXTApellido1.Size = New System.Drawing.Size(216, 25)
+        Me.TXTApellido1.Size = New System.Drawing.Size(258, 25)
         Me.TXTApellido1.TabIndex = 3
         '
         'TXTNombre2
@@ -538,7 +553,7 @@ Partial Class FPersona
         Me.TXTNombre2.Location = New System.Drawing.Point(190, 58)
         Me.TXTNombre2.MaxLength = 30
         Me.TXTNombre2.Name = "TXTNombre2"
-        Me.TXTNombre2.Size = New System.Drawing.Size(216, 25)
+        Me.TXTNombre2.Size = New System.Drawing.Size(258, 25)
         Me.TXTNombre2.TabIndex = 2
         '
         'TXTNombre1
@@ -550,12 +565,13 @@ Partial Class FPersona
         Me.TXTNombre1.Location = New System.Drawing.Point(190, 26)
         Me.TXTNombre1.MaxLength = 30
         Me.TXTNombre1.Name = "TXTNombre1"
-        Me.TXTNombre1.Size = New System.Drawing.Size(216, 25)
+        Me.TXTNombre1.Size = New System.Drawing.Size(258, 25)
         Me.TXTNombre1.TabIndex = 1
         '
         'LBLCargo
         '
         Me.LBLCargo.AutoSize = True
+        Me.LBLCargo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCargo.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCargo.Location = New System.Drawing.Point(16, 360)
         Me.LBLCargo.Name = "LBLCargo"
@@ -566,6 +582,7 @@ Partial Class FPersona
         'LBLSexo
         '
         Me.LBLSexo.AutoSize = True
+        Me.LBLSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLSexo.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLSexo.Location = New System.Drawing.Point(16, 293)
         Me.LBLSexo.Name = "LBLSexo"
@@ -576,6 +593,7 @@ Partial Class FPersona
         'LBLCorreo
         '
         Me.LBLCorreo.AutoSize = True
+        Me.LBLCorreo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCorreo.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCorreo.Location = New System.Drawing.Point(16, 232)
         Me.LBLCorreo.Name = "LBLCorreo"
@@ -586,6 +604,7 @@ Partial Class FPersona
         'LBLFecha
         '
         Me.LBLFecha.AutoSize = True
+        Me.LBLFecha.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLFecha.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLFecha.Location = New System.Drawing.Point(16, 199)
         Me.LBLFecha.Name = "LBLFecha"
@@ -596,6 +615,7 @@ Partial Class FPersona
         'LBLCI
         '
         Me.LBLCI.AutoSize = True
+        Me.LBLCI.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLCI.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLCI.Location = New System.Drawing.Point(16, 165)
         Me.LBLCI.Name = "LBLCI"
@@ -606,6 +626,7 @@ Partial Class FPersona
         'LBLApellido2
         '
         Me.LBLApellido2.AutoSize = True
+        Me.LBLApellido2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLApellido2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLApellido2.Location = New System.Drawing.Point(15, 133)
         Me.LBLApellido2.Name = "LBLApellido2"
@@ -616,6 +637,7 @@ Partial Class FPersona
         'LBLNombre2
         '
         Me.LBLNombre2.AutoSize = True
+        Me.LBLNombre2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLNombre2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLNombre2.Location = New System.Drawing.Point(16, 66)
         Me.LBLNombre2.Name = "LBLNombre2"
@@ -626,6 +648,7 @@ Partial Class FPersona
         'LBLApellido1
         '
         Me.LBLApellido1.AutoSize = True
+        Me.LBLApellido1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLApellido1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLApellido1.Location = New System.Drawing.Point(16, 99)
         Me.LBLApellido1.Name = "LBLApellido1"
@@ -636,6 +659,7 @@ Partial Class FPersona
         'LBLNombre1
         '
         Me.LBLNombre1.AutoSize = True
+        Me.LBLNombre1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLNombre1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLNombre1.Location = New System.Drawing.Point(16, 34)
         Me.LBLNombre1.Name = "LBLNombre1"
@@ -645,7 +669,8 @@ Partial Class FPersona
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.PaleGoldenrod
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
@@ -653,7 +678,7 @@ Partial Class FPersona
         Me.GroupBox1.Controls.Add(Me.BTNEliminar)
         Me.GroupBox1.Controls.Add(Me.BTNModificar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(770, 344)
+        Me.GroupBox1.Location = New System.Drawing.Point(591, 77)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(98, 259)
         Me.GroupBox1.TabIndex = 6
@@ -664,7 +689,7 @@ Partial Class FPersona
         Me.TXTFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTFechaNacimiento.Enabled = False
         Me.TXTFechaNacimiento.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTFechaNacimiento.Location = New System.Drawing.Point(480, 207)
+        Me.TXTFechaNacimiento.Location = New System.Drawing.Point(519, 202)
         Me.TXTFechaNacimiento.Name = "TXTFechaNacimiento"
         Me.TXTFechaNacimiento.Size = New System.Drawing.Size(66, 20)
         Me.TXTFechaNacimiento.TabIndex = 8
@@ -675,7 +700,7 @@ Partial Class FPersona
         Me.TXTCargo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTCargo.Enabled = False
         Me.TXTCargo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTCargo.Location = New System.Drawing.Point(483, 344)
+        Me.TXTCargo.Location = New System.Drawing.Point(519, 338)
         Me.TXTCargo.Name = "TXTCargo"
         Me.TXTCargo.Size = New System.Drawing.Size(36, 20)
         Me.TXTCargo.TabIndex = 10
@@ -686,7 +711,7 @@ Partial Class FPersona
         Me.TXTSexo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTSexo.Enabled = False
         Me.TXTSexo.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSexo.Location = New System.Drawing.Point(483, 274)
+        Me.TXTSexo.Location = New System.Drawing.Point(519, 274)
         Me.TXTSexo.Name = "TXTSexo"
         Me.TXTSexo.Size = New System.Drawing.Size(66, 20)
         Me.TXTSexo.TabIndex = 11
@@ -697,7 +722,7 @@ Partial Class FPersona
         Me.TXTDepartamento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTDepartamento.Enabled = False
         Me.TXTDepartamento.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTDepartamento.Location = New System.Drawing.Point(483, 310)
+        Me.TXTDepartamento.Location = New System.Drawing.Point(519, 304)
         Me.TXTDepartamento.Name = "TXTDepartamento"
         Me.TXTDepartamento.Size = New System.Drawing.Size(36, 20)
         Me.TXTDepartamento.TabIndex = 12
@@ -708,7 +733,7 @@ Partial Class FPersona
         Me.TXTNacionalidad.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTNacionalidad.Enabled = False
         Me.TXTNacionalidad.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTNacionalidad.Location = New System.Drawing.Point(480, 173)
+        Me.TXTNacionalidad.Location = New System.Drawing.Point(519, 171)
         Me.TXTNacionalidad.Name = "TXTNacionalidad"
         Me.TXTNacionalidad.Size = New System.Drawing.Size(36, 20)
         Me.TXTNacionalidad.TabIndex = 13
@@ -718,9 +743,9 @@ Partial Class FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
-        Me.ClientSize = New System.Drawing.Size(880, 615)
+        Me.ClientSize = New System.Drawing.Size(774, 615)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)
         Me.Controls.Add(Me.TXTSexo)

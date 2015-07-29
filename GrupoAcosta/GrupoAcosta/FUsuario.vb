@@ -144,15 +144,14 @@ Public Class FUsuario
 
         BTNPersona.Enabled = True
 
-        TXTSeudonimo.Enabled = True
-        TXTClave.Enabled = True
-        TXTConfirmarClave.Enabled = True
+        TXTSeudonimo.Enabled = False
+        TXTClave.Enabled = False
+        TXTConfirmarClave.Enabled = False
+        CMBRol.Enabled = False
 
         If TXTClave.Text = TXTConfirmarClave.Text Then
 
             TXTBuscar.Enabled = False
-
-            CMBRol.Enabled = True
 
             BTNEliminar.Enabled = False
             BTNModificar.Enabled = False
@@ -422,6 +421,10 @@ Public Class FUsuario
 
         FPersonasUsuarios.ShowDialog()
 
+        TXTSeudonimo.Enabled = True
+        TXTClave.Enabled = True
+        TXTConfirmarClave.Enabled = True
+        CMBRol.Enabled = True
 
     End Sub
 
@@ -483,11 +486,11 @@ Public Class FUsuario
 
     End Sub
 
-    Private Sub TXTClave_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTClave.KeyPress
+    'Private Sub TXTClave_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTClave.KeyPress
 
-        SoloNumeros(e)
+    '    SoloNumeros(e)
 
-    End Sub
+    'End Sub
 
 
     Private Sub TXTConfirmarClave_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTConfirmarClave.KeyPress

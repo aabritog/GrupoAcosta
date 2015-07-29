@@ -40,10 +40,12 @@ Partial Class FEstado_Solicitud
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
         Me.GBEstadoSolicitud = New System.Windows.Forms.GroupBox()
         Me.DGVEstadoSolicitud = New System.Windows.Forms.DataGridView()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GBEstadoSolicitud.SuspendLayout()
         CType(Me.DGVEstadoSolicitud, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -189,7 +191,7 @@ Partial Class FEstado_Solicitud
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(309, 235)
+        Me.BTNSalir.Location = New System.Drawing.Point(23, 6)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -201,7 +203,7 @@ Partial Class FEstado_Solicitud
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(117, 235)
+        Me.BTNCancelar.Location = New System.Drawing.Point(118, 5)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -212,8 +214,9 @@ Partial Class FEstado_Solicitud
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
+        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(27, 133)
+        Me.LBLBuscar.Location = New System.Drawing.Point(71, 219)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(123, 20)
@@ -223,18 +226,20 @@ Partial Class FEstado_Solicitud
         '
         'TXTBuscar
         '
+        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(207, 135)
+        Me.TXTBuscar.Location = New System.Drawing.Point(16, 242)
         Me.TXTBuscar.Name = "TXTBuscar"
-        Me.TXTBuscar.Size = New System.Drawing.Size(176, 20)
+        Me.TXTBuscar.Size = New System.Drawing.Size(230, 20)
         Me.TXTBuscar.TabIndex = 33
         Me.TXTBuscar.Visible = False
         '
         'GBEstadoSolicitud
         '
+        Me.GBEstadoSolicitud.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBEstadoSolicitud.Controls.Add(Me.DGVEstadoSolicitud)
         Me.GBEstadoSolicitud.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBEstadoSolicitud.Location = New System.Drawing.Point(12, 12)
+        Me.GBEstadoSolicitud.Location = New System.Drawing.Point(10, 5)
         Me.GBEstadoSolicitud.Name = "GBEstadoSolicitud"
         Me.GBEstadoSolicitud.Size = New System.Drawing.Size(485, 206)
         Me.GBEstadoSolicitud.TabIndex = 35
@@ -243,32 +248,45 @@ Partial Class FEstado_Solicitud
         '
         'DGVEstadoSolicitud
         '
+        Me.DGVEstadoSolicitud.BackgroundColor = System.Drawing.Color.Olive
         Me.DGVEstadoSolicitud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVEstadoSolicitud.Location = New System.Drawing.Point(6, 24)
         Me.DGVEstadoSolicitud.Name = "DGVEstadoSolicitud"
         Me.DGVEstadoSolicitud.Size = New System.Drawing.Size(473, 174)
         Me.DGVEstadoSolicitud.TabIndex = 23
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.GroupBox2.Controls.Add(Me.BTNCancelar)
+        Me.GroupBox2.Controls.Add(Me.BTNSalir)
+        Me.GroupBox2.Location = New System.Drawing.Point(284, 219)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(211, 45)
+        Me.GroupBox2.TabIndex = 36
+        Me.GroupBox2.TabStop = False
+        '
         'FEstado_Solicitud
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(507, 273)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.ClientSize = New System.Drawing.Size(507, 267)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GBEstadoSolicitud)
         Me.Controls.Add(Me.LBLBuscar)
-        Me.Controls.Add(Me.BTNSalir)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.BTNCancelar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "FEstado_Solicitud"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Módulo Estado-Solicitud-Grupo Acosta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO ESTADO-SOLICITUD"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GBEstadoSolicitud.ResumeLayout(False)
         CType(Me.DGVEstadoSolicitud, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -291,4 +309,5 @@ Partial Class FEstado_Solicitud
     Friend WithEvents GBEstadoSolicitud As System.Windows.Forms.GroupBox
     Friend WithEvents DGVEstadoSolicitud As System.Windows.Forms.DataGridView
     Friend WithEvents LBLValidarDescripcioncorta As System.Windows.Forms.Label
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
 End Class

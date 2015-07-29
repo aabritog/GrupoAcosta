@@ -346,4 +346,12 @@ Public Class FCargo
     Private Sub TXTDescripcionCorta_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTDescripcionCorta.KeyPress
         objCGenerica.SoloLetra(e)
     End Sub
+
+    Private Sub GBCargos_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GBCargos.Enter
+
+    End Sub
+
+    Private Sub LBLBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBLBuscar.Click
+
+    End Sub
 End Class

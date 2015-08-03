@@ -231,7 +231,7 @@ Partial Class FEstado_Solicitud
         Me.TXTBuscar.Location = New System.Drawing.Point(16, 242)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(230, 20)
-        Me.TXTBuscar.TabIndex = 33
+        Me.TXTBuscar.TabIndex = 1
         Me.TXTBuscar.Visible = False
         '
         'GBEstadoSolicitud

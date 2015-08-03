@@ -452,4 +452,8 @@ Public Class FCliente
             LBLValidarProvincia.Visible = False
         End If
     End Sub
+
+    Private Sub LVTelefono_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LVTelefono.SelectedIndexChanged
+
+    End Sub
 End Class

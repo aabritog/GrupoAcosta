@@ -153,7 +153,7 @@ Partial Class FProducto
         Me.TXTBuscar.Location = New System.Drawing.Point(197, 159)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(260, 20)
-        Me.TXTBuscar.TabIndex = 33
+        Me.TXTBuscar.TabIndex = 3
         '
         'GBProducto
         '
@@ -207,7 +207,7 @@ Partial Class FProducto
         Me.TXTDescripcion.MaxLength = 30
         Me.TXTDescripcion.Name = "TXTDescripcion"
         Me.TXTDescripcion.Size = New System.Drawing.Size(260, 25)
-        Me.TXTDescripcion.TabIndex = 5
+        Me.TXTDescripcion.TabIndex = 1
         '
         'TXTDescripcionCorta
         '
@@ -218,7 +218,7 @@ Partial Class FProducto
         Me.TXTDescripcionCorta.MaxLength = 15
         Me.TXTDescripcionCorta.Name = "TXTDescripcionCorta"
         Me.TXTDescripcionCorta.Size = New System.Drawing.Size(260, 25)
-        Me.TXTDescripcionCorta.TabIndex = 6
+        Me.TXTDescripcionCorta.TabIndex = 2
         '
         'LBLValidarDescripcion
         '

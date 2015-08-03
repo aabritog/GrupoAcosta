@@ -122,7 +122,7 @@ Partial Class FSolicitudes
         Me.CMBCliente.Location = New System.Drawing.Point(146, 30)
         Me.CMBCliente.Name = "CMBCliente"
         Me.CMBCliente.Size = New System.Drawing.Size(361, 25)
-        Me.CMBCliente.TabIndex = 31
+        Me.CMBCliente.TabIndex = 1
         '
         'LBLCliente
         '
@@ -224,7 +224,7 @@ Partial Class FSolicitudes
         Me.TXTBuscar.Location = New System.Drawing.Point(655, 267)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(188, 20)
-        Me.TXTBuscar.TabIndex = 32
+        Me.TXTBuscar.TabIndex = 2
         '
         'GBSolicitudes
         '

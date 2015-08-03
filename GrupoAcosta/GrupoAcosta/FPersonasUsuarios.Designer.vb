@@ -66,7 +66,7 @@ Partial Class FPersonasUsuarios
         Me.TXTBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(225, 25)
-        Me.TXTBuscar.TabIndex = 11
+        Me.TXTBuscar.TabIndex = 1
         '
         'GroupBox1
         '

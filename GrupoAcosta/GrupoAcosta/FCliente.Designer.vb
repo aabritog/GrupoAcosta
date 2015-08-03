@@ -116,7 +116,7 @@ Partial Class FCliente
         Me.CMBProvincia.Location = New System.Drawing.Point(153, 61)
         Me.CMBProvincia.Name = "CMBProvincia"
         Me.CMBProvincia.Size = New System.Drawing.Size(259, 25)
-        Me.CMBProvincia.TabIndex = 46
+        Me.CMBProvincia.TabIndex = 2
         '
         'LBLProvincia
         '
@@ -159,7 +159,7 @@ Partial Class FCliente
         Me.LVTelefono.Location = New System.Drawing.Point(245, 211)
         Me.LVTelefono.Name = "LVTelefono"
         Me.LVTelefono.Size = New System.Drawing.Size(167, 24)
-        Me.LVTelefono.TabIndex = 5
+        Me.LVTelefono.TabIndex = 6
         Me.LVTelefono.UseCompatibleStateImageBehavior = False
         '
         'Label1
@@ -206,7 +206,7 @@ Partial Class FCliente
         Me.TXTDireccion.MaxLength = 30
         Me.TXTDireccion.Name = "TXTDireccion"
         Me.TXTDireccion.Size = New System.Drawing.Size(259, 25)
-        Me.TXTDireccion.TabIndex = 4
+        Me.TXTDireccion.TabIndex = 5
         '
         'LBLDireccion
         '
@@ -249,10 +249,10 @@ Partial Class FCliente
         Me.TXTRif.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTRif.Enabled = False
         Me.TXTRif.Location = New System.Drawing.Point(153, 137)
-        Me.TXTRif.MaxLength = 30
+        Me.TXTRif.MaxLength = 15
         Me.TXTRif.Name = "TXTRif"
         Me.TXTRif.Size = New System.Drawing.Size(259, 25)
-        Me.TXTRif.TabIndex = 3
+        Me.TXTRif.TabIndex = 4
         '
         'LBLRif
         '
@@ -275,7 +275,7 @@ Partial Class FCliente
         Me.CMBMunicipio.Location = New System.Drawing.Point(153, 99)
         Me.CMBMunicipio.Name = "CMBMunicipio"
         Me.CMBMunicipio.Size = New System.Drawing.Size(259, 25)
-        Me.CMBMunicipio.TabIndex = 2
+        Me.CMBMunicipio.TabIndex = 3
         '
         'LBLValidarCliente
         '
@@ -438,7 +438,7 @@ Partial Class FCliente
         Me.TXTBuscar.Location = New System.Drawing.Point(524, 194)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(233, 20)
-        Me.TXTBuscar.TabIndex = 6
+        Me.TXTBuscar.TabIndex = 7
         '
         'GBC
         '

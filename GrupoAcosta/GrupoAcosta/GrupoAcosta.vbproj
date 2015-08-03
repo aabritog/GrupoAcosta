@@ -165,6 +165,12 @@
     <Compile Include="FPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FProductoEntrante.Designer.vb">
+      <DependentUpon>FProductoEntrante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FProductoEntrante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FProveedores.Designer.vb">
       <DependentUpon>FProveedores.vb</DependentUpon>
     </Compile>
@@ -298,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FPrincipal.resx">
       <DependentUpon>FPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FProductoEntrante.resx">
+      <DependentUpon>FProductoEntrante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FProveedores.resx">
       <DependentUpon>FProveedores.vb</DependentUpon>

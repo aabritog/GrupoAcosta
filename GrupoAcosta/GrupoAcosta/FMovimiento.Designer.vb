@@ -231,7 +231,7 @@ Partial Class FMovimiento
         Me.TXTBuscar.Location = New System.Drawing.Point(12, 251)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(249, 20)
-        Me.TXTBuscar.TabIndex = 35
+        Me.TXTBuscar.TabIndex = 1
         Me.TXTBuscar.Visible = False
         '
         'GBMovimientos

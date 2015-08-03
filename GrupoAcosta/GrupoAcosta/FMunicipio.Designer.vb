@@ -125,7 +125,7 @@ Partial Class FMunicipio
         Me.CMBProvincia.Location = New System.Drawing.Point(185, 67)
         Me.CMBProvincia.Name = "CMBProvincia"
         Me.CMBProvincia.Size = New System.Drawing.Size(241, 25)
-        Me.CMBProvincia.TabIndex = 31
+        Me.CMBProvincia.TabIndex = 2
         '
         'LBLValidarMunicipio
         '
@@ -145,10 +145,10 @@ Partial Class FMunicipio
         Me.TXTMunicipio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTMunicipio.Enabled = False
         Me.TXTMunicipio.Location = New System.Drawing.Point(185, 19)
-        Me.TXTMunicipio.MaxLength = 30
+        Me.TXTMunicipio.MaxLength = 20
         Me.TXTMunicipio.Name = "TXTMunicipio"
         Me.TXTMunicipio.Size = New System.Drawing.Size(241, 25)
-        Me.TXTMunicipio.TabIndex = 5
+        Me.TXTMunicipio.TabIndex = 1
         '
         'LBLProvincia
         '
@@ -276,7 +276,7 @@ Partial Class FMunicipio
         Me.TXTBuscar.Location = New System.Drawing.Point(197, 161)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(241, 20)
-        Me.TXTBuscar.TabIndex = 30
+        Me.TXTBuscar.TabIndex = 3
         '
         'GBMunicipios
         '

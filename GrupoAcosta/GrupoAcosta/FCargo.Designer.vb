@@ -232,7 +232,7 @@ Partial Class FCargo
         Me.TXTBuscar.Location = New System.Drawing.Point(206, 190)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(257, 20)
-        Me.TXTBuscar.TabIndex = 27
+        Me.TXTBuscar.TabIndex = 4
         '
         'GBCargos
         '

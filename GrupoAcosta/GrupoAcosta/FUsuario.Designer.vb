@@ -112,7 +112,7 @@ Partial Class FUsuario
         '
         Me.TXTRol.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTRol.Enabled = False
-        Me.TXTRol.Location = New System.Drawing.Point(499, 138)
+        Me.TXTRol.Location = New System.Drawing.Point(513, 138)
         Me.TXTRol.Name = "TXTRol"
         Me.TXTRol.Size = New System.Drawing.Size(43, 25)
         Me.TXTRol.TabIndex = 27
@@ -124,7 +124,7 @@ Partial Class FUsuario
         Me.TXTPersonasNoUsuarios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTPersonasNoUsuarios.Enabled = False
         Me.TXTPersonasNoUsuarios.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPersonasNoUsuarios.Location = New System.Drawing.Point(505, 29)
+        Me.TXTPersonasNoUsuarios.Location = New System.Drawing.Point(531, 24)
         Me.TXTPersonasNoUsuarios.Name = "TXTPersonasNoUsuarios"
         Me.TXTPersonasNoUsuarios.Size = New System.Drawing.Size(25, 20)
         Me.TXTPersonasNoUsuarios.TabIndex = 26
@@ -149,7 +149,7 @@ Partial Class FUsuario
         Me.LBLValidarRol.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.LBLValidarRol.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarRol.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarRol.Location = New System.Drawing.Point(357, 145)
+        Me.LBLValidarRol.Location = New System.Drawing.Point(417, 145)
         Me.LBLValidarRol.Name = "LBLValidarRol"
         Me.LBLValidarRol.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarRol.TabIndex = 23
@@ -160,7 +160,7 @@ Partial Class FUsuario
         Me.LBLValidarConfirmarClave.AutoSize = True
         Me.LBLValidarConfirmarClave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarConfirmarClave.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarConfirmarClave.Location = New System.Drawing.Point(263, 106)
+        Me.LBLValidarConfirmarClave.Location = New System.Drawing.Point(417, 105)
         Me.LBLValidarConfirmarClave.Name = "LBLValidarConfirmarClave"
         Me.LBLValidarConfirmarClave.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarConfirmarClave.TabIndex = 22
@@ -171,7 +171,7 @@ Partial Class FUsuario
         Me.LBLValidarClave.AutoSize = True
         Me.LBLValidarClave.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarClave.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarClave.Location = New System.Drawing.Point(263, 68)
+        Me.LBLValidarClave.Location = New System.Drawing.Point(417, 71)
         Me.LBLValidarClave.Name = "LBLValidarClave"
         Me.LBLValidarClave.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarClave.TabIndex = 21
@@ -182,7 +182,7 @@ Partial Class FUsuario
         Me.LBLValidarSeudonimo.AutoSize = True
         Me.LBLValidarSeudonimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarSeudonimo.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarSeudonimo.Location = New System.Drawing.Point(263, 31)
+        Me.LBLValidarSeudonimo.Location = New System.Drawing.Point(417, 33)
         Me.LBLValidarSeudonimo.Name = "LBLValidarSeudonimo"
         Me.LBLValidarSeudonimo.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarSeudonimo.TabIndex = 20
@@ -215,7 +215,7 @@ Partial Class FUsuario
         '
         Me.BTNPersona.Enabled = False
         Me.BTNPersona.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNPersona.Location = New System.Drawing.Point(382, 24)
+        Me.BTNPersona.Location = New System.Drawing.Point(439, 28)
         Me.BTNPersona.Name = "BTNPersona"
         Me.BTNPersona.Size = New System.Drawing.Size(117, 25)
         Me.BTNPersona.TabIndex = 5
@@ -230,7 +230,7 @@ Partial Class FUsuario
         Me.CMBRol.FormattingEnabled = True
         Me.CMBRol.Location = New System.Drawing.Point(137, 141)
         Me.CMBRol.Name = "CMBRol"
-        Me.CMBRol.Size = New System.Drawing.Size(202, 24)
+        Me.CMBRol.Size = New System.Drawing.Size(274, 24)
         Me.CMBRol.TabIndex = 4
         '
         'TXTClave
@@ -242,7 +242,7 @@ Partial Class FUsuario
         Me.TXTClave.MaxLength = 32
         Me.TXTClave.Name = "TXTClave"
         Me.TXTClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TXTClave.Size = New System.Drawing.Size(123, 25)
+        Me.TXTClave.Size = New System.Drawing.Size(274, 25)
         Me.TXTClave.TabIndex = 2
         Me.TXTClave.UseSystemPasswordChar = True
         '
@@ -254,7 +254,7 @@ Partial Class FUsuario
         Me.TXTConfirmarClave.Location = New System.Drawing.Point(137, 102)
         Me.TXTConfirmarClave.MaxLength = 32
         Me.TXTConfirmarClave.Name = "TXTConfirmarClave"
-        Me.TXTConfirmarClave.Size = New System.Drawing.Size(123, 25)
+        Me.TXTConfirmarClave.Size = New System.Drawing.Size(274, 25)
         Me.TXTConfirmarClave.TabIndex = 3
         '
         'TXTSeudonimo
@@ -266,7 +266,7 @@ Partial Class FUsuario
         Me.TXTSeudonimo.Location = New System.Drawing.Point(134, 29)
         Me.TXTSeudonimo.MaxLength = 10
         Me.TXTSeudonimo.Name = "TXTSeudonimo"
-        Me.TXTSeudonimo.Size = New System.Drawing.Size(123, 25)
+        Me.TXTSeudonimo.Size = New System.Drawing.Size(277, 25)
         Me.TXTSeudonimo.TabIndex = 1
         '
         'LBLROl
@@ -321,7 +321,7 @@ Partial Class FUsuario
         Me.TXTBuscar.Location = New System.Drawing.Point(591, 214)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(223, 20)
-        Me.TXTBuscar.TabIndex = 9
+        Me.TXTBuscar.TabIndex = 5
         '
         'LBLBuscar
         '

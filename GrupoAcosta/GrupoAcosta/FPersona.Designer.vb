@@ -196,7 +196,7 @@ Partial Class FPersona
         Me.TXTBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(252, 25)
-        Me.TXTBuscar.TabIndex = 4
+        Me.TXTBuscar.TabIndex = 13
         Me.TTFPersona.SetToolTip(Me.TXTBuscar, "Escriba aquí para buscar una persona del listado")
         '
         'LBLBuscar
@@ -266,7 +266,7 @@ Partial Class FPersona
         Me.LVTelefonos.MultiSelect = False
         Me.LVTelefonos.Name = "LVTelefonos"
         Me.LVTelefonos.Size = New System.Drawing.Size(177, 29)
-        Me.LVTelefonos.TabIndex = 17
+        Me.LVTelefonos.TabIndex = 9
         Me.LVTelefonos.UseCompatibleStateImageBehavior = False
         Me.LVTelefonos.Visible = False
         '
@@ -434,7 +434,7 @@ Partial Class FPersona
         Me.CMBDepartamento.Location = New System.Drawing.Point(190, 318)
         Me.CMBDepartamento.Name = "CMBDepartamento"
         Me.CMBDepartamento.Size = New System.Drawing.Size(258, 25)
-        Me.CMBDepartamento.TabIndex = 20
+        Me.CMBDepartamento.TabIndex = 11
         Me.TTFPersona.SetToolTip(Me.CMBDepartamento, "Seleccione aquí para seleccionar el departamento al cual pertenece la persona")
         '
         'LBLDepartamento
@@ -457,7 +457,7 @@ Partial Class FPersona
         Me.CMBCargo.Location = New System.Drawing.Point(190, 351)
         Me.CMBCargo.Name = "CMBCargo"
         Me.CMBCargo.Size = New System.Drawing.Size(258, 25)
-        Me.CMBCargo.TabIndex = 21
+        Me.CMBCargo.TabIndex = 12
         Me.TTFPersona.SetToolTip(Me.CMBCargo, "Seleccione aquí para seleccionar el cargo que tiene asignado la persona dentro en" & _
                 " la empresa")
         '
@@ -471,7 +471,7 @@ Partial Class FPersona
         Me.CMBSexo.Location = New System.Drawing.Point(190, 284)
         Me.CMBSexo.Name = "CMBSexo"
         Me.CMBSexo.Size = New System.Drawing.Size(258, 25)
-        Me.CMBSexo.TabIndex = 17
+        Me.CMBSexo.TabIndex = 10
         Me.TTFPersona.SetToolTip(Me.CMBSexo, "Seleccione aquí para seleccionar el sexo de la persona")
         '
         'TXTCorreo
@@ -481,9 +481,10 @@ Partial Class FPersona
         Me.TXTCorreo.Enabled = False
         Me.TXTCorreo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTCorreo.Location = New System.Drawing.Point(190, 224)
+        Me.TXTCorreo.MaxLength = 50
         Me.TXTCorreo.Name = "TXTCorreo"
         Me.TXTCorreo.Size = New System.Drawing.Size(258, 25)
-        Me.TXTCorreo.TabIndex = 16
+        Me.TXTCorreo.TabIndex = 8
         '
         'DTPFecha
         '
@@ -495,7 +496,7 @@ Partial Class FPersona
         Me.DTPFecha.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
         Me.DTPFecha.Name = "DTPFecha"
         Me.DTPFecha.Size = New System.Drawing.Size(258, 25)
-        Me.DTPFecha.TabIndex = 15
+        Me.DTPFecha.TabIndex = 7
         Me.TTFPersona.SetToolTip(Me.DTPFecha, "Seleccione/escriba aquí la fecha de nacimiento de la persona a registrar")
         Me.DTPFecha.Value = New Date(1940, 1, 1, 0, 0, 0, 0)
         '
@@ -505,9 +506,10 @@ Partial Class FPersona
         Me.TXTCI.Enabled = False
         Me.TXTCI.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTCI.Location = New System.Drawing.Point(246, 157)
+        Me.TXTCI.MaxLength = 20
         Me.TXTCI.Name = "TXTCI"
         Me.TXTCI.Size = New System.Drawing.Size(202, 25)
-        Me.TXTCI.TabIndex = 14
+        Me.TXTCI.TabIndex = 6
         '
         'CMBNacionalidad
         '
@@ -529,9 +531,10 @@ Partial Class FPersona
         Me.TXTApellido2.Enabled = False
         Me.TXTApellido2.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTApellido2.Location = New System.Drawing.Point(190, 125)
+        Me.TXTApellido2.MaxLength = 15
         Me.TXTApellido2.Name = "TXTApellido2"
         Me.TXTApellido2.Size = New System.Drawing.Size(258, 25)
-        Me.TXTApellido2.TabIndex = 12
+        Me.TXTApellido2.TabIndex = 4
         '
         'TXTApellido1
         '
@@ -540,6 +543,7 @@ Partial Class FPersona
         Me.TXTApellido1.Enabled = False
         Me.TXTApellido1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXTApellido1.Location = New System.Drawing.Point(190, 91)
+        Me.TXTApellido1.MaxLength = 15
         Me.TXTApellido1.Name = "TXTApellido1"
         Me.TXTApellido1.Size = New System.Drawing.Size(258, 25)
         Me.TXTApellido1.TabIndex = 3

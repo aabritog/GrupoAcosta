@@ -103,10 +103,10 @@ Partial Class FProvincia
         Me.TXTProvincia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTProvincia.Enabled = False
         Me.TXTProvincia.Location = New System.Drawing.Point(153, 37)
-        Me.TXTProvincia.MaxLength = 30
+        Me.TXTProvincia.MaxLength = 20
         Me.TXTProvincia.Name = "TXTProvincia"
         Me.TXTProvincia.Size = New System.Drawing.Size(249, 25)
-        Me.TXTProvincia.TabIndex = 5
+        Me.TXTProvincia.TabIndex = 1
         '
         'LBLProvincia
         '
@@ -223,7 +223,7 @@ Partial Class FProvincia
         Me.TXTBuscar.Location = New System.Drawing.Point(174, 126)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(240, 20)
-        Me.TXTBuscar.TabIndex = 31
+        Me.TXTBuscar.TabIndex = 2
         '
         'GBCProvincia
         '

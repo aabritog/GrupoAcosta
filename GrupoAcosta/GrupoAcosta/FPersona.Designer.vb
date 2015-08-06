@@ -213,8 +213,7 @@ Partial Class FPersona
         '
         'GBNuevoRegistro
         '
-        Me.GBNuevoRegistro.BackColor = System.Drawing.Color.PaleGoldenrod
-        Me.GBNuevoRegistro.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBNuevoRegistro.BackColor = System.Drawing.Color.White
         Me.GBNuevoRegistro.Controls.Add(Me.LVTelefonos)
         Me.GBNuevoRegistro.Controls.Add(Me.Label1)
         Me.GBNuevoRegistro.Controls.Add(Me.BTNAgregarTelefono)
@@ -673,8 +672,7 @@ Partial Class FPersona
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
@@ -748,7 +746,7 @@ Partial Class FPersona
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual1
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(774, 615)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)

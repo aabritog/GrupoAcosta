@@ -499,4 +499,7 @@ Public Class FUsuario
 
     End Sub
 
+    Private Sub TXTPersonasNoUsuarios_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTPersonasNoUsuarios.TextChanged
+
+    End Sub
 End Class

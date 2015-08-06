@@ -273,6 +273,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="FSolicitudProductos.Designer.vb">
+      <DependentUpon>FSolicitudProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSolicitudProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FCargo.resx">
@@ -361,6 +367,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPersona.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSolicitudProductos.resx">
+      <DependentUpon>FSolicitudProductos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

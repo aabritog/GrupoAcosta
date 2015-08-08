@@ -268,4 +268,16 @@ Public Class FDepartamento
 
 
 
+    Private Sub LBCamposObligatorios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBCamposObligatorios.Click
+
+    End Sub
+    Private Sub LBCamposObligatoriosAst_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBCamposObligatoriosAst.Click
+
+    End Sub
+    Private Sub LBLValidarDescripcioncorta_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBLValidarDescripcioncorta.Click
+
+    End Sub
+    Private Sub LBLValidarDescripcion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBLValidarDescripcion.Click
+
+    End Sub
 End Class

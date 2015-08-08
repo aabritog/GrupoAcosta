@@ -22,13 +22,6 @@ Partial Class FMovimiento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.GBMovimiento = New System.Windows.Forms.GroupBox()
-        Me.LBLValidarDescripcioncorta = New System.Windows.Forms.Label()
-        Me.LBLValidarDescripcion = New System.Windows.Forms.Label()
-        Me.TXTDescripcionCorta = New System.Windows.Forms.TextBox()
-        Me.TXTDescripcion = New System.Windows.Forms.TextBox()
-        Me.LBLDescripcionCorta = New System.Windows.Forms.Label()
-        Me.LBLDescripcion = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.BTNGuardar = New System.Windows.Forms.Button()
@@ -41,91 +34,12 @@ Partial Class FMovimiento
         Me.GBMovimientos = New System.Windows.Forms.GroupBox()
         Me.DGVMovimiento = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GBMovimiento.SuspendLayout()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox3.SuspendLayout()
         Me.GBMovimientos.SuspendLayout()
         CType(Me.DGVMovimiento, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'GBMovimiento
-        '
-        Me.GBMovimiento.Controls.Add(Me.LBLValidarDescripcioncorta)
-        Me.GBMovimiento.Controls.Add(Me.LBLValidarDescripcion)
-        Me.GBMovimiento.Controls.Add(Me.TXTDescripcionCorta)
-        Me.GBMovimiento.Controls.Add(Me.TXTDescripcion)
-        Me.GBMovimiento.Controls.Add(Me.LBLDescripcionCorta)
-        Me.GBMovimiento.Controls.Add(Me.LBLDescripcion)
-        Me.GBMovimiento.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBMovimiento.Location = New System.Drawing.Point(31, 105)
-        Me.GBMovimiento.Name = "GBMovimiento"
-        Me.GBMovimiento.Size = New System.Drawing.Size(489, 100)
-        Me.GBMovimiento.TabIndex = 3
-        Me.GBMovimiento.TabStop = False
-        Me.GBMovimiento.Text = "Nuevo Movimiento"
-        Me.GBMovimiento.Visible = False
-        '
-        'LBLValidarDescripcioncorta
-        '
-        Me.LBLValidarDescripcioncorta.AutoSize = True
-        Me.LBLValidarDescripcioncorta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLValidarDescripcioncorta.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDescripcioncorta.Location = New System.Drawing.Point(328, 59)
-        Me.LBLValidarDescripcioncorta.Name = "LBLValidarDescripcioncorta"
-        Me.LBLValidarDescripcioncorta.Size = New System.Drawing.Size(14, 18)
-        Me.LBLValidarDescripcioncorta.TabIndex = 38
-        Me.LBLValidarDescripcioncorta.Text = "*"
-        '
-        'LBLValidarDescripcion
-        '
-        Me.LBLValidarDescripcion.AutoSize = True
-        Me.LBLValidarDescripcion.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLValidarDescripcion.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarDescripcion.Location = New System.Drawing.Point(328, 19)
-        Me.LBLValidarDescripcion.Name = "LBLValidarDescripcion"
-        Me.LBLValidarDescripcion.Size = New System.Drawing.Size(14, 18)
-        Me.LBLValidarDescripcion.TabIndex = 28
-        Me.LBLValidarDescripcion.Text = "*"
-        '
-        'TXTDescripcionCorta
-        '
-        Me.TXTDescripcionCorta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTDescripcionCorta.Enabled = False
-        Me.TXTDescripcionCorta.Location = New System.Drawing.Point(185, 61)
-        Me.TXTDescripcionCorta.MaxLength = 15
-        Me.TXTDescripcionCorta.Name = "TXTDescripcionCorta"
-        Me.TXTDescripcionCorta.Size = New System.Drawing.Size(121, 25)
-        Me.TXTDescripcionCorta.TabIndex = 6
-        '
-        'TXTDescripcion
-        '
-        Me.TXTDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTDescripcion.Enabled = False
-        Me.TXTDescripcion.Location = New System.Drawing.Point(185, 19)
-        Me.TXTDescripcion.MaxLength = 30
-        Me.TXTDescripcion.Name = "TXTDescripcion"
-        Me.TXTDescripcion.Size = New System.Drawing.Size(121, 25)
-        Me.TXTDescripcion.TabIndex = 5
-        '
-        'LBLDescripcionCorta
-        '
-        Me.LBLDescripcionCorta.AutoSize = True
-        Me.LBLDescripcionCorta.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLDescripcionCorta.Location = New System.Drawing.Point(15, 68)
-        Me.LBLDescripcionCorta.Name = "LBLDescripcionCorta"
-        Me.LBLDescripcionCorta.Size = New System.Drawing.Size(107, 20)
-        Me.LBLDescripcionCorta.TabIndex = 4
-        Me.LBLDescripcionCorta.Text = "Descripción Corta"
-        '
-        'LBLDescripcion
-        '
-        Me.LBLDescripcion.AutoSize = True
-        Me.LBLDescripcion.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLDescripcion.Location = New System.Drawing.Point(15, 29)
-        Me.LBLDescripcion.Name = "LBLDescripcion"
-        Me.LBLDescripcion.Size = New System.Drawing.Size(74, 20)
-        Me.LBLDescripcion.TabIndex = 3
-        Me.LBLDescripcion.Text = "Descripción"
         '
         'GroupBox3
         '
@@ -190,8 +104,8 @@ Partial Class FMovimiento
         '
         'BTNSalir
         '
-        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(7, 19)
+        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSalir.Location = New System.Drawing.Point(7, 11)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -202,8 +116,8 @@ Partial Class FMovimiento
         'BTNCancelar
         '
         Me.BTNCancelar.Enabled = False
-        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(98, 18)
+        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNCancelar.Location = New System.Drawing.Point(89, 11)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -214,21 +128,22 @@ Partial Class FMovimiento
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
-        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(74, 228)
+        Me.LBLBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLBuscar.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.LBLBuscar.Location = New System.Drawing.Point(61, 77)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(123, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(135, 20)
         Me.LBLBuscar.TabIndex = 36
         Me.LBLBuscar.Text = "Buscar (Descripcion)"
         Me.LBLBuscar.Visible = False
         '
         'TXTBuscar
         '
-        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TXTBuscar.BackColor = System.Drawing.Color.White
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(12, 251)
+        Me.TXTBuscar.Location = New System.Drawing.Point(5, 102)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(249, 20)
         Me.TXTBuscar.TabIndex = 1
@@ -236,44 +151,56 @@ Partial Class FMovimiento
         '
         'GBMovimientos
         '
-        Me.GBMovimientos.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBMovimientos.BackColor = System.Drawing.Color.White
         Me.GBMovimientos.Controls.Add(Me.DGVMovimiento)
-        Me.GBMovimientos.Controls.Add(Me.GBMovimiento)
         Me.GBMovimientos.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBMovimientos.Location = New System.Drawing.Point(12, 12)
+        Me.GBMovimientos.Location = New System.Drawing.Point(5, 133)
         Me.GBMovimientos.Name = "GBMovimientos"
-        Me.GBMovimientos.Size = New System.Drawing.Size(453, 206)
+        Me.GBMovimientos.Size = New System.Drawing.Size(453, 190)
         Me.GBMovimientos.TabIndex = 37
         Me.GBMovimientos.TabStop = False
-        Me.GBMovimientos.Text = "Movimiento en el Sistema"
         '
         'DGVMovimiento
         '
-        Me.DGVMovimiento.BackgroundColor = System.Drawing.Color.Olive
+        Me.DGVMovimiento.BackgroundColor = System.Drawing.Color.OliveDrab
         Me.DGVMovimiento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVMovimiento.Location = New System.Drawing.Point(6, 24)
+        Me.DGVMovimiento.Location = New System.Drawing.Point(9, 11)
         Me.DGVMovimiento.Name = "DGVMovimiento"
         Me.DGVMovimiento.Size = New System.Drawing.Size(438, 174)
         Me.DGVMovimiento.TabIndex = 23
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
-        Me.GroupBox1.Location = New System.Drawing.Point(279, 223)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GroupBox1.Location = New System.Drawing.Point(286, 77)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(179, 58)
+        Me.GroupBox1.Size = New System.Drawing.Size(172, 45)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Label2.Location = New System.Drawing.Point(1, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(147, 20)
+        Me.Label2.TabIndex = 47
+        Me.Label2.Text = "MÓDULO MOVIMIENTO"
         '
         'FMovimiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
-        Me.ClientSize = New System.Drawing.Size(470, 283)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.ClientSize = New System.Drawing.Size(462, 326)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBMovimientos)
         Me.Controls.Add(Me.LBLBuscar)
@@ -282,8 +209,6 @@ Partial Class FMovimiento
         Me.Name = "FMovimiento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO MOVIMIENTO"
-        Me.GBMovimiento.ResumeLayout(False)
-        Me.GBMovimiento.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GBMovimientos.ResumeLayout(False)
         CType(Me.DGVMovimiento, System.ComponentModel.ISupportInitialize).EndInit()
@@ -292,12 +217,6 @@ Partial Class FMovimiento
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents GBMovimiento As System.Windows.Forms.GroupBox
-    Friend WithEvents LBLValidarDescripcion As System.Windows.Forms.Label
-    Friend WithEvents TXTDescripcionCorta As System.Windows.Forms.TextBox
-    Friend WithEvents TXTDescripcion As System.Windows.Forms.TextBox
-    Friend WithEvents LBLDescripcionCorta As System.Windows.Forms.Label
-    Friend WithEvents LBLDescripcion As System.Windows.Forms.Label
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents BTNAgregar As System.Windows.Forms.Button
     Friend WithEvents BTNSalir As System.Windows.Forms.Button
@@ -309,6 +228,6 @@ Partial Class FMovimiento
     Friend WithEvents TXTBuscar As System.Windows.Forms.TextBox
     Friend WithEvents GBMovimientos As System.Windows.Forms.GroupBox
     Friend WithEvents DGVMovimiento As System.Windows.Forms.DataGridView
-    Friend WithEvents LBLValidarDescripcioncorta As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

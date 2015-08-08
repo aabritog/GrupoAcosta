@@ -43,6 +43,7 @@ Partial Class FMunicipio
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
         Me.GBMunicipios = New System.Windows.Forms.GroupBox()
         Me.DGVMunicipio = New System.Windows.Forms.DataGridView()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GBNuevoMunicipio.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GBMunicipios.SuspendLayout()
@@ -61,8 +62,9 @@ Partial Class FMunicipio
         Me.GBNuevoMunicipio.Controls.Add(Me.TXTMunicipio)
         Me.GBNuevoMunicipio.Controls.Add(Me.LBLProvincia)
         Me.GBNuevoMunicipio.Controls.Add(Me.LBLMunicipio)
-        Me.GBNuevoMunicipio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBNuevoMunicipio.Location = New System.Drawing.Point(12, 12)
+        Me.GBNuevoMunicipio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBNuevoMunicipio.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GBNuevoMunicipio.Location = New System.Drawing.Point(12, 74)
         Me.GBNuevoMunicipio.Name = "GBNuevoMunicipio"
         Me.GBNuevoMunicipio.Size = New System.Drawing.Size(514, 129)
         Me.GBNuevoMunicipio.TabIndex = 2
@@ -72,22 +74,22 @@ Partial Class FMunicipio
         'LBCamposObligatoriosAst
         '
         Me.LBCamposObligatoriosAst.AutoSize = True
-        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.Transparent
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 11.0!)
         Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(444, 101)
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(430, 108)
         Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
-        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(12, 15)
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(14, 17)
         Me.LBCamposObligatoriosAst.TabIndex = 48
         Me.LBCamposObligatoriosAst.Text = "*"
         '
         'LBCamposObligatorios
         '
         Me.LBCamposObligatorios.AutoSize = True
-        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
         Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatorios.Location = New System.Drawing.Point(310, 101)
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(284, 108)
         Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
         Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
         Me.LBCamposObligatorios.TabIndex = 47
@@ -96,10 +98,10 @@ Partial Class FMunicipio
         'LBLValidarProvincia
         '
         Me.LBLValidarProvincia.AutoSize = True
-        Me.LBLValidarProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBLValidarProvincia.BackColor = System.Drawing.Color.Transparent
         Me.LBLValidarProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarProvincia.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarProvincia.Location = New System.Drawing.Point(445, 68)
+        Me.LBLValidarProvincia.Location = New System.Drawing.Point(430, 65)
         Me.LBLValidarProvincia.Name = "LBLValidarProvincia"
         Me.LBLValidarProvincia.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarProvincia.TabIndex = 33
@@ -122,7 +124,7 @@ Partial Class FMunicipio
         Me.CMBProvincia.Enabled = False
         Me.CMBProvincia.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CMBProvincia.FormattingEnabled = True
-        Me.CMBProvincia.Location = New System.Drawing.Point(185, 67)
+        Me.CMBProvincia.Location = New System.Drawing.Point(168, 63)
         Me.CMBProvincia.Name = "CMBProvincia"
         Me.CMBProvincia.Size = New System.Drawing.Size(241, 25)
         Me.CMBProvincia.TabIndex = 2
@@ -130,10 +132,10 @@ Partial Class FMunicipio
         'LBLValidarMunicipio
         '
         Me.LBLValidarMunicipio.AutoSize = True
-        Me.LBLValidarMunicipio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBLValidarMunicipio.BackColor = System.Drawing.Color.Transparent
         Me.LBLValidarMunicipio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidarMunicipio.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidarMunicipio.Location = New System.Drawing.Point(445, 23)
+        Me.LBLValidarMunicipio.Location = New System.Drawing.Point(430, 26)
         Me.LBLValidarMunicipio.Name = "LBLValidarMunicipio"
         Me.LBLValidarMunicipio.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidarMunicipio.TabIndex = 28
@@ -141,10 +143,10 @@ Partial Class FMunicipio
         '
         'TXTMunicipio
         '
-        Me.TXTMunicipio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TXTMunicipio.BackColor = System.Drawing.Color.White
         Me.TXTMunicipio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTMunicipio.Enabled = False
-        Me.TXTMunicipio.Location = New System.Drawing.Point(185, 19)
+        Me.TXTMunicipio.Location = New System.Drawing.Point(168, 26)
         Me.TXTMunicipio.MaxLength = 20
         Me.TXTMunicipio.Name = "TXTMunicipio"
         Me.TXTMunicipio.Size = New System.Drawing.Size(241, 25)
@@ -153,7 +155,7 @@ Partial Class FMunicipio
         'LBLProvincia
         '
         Me.LBLProvincia.AutoSize = True
-        Me.LBLProvincia.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBLProvincia.BackColor = System.Drawing.Color.Transparent
         Me.LBLProvincia.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLProvincia.Location = New System.Drawing.Point(15, 68)
         Me.LBLProvincia.Name = "LBLProvincia"
@@ -164,7 +166,7 @@ Partial Class FMunicipio
         'LBLMunicipio
         '
         Me.LBLMunicipio.AutoSize = True
-        Me.LBLMunicipio.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LBLMunicipio.BackColor = System.Drawing.Color.Transparent
         Me.LBLMunicipio.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLMunicipio.Location = New System.Drawing.Point(15, 29)
         Me.LBLMunicipio.Name = "LBLMunicipio"
@@ -174,14 +176,15 @@ Partial Class FMunicipio
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.BTNAgregar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNGuardar)
         Me.GroupBox2.Controls.Add(Me.BTNCancelar)
         Me.GroupBox2.Controls.Add(Me.BTNModificar)
         Me.GroupBox2.Controls.Add(Me.BTNEliminar)
-        Me.GroupBox2.Location = New System.Drawing.Point(532, 84)
+        Me.GroupBox2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GroupBox2.Location = New System.Drawing.Point(539, 109)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(85, 254)
         Me.GroupBox2.TabIndex = 24
@@ -189,7 +192,7 @@ Partial Class FMunicipio
         '
         'BTNAgregar
         '
-        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNAgregar.Location = New System.Drawing.Point(7, 11)
         Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNAgregar.Name = "BTNAgregar"
@@ -200,7 +203,7 @@ Partial Class FMunicipio
         '
         'BTNSalir
         '
-        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSalir.Location = New System.Drawing.Point(7, 213)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
@@ -212,7 +215,7 @@ Partial Class FMunicipio
         'BTNGuardar
         '
         Me.BTNGuardar.Enabled = False
-        Me.BTNGuardar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNGuardar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNGuardar.Location = New System.Drawing.Point(7, 52)
         Me.BTNGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNGuardar.Name = "BTNGuardar"
@@ -224,7 +227,7 @@ Partial Class FMunicipio
         'BTNCancelar
         '
         Me.BTNCancelar.Enabled = False
-        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNCancelar.Location = New System.Drawing.Point(7, 172)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
@@ -236,7 +239,7 @@ Partial Class FMunicipio
         'BTNModificar
         '
         Me.BTNModificar.Enabled = False
-        Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNModificar.Location = New System.Drawing.Point(7, 90)
         Me.BTNModificar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNModificar.Name = "BTNModificar"
@@ -248,7 +251,7 @@ Partial Class FMunicipio
         'BTNEliminar
         '
         Me.BTNEliminar.Enabled = False
-        Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNEliminar.Location = New System.Drawing.Point(7, 131)
         Me.BTNEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNEliminar.Name = "BTNEliminar"
@@ -260,51 +263,64 @@ Partial Class FMunicipio
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
-        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(27, 159)
+        Me.LBLBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLBuscar.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.LBLBuscar.Location = New System.Drawing.Point(27, 228)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(111, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(121, 20)
         Me.LBLBuscar.TabIndex = 31
         Me.LBLBuscar.Text = "Buscar (Municipio)"
         '
         'TXTBuscar
         '
-        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TXTBuscar.BackColor = System.Drawing.Color.White
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(197, 161)
+        Me.TXTBuscar.Location = New System.Drawing.Point(180, 228)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(241, 20)
         Me.TXTBuscar.TabIndex = 3
         '
         'GBMunicipios
         '
-        Me.GBMunicipios.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBMunicipios.BackColor = System.Drawing.Color.White
         Me.GBMunicipios.Controls.Add(Me.DGVMunicipio)
         Me.GBMunicipios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBMunicipios.Location = New System.Drawing.Point(12, 194)
+        Me.GBMunicipios.Location = New System.Drawing.Point(12, 269)
         Me.GBMunicipios.Name = "GBMunicipios"
-        Me.GBMunicipios.Size = New System.Drawing.Size(514, 193)
+        Me.GBMunicipios.Size = New System.Drawing.Size(514, 177)
         Me.GBMunicipios.TabIndex = 32
         Me.GBMunicipios.TabStop = False
-        Me.GBMunicipios.Text = "Municipios en el Sistema"
         '
         'DGVMunicipio
         '
-        Me.DGVMunicipio.BackgroundColor = System.Drawing.Color.Olive
+        Me.DGVMunicipio.BackgroundColor = System.Drawing.Color.OliveDrab
         Me.DGVMunicipio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVMunicipio.Location = New System.Drawing.Point(6, 24)
+        Me.DGVMunicipio.Location = New System.Drawing.Point(6, 13)
         Me.DGVMunicipio.Name = "DGVMunicipio"
         Me.DGVMunicipio.Size = New System.Drawing.Size(502, 159)
         Me.DGVMunicipio.TabIndex = 23
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Label2.Location = New System.Drawing.Point(8, 30)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(132, 20)
+        Me.Label2.TabIndex = 49
+        Me.Label2.Text = "MÓDULO MUNICIPIO"
         '
         'FMunicipio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
-        Me.ClientSize = New System.Drawing.Size(629, 390)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.ClientSize = New System.Drawing.Size(629, 447)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GBMunicipios)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
@@ -343,4 +359,5 @@ Partial Class FMunicipio
     Friend WithEvents DGVMunicipio As System.Windows.Forms.DataGridView
     Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
     Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

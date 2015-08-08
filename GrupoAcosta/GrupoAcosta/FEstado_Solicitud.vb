@@ -58,89 +58,89 @@
 
     End Sub
 
-    Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
+    'Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        nAction = 1
+    '    nAction = 1
 
-        TXTDescripcion.Enabled = True
-        TXTDescripcionCorta.Enabled = True
-        TXTBuscar.Enabled = False
-        BTNEliminar.Enabled = False
-        BTNModificar.Enabled = False
-        BTNAgregar.Enabled = False
-        BTNGuardar.Enabled = True
-        BTNCancelar.Enabled = True
-        TXTDescripcion.Focus()
-        DGVEstadoSolicitud.Enabled = False
-        DGVEstadoSolicitud.ClearSelection()
+    '    TXTDescripcion.Enabled = True
+    '    TXTDescripcionCorta.Enabled = True
+    '    TXTBuscar.Enabled = False
+    '    BTNEliminar.Enabled = False
+    '    BTNModificar.Enabled = False
+    '    BTNAgregar.Enabled = False
+    '    BTNGuardar.Enabled = True
+    '    BTNCancelar.Enabled = True
+    '    TXTDescripcion.Focus()
+    '    DGVEstadoSolicitud.Enabled = False
+    '    DGVEstadoSolicitud.ClearSelection()
 
-    End Sub
+    'End Sub
 
-    Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
+    'Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        If Len(TXTDescripcion.Text) = 0 Then
-            MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
-            TXTDescripcion.Focus()
-            Exit Sub
-        End If
+    '    If Len(TXTDescripcion.Text) = 0 Then
+    '        MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
+    '        TXTDescripcion.Focus()
+    '        Exit Sub
+    '    End If
 
-        If Len(TXTDescripcionCorta.Text) = 0 Then
-            MsgBox("Rellene el campo Descripción Corta", MsgBoxStyle.Information)
-            TXTDescripcionCorta.Focus()
-            Exit Sub
-        End If
+    '    If Len(TXTDescripcionCorta.Text) = 0 Then
+    '        MsgBox("Rellene el campo Descripción Corta", MsgBoxStyle.Information)
+    '        TXTDescripcionCorta.Focus()
+    '        Exit Sub
+    '    End If
 
-        'Si la acción es insertar (crear un nuevo registro).
-        If nAction = 1 Then
+    '    'Si la acción es insertar (crear un nuevo registro).
+    '    If nAction = 1 Then
 
-            Dim SQLGuardar As String = ""
-            SQLGuardar = "insert into estado_solicitud (s_descripcion, s_descripcioncorta, d_fecha, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1')"
+    '        Dim SQLGuardar As String = ""
+    '        SQLGuardar = "insert into estado_solicitud (s_descripcion, s_descripcioncorta, d_fecha, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1')"
 
-            objCGenerica.accederBD(SQLGuardar)
+    '        objCGenerica.accederBD(SQLGuardar)
 
-            mostrarDGVEstadoSolicitud()
+    '        mostrarDGVEstadoSolicitud()
 
-            BTNCancelar_Click(sender, e)
+    '        BTNCancelar_Click(sender, e)
 
-            nAction = 0
+    '        nAction = 0
 
-            MsgBox("Se ha agregado el estado de la solicitud exitosamente.", MsgBoxStyle.Information)
+    '        MsgBox("Se ha agregado el estado de la solicitud exitosamente.", MsgBoxStyle.Information)
 
-            'Si la acción es modificar (modificar registr existente).
+    '        'Si la acción es modificar (modificar registr existente).
 
-        ElseIf nAction = 2 Then
+    '    ElseIf nAction = 2 Then
 
-            Dim SQLActualizar As String = ""
-            SQLActualizar = "UPDATE estado_solicitud SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "' WHERE nid=" & DGVEstadoSolicitud.CurrentRow.Cells("nid").Value & ""
+    '        Dim SQLActualizar As String = ""
+    '        SQLActualizar = "UPDATE estado_solicitud SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "' WHERE nid=" & DGVEstadoSolicitud.CurrentRow.Cells("nid").Value & ""
 
-            objCGenerica.accederBD(SQLActualizar)
-            mostrarDGVEstadoSolicitud()
-            BTNCancelar_Click(sender, e)
+    '        objCGenerica.accederBD(SQLActualizar)
+    '        mostrarDGVEstadoSolicitud()
+    '        BTNCancelar_Click(sender, e)
 
-            nAction = 0
+    '        nAction = 0
 
-            MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
+    '        MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 
-        'Se habilitan/deshabilitan los objetos
-        TXTDescripcion.Enabled = False
-        TXTDescripcionCorta.Enabled = False
+        ''Se habilitan/deshabilitan los objetos
+        'TXTDescripcion.Enabled = False
+        'TXTDescripcionCorta.Enabled = False
         TXTBuscar.Enabled = True
-        BTNAgregar.Enabled = True
-        BTNModificar.Enabled = False
-        BTNEliminar.Enabled = False
+        'BTNAgregar.Enabled = True
+        'BTNModificar.Enabled = False
+        'BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
-        BTNGuardar.Enabled = False
+        'BTNGuardar.Enabled = False
         DGVEstadoSolicitud.Enabled = True
 
         'Se limpia contenido de los objetos
-        TXTDescripcion.Clear()
-        TXTDescripcionCorta.Clear()
+        'TXTDescripcion.Clear()
+        'TXTDescripcionCorta.Clear()
         TXTBuscar.Clear()
 
         DGVEstadoSolicitud.Enabled = True
@@ -151,24 +151,24 @@
 
     End Sub
 
-    Private Sub BTNModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNModificar.Click
+    Private Sub BTNModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         'La variable nAction = 2 porque se va a realizar el proceso de modificación
         nAction = 2
 
         'Se habilitan/deshabilitan los objetos
-        TXTDescripcion.Enabled = True
-        TXTDescripcionCorta.Enabled = True
+        'TXTDescripcion.Enabled = True
+        'TXTDescripcionCorta.Enabled = True
         TXTBuscar.Enabled = False
-        BTNAgregar.Enabled = False
-        BTNEliminar.Enabled = False
-        BTNCancelar.Enabled = True
-        BTNModificar.Enabled = False
-        BTNGuardar.Enabled = True
-        'Los objetos se cargan con la informacion del registro seleccionado del DataGridView
-        TXTDescripcion.Text = Trim(DGVEstadoSolicitud.CurrentRow.Cells("s_descripcion").Value)
-        'TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
-        TXTDescripcionCorta.Text = Trim(DGVEstadoSolicitud.CurrentRow.Cells("s_descripcioncorta").Value)
+        'BTNAgregar.Enabled = False
+        'BTNEliminar.Enabled = False
+        'BTNCancelar.Enabled = True
+        'BTNModificar.Enabled = False
+        'BTNGuardar.Enabled = True
+        ''Los objetos se cargan con la informacion del registro seleccionado del DataGridView
+        'TXTDescripcion.Text = Trim(DGVEstadoSolicitud.CurrentRow.Cells("s_descripcion").Value)
+        ''TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
+        'TXTDescripcionCorta.Text = Trim(DGVEstadoSolicitud.CurrentRow.Cells("s_descripcioncorta").Value)
 
     End Sub
 
@@ -178,25 +178,25 @@
 
     End Sub
 
-    Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
-        'Se declara el elemento eliminar para registros 
-        If MsgBox("¿Esta seguro de querer eliminar a este estado de la solicitud?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarEstadoSolicitud As String = ""
-            SQLEliminarEstadoSolicitud = "DELETE FROM estado_solicitud WHERE nid=" & DGVEstadoSolicitud.CurrentRow.Cells("nid").Value & ""
-            objCGenerica.accederBD(SQLEliminarEstadoSolicitud)
-            mostrarDGVEstadoSolicitud()
-            BTNCancelar_Click(sender, e)
-            MsgBox("Se ha eliminado el estado de la solicitud", MsgBoxStyle.Information)
-        Else
-            DGVEstadoSolicitud.ClearSelection()
-        End If
+    'Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    'Se declara el elemento eliminar para registros 
+    '    If MsgBox("¿Esta seguro de querer eliminar a este estado de la solicitud?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+    '        Dim SQLEliminarEstadoSolicitud As String = ""
+    '        SQLEliminarEstadoSolicitud = "DELETE FROM estado_solicitud WHERE nid=" & DGVEstadoSolicitud.CurrentRow.Cells("nid").Value & ""
+    '        objCGenerica.accederBD(SQLEliminarEstadoSolicitud)
+    '        mostrarDGVEstadoSolicitud()
+    '        BTNCancelar_Click(sender, e)
+    '        MsgBox("Se ha eliminado el estado de la solicitud", MsgBoxStyle.Information)
+    '    Else
+    '        DGVEstadoSolicitud.ClearSelection()
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub DGVRol_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVEstadoSolicitud.CellClick
 
-        BTNModificar.Enabled = True
-        BTNEliminar.Enabled = True
+        'BTNModificar.Enabled = True
+        'BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
 
     End Sub
@@ -213,15 +213,15 @@
 
     End Sub
 
-    Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDescripcion.TextChanged
+    'Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        objCGenerica.valCampoObligatorio(Me.TXTDescripcion, LBLValidarDescripcion)
-    End Sub
+    '    objCGenerica.valCampoObligatorio(Me.TXTDescripcion, LBLValidarDescripcion)
+    'End Sub
 
-    Private Sub TXTDescripcion_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTDescripcion.KeyPress
+    'Private Sub TXTDescripcion_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
-        objCGenerica.SoloLetra(e)
-    End Sub
+    '    objCGenerica.SoloLetra(e)
+    'End Sub
 
    Private Sub FEstado_Solicitud_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -231,12 +231,12 @@
 
     End Sub
 
-    Private Sub TXTDescripcionCorta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDescripcionCorta.TextChanged
-        objCGenerica.valCampoObligatorio(Me.TXTDescripcionCorta, LBLValidarDescripcioncorta)
-    End Sub
+    'Private Sub TXTDescripcionCorta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    objCGenerica.valCampoObligatorio(Me.TXTDescripcionCorta, LBLValidarDescripcioncorta)
+    'End Sub
 
 
-    Private Sub TXTDescripcionCorta_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTDescripcionCorta.KeyPress
-        objCGenerica.SoloLetra(e)
-    End Sub
+    'Private Sub TXTDescripcionCorta_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+    '    objCGenerica.SoloLetra(e)
+    'End Sub
 End Class

@@ -58,78 +58,78 @@
 
     End Sub
 
-    Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
+    'Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
 
-        nAction = 1
+    '    nAction = 1
 
-        TXTDescripcion.Enabled = True
-        TXTDescripcionCorta.Enabled = True
-        TXTBuscar.Enabled = False
-        BTNEliminar.Enabled = False
-        BTNModificar.Enabled = False
-        BTNAgregar.Enabled = False
-        BTNGuardar.Enabled = True
-        BTNCancelar.Enabled = True
-        TXTDescripcion.Focus()
-        DGVMovimiento.Enabled = False
-        DGVMovimiento.ClearSelection()
+    '    TXTDescripcion.Enabled = True
+    '    TXTDescripcionCorta.Enabled = True
+    '    TXTBuscar.Enabled = False
+    '    BTNEliminar.Enabled = False
+    '    BTNModificar.Enabled = False
+    '    BTNAgregar.Enabled = False
+    '    BTNGuardar.Enabled = True
+    '    BTNCancelar.Enabled = True
+    '    TXTDescripcion.Focus()
+    '    DGVMovimiento.Enabled = False
+    '    DGVMovimiento.ClearSelection()
 
-    End Sub
+    'End Sub
 
-    Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
+    'Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
-        If Len(TXTDescripcion.Text) = 0 Then
-            MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
-            TXTDescripcion.Focus()
-            Exit Sub
-        End If
+    '    If Len(TXTDescripcion.Text) = 0 Then
+    '        MsgBox("Rellene el campo Descripción", MsgBoxStyle.Information)
+    '        TXTDescripcion.Focus()
+    '        Exit Sub
+    '    End If
 
-        If Len(TXTDescripcionCorta.Text) = 0 Then
-            MsgBox("Rellene el campo Descripción Corta", MsgBoxStyle.Information)
-            TXTDescripcionCorta.Focus()
-            Exit Sub
-        End If
+    '    If Len(TXTDescripcionCorta.Text) = 0 Then
+    '        MsgBox("Rellene el campo Descripción Corta", MsgBoxStyle.Information)
+    '        TXTDescripcionCorta.Focus()
+    '        Exit Sub
+    '    End If
 
-        'Si la acción es insertar (crear un nuevo registro).
-        If nAction = 1 Then
+    '    'Si la acción es insertar (crear un nuevo registro).
+    '    If nAction = 1 Then
 
-            Dim SQLGuardar As String = ""
-            SQLGuardar = "insert into movimiento (s_descripcion, s_descripcioncorta, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1')"
+    '        Dim SQLGuardar As String = ""
+    '        SQLGuardar = "insert into movimiento (s_descripcion, s_descripcioncorta, s_activo) values ('" & TXTDescripcion.Text & "', '" & TXTDescripcionCorta.Text & "', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1')"
 
-            objCGenerica.accederBD(SQLGuardar)
+    '        objCGenerica.accederBD(SQLGuardar)
 
-            mostrarDGVMovimiento()
+    '        mostrarDGVMovimiento()
 
-            BTNCancelar_Click(sender, e)
+    '        BTNCancelar_Click(sender, e)
 
-            nAction = 0
+    '        nAction = 0
 
-            MsgBox("Se ha agregado el movimiento exitosamente.", MsgBoxStyle.Information)
+    '        MsgBox("Se ha agregado el movimiento exitosamente.", MsgBoxStyle.Information)
 
-            'Si la acción es modificar (modificar registr existente).
+    '        'Si la acción es modificar (modificar registr existente).
 
-        ElseIf nAction = 2 Then
+    '    ElseIf nAction = 2 Then
 
-            Dim SQLActualizar As String = ""
-            SQLActualizar = "UPDATE movimiento SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "' WHERE nid=" & DGVMovimiento.CurrentRow.Cells("nid").Value & ""
+    '        Dim SQLActualizar As String = ""
+    '        SQLActualizar = "UPDATE movimiento SET s_descripcion='" & TXTDescripcion.Text & "',s_descripcioncorta='" & TXTDescripcionCorta.Text & "', d_fecha= '" & Date.Today.ToString("yyyy-MM-dd") & "' WHERE nid=" & DGVMovimiento.CurrentRow.Cells("nid").Value & ""
 
-            objCGenerica.accederBD(SQLActualizar)
-            mostrarDGVMovimiento()
-            BTNCancelar_Click(sender, e)
+    '        objCGenerica.accederBD(SQLActualizar)
+    '        mostrarDGVMovimiento()
+    '        BTNCancelar_Click(sender, e)
 
-            nAction = 0
+    '        nAction = 0
 
-            MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
+    '        MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 
         'Se habilitan/deshabilitan los objetos
-        TXTDescripcion.Enabled = False
-        TXTDescripcionCorta.Enabled = False
+        'TXTDescripcion.Enabled = False
+        'TXTDescripcionCorta.Enabled = False
         TXTBuscar.Enabled = True
         BTNAgregar.Enabled = True
         BTNModificar.Enabled = False
@@ -139,8 +139,8 @@
         DGVMovimiento.Enabled = True
 
         'Se limpia contenido de los objetos
-        TXTDescripcion.Clear()
-        TXTDescripcionCorta.Clear()
+        'TXTDescripcion.Clear()
+        'TXTDescripcionCorta.Clear()
         TXTBuscar.Clear()
 
         DGVMovimiento.Enabled = True
@@ -157,8 +157,8 @@
         nAction = 2
 
         'Se habilitan/deshabilitan los objetos
-        TXTDescripcion.Enabled = True
-        TXTDescripcionCorta.Enabled = True
+        'TXTDescripcion.Enabled = True
+        'TXTDescripcionCorta.Enabled = True
         TXTBuscar.Enabled = False
         BTNAgregar.Enabled = False
         BTNEliminar.Enabled = False
@@ -166,9 +166,9 @@
         BTNModificar.Enabled = False
         BTNGuardar.Enabled = True
         'Los objetos se cargan con la informacion del registro seleccionado del DataGridView
-        TXTDescripcion.Text = Trim(DGVMovimiento.CurrentRow.Cells("s_descripcion").Value)
-        'TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
-        TXTDescripcionCorta.Text = Trim(DGVMovimiento.CurrentRow.Cells("s_descripcioncorta").Value)
+        'TXTDescripcion.Text = Trim(DGVMovimiento.CurrentRow.Cells("s_descripcion").Value)
+        ''TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
+        'TXTDescripcionCorta.Text = Trim(DGVMovimiento.CurrentRow.Cells("s_descripcioncorta").Value)
 
     End Sub
 
@@ -213,12 +213,12 @@
 
     End Sub
 
-    Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDescripcion.TextChanged
+    Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         objCGenerica.valCampoObligatorio(Me.TXTDescripcion, LBLValidarDescripcion)
     End Sub
 
-    Private Sub TXTDescripcion_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTDescripcion.KeyPress
+    Private Sub TXTDescripcion_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
         objCGenerica.SoloLetra(e)
     End Sub
@@ -228,7 +228,9 @@
         DGVMovimiento.ClearSelection()
     End Sub
 
-    Private Sub TXTDescripcionCorta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDescripcionCorta.TextChanged
-        objCGenerica.valCampoObligatorio(Me.TXTDescripcionCorta, LBLValidarDescripcioncorta)
-    End Sub
+    'Private Sub TXTDescripcionCorta_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    objCGenerica.valCampoObligatorio(Me.TXTDescripcionCorta, LBLValidarDescripcioncorta)
+    'End Sub
+
+
 End Class

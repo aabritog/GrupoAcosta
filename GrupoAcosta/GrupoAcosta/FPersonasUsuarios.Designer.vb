@@ -29,6 +29,7 @@ Partial Class FPersonasUsuarios
         Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.BTNSeleccionar = New System.Windows.Forms.Button()
         Me.LBLBuscar = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GBPersonasUsuarios.SuspendLayout()
         CType(Me.DGVPersonasNoUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -36,23 +37,22 @@ Partial Class FPersonasUsuarios
         '
         'GBPersonasUsuarios
         '
-        Me.GBPersonasUsuarios.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBPersonasUsuarios.BackColor = System.Drawing.Color.White
         Me.GBPersonasUsuarios.Controls.Add(Me.DGVPersonasNoUsuarios)
         Me.GBPersonasUsuarios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBPersonasUsuarios.Location = New System.Drawing.Point(13, 73)
+        Me.GBPersonasUsuarios.Location = New System.Drawing.Point(13, 131)
         Me.GBPersonasUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.GBPersonasUsuarios.Name = "GBPersonasUsuarios"
         Me.GBPersonasUsuarios.Padding = New System.Windows.Forms.Padding(4)
-        Me.GBPersonasUsuarios.Size = New System.Drawing.Size(543, 243)
+        Me.GBPersonasUsuarios.Size = New System.Drawing.Size(543, 237)
         Me.GBPersonasUsuarios.TabIndex = 0
         Me.GBPersonasUsuarios.TabStop = False
-        Me.GBPersonasUsuarios.Text = "Persona que no son usuarios del sistema"
         '
         'DGVPersonasNoUsuarios
         '
-        Me.DGVPersonasNoUsuarios.BackgroundColor = System.Drawing.Color.Olive
+        Me.DGVPersonasNoUsuarios.BackgroundColor = System.Drawing.Color.OliveDrab
         Me.DGVPersonasNoUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVPersonasNoUsuarios.Location = New System.Drawing.Point(7, 22)
+        Me.DGVPersonasNoUsuarios.Location = New System.Drawing.Point(7, 15)
         Me.DGVPersonasNoUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.DGVPersonasNoUsuarios.Name = "DGVPersonasNoUsuarios"
         Me.DGVPersonasNoUsuarios.Size = New System.Drawing.Size(529, 214)
@@ -60,9 +60,9 @@ Partial Class FPersonasUsuarios
         '
         'TXTBuscar
         '
-        Me.TXTBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.TXTBuscar.BackColor = System.Drawing.Color.White
         Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TXTBuscar.Location = New System.Drawing.Point(20, 40)
+        Me.TXTBuscar.Location = New System.Drawing.Point(13, 98)
         Me.TXTBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(225, 25)
@@ -70,10 +70,11 @@ Partial Class FPersonasUsuarios
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
+        Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNSeleccionar)
-        Me.GroupBox1.Location = New System.Drawing.Point(356, 13)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GroupBox1.Location = New System.Drawing.Point(363, 65)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
@@ -84,7 +85,7 @@ Partial Class FPersonasUsuarios
         'BTNCancelar
         '
         Me.BTNCancelar.Enabled = False
-        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNCancelar.Location = New System.Drawing.Point(109, 14)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
@@ -95,7 +96,7 @@ Partial Class FPersonasUsuarios
         '
         'BTNSeleccionar
         '
-        Me.BTNSeleccionar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSeleccionar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSeleccionar.Location = New System.Drawing.Point(8, 14)
         Me.BTNSeleccionar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSeleccionar.Name = "BTNSeleccionar"
@@ -107,21 +108,35 @@ Partial Class FPersonasUsuarios
         'LBLBuscar
         '
         Me.LBLBuscar.AutoSize = True
-        Me.LBLBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLBuscar.Location = New System.Drawing.Point(77, 16)
+        Me.LBLBuscar.BackColor = System.Drawing.Color.Transparent
+        Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBLBuscar.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.LBLBuscar.Location = New System.Drawing.Point(59, 74)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(117, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(127, 20)
         Me.LBLBuscar.TabIndex = 14
         Me.LBLBuscar.Text = "Buscar(Nombre, Ci)"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Label2.Location = New System.Drawing.Point(9, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(296, 20)
+        Me.Label2.TabIndex = 51
+        Me.Label2.Text = "MÓDULO PERSONA NO USUARIO DEL SISTEMA"
         '
         'FPersonasUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
-        Me.ClientSize = New System.Drawing.Size(564, 322)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.ClientSize = New System.Drawing.Size(564, 381)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TXTBuscar)
@@ -146,6 +161,7 @@ Partial Class FPersonasUsuarios
     Friend WithEvents BTNCancelar As System.Windows.Forms.Button
     Friend WithEvents BTNSeleccionar As System.Windows.Forms.Button
     Friend WithEvents LBLBuscar As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
    
 

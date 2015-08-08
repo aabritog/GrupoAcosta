@@ -237,15 +237,15 @@
 
     End Sub
 
-    Private Sub TXTDireccion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDireccion.TextChanged, TextBox4.TextChanged, TextBox2.TextChanged
+    Private Sub TXTDireccion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDireccion.TextChanged
         objCGenerica.valCampoObligatorio(Me.TXTDireccion, LBLValidarDireccion)
     End Sub
 
-    Private Sub CMBCliente_SelectionChangeCommitted_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMBCliente.SelectionChangeCommitted, ComboBox2.SelectionChangeCommitted, ComboBox1.SelectionChangeCommitted
+    Private Sub CMBCliente_SelectionChangeCommitted_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMBCliente.SelectionChangeCommitted
         TXTCliente.Text = CMBCliente.SelectedValue
     End Sub
 
-    Private Sub TXTCliente_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTCliente.TextChanged, TextBox3.TextChanged, TextBox1.TextChanged
+    Private Sub TXTCliente_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTCliente.TextChanged
         objCGenerica.valCampoObligatorio(Me.TXTCliente, LBLValidarCliente)
     End Sub
 
@@ -261,4 +261,5 @@
         BTNCancelar.Enabled = True
     End Sub
 
+  
 End Class

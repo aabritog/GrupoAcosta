@@ -103,8 +103,8 @@ Partial Class FPrincipal
         '
         Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(227, 27)
-        Me.ToolStripStatusLabel5.Text = "GRUPO ACOSTA C.A - RIF J-000000-1"
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(345, 27)
+        Me.ToolStripStatusLabel5.Text = "GRUPO ACOSTA  MARINE SERVICES C.A - RIF J-000000-1"
         '
         'MSFPrincipal
         '
@@ -324,7 +324,7 @@ Partial Class FPrincipal
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "GRUPO ACOSTA C.A"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.SSFPrincipal.ResumeLayout(False)
         Me.SSFPrincipal.PerformLayout()

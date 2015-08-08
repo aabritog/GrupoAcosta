@@ -213,10 +213,10 @@
 
     End Sub
 
-    Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    'Private Sub TXTDescripcion_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        objCGenerica.valCampoObligatorio(Me.TXTDescripcion, LBLValidarDescripcion)
-    End Sub
+    '    objCGenerica.valCampoObligatorio(Me.TXTDescripcion, LBLValidarDescripcion)
+    'End Sub
 
     Private Sub TXTDescripcion_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
 

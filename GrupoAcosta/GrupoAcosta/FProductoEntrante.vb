@@ -58,7 +58,7 @@
 
             With DGVProductoEntrante.Columns("")
                 '.Visible = False
-                .HeaderText = "Producto"s_descripcion
+                .HeaderText = "Producto"
                 .Width = "180"
                 .DisplayIndex = "0"
                 .ReadOnly = True

@@ -52,7 +52,7 @@ Partial Class FMunicipio
         '
         'GBNuevoMunicipio
         '
-        Me.GBNuevoMunicipio.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBNuevoMunicipio.BackColor = System.Drawing.Color.White
         Me.GBNuevoMunicipio.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBNuevoMunicipio.Controls.Add(Me.LBCamposObligatorios)
         Me.GBNuevoMunicipio.Controls.Add(Me.LBLValidarProvincia)

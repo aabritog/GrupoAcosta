@@ -186,8 +186,7 @@ Public Class FPersona
     End Sub
 
 
-    Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
-
+    Private Sub BTNAgregar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
         'La variable nAction = 1 porque se va a realizar el proceso de inserción.
         nAction = 1
 
@@ -215,7 +214,6 @@ Public Class FPersona
 
         DGVPersona.Enabled = False
         DGVPersona.ClearSelection()
-
     End Sub
 
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
@@ -379,10 +377,6 @@ Public Class FPersona
     Private Sub DTPFecha_CloseUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPFecha.CloseUp
         'El TextBox toma el valor seleccionado del DataTimePicker
         TXTFechaNacimiento.Text = DTPFecha.Value.Date
-    End Sub
-
-    Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
-        Me.Dispose()
     End Sub
 
     Private Sub CMBCI_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMBNacionalidad.SelectedIndexChanged
@@ -665,6 +659,11 @@ Public Class FPersona
         FReporte.sNombre_reporte = "Visualizar_Persona"
         FReporte.ShowDialog()
     End Sub
+
+    Private Sub BTNSalir_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
+        Me.Dispose()
+    End Sub
+    
 End Class
 
 

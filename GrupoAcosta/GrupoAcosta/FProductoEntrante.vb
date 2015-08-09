@@ -6,6 +6,7 @@
     Friend nId_ProductoEntrante As Integer
     Public nAction As Integer
 
+
     Private Sub cargarCMBProveedor()
 
         Dim sCadenaSQL As String = "select nid, s_descripcion from proveedores order by s_descripcion"
@@ -26,11 +27,10 @@
 
     Private Sub mostrarDGVProductoEntrante()
 
-        'Dim sCadenaSQL As String = "select nid, s_descripcion, s_descripcioncorta from producto where s_activo = '1' order by s_descripcion"
+        Dim nIdSolicitudP As Integer = FSolicitudProductos.nIdSolicitud
 
-        Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto from v_detalle_solicitud p order by p.s_descripcion"
-
-
+        Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
+        
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
 
             Dim dtDGVProductoEntrante As New DataTable
@@ -56,7 +56,7 @@
 
             End With
 
-            With DGVProductoEntrante.Columns("")
+            With DGVProductoEntrante.Columns("s_descripcion")
                 '.Visible = False
                 .HeaderText = "Producto"
                 .Width = "180"
@@ -64,6 +64,7 @@
                 .ReadOnly = True
 
             End With
+
             With DGVProductoEntrante.Columns("n_cantidad_requerida_producto")
                 '.Visible = True
                 .HeaderText = "Cantidad Requerida"
@@ -73,11 +74,20 @@
 
             End With
 
+            With DGVProductoEntrante.Columns("nid_solicitud_producto")
+                .Visible = False
+                .HeaderText = "Solicitud Producto"
+                .Width = "180"
+                .DisplayIndex = "2"
+                .ReadOnly = True
+
+            End With
+
             With CHECKDGVProductoEntrante
                 .Name = "select"
                 '.DataPropertyName = "activo_privilegio"
                 .FalseValue = "0"
-                .TrueValue = "0"
+                .TrueValue = "1"
                 .HeaderText = "Incluir"
                 .Width = "60"
                 .ReadOnly = False
@@ -100,40 +110,16 @@
 
     End Sub
 
-    'Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
-
-    '    cargarCMBProveedor()
-
-    '    nAction = 1
-
-    '    CMBProveedor.Enabled = False
-    '    'BTNSolicitudes.Enabled = True
-    '    TXTBuscar.Enabled = False
-    '    BTNEliminar.Enabled = False
-    '    BTNModificar.Enabled = False
-    '    BTNAgregar.Enabled = False
-    '    BTNGuardar.Enabled = True
-    '    BTNCancelar.Enabled = True
-    '    TXTProveedor.Focus()
-    '    DGVProductoEntrante.Enabled = True
-    '    DGVProductoEntrante.ClearSelection()
-
-    'End Sub
-
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
-
-        Dim sId_ProductoEntrante As String
-
 
         Dim SQLGuardar As String = ""
         Dim nIndice As Integer = 0
         Dim nTexto As String = "0"
         Dim sSQLAux As String = ""
         Dim sCantidad_requerida As String = ""
-        Dim nCantidad_requerida As Integer
 
         If Len(TXTProveedor.Text) = 0 Then
-            MsgBox("Rellene el campo Cliente", MsgBoxStyle.Information)
+            MsgBox("Rellene el campo Proveedor", MsgBoxStyle.Information)
             TXTProveedor.Focus()
             Exit Sub
         End If
@@ -151,56 +137,31 @@
                         Exit Sub
 
                     Else
+                        If DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value > DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value Then
+                            MsgBox("La cantidad entrante del producto supera la requerida", MsgBoxStyle.Information)
+                            Exit Sub
 
-                        SQLGuardar = "insert into producto_entrante (nid, nid_proveedor, d_fecha) values (" & TXTProveedor.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
-                        sId_ProductoEntrante = ""
-
-                        'SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha) values (" & TXTProveedor.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
-                        'sId_ProductoEntrante = ""
-
-                        'objCGenerica.accederBD(SQLGuardar, sId_ProductoEntrante)
-
-                        'nId_ProductoEntrante = CInt(Trim(sId_ProductoEntrante))
-
-                        'SQLGuardar = "insert into solicitud_historial (nId_ProductoEntrante, nid_estado, d_fecha, n_orden) values (" & nId_ProductoEntrante & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
-
-                        'objCGenerica.accederBD(SQLGuardar)
-
-                        'SQLGuardar = "insert into solicitud_historial_movimiento (nId_ProductoEntrante,nid_movimiento,d_fecha, n_orden) values (" & nId_ProductoEntrante & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
-
-                        'objCGenerica.accederBD(SQLGuardar)
-
-                        While nIndice < DGVProductoEntrante.RowCount
-
-                            If DGVProductoEntrante.Rows(nIndice).Cells("select").Value = "1" Then
-
-                                sSQLAux = "SELECT n_cantidad_requerida, '' as sCampo2, '' as sCampo3, '' as sCampo4, '' as sCampo5, '' as sCampo6,'' as sCampo7, '' as sCampo8 FROM solicitud_producto WHERE nid_solicitud = " & DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value & " AND nid_producto =" & DGVProductoEntrante.Rows(nIndice).Cells("s_descripcion").Value & ""
-                                objCGenerica.recuperarCamposBD(sSQLAux, sCantidad_requerida)
-
-                                nCantidad_requerida = CInt(sCantidad_requerida)
-
-                                If Len(DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
-                                    MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
-                                    Exit Sub
-                                Else
-
-                                    If DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value > nCantidad_requerida Then
-                                        'If DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value > DGVProductoEntrante.Rows(nIndice).Cells("nCantidadREQUERIDA").ValuE Then
-                                        MsgBox("La cantidad entrante del producto supera la requerida", MsgBoxStyle.Information)
-                                        Exit Sub
-                                    End If
-
-                                    'SQLGuardar = "insert into solicitud_producto (nId_ProductoEntrante, nid_producto, n_cantidad_requerida, s_existencia) values (" & nId_ProductoEntrante & ", " & DGVProductoEntrante.Rows(nIndice).Cells("nid").Value & ", " & DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value & ", '2')"
-                                    'objCGenerica.accederBD(SQLGuardar)
-                                End If
-
-                            End If
-
-                            nIndice = 1 + nIndice
-
-                        End While
+                        End If
 
                     End If
+
+                End If
+
+                nIndice = 1 + nIndice
+
+            End While
+
+            While nIndice < DGVProductoEntrante.RowCount
+
+                If DGVProductoEntrante.Rows(nIndice).Cells("select").Value = "1" Then
+
+                    SQLGuardar = "insert into producto_entrante (nid_proveedor, nid_solicitud_producto, n_cantidad_entrante, d_fecha) values (" & TXTProveedor.Text & ", " & DGVProductoEntrante.Rows(nIndice).Cells("nid_solicitud_producto").Value & ", " & DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value & ", '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
+
+                Else
+
+                    MsgBox("Seleccione los prouctos entrantes", MsgBoxStyle.Information)
+
+
                 End If
 
             End While
@@ -209,17 +170,7 @@
 
             nAction = 0
 
-            MsgBox("Se ha agregado la solicitud exitosamente.", MsgBoxStyle.Information)
-
-            If MsgBox("¿Desea ver el detalle de la solicitud creada?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                FReporte.sNombre_reporte = "RDetalleSolicitud2"
-                FReporte.ShowDialog()
-                Me.Dispose()
-            Else
-                Me.Dispose()
-            End If
-
-            'Si la acción es modificar (modificar registr existente).
+            MsgBox("los productos entrantes fueron registrados correctamente.", MsgBoxStyle.Information)
 
         ElseIf nAction = 2 Then
 
@@ -240,13 +191,13 @@
 
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 
-        'Se habilitan/deshabilitan los objetos
 
+        'Se habilitan/deshabilitan los objetos
         CMBProveedor.Enabled = False
         TXTBuscar.Enabled = True
         'BTNAgregar.Enabled = True
         BTNModificar.Enabled = False
-        BTNEliminar.Enabled = False
+        'BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
         BTNGuardar.Enabled = False
         DGVProductoEntrante.Enabled = True
@@ -261,6 +212,8 @@
         'DGVProductoEntrante.columns.Clear()
         CMBProveedor.DataSource = Nothing
         nAction = 0
+        'LBLNinguno.clear()
+        Me.Dispose()
 
     End Sub
 
@@ -273,7 +226,7 @@
         CMBProveedor.Enabled = True
         TXTBuscar.Enabled = False
         'BTNAgregar.Enabled = False
-        BTNEliminar.Enabled = False
+        'BTNEliminar.Enabled = False
         BTNCancelar.Enabled = True
         BTNModificar.Enabled = False
         BTNGuardar.Enabled = True
@@ -291,23 +244,8 @@
 
     End Sub
 
-    Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
-        'Se declara el elemento eliminar para registros 
-        If MsgBox("¿Esta seguro de querer eliminar esta solicitud?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarSolicitudes As String = ""
-            SQLEliminarSolicitudes = "DELETE FROM Solicitudes WHERE nid=" & DGVProductoEntrante.CurrentRow.Cells("nid").Value & ""
-            objCGenerica.accederBD(SQLEliminarSolicitudes)
-            mostrarDGVProductoEntrante()
-            BTNCancelar_Click(sender, e)
-            MsgBox("Se ha eliminado la solicitud", MsgBoxStyle.Information)
-        Else
-            DGVProductoEntrante.ClearSelection()
-        End If
-
-    End Sub
-
     Private Sub TXTBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTBuscar.TextChanged
-        bsDGVProductoEntranteFilter.Filter = "s_cliente like '%" & TXTBuscar.Text & "%' "
+        bsDGVProductoEntranteFilter.Filter = "s_descripcion like '%" & TXTBuscar.Text & "%' "
 
         If Len(TXTBuscar.Text) = 0 Then
             DGVProductoEntrante.ClearSelection()
@@ -334,8 +272,8 @@
 
         CMBProveedor.Enabled = True
         'BTNSolicitudes.Enabled = True
-        TXTBuscar.Enabled = False
-        BTNEliminar.Enabled = False
+        TXTBuscar.Enabled = True
+        'BTNEliminar.Enabled = False
         BTNModificar.Enabled = False
         'BTNAgregar.Enabled = False
         BTNGuardar.Enabled = True

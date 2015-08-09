@@ -25,12 +25,10 @@ Partial Class FPersona
         Me.components = New System.ComponentModel.Container()
         Me.GBPersona = New System.Windows.Forms.GroupBox()
         Me.DGVPersona = New System.Windows.Forms.DataGridView()
-        Me.BTNSalir = New System.Windows.Forms.Button()
         Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.BTNEliminar = New System.Windows.Forms.Button()
         Me.BTNModificar = New System.Windows.Forms.Button()
         Me.BTNGuardar = New System.Windows.Forms.Button()
-        Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
         Me.LBLBuscar = New System.Windows.Forms.Label()
         Me.GBNuevoRegistro = New System.Windows.Forms.GroupBox()
@@ -78,6 +76,8 @@ Partial Class FPersona
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BTNSalir = New System.Windows.Forms.Button()
+        Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
@@ -109,18 +109,6 @@ Partial Class FPersona
         Me.DGVPersona.TabIndex = 99
         Me.DGVPersona.TabStop = False
         Me.TTFPersona.SetToolTip(Me.DGVPersona, "Personas registradas en el sistema")
-        '
-        'BTNSalir
-        '
-        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(13, 219)
-        Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.BTNSalir.Name = "BTNSalir"
-        Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
-        Me.BTNSalir.TabIndex = 5
-        Me.BTNSalir.Text = "Salir"
-        Me.TTFPersona.SetToolTip(Me.BTNSalir, "Presione aquí para salir de la ventana actual")
-        Me.BTNSalir.UseVisualStyleBackColor = True
         '
         'BTNCancelar
         '
@@ -173,18 +161,6 @@ Partial Class FPersona
         Me.BTNGuardar.Text = "Guardar"
         Me.TTFPersona.SetToolTip(Me.BTNGuardar, "Presione aquí para guardar los cambios")
         Me.BTNGuardar.UseVisualStyleBackColor = True
-        '
-        'BTNAgregar
-        '
-        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNAgregar.Location = New System.Drawing.Point(13, 17)
-        Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BTNAgregar.Name = "BTNAgregar"
-        Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
-        Me.BTNAgregar.TabIndex = 22
-        Me.BTNAgregar.Text = "Agregar"
-        Me.TTFPersona.SetToolTip(Me.BTNAgregar, "Presione aquí para habilitar los campos para aregar una nueva persona")
-        Me.BTNAgregar.UseVisualStyleBackColor = True
         '
         'TXTBuscar
         '
@@ -674,8 +650,8 @@ Partial Class FPersona
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
+        Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Controls.Add(Me.BTNEliminar)
@@ -755,6 +731,28 @@ Partial Class FPersona
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "MÓDULO PERSONA"
         '
+        'BTNSalir
+        '
+        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSalir.Location = New System.Drawing.Point(13, 220)
+        Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNSalir.Name = "BTNSalir"
+        Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
+        Me.BTNSalir.TabIndex = 23
+        Me.BTNSalir.Text = "Salir"
+        Me.BTNSalir.UseVisualStyleBackColor = True
+        '
+        'BTNAgregar
+        '
+        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNAgregar.Location = New System.Drawing.Point(13, 14)
+        Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNAgregar.Name = "BTNAgregar"
+        Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
+        Me.BTNAgregar.TabIndex = 24
+        Me.BTNAgregar.Text = "Agregar"
+        Me.BTNAgregar.UseVisualStyleBackColor = True
+        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -790,12 +788,10 @@ Partial Class FPersona
     End Sub
     Friend WithEvents GBPersona As System.Windows.Forms.GroupBox
     Friend WithEvents DGVPersona As System.Windows.Forms.DataGridView
-    Friend WithEvents BTNSalir As System.Windows.Forms.Button
     Friend WithEvents BTNCancelar As System.Windows.Forms.Button
     Friend WithEvents BTNEliminar As System.Windows.Forms.Button
     Friend WithEvents BTNModificar As System.Windows.Forms.Button
     Friend WithEvents BTNGuardar As System.Windows.Forms.Button
-    Friend WithEvents BTNAgregar As System.Windows.Forms.Button
     Friend WithEvents TXTBuscar As System.Windows.Forms.TextBox
     Friend WithEvents LBLBuscar As System.Windows.Forms.Label
     Friend WithEvents GBNuevoRegistro As System.Windows.Forms.GroupBox
@@ -844,5 +840,7 @@ Partial Class FPersona
     Friend WithEvents LVTelefonos As System.Windows.Forms.ListView
     Friend WithEvents TTFPersona As System.Windows.Forms.ToolTip
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents BTNSalir As System.Windows.Forms.Button
+    Friend WithEvents BTNAgregar As System.Windows.Forms.Button
 
 End Class

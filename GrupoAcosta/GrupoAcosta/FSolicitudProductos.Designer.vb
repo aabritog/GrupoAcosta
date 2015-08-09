@@ -100,7 +100,6 @@ Partial Class FSolicitudProductos
         '
         'BTNCancelar
         '
-        Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNCancelar.ForeColor = System.Drawing.Color.MidnightBlue
         Me.BTNCancelar.Location = New System.Drawing.Point(92, 14)
@@ -157,7 +156,7 @@ Partial Class FSolicitudProductos
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Name = "FSolicitudProductos"
-        Me.Text = "Solicitud_Productos"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO SOLICITUD-PRODUCTOS"
         CType(Me.DGVSolicitudesSistema, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBPersonasUsuarios.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)

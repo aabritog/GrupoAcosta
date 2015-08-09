@@ -2,23 +2,15 @@
 
     Dim DatosDataTableDGVSolicitudesSistema As New DataTable
     Dim DatosBindingSourceDGVSolicitudesSistema As New BindingSource
-    Public sIdSolicitud As Integer
-
-    'Private Sub BTNSeleccionar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    'FUsuarios.TBValidarIdPersona.Text = DGVPersonasNoUsuarios.CurrentRow.Cells("id").Value
-    '    TXTSoliictudesSistema.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
-    '    FProductoEntrante.LBLNinguno.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
-    '    FProductoEntrante.LBLCliente.Text = DGVSolicitudesSistema.CurrentRow.Cells("s_cliente").Value
-    '    BTNSiguiente.Enabled = True
-    '    'Me.Close()
-    'End Sub
+    Public nIdSolicitud As Integer
+    Public nIndice As Integer = 0
 
     Private Sub mostrarDGVSolicitudesSistema()
 
         Dim CadenaSQL As String = ""
 
         'CadenaSQL = "select p.nid, p.s_nombre1 ||' '|| p.s_apellido1 ||' '|| p.s_apellido2 s_nombre, p.s_dni from persona p where p.nid not in (select nid_persona from usuario) and p.s_activo = '1'"
-        CadenaSQL = "select nid_solicitud, s_cliente, d_fecha_solicitud from v_detalle_solicitud"
+        CadenaSQL = "select nid_solicitud, s_cliente, d_fecha_solicitud from v_detalle_solicitud group by nid_solicitud, s_cliente, d_fecha_solicitud order by nid_solicitud"
 
         DatosDataTableDGVSolicitudesSistema.Clear()
 
@@ -68,7 +60,6 @@
 
     End Sub
 
-
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 
         'Se habilitan/deshabilitan los objetos
@@ -95,10 +86,13 @@
 
         BTNSiguiente.Enabled = True
 
+
     End Sub
 
   
     Private Sub BTNSiguiente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSiguiente.Click
+
+        nIdSolicitud = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
 
         'FUsuarios.TBValidarIdPersona.Text = DGVPersonasNoUsuarios.CurrentRow.Cells("id").Value
 

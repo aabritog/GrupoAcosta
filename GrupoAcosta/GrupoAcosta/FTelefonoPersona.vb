@@ -132,4 +132,5 @@
     Private Sub TXTTelefono_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTTelefono.Enter
         DGVTelefono.ClearSelection()
     End Sub
+
 End Class

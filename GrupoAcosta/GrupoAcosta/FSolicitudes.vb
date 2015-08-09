@@ -174,6 +174,7 @@
                         While nIndice < DGVSolicitudes.RowCount
 
                             If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
+
                                 If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
                                     MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
                                     Exit Sub

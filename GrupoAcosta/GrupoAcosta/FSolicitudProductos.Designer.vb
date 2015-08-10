@@ -43,7 +43,7 @@ Partial Class FSolicitudProductos
         Me.DGVSolicitudesSistema.Location = New System.Drawing.Point(6, 18)
         Me.DGVSolicitudesSistema.Margin = New System.Windows.Forms.Padding(4)
         Me.DGVSolicitudesSistema.Name = "DGVSolicitudesSistema"
-        Me.DGVSolicitudesSistema.Size = New System.Drawing.Size(529, 214)
+        Me.DGVSolicitudesSistema.Size = New System.Drawing.Size(483, 214)
         Me.DGVSolicitudesSistema.TabIndex = 0
         '
         'GBPersonasUsuarios
@@ -55,7 +55,7 @@ Partial Class FSolicitudProductos
         Me.GBPersonasUsuarios.Margin = New System.Windows.Forms.Padding(4)
         Me.GBPersonasUsuarios.Name = "GBPersonasUsuarios"
         Me.GBPersonasUsuarios.Padding = New System.Windows.Forms.Padding(4)
-        Me.GBPersonasUsuarios.Size = New System.Drawing.Size(543, 238)
+        Me.GBPersonasUsuarios.Size = New System.Drawing.Size(501, 238)
         Me.GBPersonasUsuarios.TabIndex = 1
         Me.GBPersonasUsuarios.TabStop = False
         '
@@ -77,7 +77,7 @@ Partial Class FSolicitudProductos
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNSiguiente)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
-        Me.GroupBox1.Location = New System.Drawing.Point(350, 76)
+        Me.GroupBox1.Location = New System.Drawing.Point(319, 62)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4)
@@ -136,7 +136,7 @@ Partial Class FSolicitudProductos
         Me.TXTSoliictudesSistema.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.TXTSoliictudesSistema.Enabled = False
         Me.TXTSoliictudesSistema.Font = New System.Drawing.Font("Arial", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTSoliictudesSistema.Location = New System.Drawing.Point(318, 100)
+        Me.TXTSoliictudesSistema.Location = New System.Drawing.Point(283, 94)
         Me.TXTSoliictudesSistema.Name = "TXTSoliictudesSistema"
         Me.TXTSoliictudesSistema.Size = New System.Drawing.Size(25, 20)
         Me.TXTSoliictudesSistema.TabIndex = 43
@@ -148,7 +148,7 @@ Partial Class FSolicitudProductos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(551, 384)
+        Me.ClientSize = New System.Drawing.Size(510, 384)
         Me.Controls.Add(Me.TXTSoliictudesSistema)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LBLBuscar)

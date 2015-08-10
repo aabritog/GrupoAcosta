@@ -42,14 +42,14 @@
             With DGVProducto.Columns("s_descripcion")
                 '.Visible = True
                 .HeaderText = "Descripcion"
-                .Width = "180"
+                .Width = "260"
                 .DisplayIndex = "1"
 
             End With
             With DGVProducto.Columns("s_descripcioncorta")
                 '.Visible = True
                 .HeaderText = "Descripcion Corta"
-                .Width = "180"
+                .Width = "260"
                 .DisplayIndex = "2"
 
             End With

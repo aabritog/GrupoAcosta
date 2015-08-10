@@ -5,7 +5,6 @@ Public Class FIngreso
     'Se declara variable de tipo clase para el manejo de funciones genericas
     Dim objCGenerica As CGenerica = New CGenerica
 
-
     'Friend nId_persona As Integer = 0
     Friend sId_persona As String = ""
     'Friend id_usuario As Integer = 0
@@ -14,7 +13,6 @@ Public Class FIngreso
     Friend apellidoPersona As String = ""
     Friend id_rol As Integer = 0
     Friend nombre_rol As String = ""
-
 
     Friend nId_usuario As Integer
     Friend nId_persona As Integer
@@ -39,12 +37,6 @@ Public Class FIngreso
     Dim s_Campo6 As String = ""
     Dim s_Campo7 As String = ""
     Dim s_Campo8 As String = ""
-
-
-
-
-
-
 
     Dim nlogin_errado As Integer = 0
     Dim m_campos_obligatorios As String = "Debe rellenar los campos obligatorios"             'Para los campos obligatorios *.
@@ -76,7 +68,6 @@ Public Class FIngreso
         Dim sAccederSistema As String
         Dim sSQLDatosPersona As String
 
-
         If Len(TBAlias.Text) = 0 Then
             MsgBox(m_campos_obligatorios, MsgBoxStyle.Information)
             TBAlias.Focus()
@@ -87,7 +78,6 @@ Public Class FIngreso
             TBClave.Focus()
             Exit Sub
         End If
-
 
         sSQLAccesarSistema = "SELECT nid_persona, nid, s_seudonimo FROM usuario WHERE nid =" & CBAlias.SelectedValue & " AND s_clave = '" & TBClave.Text & "'"
         sAccederSistema = ""
@@ -120,11 +110,8 @@ Public Class FIngreso
                 s_Nombre = s_Campo6
 
                 FPrincipal.ShowDialog()
-             
-
 
             End If
-
 
         Else
             MsgBox("A excedido el numero de intentos, saliendo...", MsgBoxStyle.Information)
@@ -133,12 +120,9 @@ Public Class FIngreso
 
     End Sub
 
-
     Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
         Me.Dispose()
     End Sub
-
-
 
     Private Sub TBAlias_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBAlias.TextChanged
         If Len(TBAlias.Text) = 0 Then

@@ -41,7 +41,6 @@ Partial Class FProductoEntrante
         Me.BTNSalir = New System.Windows.Forms.Button()
         Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.BTNGuardar = New System.Windows.Forms.Button()
-        Me.BTNModificar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGVProductoEntrante = New System.Windows.Forms.DataGridView()
         Me.GBProductoEntrante = New System.Windows.Forms.GroupBox()
@@ -226,18 +225,17 @@ Partial Class FProductoEntrante
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
-        Me.GroupBox1.Controls.Add(Me.BTNModificar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(569, 155)
+        Me.GroupBox1.Location = New System.Drawing.Point(569, 170)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(90, 175)
+        Me.GroupBox1.Size = New System.Drawing.Size(90, 137)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         '
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(7, 137)
+        Me.BTNSalir.Location = New System.Drawing.Point(9, 96)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -249,7 +247,7 @@ Partial Class FProductoEntrante
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(7, 96)
+        Me.BTNCancelar.Location = New System.Drawing.Point(7, 55)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -268,18 +266,6 @@ Partial Class FProductoEntrante
         Me.BTNGuardar.TabIndex = 1
         Me.BTNGuardar.Text = "Guardar"
         Me.BTNGuardar.UseVisualStyleBackColor = True
-        '
-        'BTNModificar
-        '
-        Me.BTNModificar.Enabled = False
-        Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNModificar.Location = New System.Drawing.Point(7, 55)
-        Me.BTNModificar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BTNModificar.Name = "BTNModificar"
-        Me.BTNModificar.Size = New System.Drawing.Size(74, 33)
-        Me.BTNModificar.TabIndex = 2
-        Me.BTNModificar.Text = "Modificar"
-        Me.BTNModificar.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -364,7 +350,6 @@ Partial Class FProductoEntrante
     Friend WithEvents BTNSalir As System.Windows.Forms.Button
     Friend WithEvents BTNCancelar As System.Windows.Forms.Button
     Friend WithEvents BTNGuardar As System.Windows.Forms.Button
-    Friend WithEvents BTNModificar As System.Windows.Forms.Button
     Friend WithEvents LBLPSeleccionada As System.Windows.Forms.Label
     Friend WithEvents LBLNinguno As System.Windows.Forms.Label
     Friend WithEvents LBLCliente As System.Windows.Forms.Label

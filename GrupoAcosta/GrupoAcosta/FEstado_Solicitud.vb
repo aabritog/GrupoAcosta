@@ -42,14 +42,14 @@
             With DGVEstadoSolicitud.Columns("s_descripcion")
                 '.Visible = True
                 .HeaderText = "Descripcion"
-                .Width = "180"
+                .Width = "220"
                 .DisplayIndex = "1"
 
             End With
             With DGVEstadoSolicitud.Columns("s_descripcioncorta")
                 '.Visible = True
                 .HeaderText = "Descripcion Corta"
-                .Width = "180"
+                .Width = "220"
                 .DisplayIndex = "2"
 
             End With

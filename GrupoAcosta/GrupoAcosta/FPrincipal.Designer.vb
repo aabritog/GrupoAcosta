@@ -36,6 +36,7 @@ Partial Class FPrincipal
         Me.SolicitudesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SolicitudProductoEntranteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguraciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MantenimientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DepartamentosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,9 +65,9 @@ Partial Class FPrincipal
         '
         Me.SSFPrincipal.BackColor = System.Drawing.Color.White
         Me.SSFPrincipal.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSSLUsuario, Me.TSSLAlias, Me.TSSLRol, Me.TSSLFechaHoraActual, Me.ToolStripStatusLabel5})
-        Me.SSFPrincipal.Location = New System.Drawing.Point(0, 716)
+        Me.SSFPrincipal.Location = New System.Drawing.Point(0, 708)
         Me.SSFPrincipal.Name = "SSFPrincipal"
-        Me.SSFPrincipal.Size = New System.Drawing.Size(1350, 32)
+        Me.SSFPrincipal.Size = New System.Drawing.Size(1020, 32)
         Me.SSFPrincipal.TabIndex = 0
         Me.SSFPrincipal.Text = "StatusStrip1"
         '
@@ -113,7 +114,7 @@ Partial Class FPrincipal
         Me.MSFPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.MSFPrincipal.Name = "MSFPrincipal"
         Me.MSFPrincipal.Padding = New System.Windows.Forms.Padding(6, 6, 0, 4)
-        Me.MSFPrincipal.Size = New System.Drawing.Size(1350, 34)
+        Me.MSFPrincipal.Size = New System.Drawing.Size(1020, 34)
         Me.MSFPrincipal.TabIndex = 1
         Me.MSFPrincipal.Text = "Configuración"
         '
@@ -146,7 +147,7 @@ Partial Class FPrincipal
         'SolicitudesToolStripMenuItem
         '
         Me.SolicitudesToolStripMenuItem.BackColor = System.Drawing.Color.Olive
-        Me.SolicitudesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearToolStripMenuItem, Me.ConsultarToolStripMenuItem})
+        Me.SolicitudesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CrearToolStripMenuItem, Me.ConsultarToolStripMenuItem, Me.SolicitudProductoEntranteToolStripMenuItem})
         Me.SolicitudesToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SolicitudesToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.SolicitudesToolStripMenuItem.Name = "SolicitudesToolStripMenuItem"
@@ -159,7 +160,7 @@ Partial Class FPrincipal
         Me.CrearToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CrearToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.CrearToolStripMenuItem.Name = "CrearToolStripMenuItem"
-        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
+        Me.CrearToolStripMenuItem.Size = New System.Drawing.Size(251, 24)
         Me.CrearToolStripMenuItem.Text = "Crear"
         '
         'ConsultarToolStripMenuItem
@@ -168,8 +169,15 @@ Partial Class FPrincipal
         Me.ConsultarToolStripMenuItem.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultarToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.ConsultarToolStripMenuItem.Name = "ConsultarToolStripMenuItem"
-        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(138, 24)
+        Me.ConsultarToolStripMenuItem.Size = New System.Drawing.Size(251, 24)
         Me.ConsultarToolStripMenuItem.Text = "Consultar"
+        '
+        'SolicitudProductoEntranteToolStripMenuItem
+        '
+        Me.SolicitudProductoEntranteToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
+        Me.SolicitudProductoEntranteToolStripMenuItem.Name = "SolicitudProductoEntranteToolStripMenuItem"
+        Me.SolicitudProductoEntranteToolStripMenuItem.Size = New System.Drawing.Size(251, 24)
+        Me.SolicitudProductoEntranteToolStripMenuItem.Text = "Solicitud-Producto Entrante"
         '
         'ConfiguraciónToolStripMenuItem
         '
@@ -195,7 +203,7 @@ Partial Class FPrincipal
         Me.DepartamentosToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.DepartamentosToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.DepartamentosToolStripMenuItem.Name = "DepartamentosToolStripMenuItem"
-        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
+        Me.DepartamentosToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
         Me.DepartamentosToolStripMenuItem.Text = "Departamentos"
         '
         'CargosToolStripMenuItem
@@ -203,7 +211,7 @@ Partial Class FPrincipal
         Me.CargosToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.CargosToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.CargosToolStripMenuItem.Name = "CargosToolStripMenuItem"
-        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
+        Me.CargosToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
         Me.CargosToolStripMenuItem.Text = "Cargos"
         '
         'ProductoToolStripMenuItem
@@ -211,7 +219,7 @@ Partial Class FPrincipal
         Me.ProductoToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.ProductoToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
         Me.ProductoToolStripMenuItem.Text = "Productos"
         '
         'EstadosDeSolicitudToolStripMenuItem
@@ -219,23 +227,23 @@ Partial Class FPrincipal
         Me.EstadosDeSolicitudToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.EstadosDeSolicitudToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.EstadosDeSolicitudToolStripMenuItem.Name = "EstadosDeSolicitudToolStripMenuItem"
-        Me.EstadosDeSolicitudToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
-        Me.EstadosDeSolicitudToolStripMenuItem.Text = "Estados de solicitud"
+        Me.EstadosDeSolicitudToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
+        Me.EstadosDeSolicitudToolStripMenuItem.Text = "Estados de Solicitud"
         '
         'MovimientosDeSolicitudToolStripMenuItem
         '
         Me.MovimientosDeSolicitudToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.MovimientosDeSolicitudToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.MovimientosDeSolicitudToolStripMenuItem.Name = "MovimientosDeSolicitudToolStripMenuItem"
-        Me.MovimientosDeSolicitudToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
-        Me.MovimientosDeSolicitudToolStripMenuItem.Text = "Movimientos de solicitud"
+        Me.MovimientosDeSolicitudToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
+        Me.MovimientosDeSolicitudToolStripMenuItem.Text = "Movimientos de Solicitud"
         '
         'EstadosToolStripMenuItem
         '
         Me.EstadosToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.EstadosToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.EstadosToolStripMenuItem.Name = "EstadosToolStripMenuItem"
-        Me.EstadosToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
+        Me.EstadosToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
         Me.EstadosToolStripMenuItem.Text = "Estados"
         '
         'MunicipiosToolStripMenuItem
@@ -243,7 +251,7 @@ Partial Class FPrincipal
         Me.MunicipiosToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.MunicipiosToolStripMenuItem.ForeColor = System.Drawing.Color.Olive
         Me.MunicipiosToolStripMenuItem.Name = "MunicipiosToolStripMenuItem"
-        Me.MunicipiosToolStripMenuItem.Size = New System.Drawing.Size(235, 24)
+        Me.MunicipiosToolStripMenuItem.Size = New System.Drawing.Size(237, 24)
         Me.MunicipiosToolStripMenuItem.Text = "Municipios"
         '
         'NivelesDeUsuarioToolStripMenuItem
@@ -253,20 +261,20 @@ Partial Class FPrincipal
         Me.NivelesDeUsuarioToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.NivelesDeUsuarioToolStripMenuItem.Name = "NivelesDeUsuarioToolStripMenuItem"
         Me.NivelesDeUsuarioToolStripMenuItem.Size = New System.Drawing.Size(194, 24)
-        Me.NivelesDeUsuarioToolStripMenuItem.Text = "Niveles de usuario"
+        Me.NivelesDeUsuarioToolStripMenuItem.Text = "Niveles de Usuario"
         '
         'RolesToolStripMenuItem
         '
         Me.RolesToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
-        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(133, 24)
+        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
         Me.RolesToolStripMenuItem.Text = "Usuarios"
         '
         'RolesToolStripMenuItem1
         '
         Me.RolesToolStripMenuItem1.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem1.Name = "RolesToolStripMenuItem1"
-        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(133, 24)
+        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
         Me.RolesToolStripMenuItem1.Text = "Roles"
         '
         'CerrarSesiónToolStripMenuItem
@@ -313,7 +321,7 @@ Partial Class FPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(1350, 748)
+        Me.ClientSize = New System.Drawing.Size(1020, 740)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
@@ -367,4 +375,5 @@ Partial Class FPrincipal
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents ClientesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SolicitudProductoEntranteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

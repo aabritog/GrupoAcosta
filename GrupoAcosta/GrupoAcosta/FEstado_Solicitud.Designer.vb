@@ -89,9 +89,9 @@ Partial Class FEstado_Solicitud
         Me.GBEstadoSolicitud.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.GBEstadoSolicitud.Controls.Add(Me.DGVEstadoSolicitud)
         Me.GBEstadoSolicitud.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GBEstadoSolicitud.Location = New System.Drawing.Point(8, 121)
+        Me.GBEstadoSolicitud.Location = New System.Drawing.Point(8, 101)
         Me.GBEstadoSolicitud.Name = "GBEstadoSolicitud"
-        Me.GBEstadoSolicitud.Size = New System.Drawing.Size(485, 196)
+        Me.GBEstadoSolicitud.Size = New System.Drawing.Size(466, 196)
         Me.GBEstadoSolicitud.TabIndex = 35
         Me.GBEstadoSolicitud.TabStop = False
         '
@@ -101,7 +101,7 @@ Partial Class FEstado_Solicitud
         Me.DGVEstadoSolicitud.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVEstadoSolicitud.Location = New System.Drawing.Point(4, 16)
         Me.DGVEstadoSolicitud.Name = "DGVEstadoSolicitud"
-        Me.DGVEstadoSolicitud.Size = New System.Drawing.Size(473, 174)
+        Me.DGVEstadoSolicitud.Size = New System.Drawing.Size(456, 174)
         Me.DGVEstadoSolicitud.TabIndex = 23
         '
         'GroupBox2
@@ -109,7 +109,7 @@ Partial Class FEstado_Solicitud
         Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.BTNCancelar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
-        Me.GroupBox2.Location = New System.Drawing.Point(322, 59)
+        Me.GroupBox2.Location = New System.Drawing.Point(305, 48)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(169, 47)
         Me.GroupBox2.TabIndex = 36
@@ -121,7 +121,7 @@ Partial Class FEstado_Solicitud
         Me.Label2.BackColor = System.Drawing.SystemColors.Control
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label2.Location = New System.Drawing.Point(14, 23)
+        Me.Label2.Location = New System.Drawing.Point(15, 32)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(191, 20)
         Me.Label2.TabIndex = 46
@@ -132,7 +132,7 @@ Partial Class FEstado_Solicitud
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(505, 322)
+        Me.ClientSize = New System.Drawing.Size(479, 297)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GBEstadoSolicitud)

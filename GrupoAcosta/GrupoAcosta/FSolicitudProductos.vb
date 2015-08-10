@@ -38,14 +38,14 @@
             With DGVSolicitudesSistema.Columns("nid_solicitud")
                 .Visible = True
                 .HeaderText = "N° de Solicitud"
-                .Width = "90"
+                .Width = "100"
                 .DisplayIndex = "0"
 
             End With
             With DGVSolicitudesSistema.Columns("s_cliente")
                 '.Visible = True
                 .HeaderText = "Cliente"
-                .Width = "240"
+                .Width = "250"
                 .DisplayIndex = "1"
 
             End With
@@ -53,7 +53,7 @@
             With DGVSolicitudesSistema.Columns("d_fecha_solicitud")
                 '.Visible = True
                 .HeaderText = "Fecha de la Solicitud"
-                .Width = "90"
+                .Width = "110"
                 .DisplayIndex = "2"
             End With
         End Using

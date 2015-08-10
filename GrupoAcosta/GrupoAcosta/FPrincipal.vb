@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub ProductoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductoToolStripMenuItem.Click
-        FDepartamento.ShowDialog()
+        FProducto.ShowDialog()
     End Sub
 
     Private Sub ProveedoresToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -77,16 +77,15 @@
         FSolicitudes.ShowDialog()
     End Sub
 
-    Private Sub ConsultarToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultarToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox4.Click
-
-    End Sub
-
     Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
         FCliente.ShowDialog()
     End Sub
 
+    Private Sub SolicitudProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SolicitudProductoEntranteToolStripMenuItem.Click
+        FSolicitudProductos.ShowDialog()
+    End Sub
+
+    Private Sub NivelesDeUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NivelesDeUsuarioToolStripMenuItem.Click
+
+    End Sub
 End Class

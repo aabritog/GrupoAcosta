@@ -59,7 +59,7 @@
             With DGVProductoEntrante.Columns("s_descripcion")
                 '.Visible = False
                 .HeaderText = "Producto"
-                .Width = "180"
+                .Width = "230"
                 .DisplayIndex = "0"
                 .ReadOnly = True
 
@@ -196,7 +196,7 @@
         CMBProveedor.Enabled = False
         TXTBuscar.Enabled = True
         'BTNAgregar.Enabled = True
-        BTNModificar.Enabled = False
+        'BTNModificar.Enabled = False
         'BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
         BTNGuardar.Enabled = False
@@ -217,26 +217,26 @@
 
     End Sub
 
-    Private Sub BTNModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNModificar.Click
+    'Private Sub BTNModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNModificar.Click
 
-        'La variable nAction = 2 porque se va a realizar el proceso de modificación
-        nAction = 2
+    '    'La variable nAction = 2 porque se va a realizar el proceso de modificación
+    '    nAction = 2
 
-        'Se habilitan/deshabilitan los objetos
-        CMBProveedor.Enabled = True
-        TXTBuscar.Enabled = False
-        'BTNAgregar.Enabled = False
-        'BTNEliminar.Enabled = False
-        BTNCancelar.Enabled = True
-        BTNModificar.Enabled = False
-        BTNGuardar.Enabled = True
-        cargarCMBProveedor()
-        'Los objetos se cargan con la informacion del registro seleccionado del DataGridView
-        TXTProveedor.Text = Trim(DGVProductoEntrante.CurrentRow.Cells("nid_proveedor").Value)
-        'TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
-        CMBProveedor.SelectedValue = Trim(DGVProductoEntrante.CurrentRow.Cells("nid_proveedor").Value)
+    '    'Se habilitan/deshabilitan los objetos
+    '    CMBProveedor.Enabled = True
+    '    TXTBuscar.Enabled = False
+    '    'BTNAgregar.Enabled = False
+    '    'BTNEliminar.Enabled = False
+    '    BTNCancelar.Enabled = True
+    '    BTNModificar.Enabled = False
+    '    BTNGuardar.Enabled = True
+    '    cargarCMBProveedor()
+    '    'Los objetos se cargan con la informacion del registro seleccionado del DataGridView
+    '    TXTProveedor.Text = Trim(DGVProductoEntrante.CurrentRow.Cells("nid_proveedor").Value)
+    '    'TXTClave.Text = Trim(DGVUsuario.CurrentRow.Cells("s_clave").Value)
+    '    CMBProveedor.SelectedValue = Trim(DGVProductoEntrante.CurrentRow.Cells("nid_proveedor").Value)
 
-    End Sub
+    'End Sub
 
     Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
 
@@ -265,7 +265,7 @@
     Private Sub FProductoEntrante_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         DGVProductoEntrante.ClearSelection()
         mostrarDGVProductoEntrante()
-        
+
         cargarCMBProveedor()
 
         nAction = 1
@@ -274,7 +274,7 @@
         'BTNSolicitudes.Enabled = True
         TXTBuscar.Enabled = True
         'BTNEliminar.Enabled = False
-        BTNModificar.Enabled = False
+        'BTNModificar.Enabled = False
         'BTNAgregar.Enabled = False
         BTNGuardar.Enabled = True
         BTNCancelar.Enabled = True

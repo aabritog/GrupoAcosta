@@ -67,7 +67,7 @@
             With DGVMunicipio.Columns("nid_provincia")
                 .Visible = False
                 .HeaderText = "ID Provincia"
-                .Width = "180"
+                .Width = "220"
                 .DisplayIndex = "2"
 
             End With
@@ -75,7 +75,7 @@
             With DGVMunicipio.Columns("s_provincia")
                 '.Visible = True
                 .HeaderText = "Provincia"
-                .Width = "180"
+                .Width = "220"
                 .DisplayIndex = "3"
 
             End With

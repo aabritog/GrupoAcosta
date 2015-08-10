@@ -67,7 +67,7 @@
             With DGVSolicitudes.Columns("s_descripcion")
                 '.Visible = False
                 .HeaderText = "Descripcion"
-                .Width = "180"
+                .Width = "300"
                 .DisplayIndex = "1"
                 .ReadOnly = True
 
@@ -75,7 +75,7 @@
             With DGVSolicitudes.Columns("s_descripcioncorta")
                 '.Visible = True
                 .HeaderText = "Descripcion Corta"
-                .Width = "180"
+                .Width = "200"
                 .DisplayIndex = "2"
                 .ReadOnly = True
 
@@ -111,7 +111,7 @@
     Private Sub BTNAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAgregar.Click
 
         cargarCMBCliente()
-
+        mostrarDGVSolicitudes()
         nAction = 1
 
         CMBCliente.Enabled = True
@@ -249,6 +249,7 @@
         DGVSolicitudes.ClearSelection()
         DGVSolicitudes.Columns.Clear()
         CMBCliente.DataSource = Nothing
+        mostrarDGVSolicitudes()
         nAction = 0
 
     End Sub
@@ -296,7 +297,7 @@
     End Sub
 
     Private Sub TXTBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTBuscar.TextChanged
-        bsDGVSolicitudesFilter.Filter = "s_cliente like '%" & TXTBuscar.Text & "%' "
+        bsDGVSolicitudesFilter.Filter = "s_descripcion like '%" & TXTBuscar.Text & "%' "
 
         If Len(TXTBuscar.Text) = 0 Then
             DGVSolicitudes.ClearSelection()
@@ -317,6 +318,7 @@
         mostrarDGVSolicitudes()
         DGVSolicitudes.ClearSelection()
         BTNAgregar_Click(sender, e)
+
     End Sub
     Private Sub DGVSolicitudes_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVSolicitudes.CellClick
         BTNModificar.Enabled = True

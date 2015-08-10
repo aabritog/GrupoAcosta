@@ -43,14 +43,14 @@ Public Class FDepartamento
             With DGVDepartamento.Columns("s_descripcion")
                 '.Visible = True
                 .HeaderText = "Descripcion"
-                .Width = "180"
+                .Width = "260"
                 .DisplayIndex = "1"
 
             End With
             With DGVDepartamento.Columns("s_descripcioncorta")
                 '.visible = True
                 .HeaderText = "Descripcion Corta"
-                .Width = "180"
+                .Width = "260"
                 .DisplayIndex = "2"
 
             End With

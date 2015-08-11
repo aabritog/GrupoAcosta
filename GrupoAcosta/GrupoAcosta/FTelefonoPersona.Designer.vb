@@ -23,6 +23,7 @@ Partial Class FTelefonoPersona
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTelefonoPersona))
         Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.TXTTelefono = New System.Windows.Forms.TextBox()
         Me.LBValidarTelefono = New System.Windows.Forms.Label()
@@ -188,6 +189,7 @@ Partial Class FTelefonoPersona
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FTelefonoPersona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO TELÉFONO-PERSONA"

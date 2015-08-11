@@ -22,6 +22,7 @@ Partial Class FCargo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FCargo))
         Me.LBLBuscar = New System.Windows.Forms.Label()
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
         Me.GBCargos = New System.Windows.Forms.GroupBox()
@@ -368,6 +369,7 @@ Partial Class FCargo
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FCargo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO CARGO"

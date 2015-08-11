@@ -22,6 +22,7 @@ Partial Class FPersonasUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPersonasUsuarios))
         Me.GBPersonasUsuarios = New System.Windows.Forms.GroupBox()
         Me.DGVPersonasNoUsuarios = New System.Windows.Forms.DataGridView()
         Me.TXTBuscar = New System.Windows.Forms.TextBox()
@@ -142,6 +143,7 @@ Partial Class FPersonasUsuarios
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GBPersonasUsuarios)
         Me.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FPersonasUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

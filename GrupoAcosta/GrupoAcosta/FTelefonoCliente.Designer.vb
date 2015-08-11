@@ -22,6 +22,7 @@ Partial Class FTelefonoCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FTelefonoCliente))
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.TXTTelefono = New System.Windows.Forms.TextBox()
@@ -180,6 +181,7 @@ Partial Class FTelefonoCliente
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FTelefonoCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO TELÉFONO-CLIENTE"

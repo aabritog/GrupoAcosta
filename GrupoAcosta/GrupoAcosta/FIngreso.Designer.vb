@@ -206,13 +206,14 @@ Partial Class FIngreso
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.SystemColors.Control
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label3.Location = New System.Drawing.Point(12, 31)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(170, 20)
+        Me.Label3.Size = New System.Drawing.Size(203, 20)
         Me.Label3.TabIndex = 19
-        Me.Label3.Text = "Ingreso Grupo Acosta C.A"
+        Me.Label3.Text = "INGRESO GRUPO ACOSTA C.A"
         '
         'PictureBox3
         '

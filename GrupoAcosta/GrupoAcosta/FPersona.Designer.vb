@@ -23,6 +23,7 @@ Partial Class FPersona
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPersona))
         Me.GBPersona = New System.Windows.Forms.GroupBox()
         Me.DGVPersona = New System.Windows.Forms.DataGridView()
         Me.BTNCancelar = New System.Windows.Forms.Button()
@@ -68,6 +69,8 @@ Partial Class FPersona
         Me.LBLApellido1 = New System.Windows.Forms.Label()
         Me.LBLNombre1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BTNAgregar = New System.Windows.Forms.Button()
+        Me.BTNSalir = New System.Windows.Forms.Button()
         Me.TXTFechaNacimiento = New System.Windows.Forms.TextBox()
         Me.TXTCargo = New System.Windows.Forms.TextBox()
         Me.TXTSexo = New System.Windows.Forms.TextBox()
@@ -76,8 +79,6 @@ Partial Class FPersona
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BTNSalir = New System.Windows.Forms.Button()
-        Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
@@ -664,6 +665,28 @@ Partial Class FPersona
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         '
+        'BTNAgregar
+        '
+        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNAgregar.Location = New System.Drawing.Point(13, 14)
+        Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNAgregar.Name = "BTNAgregar"
+        Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
+        Me.BTNAgregar.TabIndex = 24
+        Me.BTNAgregar.Text = "Agregar"
+        Me.BTNAgregar.UseVisualStyleBackColor = True
+        '
+        'BTNSalir
+        '
+        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSalir.Location = New System.Drawing.Point(13, 220)
+        Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNSalir.Name = "BTNSalir"
+        Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
+        Me.BTNSalir.TabIndex = 23
+        Me.BTNSalir.Text = "Salir"
+        Me.BTNSalir.UseVisualStyleBackColor = True
+        '
         'TXTFechaNacimiento
         '
         Me.TXTFechaNacimiento.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -731,28 +754,6 @@ Partial Class FPersona
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "MÓDULO PERSONA"
         '
-        'BTNSalir
-        '
-        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(13, 220)
-        Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
-        Me.BTNSalir.Name = "BTNSalir"
-        Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
-        Me.BTNSalir.TabIndex = 23
-        Me.BTNSalir.Text = "Salir"
-        Me.BTNSalir.UseVisualStyleBackColor = True
-        '
-        'BTNAgregar
-        '
-        Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNAgregar.Location = New System.Drawing.Point(13, 14)
-        Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
-        Me.BTNAgregar.Name = "BTNAgregar"
-        Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
-        Me.BTNAgregar.TabIndex = 24
-        Me.BTNAgregar.Text = "Agregar"
-        Me.BTNAgregar.UseVisualStyleBackColor = True
-        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -772,6 +773,7 @@ Partial Class FPersona
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GBPersona)
         Me.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FPersona"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

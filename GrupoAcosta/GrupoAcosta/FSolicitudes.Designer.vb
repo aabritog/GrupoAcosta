@@ -22,6 +22,7 @@ Partial Class FSolicitudes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FSolicitudes))
         Me.GBNuevaSolicitud = New System.Windows.Forms.GroupBox()
         Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
         Me.LBLValidarCliente = New System.Windows.Forms.Label()
@@ -301,6 +302,7 @@ Partial Class FSolicitudes
         Me.Controls.Add(Me.LBLBuscar)
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GBNuevaSolicitud)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FSolicitudes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO SOLICITUDES"

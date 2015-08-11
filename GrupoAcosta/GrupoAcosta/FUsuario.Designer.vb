@@ -22,6 +22,7 @@ Partial Class FUsuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FUsuario))
         Me.GBUsuario = New System.Windows.Forms.GroupBox()
         Me.DGVUsuario = New System.Windows.Forms.DataGridView()
         Me.GBNuevoUsuario = New System.Windows.Forms.GroupBox()
@@ -456,6 +457,7 @@ Partial Class FUsuario
         Me.Controls.Add(Me.GBNuevoUsuario)
         Me.Controls.Add(Me.GBUsuario)
         Me.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO USUARIO"

@@ -23,6 +23,7 @@ Partial Class FPrincipal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FPrincipal))
         Me.SSFPrincipal = New System.Windows.Forms.StatusStrip()
         Me.TSSLUsuario = New System.Windows.Forms.ToolStripStatusLabel()
         Me.TSSLAlias = New System.Windows.Forms.ToolStripStatusLabel()
@@ -267,14 +268,14 @@ Partial Class FPrincipal
         '
         Me.RolesToolStripMenuItem.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
-        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(152, 24)
+        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(133, 24)
         Me.RolesToolStripMenuItem.Text = "Usuarios"
         '
         'RolesToolStripMenuItem1
         '
         Me.RolesToolStripMenuItem1.BackColor = System.Drawing.Color.White
         Me.RolesToolStripMenuItem1.Name = "RolesToolStripMenuItem1"
-        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(152, 24)
+        Me.RolesToolStripMenuItem1.Size = New System.Drawing.Size(133, 24)
         Me.RolesToolStripMenuItem1.Text = "Roles"
         '
         'CerrarSesiónToolStripMenuItem
@@ -328,6 +329,7 @@ Partial Class FPrincipal
         Me.Controls.Add(Me.SSFPrincipal)
         Me.Controls.Add(Me.MSFPrincipal)
         Me.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MSFPrincipal
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "FPrincipal"

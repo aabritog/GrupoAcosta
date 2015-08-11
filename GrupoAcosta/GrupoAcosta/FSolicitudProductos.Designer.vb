@@ -22,6 +22,7 @@ Partial Class FSolicitudProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FSolicitudProductos))
         Me.DGVSolicitudesSistema = New System.Windows.Forms.DataGridView()
         Me.GBPersonasUsuarios = New System.Windows.Forms.GroupBox()
         Me.LBLBuscar = New System.Windows.Forms.Label()
@@ -155,6 +156,7 @@ Partial Class FSolicitudProductos
         Me.Controls.Add(Me.GBPersonasUsuarios)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TXTBuscar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FSolicitudProductos"
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO SOLICITUD-PRODUCTOS"
         CType(Me.DGVSolicitudesSistema, System.ComponentModel.ISupportInitialize).EndInit()

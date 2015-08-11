@@ -22,6 +22,7 @@ Partial Class FProducto
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FProducto))
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.BTNAgregar = New System.Windows.Forms.Button()
         Me.BTNSalir = New System.Windows.Forms.Button()
@@ -315,6 +316,7 @@ Partial Class FProducto
         Me.Controls.Add(Me.TXTBuscar)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PRODUCTO"

@@ -22,6 +22,7 @@ Partial Class FReporte
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FReporte))
         Me.CRVVisorReportes = New CrystalDecisions.Windows.Forms.CrystalReportViewer()
         Me.SuspendLayout()
         '
@@ -43,6 +44,7 @@ Partial Class FReporte
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(809, 487)
         Me.Controls.Add(Me.CRVVisorReportes)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FReporte"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO REPORTE"

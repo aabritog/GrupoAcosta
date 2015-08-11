@@ -134,6 +134,8 @@
         Dim SQLGuardar As String = ""
         Dim nIndice As Integer = 0
         Dim nTexto As String = "0"
+        Dim nRegistroUnico As Integer
+        Dim nSolicitudVacia As Integer
 
 
         If Len(TXTCliente.Text) = 0 Then
@@ -145,6 +147,10 @@
         'Si la acción es insertar (crear un nuevo registro).
         If nAction = 1 Then
 
+            nRegistroUnico = 0
+            nSolicitudVacia = 0
+            nIndice = 0
+
             While nIndice < DGVSolicitudes.RowCount
 
                 If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
@@ -153,25 +159,51 @@
                     If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
                         MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
                         Exit Sub
-
                     Else
+                        nSolicitudVacia = 1
+                    End If
+                End If
 
-                        SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha) values (" & TXTCliente.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
-                        sId_solicitud = ""
+                nIndice = nIndice + 1
 
-                        objCGenerica.accederBD(SQLGuardar, sId_solicitud)
+            End While
 
-                        nId_solicitud = CInt(Trim(sId_solicitud))
+            If nSolicitudVacia = 0 Then
 
-                        SQLGuardar = "insert into solicitud_historial (nid_solicitud, nid_estado, d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+                MsgBox(" en la solicitud  se debe incluir al menos un producto ", MsgBoxStyle.Information)
+                Exit Sub
 
-                        objCGenerica.accederBD(SQLGuardar)
+            Else
 
-                        SQLGuardar = "insert into solicitud_historial_movimiento (nid_solicitud,nid_movimiento,d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+                nIndice = 0
+                While nIndice < DGVSolicitudes.RowCount
 
-                        objCGenerica.accederBD(SQLGuardar)
+                    If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
+                        'SQLGuardar = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
 
-                        While nIndice < DGVSolicitudes.RowCount
+                        If Len(DGVSolicitudes.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
+                            MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
+                            Exit Sub
+
+                        Else
+
+                            If nRegistroUnico = 0 Then
+                                SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha) values (" & TXTCliente.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
+                                sId_solicitud = ""
+
+                                objCGenerica.accederBD(SQLGuardar, sId_solicitud)
+
+                                nId_solicitud = CInt(Trim(sId_solicitud))
+
+                                SQLGuardar = "insert into solicitud_historial (nid_solicitud, nid_estado, d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+
+                                objCGenerica.accederBD(SQLGuardar)
+
+                                SQLGuardar = "insert into solicitud_historial_movimiento (nid_solicitud,nid_movimiento,d_fecha, n_orden) values (" & nId_solicitud & ", 1, '" & Date.Today.ToString("yyyy-MM-dd") & "', 1)"
+
+                                objCGenerica.accederBD(SQLGuardar)
+
+                            End If
 
                             If DGVSolicitudes.Rows(nIndice).Cells("select").Value = "1" Then
 
@@ -185,14 +217,16 @@
 
                             End If
 
-                            nIndice = 1 + nIndice
+                            nRegistroUnico = 1
 
-                        End While
-
+                        End If
                     End If
-                End If
 
-            End While
+                    nIndice = 1 + nIndice
+
+                End While
+
+            End If
 
             BTNCancelar_Click(sender, e)
 

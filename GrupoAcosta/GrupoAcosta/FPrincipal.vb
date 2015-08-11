@@ -1,6 +1,6 @@
 ﻿Public Class FPrincipal
 
-    Private Sub PersonaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PersonaToolStripMenuItem.Click
+    Private Sub PersonaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIPersonas.Click
         FPersona.ShowDialog()
     End Sub
 
@@ -14,15 +14,15 @@
         FIngreso.TBClave.Clear()
     End Sub
 
-    Private Sub DepartamentosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DepartamentosToolStripMenuItem.Click
+    Private Sub DepartamentosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIDepartamentos.Click
         FDepartamento.ShowDialog()
     End Sub
 
-    Private Sub CargosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CargosToolStripMenuItem.Click
+    Private Sub CargosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMICargos.Click
         FCargo.ShowDialog()
     End Sub
 
-    Private Sub ProductoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProductoToolStripMenuItem.Click
+    Private Sub ProductoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProductos.Click
         FProducto.ShowDialog()
     End Sub
 
@@ -41,51 +41,56 @@
         TSSLFechaHoraActual.Text = "Fecha/hora actual:  " & Date.Now & " | "
     End Sub
 
-    Private Sub ProveedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+    Private Sub ProveedoresToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProveedores.Click
         FProveedores.ShowDialog()
     End Sub
 
-    Private Sub EstadosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EstadosDeSolicitudToolStripMenuItem.Click
+    Private Sub EstadosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIEstadodeSolicitud.Click
         FEstado_Solicitud.ShowDialog()
     End Sub
 
-    Private Sub MovimientosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MovimientosDeSolicitudToolStripMenuItem.Click
+    Private Sub MovimientosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIMovimientosdeSolicitud.Click
         FMovimiento.ShowDialog()
     End Sub
 
-    Private Sub EstadosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EstadosToolStripMenuItem.Click
+    Private Sub EstadosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIEstados.Click
         FProvincia.ShowDialog()
     End Sub
 
-    Private Sub MunicipiosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MunicipiosToolStripMenuItem.Click
+    Private Sub MunicipiosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIMunicipios.Click
         FMunicipio.ShowDialog()
     End Sub
 
-    Private Sub SolicitudesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SolicitudesToolStripMenuItem.Click
+    Private Sub SolicitudesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMISolicitudes.Click
 
     End Sub
 
-    Private Sub RolesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RolesToolStripMenuItem.Click
+    Private Sub RolesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIUsuarios.Click
         FUsuario.ShowDialog()
     End Sub
 
-    Private Sub RolesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RolesToolStripMenuItem1.Click
+    Private Sub RolesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIRoles.Click
         FRol.ShowDialog()
     End Sub
 
-    Private Sub CrearToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CrearToolStripMenuItem.Click
+    Private Sub CrearToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMICrearSolicitudes.Click
         FSolicitudes.ShowDialog()
     End Sub
 
-    Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClientesToolStripMenuItem.Click
+    Private Sub ClientesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIClientes.Click
         FCliente.ShowDialog()
     End Sub
 
-    Private Sub SolicitudProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SolicitudProductoEntranteToolStripMenuItem.Click
+    Private Sub SolicitudProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProcesarSolicitudes.Click
         FSolicitudProductos.ShowDialog()
     End Sub
 
-    Private Sub NivelesDeUsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NivelesDeUsuarioToolStripMenuItem.Click
-
+    Private Sub ProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProductoEntrante.Click
+        FProductoEntrante.ShowDialog()
     End Sub
+
+    Private Sub RespaldoRestauraciónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIRespaldoRestauracion.Click
+        FRespaldoRestaura.ShowDialog()
+    End Sub
+
 End Class

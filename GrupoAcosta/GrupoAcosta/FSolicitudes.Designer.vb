@@ -294,7 +294,7 @@ Partial Class FSolicitudes
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(850, 519)
+        Me.ClientSize = New System.Drawing.Size(846, 519)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BNTReporteSolicitudes)
         Me.Controls.Add(Me.GroupBox1)

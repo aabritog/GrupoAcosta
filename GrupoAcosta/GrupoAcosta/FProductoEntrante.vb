@@ -29,8 +29,9 @@
 
         Dim nIdSolicitudP As Integer = FSolicitudProductos.nIdSolicitud
 
-        Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
-        
+        'Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
+        Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto, (select sum(pe.n_cantidad_entrante) from producto_entrante pe where nid_solicitud_producto = p.nid_solicitud_producto) ncantidad_recibida from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
+
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
 
             Dim dtDGVProductoEntrante As New DataTable
@@ -59,7 +60,7 @@
             With DGVProductoEntrante.Columns("s_descripcion")
                 '.Visible = False
                 .HeaderText = "Producto"
-                .Width = "230"
+                .Width = "200"
                 .DisplayIndex = "0"
                 .ReadOnly = True
 
@@ -68,7 +69,7 @@
             With DGVProductoEntrante.Columns("n_cantidad_requerida_producto")
                 '.Visible = True
                 .HeaderText = "Cantidad Requerida"
-                .Width = "180"
+                .Width = "150"
                 .DisplayIndex = "1"
                 .ReadOnly = True
 
@@ -77,7 +78,7 @@
             With DGVProductoEntrante.Columns("nid_solicitud_producto")
                 .Visible = False
                 .HeaderText = "Solicitud Producto"
-                .Width = "180"
+                .Width = "150"
                 .DisplayIndex = "2"
                 .ReadOnly = True
 
@@ -99,8 +100,18 @@
                 '.FalseValue = "0"
                 '.TrueValue = "1"
                 .HeaderText = "Cantidad Entrante"
-                .Width = "60"
+                .Width = "150"
                 .ReadOnly = False
+
+            End With
+
+            With DGVProductoEntrante.Columns("ncantidad_recibida")
+                .Visible = True
+                .HeaderText = "Cantidad Recibida"
+                .Width = "150"
+                .DisplayIndex = "3"
+                .ReadOnly = True
+
             End With
 
             DGVProductoEntrante.Columns.Add(CHECKDGVProductoEntrante)
@@ -151,18 +162,21 @@
 
             End While
 
+            nIndice = 0
+
             While nIndice < DGVProductoEntrante.RowCount
 
                 If DGVProductoEntrante.Rows(nIndice).Cells("select").Value = "1" Then
 
                     SQLGuardar = "insert into producto_entrante (nid_proveedor, nid_solicitud_producto, n_cantidad_entrante, d_fecha) values (" & TXTProveedor.Text & ", " & DGVProductoEntrante.Rows(nIndice).Cells("nid_solicitud_producto").Value & ", " & DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value & ", '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
-
+                    objCGenerica.accederBD(SQLGuardar)
                 Else
 
                     MsgBox("Seleccione los prouctos entrantes", MsgBoxStyle.Information)
 
-
                 End If
+
+                nIndice = 1 + nIndice
 
             End While
 
@@ -297,4 +311,6 @@
 
     '    CMBProveedor.Enabled = True
     'End Sub
+
+
 End Class

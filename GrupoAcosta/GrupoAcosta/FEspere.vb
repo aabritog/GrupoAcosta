@@ -8,7 +8,7 @@
 
         If FRespaldoRestaura.RespaldarRestaurar = "Restaurar" Then
             Dim host As String = "localhost"
-            Dim puerto As String = "5433"
+            Dim puerto As String = "5432"
             Dim bd As String = "GRUPOACOSTA"
             Dim Ruta As String = Application.StartupPath & "\Restaura.bat"
             Ruta = Chr(34) & Ruta & Chr(34)
@@ -26,7 +26,7 @@
 
         If FRespaldoRestaura.RespaldarRestaurar = "Respaldar" Then
             Dim host As String = "localhost"
-            Dim puerto As String = "5433"
+            Dim puerto As String = "5432"
             Dim bd As String = "GRUPOACOSTA"
             Dim password As String = "root"
 

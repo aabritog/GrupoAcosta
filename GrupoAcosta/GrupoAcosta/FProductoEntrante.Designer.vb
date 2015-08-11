@@ -158,7 +158,7 @@ Partial Class FProductoEntrante
         Me.GroupBox3.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox3.Location = New System.Drawing.Point(12, 60)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(546, 191)
+        Me.GroupBox3.Size = New System.Drawing.Size(532, 191)
         Me.GroupBox3.TabIndex = 3
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Producto Entrante"
@@ -226,7 +226,7 @@ Partial Class FProductoEntrante
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(569, 170)
+        Me.GroupBox1.Location = New System.Drawing.Point(617, 114)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(90, 137)
         Me.GroupBox1.TabIndex = 38
@@ -274,7 +274,7 @@ Partial Class FProductoEntrante
         Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 300)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(546, 191)
+        Me.GroupBox2.Size = New System.Drawing.Size(718, 235)
         Me.GroupBox2.TabIndex = 33
         Me.GroupBox2.TabStop = False
         '
@@ -284,7 +284,7 @@ Partial Class FProductoEntrante
         Me.DGVProductoEntrante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DGVProductoEntrante.Location = New System.Drawing.Point(6, 14)
         Me.DGVProductoEntrante.Name = "DGVProductoEntrante"
-        Me.DGVProductoEntrante.Size = New System.Drawing.Size(534, 174)
+        Me.DGVProductoEntrante.Size = New System.Drawing.Size(706, 215)
         Me.DGVProductoEntrante.TabIndex = 23
         '
         'GBProductoEntrante
@@ -314,7 +314,7 @@ Partial Class FProductoEntrante
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(671, 495)
+        Me.ClientSize = New System.Drawing.Size(742, 535)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LBLBuscar)

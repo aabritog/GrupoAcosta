@@ -70,7 +70,7 @@
     End Sub
 
     Private Sub RolesToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIRoles.Click
-        FRol.ShowDialog()
+        FRoles.ShowDialog()
     End Sub
 
     Private Sub CrearToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMICrearSolicitudes.Click

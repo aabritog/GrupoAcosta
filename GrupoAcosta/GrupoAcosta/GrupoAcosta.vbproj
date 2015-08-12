@@ -171,6 +171,12 @@
     <Compile Include="FPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FPrivilegios.Designer.vb">
+      <DependentUpon>FPrivilegios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FPrivilegios.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FProductoEntrante.Designer.vb">
       <DependentUpon>FProductoEntrante.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,12 @@
       <DependentUpon>FRol.vb</DependentUpon>
     </Compile>
     <Compile Include="FRol.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRoles.Designer.vb">
+      <DependentUpon>FRoles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRoles.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FTelefonoCliente.Designer.vb">
@@ -326,6 +338,9 @@
     <EmbeddedResource Include="FPrincipal.resx">
       <DependentUpon>FPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FPrivilegios.resx">
+      <DependentUpon>FPrivilegios.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FProductoEntrante.resx">
       <DependentUpon>FProductoEntrante.vb</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +358,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRol.resx">
       <DependentUpon>FRol.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRoles.resx">
+      <DependentUpon>FRoles.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTelefonoCliente.resx">
       <DependentUpon>FTelefonoCliente.vb</DependentUpon>

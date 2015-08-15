@@ -219,6 +219,12 @@
     <Compile Include="FRoles.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FSolicitudesConsulta.Designer.vb">
+      <DependentUpon>FSolicitudesConsulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FSolicitudesConsulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FTelefonoCliente.Designer.vb">
       <DependentUpon>FTelefonoCliente.vb</DependentUpon>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRoles.resx">
       <DependentUpon>FRoles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSolicitudesConsulta.resx">
+      <DependentUpon>FSolicitudesConsulta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTelefonoCliente.resx">
       <DependentUpon>FTelefonoCliente.vb</DependentUpon>

@@ -49,7 +49,7 @@ Partial Class FSolicitudProductos
         '
         'GBPersonasUsuarios
         '
-        Me.GBPersonasUsuarios.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.GBPersonasUsuarios.BackColor = System.Drawing.Color.White
         Me.GBPersonasUsuarios.Controls.Add(Me.DGVSolicitudesSistema)
         Me.GBPersonasUsuarios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBPersonasUsuarios.Location = New System.Drawing.Point(5, 142)
@@ -128,9 +128,9 @@ Partial Class FSolicitudProductos
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label2.Location = New System.Drawing.Point(12, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(211, 20)
+        Me.Label2.Size = New System.Drawing.Size(206, 20)
         Me.Label2.TabIndex = 42
-        Me.Label2.Text = "MÓDULO PRODUCTO ENTRANTE"
+        Me.Label2.Text = "MÓDULO SOLICITUD ENTRANTE"
         '
         'TXTSoliictudesSistema
         '
@@ -158,6 +158,7 @@ Partial Class FSolicitudProductos
         Me.Controls.Add(Me.TXTBuscar)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FSolicitudProductos"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO SOLICITUD-PRODUCTOS"
         CType(Me.DGVSolicitudesSistema, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBPersonasUsuarios.ResumeLayout(False)

@@ -7,6 +7,7 @@ Imports CrystalDecisions.Windows
 Public Class FReporte
 
     Friend sNombre_reporte As String = ""
+    Friend nId_solicitud As Integer
 
     Dim ruta As String
     Dim rpt As New ReportDocument
@@ -73,7 +74,7 @@ Public Class FReporte
         If sNombre_reporte = "RDetalleSolicitud2" Then
             Me.Text = "Grupo Acosta C.A - Detalle de solicitud"
             ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitud2.rpt"
-            DetalleSolicitud2(ruta, FSolicitudes.nId_solicitud) : CRVVisorReportes.ReportSource = rpt
+            DetalleSolicitud2(ruta, nId_solicitud) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
         End If
 

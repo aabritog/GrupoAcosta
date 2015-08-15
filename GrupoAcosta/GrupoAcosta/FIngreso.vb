@@ -99,7 +99,8 @@ Public Class FIngreso
                 MsgBox("Alias o clave errada, verifique. Intentos restantes: " & 3 - nlogin_errado & "")
             Else
                 'ME TRAIGO TODOS LOS DATOS PARA CARGAR LA BARRA DE ESTADO DE LA FPRINCIPAL
-                sSQLDatosPersona = "SELECT nid_usuario, nid_persona, nid_rol, s_seudonimo, s_rol, s_nombre, '' as sCampo7, '' as sCampo8 FROM v_usuario_persona_rol WHERE nid_persona=" & nId_persona & ""
+                sSQLDatosPersona = "SELECT nid, nid_persona, nid_rol, s_seudonimo, s_rol, s_nombre, '' as sCampo7, '' as sCampo8 FROM v_usuario_persona_rol WHERE nid_persona=" & nId_persona & ""
+
                 objCGenerica.recuperarCamposBD(sSQLDatosPersona, s_Campo1, s_Campo2, s_Campo3, s_Campo4, s_Campo5, s_Campo6)
 
                 nId_usuario = CInt(s_Campo1)

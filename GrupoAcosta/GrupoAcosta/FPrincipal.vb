@@ -93,4 +93,7 @@
         FRespaldoRestaura.ShowDialog()
     End Sub
 
+    Private Sub TSMIConsultarSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIConsultarSolicitudes.Click
+        FSolicitudesConsulta.ShowDialog()
+    End Sub
 End Class

@@ -324,6 +324,7 @@ Partial Class FProductoEntrante
         Me.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FProductoEntrante"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PRODUCTO ENTRANTE"
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()

@@ -116,7 +116,6 @@
 
         CMBCliente.Enabled = True
         TXTBuscar.Enabled = False
-        BTNEliminar.Enabled = False
         BTNModificar.Enabled = False
         BTNAgregar.Enabled = False
         BTNGuardar.Enabled = True
@@ -236,6 +235,7 @@
 
             If MsgBox("¿Desea ver el detalle de la solicitud creada?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
                 FReporte.sNombre_reporte = "RDetalleSolicitud2"
+                FReporte.nId_solicitud = nId_solicitud
                 FReporte.ShowDialog()
                 Me.Dispose()
             Else
@@ -269,7 +269,6 @@
         TXTBuscar.Enabled = True
         BTNAgregar.Enabled = True
         BTNModificar.Enabled = False
-        BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
         BTNGuardar.Enabled = False
         DGVSolicitudes.Enabled = True
@@ -297,7 +296,6 @@
         CMBCliente.Enabled = True
         TXTBuscar.Enabled = False
         BTNAgregar.Enabled = False
-        BTNEliminar.Enabled = False
         BTNCancelar.Enabled = True
         BTNModificar.Enabled = False
         BTNGuardar.Enabled = True
@@ -312,21 +310,6 @@
     Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
 
         Me.Dispose()
-
-    End Sub
-
-    Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
-        'Se declara el elemento eliminar para registros 
-        If MsgBox("¿Esta seguro de querer eliminar esta solicitud?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarSolicitudes As String = ""
-            SQLEliminarSolicitudes = "DELETE FROM Solicitudes WHERE nid=" & DGVSolicitudes.CurrentRow.Cells("nid").Value & ""
-            objCGenerica.accederBD(SQLEliminarSolicitudes)
-            mostrarDGVSolicitudes()
-            BTNCancelar_Click(sender, e)
-            MsgBox("Se ha eliminado la solicitud", MsgBoxStyle.Information)
-        Else
-            DGVSolicitudes.ClearSelection()
-        End If
 
     End Sub
 
@@ -356,15 +339,7 @@
     End Sub
     Private Sub DGVSolicitudes_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVSolicitudes.CellClick
         BTNModificar.Enabled = True
-        BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
-    End Sub
-
-    Private Sub BNTReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BNTReporteSolicitudes.Click
-
-        FReporte.sNombre_reporte = "Visualizar_Solicitudes"
-        FReporte.ShowDialog()
-
     End Sub
 
 End Class

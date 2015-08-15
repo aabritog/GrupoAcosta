@@ -112,7 +112,7 @@ Partial Class FPrincipal
         '
         Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(359, 27)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(362, 27)
         Me.ToolStripStatusLabel5.Text = "GRUPO ACOSTA  MARINE SERVICES C.A - RIF J-30998360-1"
         '
         'MSFPrincipal
@@ -129,6 +129,7 @@ Partial Class FPrincipal
         'TSMIPersonas
         '
         Me.TSMIPersonas.BackColor = System.Drawing.Color.Olive
+        Me.TSMIPersonas.Enabled = False
         Me.TSMIPersonas.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSMIPersonas.ForeColor = System.Drawing.Color.White
         Me.TSMIPersonas.Name = "TSMIPersonas"
@@ -137,6 +138,7 @@ Partial Class FPrincipal
         '
         'TSMIProveedores
         '
+        Me.TSMIProveedores.Enabled = False
         Me.TSMIProveedores.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSMIProveedores.ForeColor = System.Drawing.Color.White
         Me.TSMIProveedores.Name = "TSMIProveedores"
@@ -146,6 +148,7 @@ Partial Class FPrincipal
         'TSMIClientes
         '
         Me.TSMIClientes.BackColor = System.Drawing.Color.Olive
+        Me.TSMIClientes.Enabled = False
         Me.TSMIClientes.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSMIClientes.ForeColor = System.Drawing.Color.White
         Me.TSMIClientes.Name = "TSMIClientes"
@@ -156,6 +159,7 @@ Partial Class FPrincipal
         '
         Me.TSMISolicitudes.BackColor = System.Drawing.Color.Olive
         Me.TSMISolicitudes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMICrearSolicitudes, Me.TSMIConsultarSolicitudes, Me.TSMIProcesarSolicitudes})
+        Me.TSMISolicitudes.Enabled = False
         Me.TSMISolicitudes.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSMISolicitudes.ForeColor = System.Drawing.Color.White
         Me.TSMISolicitudes.Name = "TSMISolicitudes"
@@ -192,6 +196,7 @@ Partial Class FPrincipal
         '
         Me.TSMIConfiguracion.BackColor = System.Drawing.Color.Olive
         Me.TSMIConfiguracion.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMITablasdelSistema, Me.TSMINivelesdeUsuario, Me.TSMISistema})
+        Me.TSMIConfiguracion.Enabled = False
         Me.TSMIConfiguracion.Font = New System.Drawing.Font("Arial Narrow", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TSMIConfiguracion.ForeColor = System.Drawing.Color.White
         Me.TSMIConfiguracion.Name = "TSMIConfiguracion"
@@ -202,6 +207,7 @@ Partial Class FPrincipal
         '
         Me.TSMITablasdelSistema.BackColor = System.Drawing.Color.Olive
         Me.TSMITablasdelSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIDepartamentos, Me.TSMICargos, Me.TSMIProductos, Me.TSMIEstadodeSolicitud, Me.TSMIMovimientosdeSolicitud, Me.TSMIEstados, Me.TSMIMunicipios, Me.TSMIProductoEntrante})
+        Me.TSMITablasdelSistema.Enabled = False
         Me.TSMITablasdelSistema.ForeColor = System.Drawing.Color.White
         Me.TSMITablasdelSistema.Name = "TSMITablasdelSistema"
         Me.TSMITablasdelSistema.Size = New System.Drawing.Size(196, 24)
@@ -274,6 +280,7 @@ Partial Class FPrincipal
         '
         Me.TSMINivelesdeUsuario.BackColor = System.Drawing.Color.Olive
         Me.TSMINivelesdeUsuario.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIUsuarios, Me.TSMIRoles})
+        Me.TSMINivelesdeUsuario.Enabled = False
         Me.TSMINivelesdeUsuario.ForeColor = System.Drawing.Color.White
         Me.TSMINivelesdeUsuario.Name = "TSMINivelesdeUsuario"
         Me.TSMINivelesdeUsuario.Size = New System.Drawing.Size(196, 24)
@@ -284,7 +291,7 @@ Partial Class FPrincipal
         Me.TSMIUsuarios.BackColor = System.Drawing.Color.White
         Me.TSMIUsuarios.ForeColor = System.Drawing.Color.Olive
         Me.TSMIUsuarios.Name = "TSMIUsuarios"
-        Me.TSMIUsuarios.Size = New System.Drawing.Size(133, 24)
+        Me.TSMIUsuarios.Size = New System.Drawing.Size(152, 24)
         Me.TSMIUsuarios.Text = "Usuarios"
         '
         'TSMIRoles
@@ -292,13 +299,14 @@ Partial Class FPrincipal
         Me.TSMIRoles.BackColor = System.Drawing.Color.White
         Me.TSMIRoles.ForeColor = System.Drawing.Color.Olive
         Me.TSMIRoles.Name = "TSMIRoles"
-        Me.TSMIRoles.Size = New System.Drawing.Size(133, 24)
+        Me.TSMIRoles.Size = New System.Drawing.Size(152, 24)
         Me.TSMIRoles.Text = "Roles"
         '
         'TSMISistema
         '
         Me.TSMISistema.BackColor = System.Drawing.Color.Olive
         Me.TSMISistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIRespaldoRestauracion})
+        Me.TSMISistema.Enabled = False
         Me.TSMISistema.ForeColor = System.Drawing.Color.White
         Me.TSMISistema.Name = "TSMISistema"
         Me.TSMISistema.Size = New System.Drawing.Size(196, 24)

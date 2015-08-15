@@ -62,6 +62,7 @@
             .UseColumnTextForButtonValue = True
             '.DisplayIndex = 0
         End With
+        DGVRoles.Columns.Clear()
         With DGVRoles
             .DataSource = bsDGVRoles
             .Columns.Add(botonDGVRoles)
@@ -260,23 +261,23 @@
     End Sub
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
-        'Dim rolAsignado As Boolean = False
-        'Dim SQLVerificarAsignacion As String 'Esta consulta permitirá verificar si el rol que se desea eliminar del sistema esta asignado a algun usuario del sistema.
-        'SQLVerificarAsignacion = "SELECT id_rol FROM v_usuario__rol WHERE id_rol=" & DGVRoles.CurrentRow.Cells("id").Value & ""
-        'AccederBD(SQLVerificarAsignacion, rolAsignado)
+        Dim rolAsignado As Boolean = False
+        Dim SQLVerificarAsignacion As String 'Esta consulta permitirá verificar si el rol que se desea eliminar del sistema esta asignado a algun usuario del sistema.
+        SQLVerificarAsignacion = "SELECT nid_rol FROM v_usuario_persona_rol WHERE nid_rol=" & DGVRoles.CurrentRow.Cells("nid").Value & ""
+        AccederBD(SQLVerificarAsignacion, rolAsignado)
 
-        'If rolAsignado = True Then
-        '    MsgBox("No se puede eliminar el rol seleccionado ya que existe por lo mínimo un usuario del sistema que tiene asignado el mismo.", MsgBoxStyle.Information)
-        '    BTNEliminar.Enabled = False
-        '    Exit Sub
-        'Else
-        '    Dim SQLEliminarRol As String = ""
-        '    SQLEliminarRol = "DELETE FROM rol WHERE id=" & DGVRoles.CurrentRow.Cells("id").Value & ""
-        '    AccederBD(SQLEliminarRol)
-        '    cargarDGVRoles()
-        '    BTNEliminar.Enabled = False
-        '    MsgBox("Rol eliminado exitosamente...", MsgBoxStyle.Information)
-        'End If
+        If rolAsignado = True Then
+            MsgBox("No se puede eliminar el rol seleccionado ya que existe por lo mínimo un usuario del sistema que tiene asignado el mismo.", MsgBoxStyle.Information)
+            BTNEliminar.Enabled = False
+            Exit Sub
+        Else
+            Dim SQLEliminarRol As String = ""
+            SQLEliminarRol = "DELETE FROM rol WHERE nid=" & DGVRoles.CurrentRow.Cells("nid").Value & ""
+            AccederBD(SQLEliminarRol)
+            cargarDGVRoles()
+            BTNEliminar.Enabled = False
+            MsgBox("Rol eliminado exitosamente...", MsgBoxStyle.Information)
+        End If
 
     End Sub
 End Class

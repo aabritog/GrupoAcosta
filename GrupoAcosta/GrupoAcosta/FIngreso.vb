@@ -11,7 +11,7 @@ Public Class FIngreso
     Friend aliasUser As String = ""
     Friend nombrePersona As String = ""
     Friend apellidoPersona As String = ""
-    Friend id_rol As Integer = 0
+    'Friend id_rol As Integer = 0
     Friend nombre_rol As String = ""
 
     Friend nId_usuario As Integer

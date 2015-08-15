@@ -21,7 +21,7 @@
         DatosBindingSourceDGVPrivilegios.DataSource = Nothing
         DGVPrivilegios.Columns.Clear()
         Dim SQLDGVPrivilegios As String = ""
-        SQLDGVPrivilegios = "SELECT id_rol,id_privilegio,descripcion,activo_privilegio FROM v_rol_permisos WHERE id_rol=" & FRoles.id_rol & ""
+        SQLDGVPrivilegios = "SELECT nid_rol,nid_privilegios, descripcion_privilegios, b_activo_privilegios FROM v_rol_privilegios WHERE nid_rol=" & FRoles.id_rol & " ORDER BY descripcion_privilegios"
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
             Using DatosDataAdapter As New Odbc.OdbcDataAdapter(SQLDGVPrivilegios, conexion)
                 DatosDataAdapter.Fill(DatosDataTableDGVPrivilegios)
@@ -31,7 +31,7 @@
             Dim check As New DataGridViewCheckBoxColumn
             With check
                 .Name = "acceso"
-                .DataPropertyName = "activo_privilegio"
+                .DataPropertyName = "b_activo_privilegios"
                 .FalseValue = "0"
                 .TrueValue = "1"
                 .HeaderText = "Activo"
@@ -47,24 +47,24 @@
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
             End With
-            With DGVPrivilegios.Columns("id_rol")
+            With DGVPrivilegios.Columns("nid_rol")
                 .HeaderText = "ID Rol:"
                 .ReadOnly = True
                 .Width = "65"
                 .Visible = False
             End With
-            With DGVPrivilegios.Columns("id_privilegio")
+            With DGVPrivilegios.Columns("nid_privilegios")
                 .HeaderText = "ID Priv"
                 .Visible = False
                 .ReadOnly = True
                 .Width = "60"
             End With
-            With DGVPrivilegios.Columns("descripcion")
+            With DGVPrivilegios.Columns("descripcion_privilegios")
                 .HeaderText = "Previlegio"
                 .Width = "290"
                 .ReadOnly = True
             End With
-            With DGVPrivilegios.Columns("activo_privilegio")
+            With DGVPrivilegios.Columns("b_activo_privilegios")
                 .Visible = False
                 .ReadOnly = True
                 .Width = "60"
@@ -76,7 +76,7 @@
     Private Sub cargarCBRol()
         DatosDataTableCBRol.Clear()
         Dim SQLCBRol As String = ""
-        SQLCBRol = "SELECT id,nombre FROM rol"
+        SQLCBRol = "SELECT nid, s_descripcion FROM rol"
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
             Using DatosDataAdapter As New Odbc.OdbcDataAdapter(SQLCBRol, conexion)
                 DatosDataAdapter.Fill(DatosDataTableCBRol)
@@ -84,8 +84,8 @@
             End Using
             With CBRol
                 .DataSource = DatosBindingSourceCBRol
-                .DisplayMember = "nombre"
-                .ValueMember = "id"
+                .DisplayMember = "s_descripcion"
+                .ValueMember = "nid"
             End With
             CBRol.SelectedValue = FRoles.id_rol
         End Using
@@ -96,11 +96,11 @@
         Dim i As Integer = 0
         Dim CadenaSQL As String = ""
         While i < DGVPrivilegios.RowCount
-            CadenaSQL = "UPDATE rol_privilegio SET activo=" & CBool(DGVPrivilegios.Rows(i).Cells("activo_privilegio").Value) & " WHERE id_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("id_rol").Value) & " AND id_privilegio=" & CInt(DGVPrivilegios.Rows(i).Cells("id_privilegio").Value) & ""
+            CadenaSQL = "UPDATE rol_privilegios SET b_activo=" & CBool(DGVPrivilegios.Rows(i).Cells("b_activo_privilegios").Value) & " WHERE nid_rol=" & CInt(DGVPrivilegios.Rows(i).Cells("nid_rol").Value) & " AND nid_privilegios=" & CInt(DGVPrivilegios.Rows(i).Cells("nid_privilegios").Value) & ""
             Acceso_BD(CadenaSQL)
             i = 1 + i
         End While
-        If FIngreso.id_rol = FRoles.DGVRoles.CurrentRow.Cells("id").Value Then
+        If FIngreso.nId_rol = FRoles.DGVRoles.CurrentRow.Cells("nid").Value Then
             'FPrincipal.cargarVistaRol()
         End If
         FRoles.BTNEliminar.Enabled = False
@@ -139,7 +139,8 @@
 
 
         Dim SQLDGVPrivilegios As String = ""
-        SQLDGVPrivilegios = "SELECT id_rol,id_privilegio,descripcion,activo_privilegio FROM v_rol_permisos WHERE id_rol=" & CInt(TBIdrol.Text) & ""
+        SQLDGVPrivilegios = "SELECT nid_rol,nid_privilegios, descripcion_privilegios, b_activo_privilegios FROM v_rol_privilegios WHERE id_rol=" & CInt(TBIdrol.Text) & ""
+
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
             Using DatosDataAdapter As New Odbc.OdbcDataAdapter(SQLDGVPrivilegios, conexion)
                 DatosDataAdapter.Fill(DatosDataTableDGVPrivilegios)
@@ -149,7 +150,7 @@
             Dim check As New DataGridViewCheckBoxColumn
             With check
                 .Name = "acceso"
-                .DataPropertyName = "activo_privilegio"
+                .DataPropertyName = "nactivo_privilegio"
                 .FalseValue = "0"
                 .TrueValue = "1"
                 .HeaderText = "Activo"
@@ -165,24 +166,24 @@
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
                 .AlternatingRowsDefaultCellStyle.BackColor = Color.Beige
             End With
-            With DGVPrivilegios.Columns("id_rol")
+            With DGVPrivilegios.Columns("nid_rol")
                 .HeaderText = "ID Rol:"
                 .ReadOnly = True
                 .Width = "65"
                 .Visible = False
             End With
-            With DGVPrivilegios.Columns("id_privilegio")
+            With DGVPrivilegios.Columns("nid_privilegios")
                 .HeaderText = "ID Priv"
                 .Visible = False
                 .ReadOnly = True
                 .Width = "60"
             End With
-            With DGVPrivilegios.Columns("descripcion")
+            With DGVPrivilegios.Columns("descripcion_privilegios")
                 .HeaderText = "Privilegio"
                 .Width = "290"
                 .ReadOnly = True
             End With
-            With DGVPrivilegios.Columns("activo_privilegio")
+            With DGVPrivilegios.Columns("b_activo_privilegios")
                 .Visible = False
                 .ReadOnly = True
             End With

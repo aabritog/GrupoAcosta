@@ -1,5 +1,41 @@
 ﻿Public Class FPrincipal
 
+    'Instruccion que permite comprobar y cargar los privilegios que tiene el usuario que esta iniciando sesion de acuerdo a el rol que posee en el sistema.
+    Public Sub cargarVistaRol()
+        Dim CadenaSQL As String = ""
+        CadenaSQL = "SELECT s_nombre_objeto,b_activo_privilegios FROM v_rol_privilegios WHERE nid_rol='" & FIngreso.nId_rol & "'"
+        Using Conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString) 'Se declara la conexion haciendo uso del using
+            Conexion.Open() 'Se abre la conexion
+            Dim Comando As New Odbc.OdbcCommand(CadenaSQL, Conexion) 'Se declara el comando que se va a ejecutar y se conecta
+            Dim reader As Odbc.OdbcDataReader = Comando.ExecuteReader() 'Se ejecuta la lectura de los valores encontrados en la consulta
+
+            Dim NombreMenu As String
+            Dim item As ToolStripItem
+            Dim Menu As ToolStripMenuItem
+
+            If reader.HasRows Then
+                While reader.Read
+                    For i = 0 To MSFPrincipal.Items.Count
+                        NombreMenu = Trim(reader("s_nombre_objeto"))
+                        For Each Menu In MSFPrincipal.Items
+                            If Menu.Name = NombreMenu Then
+                                CType(Menu, ToolStripMenuItem).Enabled = CBool(reader("b_activo_privilegios"))
+                            End If
+                            For Each item In Menu.DropDownItems
+                                If item.Name = NombreMenu Then
+                                    CType(item, ToolStripMenuItem).Enabled = CBool(reader("b_activo_privilegios"))
+                                End If
+                            Next
+                        Next
+                    Next
+                End While
+            End If
+            reader.Close()
+            Conexion.Close()
+        End Using
+    End Sub
+
+
     Private Sub PersonaToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIPersonas.Click
         FPersona.ShowDialog()
     End Sub
@@ -95,5 +131,9 @@
 
     Private Sub TSMIConsultarSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIConsultarSolicitudes.Click
         FSolicitudesConsulta.ShowDialog()
+    End Sub
+
+    Private Sub FPrincipal_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
+        cargarVistaRol()
     End Sub
 End Class

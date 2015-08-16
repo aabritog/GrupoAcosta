@@ -135,11 +135,11 @@ Partial Class FTelefonoPersona
         '
         Me.LBCamposObligatorios.AutoSize = True
         Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
-        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
         Me.LBCamposObligatorios.Location = New System.Drawing.Point(151, 72)
         Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
-        Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(119, 16)
         Me.LBCamposObligatorios.TabIndex = 53
         Me.LBCamposObligatorios.Text = "Campos Obligatorios"
         '
@@ -158,7 +158,7 @@ Partial Class FTelefonoPersona
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label2.Location = New System.Drawing.Point(8, 25)

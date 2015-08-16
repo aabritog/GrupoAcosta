@@ -47,7 +47,6 @@ Partial Class FPrincipal
         Me.TSMIMovimientosdeSolicitud = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIEstados = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIMunicipios = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TSMIProductoEntrante = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMINivelesdeUsuario = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIUsuarios = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIRoles = New System.Windows.Forms.ToolStripMenuItem()
@@ -112,7 +111,7 @@ Partial Class FPrincipal
         '
         Me.ToolStripStatusLabel5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusLabel5.Name = "ToolStripStatusLabel5"
-        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(362, 27)
+        Me.ToolStripStatusLabel5.Size = New System.Drawing.Size(359, 27)
         Me.ToolStripStatusLabel5.Text = "GRUPO ACOSTA  MARINE SERVICES C.A - RIF J-30998360-1"
         '
         'MSFPrincipal
@@ -206,7 +205,7 @@ Partial Class FPrincipal
         'TSMITablasdelSistema
         '
         Me.TSMITablasdelSistema.BackColor = System.Drawing.Color.Olive
-        Me.TSMITablasdelSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIDepartamentos, Me.TSMICargos, Me.TSMIProductos, Me.TSMIEstadodeSolicitud, Me.TSMIMovimientosdeSolicitud, Me.TSMIEstados, Me.TSMIMunicipios, Me.TSMIProductoEntrante})
+        Me.TSMITablasdelSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIDepartamentos, Me.TSMICargos, Me.TSMIProductos, Me.TSMIEstadodeSolicitud, Me.TSMIMovimientosdeSolicitud, Me.TSMIEstados, Me.TSMIMunicipios})
         Me.TSMITablasdelSistema.Enabled = False
         Me.TSMITablasdelSistema.ForeColor = System.Drawing.Color.White
         Me.TSMITablasdelSistema.Name = "TSMITablasdelSistema"
@@ -268,13 +267,6 @@ Partial Class FPrincipal
         Me.TSMIMunicipios.Name = "TSMIMunicipios"
         Me.TSMIMunicipios.Size = New System.Drawing.Size(237, 24)
         Me.TSMIMunicipios.Text = "Municipios"
-        '
-        'TSMIProductoEntrante
-        '
-        Me.TSMIProductoEntrante.ForeColor = System.Drawing.Color.Olive
-        Me.TSMIProductoEntrante.Name = "TSMIProductoEntrante"
-        Me.TSMIProductoEntrante.Size = New System.Drawing.Size(237, 24)
-        Me.TSMIProductoEntrante.Text = "Producto Entrante"
         '
         'TSMINivelesdeUsuario
         '
@@ -445,7 +437,6 @@ Partial Class FPrincipal
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents TSMIClientes As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIProcesarSolicitudes As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TSMIProductoEntrante As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMISistema As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIRespaldoRestauracion As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIAyuda As System.Windows.Forms.ToolStripMenuItem

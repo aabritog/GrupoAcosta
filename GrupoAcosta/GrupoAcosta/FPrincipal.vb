@@ -97,10 +97,6 @@
         FMunicipio.ShowDialog()
     End Sub
 
-    Private Sub SolicitudesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMISolicitudes.Click
-
-    End Sub
-
     Private Sub RolesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIUsuarios.Click
         FUsuario.ShowDialog()
     End Sub
@@ -121,9 +117,9 @@
         FSolicitudProductos.ShowDialog()
     End Sub
 
-    Private Sub ProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProductoEntrante.Click
-        FProductoEntrante.ShowDialog()
-    End Sub
+    'Private Sub ProductoEntranteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIProductoEntrante.Click
+    '    FProductoEntrante.ShowDialog()
+    'End Sub
 
     Private Sub RespaldoRestauraciónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIRespaldoRestauracion.Click
         FRespaldoRestaura.ShowDialog()
@@ -135,5 +131,14 @@
 
     Private Sub FPrincipal_Shown(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Shown
         cargarVistaRol()
+    End Sub
+
+    'Private Sub PrivilegiosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PrivilegiosToolStripMenuItem.Click
+    '    FPrivilegios.ShowDialog()
+
+    'End Sub
+
+    Private Sub TSMIProductoEntrante_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class

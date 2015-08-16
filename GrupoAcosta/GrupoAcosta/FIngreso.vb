@@ -150,4 +150,8 @@ Public Class FIngreso
         TBAlias.Text = Trim(CBAlias.SelectedValue)
         nlogin_errado = 0
     End Sub
+
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+
+    End Sub
 End Class

@@ -186,18 +186,18 @@
 
             MsgBox("los productos entrantes fueron registrados correctamente.", MsgBoxStyle.Information)
 
-        ElseIf nAction = 2 Then
+            'ElseIf nAction = 2 Then
 
-            Dim SQLActualizar As String = ""
-            SQLActualizar = "UPDATE solicitudes SET nid_cliente= '" & TXTProveedor.Text & "' WHERE nid=" & DGVProductoEntrante.CurrentRow.Cells("nid").Value & ""
+            '    Dim SQLActualizar As String = ""
+            '    SQLActualizar = "UPDATE solicitudes SET nid_cliente= '" & TXTProveedor.Text & "' WHERE nid=" & DGVProductoEntrante.CurrentRow.Cells("nid").Value & ""
 
-            objCGenerica.accederBD(SQLActualizar)
-            mostrarDGVProductoEntrante()
-            BTNCancelar_Click(sender, e)
+            '    objCGenerica.accederBD(SQLActualizar)
+            '    mostrarDGVProductoEntrante()
+            '    BTNCancelar_Click(sender, e)
 
-            nAction = 0
+            '    nAction = 0
 
-            MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
+            '    MsgBox("Se han guardado los cambios exitosamente.", MsgBoxStyle.Information)
 
         End If
 

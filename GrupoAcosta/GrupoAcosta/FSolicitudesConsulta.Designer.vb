@@ -42,14 +42,14 @@ Partial Class FSolicitudesConsulta
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label2.Location = New System.Drawing.Point(8, 23)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(244, 20)
+        Me.Label2.Size = New System.Drawing.Size(224, 20)
         Me.Label2.TabIndex = 48
-        Me.Label2.Text = "MÓDULO CONSULTA DE SOLICITUDES"
+        Me.Label2.Text = "MÓDULO CONSULTA SOLICITUDES"
         '
         'LBLBuscar
         '
@@ -106,7 +106,7 @@ Partial Class FSolicitudesConsulta
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Location = New System.Drawing.Point(41, 406)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(365, 52)
+        Me.GroupBox1.Size = New System.Drawing.Size(371, 52)
         Me.GroupBox1.TabIndex = 52
         Me.GroupBox1.TabStop = False
         '
@@ -164,7 +164,7 @@ Partial Class FSolicitudesConsulta
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.DarkOrange
-        Me.TextBox1.Location = New System.Drawing.Point(441, 416)
+        Me.TextBox1.Location = New System.Drawing.Point(418, 406)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(42, 20)
         Me.TextBox1.TabIndex = 53
@@ -197,7 +197,7 @@ Partial Class FSolicitudesConsulta
         Me.Controls.Add(Me.Label2)
         Me.Name = "FSolicitudesConsulta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FSolicitudesConsulta"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO CONSULTA SOLICITUDES"
         Me.GBPersonasUsuarios.ResumeLayout(False)
         CType(Me.DGVConsultaSolicitudes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)

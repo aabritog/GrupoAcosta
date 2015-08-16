@@ -98,11 +98,11 @@ Partial Class FRol
         '
         Me.LBCamposObligatorios.AutoSize = True
         Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
-        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
         Me.LBCamposObligatorios.Location = New System.Drawing.Point(326, 100)
         Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
-        Me.LBCamposObligatorios.Size = New System.Drawing.Size(125, 15)
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(119, 16)
         Me.LBCamposObligatorios.TabIndex = 47
         Me.LBCamposObligatorios.Text = "Campos Obligatorios"
         '
@@ -191,7 +191,7 @@ Partial Class FRol
         Me.GBRol.Font = New System.Drawing.Font("Arial Narrow", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBRol.Location = New System.Drawing.Point(12, 273)
         Me.GBRol.Name = "GBRol"
-        Me.GBRol.Size = New System.Drawing.Size(541, 191)
+        Me.GBRol.Size = New System.Drawing.Size(541, 199)
         Me.GBRol.TabIndex = 29
         Me.GBRol.TabStop = False
         '
@@ -199,7 +199,7 @@ Partial Class FRol
         '
         Me.DGVRol.BackgroundColor = System.Drawing.Color.OliveDrab
         Me.DGVRol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVRol.Location = New System.Drawing.Point(6, 11)
+        Me.DGVRol.Location = New System.Drawing.Point(6, 17)
         Me.DGVRol.Name = "DGVRol"
         Me.DGVRol.Size = New System.Drawing.Size(529, 174)
         Me.DGVRol.TabIndex = 23
@@ -217,14 +217,14 @@ Partial Class FRol
         Me.GroupBox3.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox3.Location = New System.Drawing.Point(565, 116)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(85, 254)
+        Me.GroupBox3.Size = New System.Drawing.Size(85, 258)
         Me.GroupBox3.TabIndex = 31
         Me.GroupBox3.TabStop = False
         '
         'BTNAgregar
         '
         Me.BTNAgregar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNAgregar.Location = New System.Drawing.Point(7, 11)
+        Me.BTNAgregar.Location = New System.Drawing.Point(7, 17)
         Me.BTNAgregar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNAgregar.Name = "BTNAgregar"
         Me.BTNAgregar.Size = New System.Drawing.Size(74, 33)
@@ -235,7 +235,7 @@ Partial Class FRol
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(7, 213)
+        Me.BTNSalir.Location = New System.Drawing.Point(7, 222)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -247,7 +247,7 @@ Partial Class FRol
         '
         Me.BTNGuardar.Enabled = False
         Me.BTNGuardar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNGuardar.Location = New System.Drawing.Point(7, 52)
+        Me.BTNGuardar.Location = New System.Drawing.Point(7, 58)
         Me.BTNGuardar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNGuardar.Name = "BTNGuardar"
         Me.BTNGuardar.Size = New System.Drawing.Size(74, 33)
@@ -259,7 +259,7 @@ Partial Class FRol
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(7, 172)
+        Me.BTNCancelar.Location = New System.Drawing.Point(7, 181)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -271,7 +271,7 @@ Partial Class FRol
         '
         Me.BTNModificar.Enabled = False
         Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNModificar.Location = New System.Drawing.Point(7, 90)
+        Me.BTNModificar.Location = New System.Drawing.Point(7, 99)
         Me.BTNModificar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNModificar.Name = "BTNModificar"
         Me.BTNModificar.Size = New System.Drawing.Size(74, 33)
@@ -283,7 +283,7 @@ Partial Class FRol
         '
         Me.BTNEliminar.Enabled = False
         Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEliminar.Location = New System.Drawing.Point(7, 131)
+        Me.BTNEliminar.Location = New System.Drawing.Point(7, 140)
         Me.BTNEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNEliminar.Name = "BTNEliminar"
         Me.BTNEliminar.Size = New System.Drawing.Size(74, 33)
@@ -294,7 +294,7 @@ Partial Class FRol
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label2.Location = New System.Drawing.Point(14, 23)
@@ -308,7 +308,7 @@ Partial Class FRol
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(659, 466)
+        Me.ClientSize = New System.Drawing.Size(659, 476)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GBRol)

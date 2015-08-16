@@ -1,4 +1,6 @@
 ﻿Public Class FPrivilegios
+    Dim objCGenerica As CGenerica = New CGenerica
+
     Dim DatosDataTableDGVPrivilegios As New DataTable
     Dim DatosBindingSourceDGVPrivilegios As New BindingSource
 
@@ -130,7 +132,7 @@
     End Sub
 
     Private Sub CBRol_SelectionChangeCommitted(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBRol.SelectionChangeCommitted
-        TBIdrol.Text = CBRol.SelectedValue
+        TXTRol.Text = CBRol.SelectedValue
         DGVPrivilegios.Columns.Remove("acceso")
         DatosDataTableDGVPrivilegios.Clear()
         DatosDataTableDGVPrivilegios.Clear()
@@ -139,7 +141,7 @@
 
 
         Dim SQLDGVPrivilegios As String = ""
-        SQLDGVPrivilegios = "SELECT nid_rol,nid_privilegios, descripcion_privilegios, b_activo_privilegios FROM v_rol_privilegios WHERE id_rol=" & CInt(TBIdrol.Text) & ""
+        SQLDGVPrivilegios = "SELECT nid_rol,nid_privilegios, descripcion_privilegios, b_activo_privilegios FROM v_rol_privilegios WHERE nid_rol=" & CInt(TXTRol.Text) & ""
 
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
             Using DatosDataAdapter As New Odbc.OdbcDataAdapter(SQLDGVPrivilegios, conexion)
@@ -190,6 +192,9 @@
         End Using
     End Sub
 
+    Private Sub TXTRol_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTRol.TextChanged
 
+        objCGenerica.valCampoObligatorio(Me.TXTRol, LBValidarRoles)
 
+    End Sub
 End Class

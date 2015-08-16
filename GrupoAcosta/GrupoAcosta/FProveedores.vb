@@ -372,4 +372,7 @@ Public Class FProveedores
     End Sub
 
 
+    Private Sub GroupBox3_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox3.Enter
+
+    End Sub
 End Class

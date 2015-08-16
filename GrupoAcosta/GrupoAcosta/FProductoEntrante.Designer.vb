@@ -79,11 +79,11 @@ Partial Class FProductoEntrante
         '
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
         Me.Label9.Location = New System.Drawing.Point(313, 164)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(125, 15)
+        Me.Label9.Size = New System.Drawing.Size(119, 16)
         Me.Label9.TabIndex = 47
         Me.Label9.Text = "Campos Obligatorios"
         '
@@ -301,6 +301,7 @@ Partial Class FProductoEntrante
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(8, 19)
         Me.Label2.Name = "Label2"

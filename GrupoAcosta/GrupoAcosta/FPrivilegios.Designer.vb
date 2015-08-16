@@ -29,9 +29,13 @@ Partial Class FPrivilegios
         Me.CBRol = New System.Windows.Forms.ComboBox()
         Me.LBRoles = New System.Windows.Forms.Label()
         Me.GBAsignacionPrivilegios = New System.Windows.Forms.GroupBox()
-        Me.TBIdrol = New System.Windows.Forms.TextBox()
+        Me.LBValidarRoles = New System.Windows.Forms.Label()
+        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
+        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
+        Me.TXTRol = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.DGVPrivilegios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBAsignacionPrivilegios.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -40,9 +44,9 @@ Partial Class FPrivilegios
         '
         'DGVPrivilegios
         '
-        Me.DGVPrivilegios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.DGVPrivilegios.BackgroundColor = System.Drawing.Color.OliveDrab
         Me.DGVPrivilegios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVPrivilegios.Location = New System.Drawing.Point(12, 20)
+        Me.DGVPrivilegios.Location = New System.Drawing.Point(12, 15)
         Me.DGVPrivilegios.Name = "DGVPrivilegios"
         Me.DGVPrivilegios.RowHeadersVisible = False
         Me.DGVPrivilegios.Size = New System.Drawing.Size(368, 474)
@@ -51,20 +55,18 @@ Partial Class FPrivilegios
         '
         'BTNGuardar
         '
-        Me.BTNGuardar.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.BTNGuardar.Location = New System.Drawing.Point(11, 19)
+        Me.BTNGuardar.Location = New System.Drawing.Point(6, 13)
         Me.BTNGuardar.Name = "BTNGuardar"
-        Me.BTNGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNGuardar.Size = New System.Drawing.Size(75, 34)
         Me.BTNGuardar.TabIndex = 2
         Me.BTNGuardar.Text = "Guardar"
         Me.BTNGuardar.UseVisualStyleBackColor = True
         '
         'BTNSalir
         '
-        Me.BTNSalir.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.BTNSalir.Location = New System.Drawing.Point(11, 48)
+        Me.BTNSalir.Location = New System.Drawing.Point(6, 53)
         Me.BTNSalir.Name = "BTNSalir"
-        Me.BTNSalir.Size = New System.Drawing.Size(75, 23)
+        Me.BTNSalir.Size = New System.Drawing.Size(75, 33)
         Me.BTNSalir.TabIndex = 3
         Me.BTNSalir.Text = "Salir"
         Me.BTNSalir.UseVisualStyleBackColor = True
@@ -74,51 +76,94 @@ Partial Class FPrivilegios
         Me.CBRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBRol.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.CBRol.FormattingEnabled = True
-        Me.CBRol.Location = New System.Drawing.Point(54, 26)
+        Me.CBRol.Location = New System.Drawing.Point(157, 33)
         Me.CBRol.Name = "CBRol"
-        Me.CBRol.Size = New System.Drawing.Size(190, 21)
+        Me.CBRol.Size = New System.Drawing.Size(249, 28)
         Me.CBRol.TabIndex = 1
         '
         'LBRoles
         '
         Me.LBRoles.AutoSize = True
-        Me.LBRoles.Location = New System.Drawing.Point(15, 31)
+        Me.LBRoles.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBRoles.Location = New System.Drawing.Point(9, 38)
         Me.LBRoles.Name = "LBRoles"
-        Me.LBRoles.Size = New System.Drawing.Size(37, 13)
+        Me.LBRoles.Size = New System.Drawing.Size(50, 17)
         Me.LBRoles.TabIndex = 6
         Me.LBRoles.Text = "Roles:"
         '
         'GBAsignacionPrivilegios
         '
         Me.GBAsignacionPrivilegios.BackColor = System.Drawing.Color.White
-        Me.GBAsignacionPrivilegios.Controls.Add(Me.TBIdrol)
+        Me.GBAsignacionPrivilegios.Controls.Add(Me.LBValidarRoles)
+        Me.GBAsignacionPrivilegios.Controls.Add(Me.LBCamposObligatoriosAst)
         Me.GBAsignacionPrivilegios.Controls.Add(Me.LBRoles)
+        Me.GBAsignacionPrivilegios.Controls.Add(Me.LBCamposObligatorios)
         Me.GBAsignacionPrivilegios.Controls.Add(Me.CBRol)
-        Me.GBAsignacionPrivilegios.Location = New System.Drawing.Point(12, 12)
+        Me.GBAsignacionPrivilegios.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GBAsignacionPrivilegios.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GBAsignacionPrivilegios.Location = New System.Drawing.Point(12, 70)
         Me.GBAsignacionPrivilegios.Name = "GBAsignacionPrivilegios"
-        Me.GBAsignacionPrivilegios.Size = New System.Drawing.Size(395, 73)
+        Me.GBAsignacionPrivilegios.Size = New System.Drawing.Size(446, 91)
         Me.GBAsignacionPrivilegios.TabIndex = 7
         Me.GBAsignacionPrivilegios.TabStop = False
-        Me.GBAsignacionPrivilegios.Text = "Asignación de privilegios"
+        Me.GBAsignacionPrivilegios.Text = "Asignación de Privilegios"
         '
-        'TBIdrol
+        'LBValidarRoles
         '
-        Me.TBIdrol.BackColor = System.Drawing.Color.Yellow
-        Me.TBIdrol.Location = New System.Drawing.Point(317, 13)
-        Me.TBIdrol.Name = "TBIdrol"
-        Me.TBIdrol.ReadOnly = True
-        Me.TBIdrol.Size = New System.Drawing.Size(32, 20)
-        Me.TBIdrol.TabIndex = 7
-        Me.TBIdrol.Visible = False
+        Me.LBValidarRoles.AutoSize = True
+        Me.LBValidarRoles.BackColor = System.Drawing.Color.Transparent
+        Me.LBValidarRoles.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBValidarRoles.ForeColor = System.Drawing.Color.Red
+        Me.LBValidarRoles.Location = New System.Drawing.Point(420, 33)
+        Me.LBValidarRoles.Name = "LBValidarRoles"
+        Me.LBValidarRoles.Size = New System.Drawing.Size(14, 18)
+        Me.LBValidarRoles.TabIndex = 52
+        Me.LBValidarRoles.Text = "*"
+        '
+        'LBCamposObligatoriosAst
+        '
+        Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.Transparent
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(420, 74)
+        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(14, 17)
+        Me.LBCamposObligatoriosAst.TabIndex = 52
+        Me.LBCamposObligatoriosAst.Text = "*"
+        '
+        'LBCamposObligatorios
+        '
+        Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(287, 72)
+        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(119, 16)
+        Me.LBCamposObligatorios.TabIndex = 53
+        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
+        '
+        'TXTRol
+        '
+        Me.TXTRol.BackColor = System.Drawing.Color.Yellow
+        Me.TXTRol.Location = New System.Drawing.Point(467, 104)
+        Me.TXTRol.Name = "TXTRol"
+        Me.TXTRol.ReadOnly = True
+        Me.TXTRol.Size = New System.Drawing.Size(32, 20)
+        Me.TXTRol.TabIndex = 7
+        Me.TXTRol.Visible = False
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
-        Me.GroupBox1.Location = New System.Drawing.Point(413, 12)
+        Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.GroupBox1.Location = New System.Drawing.Point(435, 222)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(99, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(88, 92)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         '
@@ -126,19 +171,32 @@ Partial Class FPrivilegios
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.DGVPrivilegios)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 92)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 167)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(395, 503)
+        Me.GroupBox2.Size = New System.Drawing.Size(389, 499)
         Me.GroupBox2.TabIndex = 9
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Privilegios"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.Label2.Location = New System.Drawing.Point(12, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(146, 20)
+        Me.Label2.TabIndex = 51
+        Me.Label2.Text = "MÓDULO PRIVILEGIOS"
         '
         'FPrivilegios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCAactual2
-        Me.ClientSize = New System.Drawing.Size(522, 603)
+        Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
+        Me.ClientSize = New System.Drawing.Size(531, 669)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TXTRol)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GBAsignacionPrivilegios)
@@ -148,13 +206,14 @@ Partial Class FPrivilegios
         Me.Name = "FPrivilegios"
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Departamento de Enfermería - Privilegios en roles"
+        Me.Text = "GRUPO ACOSTA MARINE SERVICES C.A - MÓDULO PRIVILEGIOS"
         CType(Me.DGVPrivilegios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GBAsignacionPrivilegios.ResumeLayout(False)
         Me.GBAsignacionPrivilegios.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DGVPrivilegios As System.Windows.Forms.DataGridView
@@ -163,7 +222,11 @@ Partial Class FPrivilegios
     Friend WithEvents CBRol As System.Windows.Forms.ComboBox
     Friend WithEvents LBRoles As System.Windows.Forms.Label
     Friend WithEvents GBAsignacionPrivilegios As System.Windows.Forms.GroupBox
-    Friend WithEvents TBIdrol As System.Windows.Forms.TextBox
+    Friend WithEvents TXTRol As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
+    Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
+    Friend WithEvents LBValidarRoles As System.Windows.Forms.Label
 End Class

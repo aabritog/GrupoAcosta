@@ -50,9 +50,10 @@ Partial Class FRespaldoRestaura
         'BTNRespaldar
         '
         Me.BTNRespaldar.Enabled = False
-        Me.BTNRespaldar.Location = New System.Drawing.Point(6, 9)
+        Me.BTNRespaldar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNRespaldar.Location = New System.Drawing.Point(8, 15)
         Me.BTNRespaldar.Name = "BTNRespaldar"
-        Me.BTNRespaldar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNRespaldar.Size = New System.Drawing.Size(75, 31)
         Me.BTNRespaldar.TabIndex = 2
         Me.BTNRespaldar.Text = "Respaldar"
         Me.BTNRespaldar.UseVisualStyleBackColor = True
@@ -60,18 +61,20 @@ Partial Class FRespaldoRestaura
         'BTNRestaurar
         '
         Me.BTNRestaurar.Enabled = False
-        Me.BTNRestaurar.Location = New System.Drawing.Point(6, 38)
+        Me.BTNRestaurar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNRestaurar.Location = New System.Drawing.Point(8, 52)
         Me.BTNRestaurar.Name = "BTNRestaurar"
-        Me.BTNRestaurar.Size = New System.Drawing.Size(75, 23)
+        Me.BTNRestaurar.Size = New System.Drawing.Size(75, 32)
         Me.BTNRestaurar.TabIndex = 3
         Me.BTNRestaurar.Text = "Restaurar"
         Me.BTNRestaurar.UseVisualStyleBackColor = True
         '
         'BTNSalir
         '
-        Me.BTNSalir.Location = New System.Drawing.Point(6, 67)
+        Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSalir.Location = New System.Drawing.Point(8, 90)
         Me.BTNSalir.Name = "BTNSalir"
-        Me.BTNSalir.Size = New System.Drawing.Size(75, 23)
+        Me.BTNSalir.Size = New System.Drawing.Size(75, 29)
         Me.BTNSalir.TabIndex = 4
         Me.BTNSalir.Text = "Salir"
         Me.BTNSalir.UseVisualStyleBackColor = True
@@ -107,7 +110,7 @@ Partial Class FRespaldoRestaura
         Me.GBDatos.Controls.Add(Me.TBArchivoBackup)
         Me.GBDatos.Font = New System.Drawing.Font("Arial Narrow", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBDatos.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GBDatos.Location = New System.Drawing.Point(12, 131)
+        Me.GBDatos.Location = New System.Drawing.Point(12, 153)
         Me.GBDatos.Name = "GBDatos"
         Me.GBDatos.Size = New System.Drawing.Size(324, 99)
         Me.GBDatos.TabIndex = 12
@@ -118,13 +121,13 @@ Partial Class FRespaldoRestaura
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
         Me.GroupBox1.Controls.Add(Me.BTNRespaldar)
-        Me.GroupBox1.Controls.Add(Me.BTNRestaurar)
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
+        Me.GroupBox1.Controls.Add(Me.BTNRestaurar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial Narrow", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox1.Location = New System.Drawing.Point(342, 77)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(89, 97)
+        Me.GroupBox1.Size = New System.Drawing.Size(89, 128)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         '
@@ -132,9 +135,9 @@ Partial Class FRespaldoRestaura
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Silver
         Me.PictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 249)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 267)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(461, 6)
+        Me.PictureBox3.Size = New System.Drawing.Size(451, 6)
         Me.PictureBox3.TabIndex = 94
         Me.PictureBox3.TabStop = False
         '
@@ -143,11 +146,11 @@ Partial Class FRespaldoRestaura
         Me.GroupBox2.BackColor = System.Drawing.Color.White
         Me.GroupBox2.Controls.Add(Me.RBRestaurar)
         Me.GroupBox2.Controls.Add(Me.RBRespaldo)
-        Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox2.Location = New System.Drawing.Point(12, 77)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(324, 48)
+        Me.GroupBox2.Size = New System.Drawing.Size(324, 57)
         Me.GroupBox2.TabIndex = 98
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Elija lo que Desee Hacer"
@@ -155,10 +158,10 @@ Partial Class FRespaldoRestaura
         'RBRestaurar
         '
         Me.RBRestaurar.AutoSize = True
-        Me.RBRestaurar.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RBRestaurar.Location = New System.Drawing.Point(217, 20)
+        Me.RBRestaurar.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RBRestaurar.Location = New System.Drawing.Point(209, 31)
         Me.RBRestaurar.Name = "RBRestaurar"
-        Me.RBRestaurar.Size = New System.Drawing.Size(82, 20)
+        Me.RBRestaurar.Size = New System.Drawing.Size(91, 21)
         Me.RBRestaurar.TabIndex = 1
         Me.RBRestaurar.TabStop = True
         Me.RBRestaurar.Text = "Restaurar"
@@ -167,10 +170,10 @@ Partial Class FRespaldoRestaura
         'RBRespaldo
         '
         Me.RBRespaldo.AutoSize = True
-        Me.RBRespaldo.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RBRespaldo.Location = New System.Drawing.Point(23, 20)
+        Me.RBRespaldo.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RBRespaldo.Location = New System.Drawing.Point(30, 31)
         Me.RBRespaldo.Name = "RBRespaldo"
-        Me.RBRespaldo.Size = New System.Drawing.Size(80, 20)
+        Me.RBRespaldo.Size = New System.Drawing.Size(88, 21)
         Me.RBRespaldo.TabIndex = 0
         Me.RBRespaldo.TabStop = True
         Me.RBRespaldo.Text = "Respaldo"
@@ -191,14 +194,14 @@ Partial Class FRespaldoRestaura
         Me.PictureBox2.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox2.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(461, 6)
+        Me.PictureBox2.Size = New System.Drawing.Size(451, 6)
         Me.PictureBox2.TabIndex = 99
         Me.PictureBox2.TabStop = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.SystemColors.Control
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.Label2.Location = New System.Drawing.Point(8, 34)
@@ -210,7 +213,7 @@ Partial Class FRespaldoRestaura
         'FRespaldoRestaura
         '
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(461, 255)
+        Me.ClientSize = New System.Drawing.Size(451, 273)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.GroupBox2)

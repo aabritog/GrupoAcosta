@@ -173,7 +173,7 @@ Partial Class FSolicitudes
         Me.LBLBuscar.BackColor = System.Drawing.Color.Transparent
         Me.LBLBuscar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLBuscar.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.LBLBuscar.Location = New System.Drawing.Point(709, 235)
+        Me.LBLBuscar.Location = New System.Drawing.Point(697, 244)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
         Me.LBLBuscar.Size = New System.Drawing.Size(105, 20)

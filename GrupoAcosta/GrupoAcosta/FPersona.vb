@@ -317,6 +317,7 @@ Public Class FPersona
             nId_persona = CInt(Trim(sId_persona))
 
             'Se verifica si el objeto tiene elementos (Si se agrego algun telefono).
+
             If LVTelefonos.Items.Count > 0 Then
                 For Each Item As ListViewItem In LVTelefonos.Items
                     'Si existen elementos (telefonos) se cargan a la tabla telefono_persona.

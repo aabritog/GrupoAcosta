@@ -25,7 +25,6 @@ Public Class FSolicitudesConsulta
                 DatosBindingSourceDGVConsultaSolicitudes.DataSource = DatosDataTableDGVConsultaSolicitudes
             End Using
 
-
             With DGVConsultaSolicitudes
                 .RowHeadersVisible = False
                 .ReadOnly = True
@@ -88,8 +87,6 @@ Public Class FSolicitudesConsulta
         Me.Dispose()
 
     End Sub
-
-
 
     Private Sub FSolicitudesConsulta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         mostrarDGVConsultaSolicitudes()

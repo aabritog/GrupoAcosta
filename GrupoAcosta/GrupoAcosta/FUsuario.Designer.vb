@@ -273,8 +273,10 @@ Partial Class FUsuario
         Me.TXTConfirmarClave.Location = New System.Drawing.Point(137, 102)
         Me.TXTConfirmarClave.MaxLength = 32
         Me.TXTConfirmarClave.Name = "TXTConfirmarClave"
+        Me.TXTConfirmarClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTConfirmarClave.Size = New System.Drawing.Size(274, 25)
         Me.TXTConfirmarClave.TabIndex = 3
+        Me.TXTConfirmarClave.UseSystemPasswordChar = True
         '
         'TXTSeudonimo
         '

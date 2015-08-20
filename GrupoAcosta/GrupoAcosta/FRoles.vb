@@ -281,5 +281,9 @@
 
     End Sub
 
-    
+    Private Sub TBNuevoRol_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TBNuevoRol.KeyPress
+
+        objCGenerica.SoloLetra(e)
+
+    End Sub
 End Class

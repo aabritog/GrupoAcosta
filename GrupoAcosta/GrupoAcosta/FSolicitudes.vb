@@ -187,7 +187,7 @@
                         Else
 
                             If nRegistroUnico = 0 Then
-                                SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha) values (" & TXTCliente.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "') returning nid"
+                                SQLGuardar = "insert into solicitudes (nid_cliente, s_verificacion, d_fecha, nid_estado) values (" & TXTCliente.Text & ", '2', '" & Date.Today.ToString("yyyy-MM-dd") & "', '1') returning nid"
                                 sId_solicitud = ""
 
                                 objCGenerica.accederBD(SQLGuardar, sId_solicitud)

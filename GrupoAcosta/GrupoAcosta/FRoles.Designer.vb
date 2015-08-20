@@ -27,15 +27,15 @@ Partial Class FRoles
         Me.BTNCrearRol = New System.Windows.Forms.Button()
         Me.DGVRoles = New System.Windows.Forms.DataGridView()
         Me.GBRoles = New System.Windows.Forms.GroupBox()
+        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
         Me.LBValidarNuevoRol = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.BTNEliminar = New System.Windows.Forms.Button()
         Me.BTNSalir = New System.Windows.Forms.Button()
         Me.LNNombreAtencion = New System.Windows.Forms.Label()
-        Me.LBCamposObligatoriosAst = New System.Windows.Forms.Label()
-        Me.LBCamposObligatorios = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DGVRoles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBRoles.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -88,6 +88,40 @@ Partial Class FRoles
         Me.GBRoles.TabIndex = 3
         Me.GBRoles.TabStop = False
         Me.GBRoles.Text = "Nuevo Rol:"
+        '
+        'LBCamposObligatoriosAst
+        '
+        Me.LBCamposObligatoriosAst.AutoSize = True
+        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.Transparent
+        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 11.0!)
+        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(383, 73)
+        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
+        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(14, 17)
+        Me.LBCamposObligatoriosAst.TabIndex = 97
+        Me.LBCamposObligatoriosAst.Text = "*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 36)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(64, 17)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Nombre:"
+        '
+        'LBCamposObligatorios
+        '
+        Me.LBCamposObligatorios.AutoSize = True
+        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
+        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
+        Me.LBCamposObligatorios.Location = New System.Drawing.Point(258, 74)
+        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
+        Me.LBCamposObligatorios.Size = New System.Drawing.Size(119, 16)
+        Me.LBCamposObligatorios.TabIndex = 96
+        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
         '
         'LBValidarNuevoRol
         '
@@ -154,40 +188,6 @@ Partial Class FRoles
         Me.LNNombreAtencion.Size = New System.Drawing.Size(111, 20)
         Me.LNNombreAtencion.TabIndex = 95
         Me.LNNombreAtencion.Text = "MÓDULO ROLES"
-        '
-        'LBCamposObligatoriosAst
-        '
-        Me.LBCamposObligatoriosAst.AutoSize = True
-        Me.LBCamposObligatoriosAst.BackColor = System.Drawing.Color.Transparent
-        Me.LBCamposObligatoriosAst.Font = New System.Drawing.Font("Arial", 11.0!)
-        Me.LBCamposObligatoriosAst.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatoriosAst.Location = New System.Drawing.Point(383, 73)
-        Me.LBCamposObligatoriosAst.Name = "LBCamposObligatoriosAst"
-        Me.LBCamposObligatoriosAst.Size = New System.Drawing.Size(14, 17)
-        Me.LBCamposObligatoriosAst.TabIndex = 97
-        Me.LBCamposObligatoriosAst.Text = "*"
-        '
-        'LBCamposObligatorios
-        '
-        Me.LBCamposObligatorios.AutoSize = True
-        Me.LBCamposObligatorios.BackColor = System.Drawing.Color.Transparent
-        Me.LBCamposObligatorios.Font = New System.Drawing.Font("Arial Narrow", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBCamposObligatorios.ForeColor = System.Drawing.Color.Red
-        Me.LBCamposObligatorios.Location = New System.Drawing.Point(258, 74)
-        Me.LBCamposObligatorios.Name = "LBCamposObligatorios"
-        Me.LBCamposObligatorios.Size = New System.Drawing.Size(119, 16)
-        Me.LBCamposObligatorios.TabIndex = 96
-        Me.LBCamposObligatorios.Text = "Campos Obligatorios"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 36)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 17)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Nombre:"
         '
         'FRoles
         '

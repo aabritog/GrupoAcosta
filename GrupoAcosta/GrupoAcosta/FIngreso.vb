@@ -22,13 +22,6 @@ Public Class FIngreso
     Friend s_Rol As String
     Friend s_Nombre As String
 
-    'Friend s_Clave As String
-    'Friend s_Dni As String
-    'Friend d_fecha_nacimiento As Date
-    'Friend s_Correo As String
-    'Friend s_Sexo As String
-    'Friend s_Nacionalidad As String
-
     Dim s_Campo1 As String = ""
     Dim s_Campo2 As String = ""
     Dim s_Campo3 As String = ""
@@ -60,7 +53,6 @@ Public Class FIngreso
             .ValueMember = "nid"
         End With
     End Sub
-
 
     Friend Sub BTNAccesar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNAcceder.Click
 
@@ -151,7 +143,4 @@ Public Class FIngreso
         nlogin_errado = 0
     End Sub
 
-    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
-
-    End Sub
 End Class

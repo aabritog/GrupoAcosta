@@ -1,7 +1,8 @@
-﻿Imports GrupoAcosta.CGenerica
-
+﻿
 Public Class FUsuario
+
     Dim objCGenerica As CGenerica = New CGenerica
+
     Dim DatosDataTableDGVUsuario As New DataTable
     Dim DatosBindingSourceDGVUsuario As New BindingSource
     Dim DatosDataTableCMBRol As New DataTable
@@ -47,8 +48,6 @@ Public Class FUsuario
 
         Dim CadenaSQL As String = ""
 
-        'CadenaSQL = "select p.nid, p.s_nombre1, p.s_nombre2, p.s_apellido1, p.s_apellido2, p.s_dni, p.d_fecha_nacimiento, p.s_correo, p.s_sexo, p.nid_cargo, c.s_descripcion s_cargo, d.nid nid_departamento, d.s_descripcion s_departamento from persona p inner join cargo c on p.nid_cargo = c.nid inner join departamento d on d.nid = c.nid_departamento order by p.s_nombre1, p.s_nombre2, p.s_apellido1, p.s_apellido2"
-        'CadenaSQL = "select u.nid, u.nid_persona, u.s_clave, u.nid_rol, u.s_seudonimo, u.s_activo, r.s_descripcion s_rol, p.s_nombre1 s_nombre, p.s_apellido1 s_apellido from usuario u inner join rol r on u.nid_rol = r.nid inner join persona p on u.nid_persona = p.nid"
         CadenaSQL = "select u.nid, u.nid_persona, u.s_clave, u.nid_rol, u.s_seudonimo, r.s_descripcion s_rol, p.s_nombre1 || ' ' || p.s_apellido1 s_nombre from usuario u inner join rol r on u.nid_rol = r.nid inner join persona p on u.nid_persona = p.nid and u.s_activo='1'"
 
         DatosDataTableDGVUsuario.Clear()
@@ -129,14 +128,12 @@ Public Class FUsuario
 
     End Sub
 
-
     Private Sub FUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         DGVUsuario.ClearSelection()
         mostrarDGVUsuario()
         TXTBuscar.Enabled = True
     End Sub
-
 
     Private Sub BTNNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNNuevo.Click
         nAction = 1
@@ -277,7 +274,7 @@ Public Class FUsuario
             'End If
             '.................................................................................................................................
             Dim SQLActualizar As String = ""
-            SQLActualizar = "UPDATE usuario SET s_seudonimo='" & TXTSeudonimo.Text & "',s_clave='" & TXTClave.Text & "', nid_rol= " & TXTRol.Text & " WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""
+            SQLActualizar = "UPDATE usuario SET s_seudonimo='" & TXTSeudonimo.Text & "',s_clave= '" & TXTClave.Text & "', nid_rol= " & TXTRol.Text & " WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""
 
             accederBD(SQLActualizar)
             mostrarDGVUsuario()
@@ -366,35 +363,6 @@ Public Class FUsuario
 
     End Sub
 
-    Private Sub SoloNumeros(ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        'Rutina utilizada para validar que en el TBCi se puedan introducir solo numeros.
-
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
-
-    End Sub
-
-    Private Sub SoloLetras(ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        'Rutina utilizada para validar que en el TBNombres se puedan introducir solo Letras A-Z y a-z.
-        If Char.IsDigit(e.KeyChar) Then
-            e.Handled = True
-        ElseIf Char.IsLetter(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsControl(e.KeyChar) Then
-            e.Handled = False
-        ElseIf Char.IsWhiteSpace(e.KeyChar) Then
-            e.Handled = False
-        Else
-            e.Handled = True
-        End If
-
-    End Sub
-
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
 
         'Se declara el elemento eliminar para registros 
@@ -428,7 +396,6 @@ Public Class FUsuario
 
     End Sub
 
-
     Private Sub TXTSeudonimo_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTSeudonimo.TextChanged
 
         If Len(TXTSeudonimo.Text) = 0 Then
@@ -449,16 +416,6 @@ Public Class FUsuario
 
     End Sub
 
-    Private Sub TXTConfirmarClave_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTConfirmarClave.TextChanged
-
-        If Len(TXTConfirmarClave.Text) = 0 Then
-            LBLValidarConfirmarClave.Visible = True
-        Else
-            LBLValidarConfirmarClave.Visible = False
-        End If
-
-    End Sub
-
     Private Sub TXTRol_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTRol.TextChanged
 
         If Len(TXTRol.Text) = 0 Then
@@ -468,8 +425,6 @@ Public Class FUsuario
         End If
 
     End Sub
-
-
 
     Private Sub DGVUsuario_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVUsuario.CellClick
 
@@ -482,21 +437,17 @@ Public Class FUsuario
 
     Private Sub TXTSeudonimo_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTSeudonimo.KeyPress
 
-        SoloLetras(e)
+        objCGenerica.SoloLetra(e)
 
     End Sub
 
-    'Private Sub TXTClave_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTClave.KeyPress
+    Private Sub TXTConfirmarClave_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTConfirmarClave.TextChanged
 
-    '    SoloNumeros(e)
-
-    'End Sub
-
-
-    Private Sub TXTConfirmarClave_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTConfirmarClave.KeyPress
-
-        SoloNumeros(e)
+        If Len(TXTConfirmarClave.Text) = 0 Then
+            LBLValidarConfirmarClave.Visible = True
+        Else
+            LBLValidarConfirmarClave.Visible = False
+        End If
 
     End Sub
-
 End Class

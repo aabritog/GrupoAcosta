@@ -79,6 +79,8 @@ Partial Class FPersona
         Me.DataSet1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TTFPersona = New System.Windows.Forms.ToolTip(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BTNVisualizar = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GBPersona.SuspendLayout()
         CType(Me.DGVPersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GBNuevoRegistro.SuspendLayout()
@@ -115,7 +117,7 @@ Partial Class FPersona
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(13, 178)
+        Me.BTNCancelar.Location = New System.Drawing.Point(13, 218)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -128,7 +130,7 @@ Partial Class FPersona
         '
         Me.BTNEliminar.Enabled = False
         Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNEliminar.Location = New System.Drawing.Point(13, 137)
+        Me.BTNEliminar.Location = New System.Drawing.Point(13, 178)
         Me.BTNEliminar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNEliminar.Name = "BTNEliminar"
         Me.BTNEliminar.Size = New System.Drawing.Size(74, 33)
@@ -141,7 +143,7 @@ Partial Class FPersona
         '
         Me.BTNModificar.Enabled = False
         Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNModificar.Location = New System.Drawing.Point(13, 96)
+        Me.BTNModificar.Location = New System.Drawing.Point(13, 137)
         Me.BTNModificar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNModificar.Name = "BTNModificar"
         Me.BTNModificar.Size = New System.Drawing.Size(74, 33)
@@ -651,6 +653,7 @@ Partial Class FPersona
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.BTNVisualizar)
         Me.GroupBox1.Controls.Add(Me.BTNAgregar)
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
@@ -659,9 +662,9 @@ Partial Class FPersona
         Me.GroupBox1.Controls.Add(Me.BTNModificar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.GroupBox1.Location = New System.Drawing.Point(591, 92)
+        Me.GroupBox1.Location = New System.Drawing.Point(591, 73)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(98, 259)
+        Me.GroupBox1.Size = New System.Drawing.Size(98, 303)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         '
@@ -679,7 +682,7 @@ Partial Class FPersona
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(13, 220)
+        Me.BTNSalir.Location = New System.Drawing.Point(13, 259)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -754,6 +757,28 @@ Partial Class FPersona
         Me.Label2.TabIndex = 50
         Me.Label2.Text = "MÓDULO PERSONA"
         '
+        'BTNVisualizar
+        '
+        Me.BTNVisualizar.Enabled = False
+        Me.BTNVisualizar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNVisualizar.Location = New System.Drawing.Point(13, 96)
+        Me.BTNVisualizar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNVisualizar.Name = "BTNVisualizar"
+        Me.BTNVisualizar.Size = New System.Drawing.Size(78, 33)
+        Me.BTNVisualizar.TabIndex = 51
+        Me.BTNVisualizar.Text = "Visualizar"
+        Me.TTFPersona.SetToolTip(Me.BTNVisualizar, "Presione aquí para modificar la persona seleccionada del listado")
+        Me.BTNVisualizar.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.DarkOrange
+        Me.TextBox1.Location = New System.Drawing.Point(695, 174)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(42, 25)
+        Me.TextBox1.TabIndex = 54
+        Me.TextBox1.Visible = False
+        '
         'FPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -761,6 +786,7 @@ Partial Class FPersona
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(774, 690)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TXTNacionalidad)
         Me.Controls.Add(Me.TXTDepartamento)
@@ -844,5 +870,7 @@ Partial Class FPersona
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents BTNSalir As System.Windows.Forms.Button
     Friend WithEvents BTNAgregar As System.Windows.Forms.Button
+    Friend WithEvents BTNVisualizar As System.Windows.Forms.Button
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 
 End Class

@@ -69,9 +69,9 @@ Partial Class FSolicitudProductos
         Me.LBLBuscar.Location = New System.Drawing.Point(50, 76)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(127, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(154, 20)
         Me.LBLBuscar.TabIndex = 17
-        Me.LBLBuscar.Text = "Buscar(Nombre, Ci)"
+        Me.LBLBuscar.Text = "Buscar(Nombre Cliente)"
         '
         'GroupBox1
         '

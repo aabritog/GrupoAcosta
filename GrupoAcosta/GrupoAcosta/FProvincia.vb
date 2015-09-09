@@ -209,6 +209,7 @@
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNAgregar.Enabled = False
     End Sub
 
     Private Sub LBCamposObligatorios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LBCamposObligatorios.Click

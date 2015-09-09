@@ -259,6 +259,7 @@
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNAgregar.Enabled = False
     End Sub
 
   

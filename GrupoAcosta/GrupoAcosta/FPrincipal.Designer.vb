@@ -44,7 +44,6 @@ Partial Class FPrincipal
         Me.TSMICargos = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIProductos = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIEstadodeSolicitud = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TSMIMovimientosdeSolicitud = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIEstados = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMIMunicipios = New System.Windows.Forms.ToolStripMenuItem()
         Me.TSMINivelesdeUsuario = New System.Windows.Forms.ToolStripMenuItem()
@@ -205,7 +204,7 @@ Partial Class FPrincipal
         'TSMITablasdelSistema
         '
         Me.TSMITablasdelSistema.BackColor = System.Drawing.Color.Olive
-        Me.TSMITablasdelSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIDepartamentos, Me.TSMICargos, Me.TSMIProductos, Me.TSMIEstadodeSolicitud, Me.TSMIMovimientosdeSolicitud, Me.TSMIEstados, Me.TSMIMunicipios})
+        Me.TSMITablasdelSistema.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TSMIDepartamentos, Me.TSMICargos, Me.TSMIProductos, Me.TSMIEstadodeSolicitud, Me.TSMIEstados, Me.TSMIMunicipios})
         Me.TSMITablasdelSistema.Enabled = False
         Me.TSMITablasdelSistema.ForeColor = System.Drawing.Color.White
         Me.TSMITablasdelSistema.Name = "TSMITablasdelSistema"
@@ -217,7 +216,7 @@ Partial Class FPrincipal
         Me.TSMIDepartamentos.BackColor = System.Drawing.Color.White
         Me.TSMIDepartamentos.ForeColor = System.Drawing.Color.Olive
         Me.TSMIDepartamentos.Name = "TSMIDepartamentos"
-        Me.TSMIDepartamentos.Size = New System.Drawing.Size(237, 24)
+        Me.TSMIDepartamentos.Size = New System.Drawing.Size(207, 24)
         Me.TSMIDepartamentos.Text = "Departamentos"
         '
         'TSMICargos
@@ -225,7 +224,7 @@ Partial Class FPrincipal
         Me.TSMICargos.BackColor = System.Drawing.Color.White
         Me.TSMICargos.ForeColor = System.Drawing.Color.Olive
         Me.TSMICargos.Name = "TSMICargos"
-        Me.TSMICargos.Size = New System.Drawing.Size(237, 24)
+        Me.TSMICargos.Size = New System.Drawing.Size(207, 24)
         Me.TSMICargos.Text = "Cargos"
         '
         'TSMIProductos
@@ -233,7 +232,7 @@ Partial Class FPrincipal
         Me.TSMIProductos.BackColor = System.Drawing.Color.White
         Me.TSMIProductos.ForeColor = System.Drawing.Color.Olive
         Me.TSMIProductos.Name = "TSMIProductos"
-        Me.TSMIProductos.Size = New System.Drawing.Size(237, 24)
+        Me.TSMIProductos.Size = New System.Drawing.Size(207, 24)
         Me.TSMIProductos.Text = "Productos"
         '
         'TSMIEstadodeSolicitud
@@ -241,23 +240,15 @@ Partial Class FPrincipal
         Me.TSMIEstadodeSolicitud.BackColor = System.Drawing.Color.White
         Me.TSMIEstadodeSolicitud.ForeColor = System.Drawing.Color.Olive
         Me.TSMIEstadodeSolicitud.Name = "TSMIEstadodeSolicitud"
-        Me.TSMIEstadodeSolicitud.Size = New System.Drawing.Size(237, 24)
+        Me.TSMIEstadodeSolicitud.Size = New System.Drawing.Size(207, 24)
         Me.TSMIEstadodeSolicitud.Text = "Estados de Solicitud"
-        '
-        'TSMIMovimientosdeSolicitud
-        '
-        Me.TSMIMovimientosdeSolicitud.BackColor = System.Drawing.Color.White
-        Me.TSMIMovimientosdeSolicitud.ForeColor = System.Drawing.Color.Olive
-        Me.TSMIMovimientosdeSolicitud.Name = "TSMIMovimientosdeSolicitud"
-        Me.TSMIMovimientosdeSolicitud.Size = New System.Drawing.Size(237, 24)
-        Me.TSMIMovimientosdeSolicitud.Text = "Movimientos de Solicitud"
         '
         'TSMIEstados
         '
         Me.TSMIEstados.BackColor = System.Drawing.Color.White
         Me.TSMIEstados.ForeColor = System.Drawing.Color.Olive
         Me.TSMIEstados.Name = "TSMIEstados"
-        Me.TSMIEstados.Size = New System.Drawing.Size(237, 24)
+        Me.TSMIEstados.Size = New System.Drawing.Size(207, 24)
         Me.TSMIEstados.Text = "Estados"
         '
         'TSMIMunicipios
@@ -265,7 +256,7 @@ Partial Class FPrincipal
         Me.TSMIMunicipios.BackColor = System.Drawing.Color.White
         Me.TSMIMunicipios.ForeColor = System.Drawing.Color.Olive
         Me.TSMIMunicipios.Name = "TSMIMunicipios"
-        Me.TSMIMunicipios.Size = New System.Drawing.Size(237, 24)
+        Me.TSMIMunicipios.Size = New System.Drawing.Size(207, 24)
         Me.TSMIMunicipios.Text = "Municipios"
         '
         'TSMINivelesdeUsuario
@@ -283,7 +274,7 @@ Partial Class FPrincipal
         Me.TSMIUsuarios.BackColor = System.Drawing.Color.White
         Me.TSMIUsuarios.ForeColor = System.Drawing.Color.Olive
         Me.TSMIUsuarios.Name = "TSMIUsuarios"
-        Me.TSMIUsuarios.Size = New System.Drawing.Size(152, 24)
+        Me.TSMIUsuarios.Size = New System.Drawing.Size(133, 24)
         Me.TSMIUsuarios.Text = "Usuarios"
         '
         'TSMIRoles
@@ -291,7 +282,7 @@ Partial Class FPrincipal
         Me.TSMIRoles.BackColor = System.Drawing.Color.White
         Me.TSMIRoles.ForeColor = System.Drawing.Color.Olive
         Me.TSMIRoles.Name = "TSMIRoles"
-        Me.TSMIRoles.Size = New System.Drawing.Size(152, 24)
+        Me.TSMIRoles.Size = New System.Drawing.Size(133, 24)
         Me.TSMIRoles.Text = "Roles"
         '
         'TSMISistema
@@ -423,7 +414,6 @@ Partial Class FPrincipal
     Friend WithEvents TimerFechaHoraActual As System.Windows.Forms.Timer
     Friend WithEvents TSMIProveedores As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIEstadodeSolicitud As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TSMIMovimientosdeSolicitud As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIEstados As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMIMunicipios As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TSMISolicitudes As System.Windows.Forms.ToolStripMenuItem

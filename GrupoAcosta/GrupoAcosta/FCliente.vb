@@ -414,6 +414,7 @@ Public Class FCliente
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNAgregar.Enabled = False
     End Sub
 
     Private Sub TXTRif_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTRif.TextChanged

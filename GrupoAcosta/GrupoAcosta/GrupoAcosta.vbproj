@@ -480,6 +480,7 @@
     <None Include="Resources\LOGO actual 12 ANIVERSARIO GAMSCAactual.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\1.gif" />
     <Content Include="Resources\FCargando1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

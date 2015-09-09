@@ -1,6 +1,4 @@
-﻿Imports GrupoAcosta.CGenerica
-
-Public Class FPersona
+﻿Public Class FPersona
 
     'Se declara variable de tipo clase para el manejo de funciones genericas
     Dim objCGenerica As CGenerica = New CGenerica
@@ -11,6 +9,9 @@ Public Class FPersona
     'Declaracion de variables auxiliares
     Public nAction As Integer ' *Insertar: nAction = 1. *Modificar: nAction = 2. *Consultar: nAction = 3.
 
+    Public nIdPersona As Integer
+
+    Friend nId_persona As Integer
 
     'Función que permite cargar el ComboBox Departamento
     Private Sub cargarCMBDepartamento()
@@ -208,6 +209,7 @@ Public Class FPersona
         BTNAgregar.Enabled = False
         BTNGuardar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNVisualizar.Enabled = False
         BTNAgregarTelefono.Enabled = True
 
         TXTNombre1.Focus()
@@ -487,9 +489,13 @@ Public Class FPersona
 
     Private Sub DGVPersona_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVPersona.CellClick
 
+        nId_persona = (DGVPersona.CurrentRow.Cells("nid").Value)
+        TextBox1.Text = nId_persona
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNVisualizar.Enabled = True
+        BTNAgregar.Enabled = False
 
     End Sub
 
@@ -515,6 +521,7 @@ Public Class FPersona
         BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
         BTNGuardar.Enabled = False
+        BTNVisualizar.Enabled = False
         BTNAgregarTelefono.Enabled = False
 
         'Se limpia contenido de los objetos
@@ -656,15 +663,18 @@ Public Class FPersona
         DTPFecha_CloseUp(sender, e)
     End Sub
 
-    Private Sub BNTReporte_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        FReporte.sNombre_reporte = "Visualizar_Persona"
-        FReporte.ShowDialog()
-    End Sub
-
     Private Sub BTNSalir_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
         Me.Dispose()
     End Sub
-    
+
+    Private Sub BTNVisualizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNVisualizar.Click
+
+        FReporte.sNombre_reporte = "Visualizar_Persona"
+        FReporte.nId_persona = TextBox1.Text
+        FReporte.ShowDialog()
+        Me.Dispose()
+
+    End Sub
 End Class
 
 

@@ -61,6 +61,7 @@ Public Class FUsuario
 
             '
             With DGVUsuario
+                .Columns.Clear()
                 .RowHeadersVisible = False
                 .ReadOnly = True
                 .AllowUserToAddRows = False
@@ -431,7 +432,8 @@ Public Class FUsuario
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
-        TXTBuscar.Enabled = True
+        'TXTBuscar.Enabled = True
+        BTNNuevo.Enabled = False
 
     End Sub
 

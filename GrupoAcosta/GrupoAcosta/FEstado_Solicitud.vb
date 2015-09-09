@@ -19,6 +19,7 @@
             bsDGVEstadoSolicitudFilter = bsDGVEstadoSolicitud
 
             With DGVEstadoSolicitud
+                .Columns.Clear()
                 .RowHeadersVisible = False
                 .ReadOnly = True
                 .AllowUserToAddRows = False

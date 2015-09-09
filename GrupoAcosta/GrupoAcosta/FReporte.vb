@@ -8,16 +8,16 @@ Public Class FReporte
 
     Friend sNombre_reporte As String = ""
     Friend nId_solicitud As Integer
-
+    Friend nId_persona As Integer
     Dim ruta As String
     Dim rpt As New ReportDocument
 
-    Friend Sub llenarDSInformacionPersona(ByVal ruta As String)
+    Friend Sub llenarDSInformacionPersona(ByVal ruta As String, ByRef nIdPersona As Integer)
         Dim miDs As DataSet1 = New DataSet1
-        Dim ta As New DataSet1TableAdapters.V__persona_departamento_cargoTableAdapter
+        Dim ta As New DataSet1TableAdapters.v_persona_departamento_cargoTableAdapter
 
         Try
-            ta.FillByAllPerson(miDs.V__persona_departamento_cargo)
+            ta.FillByVisuaPer(miDs.v_persona_departamento_cargo, nIdPersona)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception
@@ -54,12 +54,11 @@ Public Class FReporte
 
     End Sub
 
-
     Private Sub CRVVisorReportes_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CRVVisorReportes.Load
 
         If sNombre_reporte = "Visualizar_Persona" Then
             ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RPersona.rpt"
-            llenarDSInformacionPersona(ruta) : CRVVisorReportes.ReportSource = rpt
+            llenarDSInformacionPersona(ruta, nId_persona) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
 
         End If
@@ -79,6 +78,5 @@ Public Class FReporte
         End If
 
     End Sub
-
 
 End Class

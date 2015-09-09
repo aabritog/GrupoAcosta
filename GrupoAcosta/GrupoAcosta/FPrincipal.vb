@@ -85,9 +85,9 @@
         FEstado_Solicitud.ShowDialog()
     End Sub
 
-    Private Sub MovimientosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIMovimientosdeSolicitud.Click
-        FMovimiento.ShowDialog()
-    End Sub
+    'Private Sub MovimientosDeSolicitudToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    FMovimiento.ShowDialog()
+    'End Sub
 
     Private Sub EstadosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIEstados.Click
         FProvincia.ShowDialog()

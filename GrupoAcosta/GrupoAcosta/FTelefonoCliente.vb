@@ -127,8 +127,8 @@
     Private Sub FTelefonoProveedores_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TXTTelefono.Focus()
         If FCliente.nAction = 1 Then
-            Me.Size = New Size(431, 194)
-            GroupBox2.Size = New Size(280, 100)
+            Me.Size = New Size(431, 337)
+            GroupBox2.Size = New Size(304, 98)
         ElseIf FCliente.nAction = 3 Then
             DGVTelefono.Visible = True
             cargarDGVTelefono()

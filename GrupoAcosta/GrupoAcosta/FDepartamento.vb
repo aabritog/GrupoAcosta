@@ -20,6 +20,7 @@ Public Class FDepartamento
             bsDGVDepartamentoFilter = bsDGVDepartamento
 
             With DGVDepartamento
+                .Columns.Clear()
                 .RowHeadersVisible = False
                 .ReadOnly = True
                 .AllowUserToAddRows = False
@@ -226,6 +227,7 @@ Public Class FDepartamento
         BTNModificar.Enabled = True
         BTNEliminar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNAgregar.Enabled = False
 
     End Sub
 

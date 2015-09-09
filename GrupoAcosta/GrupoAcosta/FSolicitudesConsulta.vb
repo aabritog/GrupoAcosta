@@ -63,13 +63,6 @@ Public Class FSolicitudesConsulta
 
     End Sub
 
-    Private Sub BNTReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        FReporte.sNombre_reporte = "Visualizar_Solicitudes"
-        FReporte.ShowDialog()
-
-    End Sub
-
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 
         DGVConsultaSolicitudes.Enabled = True

@@ -295,6 +295,7 @@ Partial Class FDepartamento
         '
         Me.TXTBuscar.BackColor = System.Drawing.Color.White
         Me.TXTBuscar.CausesValidation = False
+        Me.TXTBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TXTBuscar.Location = New System.Drawing.Point(194, 234)
         Me.TXTBuscar.Name = "TXTBuscar"
         Me.TXTBuscar.Size = New System.Drawing.Size(262, 20)

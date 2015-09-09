@@ -436,9 +436,9 @@ Partial Class FCliente
         Me.LBLBuscar.Location = New System.Drawing.Point(28, 362)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(105, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(112, 20)
         Me.LBLBuscar.TabIndex = 29
-        Me.LBLBuscar.Text = "Buscar (Cliente)"
+        Me.LBLBuscar.Text = "Buscar (Nombre)"
         '
         'TXTBuscar
         '

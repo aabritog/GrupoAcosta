@@ -103,8 +103,8 @@
     Private Sub FTelefono_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         TXTTelefono.Focus()
         If FPersona.nAction = 1 Then
-            Me.Size = New Size(431, 194)
-            GroupBox2.Size = New Size(280, 100)
+            Me.Size = New Size(444, 343)
+            GroupBox2.Size = New Size(313, 93)
         ElseIf FPersona.nAction = 3 Then
             DGVTelefono.Visible = True
             cargarDGVTelefono()

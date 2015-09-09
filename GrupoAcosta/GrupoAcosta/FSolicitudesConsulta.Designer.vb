@@ -60,9 +60,9 @@ Partial Class FSolicitudesConsulta
         Me.LBLBuscar.Location = New System.Drawing.Point(51, 73)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(127, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(154, 20)
         Me.LBLBuscar.TabIndex = 50
-        Me.LBLBuscar.Text = "Buscar(Nombre, Ci)"
+        Me.LBLBuscar.Text = "Buscar(Nombre Cliente)"
         '
         'TXTBuscar
         '

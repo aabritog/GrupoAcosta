@@ -72,7 +72,13 @@ Public Class FSolicitudesConsulta
         BTNEliminar.Enabled = False
         BTNCancelar.Enabled = False
         BTNVerSolicitud.Enabled = False
-        BTNReporteSolicitudes.enabled = True
+        BTNReporteSolicitudes.Enabled = True
+        BTNSolicitudIniciada.Enabled = True
+
+        BTNSolicitudProceso.Enabled = True
+
+        BTNSolicitudFinalizada.Enabled = True
+
     End Sub
 
     Private Sub BTNSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSalir.Click
@@ -84,6 +90,13 @@ Public Class FSolicitudesConsulta
     Private Sub FSolicitudesConsulta_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         mostrarDGVConsultaSolicitudes()
         DGVConsultaSolicitudes.ClearSelection()
+
+        BTNSolicitudIniciada.Enabled = True
+
+        BTNSolicitudProceso.Enabled = True
+
+        BTNSolicitudFinalizada.Enabled = True
+
     End Sub
 
     Private Sub TXTBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTBuscar.TextChanged
@@ -106,6 +119,11 @@ Public Class FSolicitudesConsulta
 
         BTNReporteSolicitudes.Enabled = False
 
+        BTNSolicitudIniciada.Enabled = False
+
+        BTNSolicitudProceso.Enabled = False
+
+        BTNSolicitudFinalizada.Enabled = False
 
     End Sub
 
@@ -134,6 +152,11 @@ Public Class FSolicitudesConsulta
 
     Private Sub BTNReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNReporteSolicitudes.Click
         FReporte.sNombre_reporte = "Visualizar_Solicitudes"
+        FReporte.ShowDialog()
+    End Sub
+
+    Private Sub BTNSolicitudIniciada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudIniciada.Click
+        FReporte.sNombre_reporte = "Visualizar_Uno"
         FReporte.ShowDialog()
     End Sub
 End Class

@@ -1615,6 +1615,45 @@ WHERE (nid = ?)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_estado_solicitudTableAdapter" GeneratorDataComponentClassName="v_estado_solicitudTableAdapter" Name="v_estado_solicitud" UserDataComponentName="v_estado_solicitudTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_producto, s_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existencia_producto, nid_cliente, s_cliente
+FROM            "public".v_estado_solicitud</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nid_solicitud" DataSetColumn="nid_solicitud" />
+              <Mapping SourceColumn="d_fecha_solicitud" DataSetColumn="d_fecha_solicitud" />
+              <Mapping SourceColumn="estado_solicitud" DataSetColumn="estado_solicitud" />
+              <Mapping SourceColumn="nid_producto" DataSetColumn="nid_producto" />
+              <Mapping SourceColumn="s_descripcion" DataSetColumn="s_descripcion" />
+              <Mapping SourceColumn="nid_solicitud_producto" DataSetColumn="nid_solicitud_producto" />
+              <Mapping SourceColumn="n_cantidad_requerida_producto" DataSetColumn="n_cantidad_requerida_producto" />
+              <Mapping SourceColumn="s_existencia_producto" DataSetColumn="s_existencia_producto" />
+              <Mapping SourceColumn="nid_cliente" DataSetColumn="nid_cliente" />
+              <Mapping SourceColumn="s_cliente" DataSetColumn="s_cliente" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByEstadoUno" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByEstadoUno" GeneratorSourceName="FillByEstadoUno" GetMethodModifier="Public" GetMethodName="GetDataByEstadoUno" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByEstadoUno" UserSourceName="FillByEstadoUno">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_producto, s_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existencia_producto, nid_cliente, s_cliente
+FROM            "public".v_estado_solicitud
+where (estado_solicitud = 1)
+GROUP BY nid_solicitud, d_fecha_solicitud, s_cliente, estado_solicitud,nid_producto, s_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existencia_producto, nid_cliente, s_cliente
+ORDER BY nid_solicitud, d_fecha_solicitud, s_cliente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1623,7 +1662,7 @@ WHERE (nid = ?)</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="cargo" msprop:Generator_TableClassName="cargoDataTable" msprop:Generator_TableVarName="tablecargo" msprop:Generator_RowChangedName="cargoRowChanged" msprop:Generator_TablePropName="cargo" msprop:Generator_RowDeletingName="cargoRowDeleting" msprop:Generator_RowChangingName="cargoRowChanging" msprop:Generator_RowEvHandlerName="cargoRowChangeEventHandler" msprop:Generator_RowDeletedName="cargoRowDeleted" msprop:Generator_RowClassName="cargoRow" msprop:Generator_UserTableName="cargo" msprop:Generator_RowEvArgName="cargoRowChangeEvent">
+        <xs:element name="cargo" msprop:Generator_TableClassName="cargoDataTable" msprop:Generator_TableVarName="tablecargo" msprop:Generator_TablePropName="cargo" msprop:Generator_RowDeletingName="cargoRowDeleting" msprop:Generator_RowChangingName="cargoRowChanging" msprop:Generator_RowEvHandlerName="cargoRowChangeEventHandler" msprop:Generator_RowDeletedName="cargoRowDeleted" msprop:Generator_UserTableName="cargo" msprop:Generator_RowChangedName="cargoRowChanged" msprop:Generator_RowEvArgName="cargoRowChangeEvent" msprop:Generator_RowClassName="cargoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1653,7 +1692,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_RowClassName="clienteRow" msprop:Generator_UserTableName="cliente" msprop:Generator_RowEvArgName="clienteRowChangeEvent">
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1682,7 +1721,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="departamento" msprop:Generator_TableClassName="departamentoDataTable" msprop:Generator_TableVarName="tabledepartamento" msprop:Generator_RowChangedName="departamentoRowChanged" msprop:Generator_TablePropName="departamento" msprop:Generator_RowDeletingName="departamentoRowDeleting" msprop:Generator_RowChangingName="departamentoRowChanging" msprop:Generator_RowEvHandlerName="departamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="departamentoRowDeleted" msprop:Generator_RowClassName="departamentoRow" msprop:Generator_UserTableName="departamento" msprop:Generator_RowEvArgName="departamentoRowChangeEvent">
+        <xs:element name="departamento" msprop:Generator_TableClassName="departamentoDataTable" msprop:Generator_TableVarName="tabledepartamento" msprop:Generator_TablePropName="departamento" msprop:Generator_RowDeletingName="departamentoRowDeleting" msprop:Generator_RowChangingName="departamentoRowChanging" msprop:Generator_RowEvHandlerName="departamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="departamentoRowDeleted" msprop:Generator_UserTableName="departamento" msprop:Generator_RowChangedName="departamentoRowChanged" msprop:Generator_RowEvArgName="departamentoRowChangeEvent" msprop:Generator_RowClassName="departamentoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1711,7 +1750,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="direccion" msprop:Generator_TableClassName="direccionDataTable" msprop:Generator_TableVarName="tabledireccion" msprop:Generator_RowChangedName="direccionRowChanged" msprop:Generator_TablePropName="direccion" msprop:Generator_RowDeletingName="direccionRowDeleting" msprop:Generator_RowChangingName="direccionRowChanging" msprop:Generator_RowEvHandlerName="direccionRowChangeEventHandler" msprop:Generator_RowDeletedName="direccionRowDeleted" msprop:Generator_RowClassName="direccionRow" msprop:Generator_UserTableName="direccion" msprop:Generator_RowEvArgName="direccionRowChangeEvent">
+        <xs:element name="direccion" msprop:Generator_TableClassName="direccionDataTable" msprop:Generator_TableVarName="tabledireccion" msprop:Generator_TablePropName="direccion" msprop:Generator_RowDeletingName="direccionRowDeleting" msprop:Generator_RowChangingName="direccionRowChanging" msprop:Generator_RowEvHandlerName="direccionRowChangeEventHandler" msprop:Generator_RowDeletedName="direccionRowDeleted" msprop:Generator_UserTableName="direccion" msprop:Generator_RowChangedName="direccionRowChanged" msprop:Generator_RowEvArgName="direccionRowChangeEvent" msprop:Generator_RowClassName="direccionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1726,7 +1765,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="estado_solicitud" msprop:Generator_TableClassName="estado_solicitudDataTable" msprop:Generator_TableVarName="tableestado_solicitud" msprop:Generator_RowChangedName="estado_solicitudRowChanged" msprop:Generator_TablePropName="estado_solicitud" msprop:Generator_RowDeletingName="estado_solicitudRowDeleting" msprop:Generator_RowChangingName="estado_solicitudRowChanging" msprop:Generator_RowEvHandlerName="estado_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="estado_solicitudRowDeleted" msprop:Generator_RowClassName="estado_solicitudRow" msprop:Generator_UserTableName="estado_solicitud" msprop:Generator_RowEvArgName="estado_solicitudRowChangeEvent">
+        <xs:element name="estado_solicitud" msprop:Generator_TableClassName="estado_solicitudDataTable" msprop:Generator_TableVarName="tableestado_solicitud" msprop:Generator_TablePropName="estado_solicitud" msprop:Generator_RowDeletingName="estado_solicitudRowDeleting" msprop:Generator_RowChangingName="estado_solicitudRowChanging" msprop:Generator_RowEvHandlerName="estado_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="estado_solicitudRowDeleted" msprop:Generator_UserTableName="estado_solicitud" msprop:Generator_RowChangedName="estado_solicitudRowChanged" msprop:Generator_RowEvArgName="estado_solicitudRowChangeEvent" msprop:Generator_RowClassName="estado_solicitudRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:int" />
@@ -1755,7 +1794,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="movimiento" msprop:Generator_TableClassName="movimientoDataTable" msprop:Generator_TableVarName="tablemovimiento" msprop:Generator_RowChangedName="movimientoRowChanged" msprop:Generator_TablePropName="movimiento" msprop:Generator_RowDeletingName="movimientoRowDeleting" msprop:Generator_RowChangingName="movimientoRowChanging" msprop:Generator_RowEvHandlerName="movimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="movimientoRowDeleted" msprop:Generator_RowClassName="movimientoRow" msprop:Generator_UserTableName="movimiento" msprop:Generator_RowEvArgName="movimientoRowChangeEvent">
+        <xs:element name="movimiento" msprop:Generator_TableClassName="movimientoDataTable" msprop:Generator_TableVarName="tablemovimiento" msprop:Generator_TablePropName="movimiento" msprop:Generator_RowDeletingName="movimientoRowDeleting" msprop:Generator_RowChangingName="movimientoRowChanging" msprop:Generator_RowEvHandlerName="movimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="movimientoRowDeleted" msprop:Generator_UserTableName="movimiento" msprop:Generator_RowChangedName="movimientoRowChanged" msprop:Generator_RowEvArgName="movimientoRowChangeEvent" msprop:Generator_RowClassName="movimientoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:int" />
@@ -1784,7 +1823,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="municipio" msprop:Generator_TableClassName="municipioDataTable" msprop:Generator_TableVarName="tablemunicipio" msprop:Generator_RowChangedName="municipioRowChanged" msprop:Generator_TablePropName="municipio" msprop:Generator_RowDeletingName="municipioRowDeleting" msprop:Generator_RowChangingName="municipioRowChanging" msprop:Generator_RowEvHandlerName="municipioRowChangeEventHandler" msprop:Generator_RowDeletedName="municipioRowDeleted" msprop:Generator_RowClassName="municipioRow" msprop:Generator_UserTableName="municipio" msprop:Generator_RowEvArgName="municipioRowChangeEvent">
+        <xs:element name="municipio" msprop:Generator_TableClassName="municipioDataTable" msprop:Generator_TableVarName="tablemunicipio" msprop:Generator_TablePropName="municipio" msprop:Generator_RowDeletingName="municipioRowDeleting" msprop:Generator_RowChangingName="municipioRowChanging" msprop:Generator_RowEvHandlerName="municipioRowChangeEventHandler" msprop:Generator_RowDeletedName="municipioRowDeleted" msprop:Generator_UserTableName="municipio" msprop:Generator_RowChangedName="municipioRowChanged" msprop:Generator_RowEvArgName="municipioRowChangeEvent" msprop:Generator_RowClassName="municipioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1799,7 +1838,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_RowClassName="personaRow" msprop:Generator_UserTableName="persona" msprop:Generator_RowEvArgName="personaRowChangeEvent">
+        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_UserTableName="persona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_RowEvArgName="personaRowChangeEvent" msprop:Generator_RowClassName="personaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1871,7 +1910,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="privilegios" msprop:Generator_TableClassName="privilegiosDataTable" msprop:Generator_TableVarName="tableprivilegios" msprop:Generator_RowChangedName="privilegiosRowChanged" msprop:Generator_TablePropName="privilegios" msprop:Generator_RowDeletingName="privilegiosRowDeleting" msprop:Generator_RowChangingName="privilegiosRowChanging" msprop:Generator_RowEvHandlerName="privilegiosRowChangeEventHandler" msprop:Generator_RowDeletedName="privilegiosRowDeleted" msprop:Generator_RowClassName="privilegiosRow" msprop:Generator_UserTableName="privilegios" msprop:Generator_RowEvArgName="privilegiosRowChangeEvent">
+        <xs:element name="privilegios" msprop:Generator_TableClassName="privilegiosDataTable" msprop:Generator_TableVarName="tableprivilegios" msprop:Generator_TablePropName="privilegios" msprop:Generator_RowDeletingName="privilegiosRowDeleting" msprop:Generator_RowChangingName="privilegiosRowChanging" msprop:Generator_RowEvHandlerName="privilegiosRowChangeEventHandler" msprop:Generator_RowDeletedName="privilegiosRowDeleted" msprop:Generator_UserTableName="privilegios" msprop:Generator_RowChangedName="privilegiosRowChanged" msprop:Generator_RowEvArgName="privilegiosRowChangeEvent" msprop:Generator_RowClassName="privilegiosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1907,7 +1946,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="producto" msprop:Generator_TableClassName="productoDataTable" msprop:Generator_TableVarName="tableproducto" msprop:Generator_RowChangedName="productoRowChanged" msprop:Generator_TablePropName="producto" msprop:Generator_RowDeletingName="productoRowDeleting" msprop:Generator_RowChangingName="productoRowChanging" msprop:Generator_RowEvHandlerName="productoRowChangeEventHandler" msprop:Generator_RowDeletedName="productoRowDeleted" msprop:Generator_RowClassName="productoRow" msprop:Generator_UserTableName="producto" msprop:Generator_RowEvArgName="productoRowChangeEvent">
+        <xs:element name="producto" msprop:Generator_TableClassName="productoDataTable" msprop:Generator_TableVarName="tableproducto" msprop:Generator_TablePropName="producto" msprop:Generator_RowDeletingName="productoRowDeleting" msprop:Generator_RowChangingName="productoRowChanging" msprop:Generator_RowEvHandlerName="productoRowChangeEventHandler" msprop:Generator_RowDeletedName="productoRowDeleted" msprop:Generator_UserTableName="producto" msprop:Generator_RowChangedName="productoRowChanged" msprop:Generator_RowEvArgName="productoRowChangeEvent" msprop:Generator_RowClassName="productoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1936,7 +1975,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="producto_entrante" msprop:Generator_TableClassName="producto_entranteDataTable" msprop:Generator_TableVarName="tableproducto_entrante" msprop:Generator_RowChangedName="producto_entranteRowChanged" msprop:Generator_TablePropName="producto_entrante" msprop:Generator_RowDeletingName="producto_entranteRowDeleting" msprop:Generator_RowChangingName="producto_entranteRowChanging" msprop:Generator_RowEvHandlerName="producto_entranteRowChangeEventHandler" msprop:Generator_RowDeletedName="producto_entranteRowDeleted" msprop:Generator_RowClassName="producto_entranteRow" msprop:Generator_UserTableName="producto_entrante" msprop:Generator_RowEvArgName="producto_entranteRowChangeEvent">
+        <xs:element name="producto_entrante" msprop:Generator_TableClassName="producto_entranteDataTable" msprop:Generator_TableVarName="tableproducto_entrante" msprop:Generator_TablePropName="producto_entrante" msprop:Generator_RowDeletingName="producto_entranteRowDeleting" msprop:Generator_RowChangingName="producto_entranteRowChanging" msprop:Generator_RowEvHandlerName="producto_entranteRowChangeEventHandler" msprop:Generator_RowDeletedName="producto_entranteRowDeleted" msprop:Generator_UserTableName="producto_entrante" msprop:Generator_RowChangedName="producto_entranteRowChanged" msprop:Generator_RowEvArgName="producto_entranteRowChangeEvent" msprop:Generator_RowClassName="producto_entranteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1946,7 +1985,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="proveedores" msprop:Generator_TableClassName="proveedoresDataTable" msprop:Generator_TableVarName="tableproveedores" msprop:Generator_RowChangedName="proveedoresRowChanged" msprop:Generator_TablePropName="proveedores" msprop:Generator_RowDeletingName="proveedoresRowDeleting" msprop:Generator_RowChangingName="proveedoresRowChanging" msprop:Generator_RowEvHandlerName="proveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedoresRowDeleted" msprop:Generator_RowClassName="proveedoresRow" msprop:Generator_UserTableName="proveedores" msprop:Generator_RowEvArgName="proveedoresRowChangeEvent">
+        <xs:element name="proveedores" msprop:Generator_TableClassName="proveedoresDataTable" msprop:Generator_TableVarName="tableproveedores" msprop:Generator_TablePropName="proveedores" msprop:Generator_RowDeletingName="proveedoresRowDeleting" msprop:Generator_RowChangingName="proveedoresRowChanging" msprop:Generator_RowEvHandlerName="proveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="proveedoresRowDeleted" msprop:Generator_UserTableName="proveedores" msprop:Generator_RowChangedName="proveedoresRowChanged" msprop:Generator_RowEvArgName="proveedoresRowChangeEvent" msprop:Generator_RowClassName="proveedoresRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -1989,7 +2028,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="provincia" msprop:Generator_TableClassName="provinciaDataTable" msprop:Generator_TableVarName="tableprovincia" msprop:Generator_RowChangedName="provinciaRowChanged" msprop:Generator_TablePropName="provincia" msprop:Generator_RowDeletingName="provinciaRowDeleting" msprop:Generator_RowChangingName="provinciaRowChanging" msprop:Generator_RowEvHandlerName="provinciaRowChangeEventHandler" msprop:Generator_RowDeletedName="provinciaRowDeleted" msprop:Generator_RowClassName="provinciaRow" msprop:Generator_UserTableName="provincia" msprop:Generator_RowEvArgName="provinciaRowChangeEvent">
+        <xs:element name="provincia" msprop:Generator_TableClassName="provinciaDataTable" msprop:Generator_TableVarName="tableprovincia" msprop:Generator_TablePropName="provincia" msprop:Generator_RowDeletingName="provinciaRowDeleting" msprop:Generator_RowChangingName="provinciaRowChanging" msprop:Generator_RowEvHandlerName="provinciaRowChangeEventHandler" msprop:Generator_RowDeletedName="provinciaRowDeleted" msprop:Generator_UserTableName="provincia" msprop:Generator_RowChangedName="provinciaRowChanged" msprop:Generator_RowEvArgName="provinciaRowChangeEvent" msprop:Generator_RowClassName="provinciaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2003,7 +2042,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="rol" msprop:Generator_TableClassName="rolDataTable" msprop:Generator_TableVarName="tablerol" msprop:Generator_RowChangedName="rolRowChanged" msprop:Generator_TablePropName="rol" msprop:Generator_RowDeletingName="rolRowDeleting" msprop:Generator_RowChangingName="rolRowChanging" msprop:Generator_RowEvHandlerName="rolRowChangeEventHandler" msprop:Generator_RowDeletedName="rolRowDeleted" msprop:Generator_RowClassName="rolRow" msprop:Generator_UserTableName="rol" msprop:Generator_RowEvArgName="rolRowChangeEvent">
+        <xs:element name="rol" msprop:Generator_TableClassName="rolDataTable" msprop:Generator_TableVarName="tablerol" msprop:Generator_TablePropName="rol" msprop:Generator_RowDeletingName="rolRowDeleting" msprop:Generator_RowChangingName="rolRowChanging" msprop:Generator_RowEvHandlerName="rolRowChangeEventHandler" msprop:Generator_RowDeletedName="rolRowDeleted" msprop:Generator_UserTableName="rol" msprop:Generator_RowChangedName="rolRowChanged" msprop:Generator_RowEvArgName="rolRowChangeEvent" msprop:Generator_RowClassName="rolRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2032,7 +2071,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="rol_privilegios" msprop:Generator_TableClassName="rol_privilegiosDataTable" msprop:Generator_TableVarName="tablerol_privilegios" msprop:Generator_RowChangedName="rol_privilegiosRowChanged" msprop:Generator_TablePropName="rol_privilegios" msprop:Generator_RowDeletingName="rol_privilegiosRowDeleting" msprop:Generator_RowChangingName="rol_privilegiosRowChanging" msprop:Generator_RowEvHandlerName="rol_privilegiosRowChangeEventHandler" msprop:Generator_RowDeletedName="rol_privilegiosRowDeleted" msprop:Generator_RowClassName="rol_privilegiosRow" msprop:Generator_UserTableName="rol_privilegios" msprop:Generator_RowEvArgName="rol_privilegiosRowChangeEvent">
+        <xs:element name="rol_privilegios" msprop:Generator_TableClassName="rol_privilegiosDataTable" msprop:Generator_TableVarName="tablerol_privilegios" msprop:Generator_TablePropName="rol_privilegios" msprop:Generator_RowDeletingName="rol_privilegiosRowDeleting" msprop:Generator_RowChangingName="rol_privilegiosRowChanging" msprop:Generator_RowEvHandlerName="rol_privilegiosRowChangeEventHandler" msprop:Generator_RowDeletedName="rol_privilegiosRowDeleted" msprop:Generator_UserTableName="rol_privilegios" msprop:Generator_RowChangedName="rol_privilegiosRowChanged" msprop:Generator_RowEvArgName="rol_privilegiosRowChangeEvent" msprop:Generator_RowClassName="rol_privilegiosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2049,7 +2088,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="solicitud_historial" msprop:Generator_TableClassName="solicitud_historialDataTable" msprop:Generator_TableVarName="tablesolicitud_historial" msprop:Generator_RowChangedName="solicitud_historialRowChanged" msprop:Generator_TablePropName="solicitud_historial" msprop:Generator_RowDeletingName="solicitud_historialRowDeleting" msprop:Generator_RowChangingName="solicitud_historialRowChanging" msprop:Generator_RowEvHandlerName="solicitud_historialRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_historialRowDeleted" msprop:Generator_RowClassName="solicitud_historialRow" msprop:Generator_UserTableName="solicitud_historial" msprop:Generator_RowEvArgName="solicitud_historialRowChangeEvent">
+        <xs:element name="solicitud_historial" msprop:Generator_TableClassName="solicitud_historialDataTable" msprop:Generator_TableVarName="tablesolicitud_historial" msprop:Generator_TablePropName="solicitud_historial" msprop:Generator_RowDeletingName="solicitud_historialRowDeleting" msprop:Generator_RowChangingName="solicitud_historialRowChanging" msprop:Generator_RowEvHandlerName="solicitud_historialRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_historialRowDeleted" msprop:Generator_UserTableName="solicitud_historial" msprop:Generator_RowChangedName="solicitud_historialRowChanged" msprop:Generator_RowEvArgName="solicitud_historialRowChangeEvent" msprop:Generator_RowClassName="solicitud_historialRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2060,7 +2099,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="solicitud_historial_movimiento" msprop:Generator_TableClassName="solicitud_historial_movimientoDataTable" msprop:Generator_TableVarName="tablesolicitud_historial_movimiento" msprop:Generator_RowChangedName="solicitud_historial_movimientoRowChanged" msprop:Generator_TablePropName="solicitud_historial_movimiento" msprop:Generator_RowDeletingName="solicitud_historial_movimientoRowDeleting" msprop:Generator_RowChangingName="solicitud_historial_movimientoRowChanging" msprop:Generator_RowEvHandlerName="solicitud_historial_movimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_historial_movimientoRowDeleted" msprop:Generator_RowClassName="solicitud_historial_movimientoRow" msprop:Generator_UserTableName="solicitud_historial_movimiento" msprop:Generator_RowEvArgName="solicitud_historial_movimientoRowChangeEvent">
+        <xs:element name="solicitud_historial_movimiento" msprop:Generator_TableClassName="solicitud_historial_movimientoDataTable" msprop:Generator_TableVarName="tablesolicitud_historial_movimiento" msprop:Generator_TablePropName="solicitud_historial_movimiento" msprop:Generator_RowDeletingName="solicitud_historial_movimientoRowDeleting" msprop:Generator_RowChangingName="solicitud_historial_movimientoRowChanging" msprop:Generator_RowEvHandlerName="solicitud_historial_movimientoRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_historial_movimientoRowDeleted" msprop:Generator_UserTableName="solicitud_historial_movimiento" msprop:Generator_RowChangedName="solicitud_historial_movimientoRowChanged" msprop:Generator_RowEvArgName="solicitud_historial_movimientoRowChangeEvent" msprop:Generator_RowClassName="solicitud_historial_movimientoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2071,7 +2110,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="solicitud_producto" msprop:Generator_TableClassName="solicitud_productoDataTable" msprop:Generator_TableVarName="tablesolicitud_producto" msprop:Generator_RowChangedName="solicitud_productoRowChanged" msprop:Generator_TablePropName="solicitud_producto" msprop:Generator_RowDeletingName="solicitud_productoRowDeleting" msprop:Generator_RowChangingName="solicitud_productoRowChanging" msprop:Generator_RowEvHandlerName="solicitud_productoRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_productoRowDeleted" msprop:Generator_RowClassName="solicitud_productoRow" msprop:Generator_UserTableName="solicitud_producto" msprop:Generator_RowEvArgName="solicitud_productoRowChangeEvent">
+        <xs:element name="solicitud_producto" msprop:Generator_TableClassName="solicitud_productoDataTable" msprop:Generator_TableVarName="tablesolicitud_producto" msprop:Generator_TablePropName="solicitud_producto" msprop:Generator_RowDeletingName="solicitud_productoRowDeleting" msprop:Generator_RowChangingName="solicitud_productoRowChanging" msprop:Generator_RowEvHandlerName="solicitud_productoRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitud_productoRowDeleted" msprop:Generator_UserTableName="solicitud_producto" msprop:Generator_RowChangedName="solicitud_productoRowChanged" msprop:Generator_RowEvArgName="solicitud_productoRowChangeEvent" msprop:Generator_RowClassName="solicitud_productoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2088,7 +2127,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="solicitudes" msprop:Generator_TableClassName="solicitudesDataTable" msprop:Generator_TableVarName="tablesolicitudes" msprop:Generator_RowChangedName="solicitudesRowChanged" msprop:Generator_TablePropName="solicitudes" msprop:Generator_RowDeletingName="solicitudesRowDeleting" msprop:Generator_RowChangingName="solicitudesRowChanging" msprop:Generator_RowEvHandlerName="solicitudesRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitudesRowDeleted" msprop:Generator_RowClassName="solicitudesRow" msprop:Generator_UserTableName="solicitudes" msprop:Generator_RowEvArgName="solicitudesRowChangeEvent">
+        <xs:element name="solicitudes" msprop:Generator_TableClassName="solicitudesDataTable" msprop:Generator_TableVarName="tablesolicitudes" msprop:Generator_TablePropName="solicitudes" msprop:Generator_RowDeletingName="solicitudesRowDeleting" msprop:Generator_RowChangingName="solicitudesRowChanging" msprop:Generator_RowEvHandlerName="solicitudesRowChangeEventHandler" msprop:Generator_RowDeletedName="solicitudesRowDeleted" msprop:Generator_UserTableName="solicitudes" msprop:Generator_RowChangedName="solicitudesRowChanged" msprop:Generator_RowEvArgName="solicitudesRowChangeEvent" msprop:Generator_RowClassName="solicitudesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2097,7 +2136,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="telefono" msprop:Generator_TableClassName="telefonoDataTable" msprop:Generator_TableVarName="tabletelefono" msprop:Generator_RowChangedName="telefonoRowChanged" msprop:Generator_TablePropName="telefono" msprop:Generator_RowDeletingName="telefonoRowDeleting" msprop:Generator_RowChangingName="telefonoRowChanging" msprop:Generator_RowEvHandlerName="telefonoRowChangeEventHandler" msprop:Generator_RowDeletedName="telefonoRowDeleted" msprop:Generator_RowClassName="telefonoRow" msprop:Generator_UserTableName="telefono" msprop:Generator_RowEvArgName="telefonoRowChangeEvent">
+        <xs:element name="telefono" msprop:Generator_TableClassName="telefonoDataTable" msprop:Generator_TableVarName="tabletelefono" msprop:Generator_TablePropName="telefono" msprop:Generator_RowDeletingName="telefonoRowDeleting" msprop:Generator_RowChangingName="telefonoRowChanging" msprop:Generator_RowEvHandlerName="telefonoRowChangeEventHandler" msprop:Generator_RowDeletedName="telefonoRowDeleted" msprop:Generator_UserTableName="telefono" msprop:Generator_RowChangedName="telefonoRowChanged" msprop:Generator_RowEvArgName="telefonoRowChangeEvent" msprop:Generator_RowClassName="telefonoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2112,7 +2151,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="telefono_persona" msprop:Generator_TableClassName="telefono_personaDataTable" msprop:Generator_TableVarName="tabletelefono_persona" msprop:Generator_RowChangedName="telefono_personaRowChanged" msprop:Generator_TablePropName="telefono_persona" msprop:Generator_RowDeletingName="telefono_personaRowDeleting" msprop:Generator_RowChangingName="telefono_personaRowChanging" msprop:Generator_RowEvHandlerName="telefono_personaRowChangeEventHandler" msprop:Generator_RowDeletedName="telefono_personaRowDeleted" msprop:Generator_RowClassName="telefono_personaRow" msprop:Generator_UserTableName="telefono_persona" msprop:Generator_RowEvArgName="telefono_personaRowChangeEvent">
+        <xs:element name="telefono_persona" msprop:Generator_TableClassName="telefono_personaDataTable" msprop:Generator_TableVarName="tabletelefono_persona" msprop:Generator_TablePropName="telefono_persona" msprop:Generator_RowDeletingName="telefono_personaRowDeleting" msprop:Generator_RowChangingName="telefono_personaRowChanging" msprop:Generator_RowEvHandlerName="telefono_personaRowChangeEventHandler" msprop:Generator_RowDeletedName="telefono_personaRowDeleted" msprop:Generator_UserTableName="telefono_persona" msprop:Generator_RowChangedName="telefono_personaRowChanged" msprop:Generator_RowEvArgName="telefono_personaRowChangeEvent" msprop:Generator_RowClassName="telefono_personaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2127,7 +2166,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="telefono_proveedor" msprop:Generator_TableClassName="telefono_proveedorDataTable" msprop:Generator_TableVarName="tabletelefono_proveedor" msprop:Generator_RowChangedName="telefono_proveedorRowChanged" msprop:Generator_TablePropName="telefono_proveedor" msprop:Generator_RowDeletingName="telefono_proveedorRowDeleting" msprop:Generator_RowChangingName="telefono_proveedorRowChanging" msprop:Generator_RowEvHandlerName="telefono_proveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="telefono_proveedorRowDeleted" msprop:Generator_RowClassName="telefono_proveedorRow" msprop:Generator_UserTableName="telefono_proveedor" msprop:Generator_RowEvArgName="telefono_proveedorRowChangeEvent">
+        <xs:element name="telefono_proveedor" msprop:Generator_TableClassName="telefono_proveedorDataTable" msprop:Generator_TableVarName="tabletelefono_proveedor" msprop:Generator_TablePropName="telefono_proveedor" msprop:Generator_RowDeletingName="telefono_proveedorRowDeleting" msprop:Generator_RowChangingName="telefono_proveedorRowChanging" msprop:Generator_RowEvHandlerName="telefono_proveedorRowChangeEventHandler" msprop:Generator_RowDeletedName="telefono_proveedorRowDeleted" msprop:Generator_UserTableName="telefono_proveedor" msprop:Generator_RowChangedName="telefono_proveedorRowChanged" msprop:Generator_RowEvArgName="telefono_proveedorRowChangeEvent" msprop:Generator_RowClassName="telefono_proveedorRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2142,7 +2181,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuario" msprop:Generator_TableClassName="usuarioDataTable" msprop:Generator_TableVarName="tableusuario" msprop:Generator_RowChangedName="usuarioRowChanged" msprop:Generator_TablePropName="usuario" msprop:Generator_RowDeletingName="usuarioRowDeleting" msprop:Generator_RowChangingName="usuarioRowChanging" msprop:Generator_RowEvHandlerName="usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="usuarioRowDeleted" msprop:Generator_RowClassName="usuarioRow" msprop:Generator_UserTableName="usuario" msprop:Generator_RowEvArgName="usuarioRowChangeEvent">
+        <xs:element name="usuario" msprop:Generator_TableClassName="usuarioDataTable" msprop:Generator_TableVarName="tableusuario" msprop:Generator_TablePropName="usuario" msprop:Generator_RowDeletingName="usuarioRowDeleting" msprop:Generator_RowChangingName="usuarioRowChanging" msprop:Generator_RowEvHandlerName="usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="usuarioRowDeleted" msprop:Generator_UserTableName="usuario" msprop:Generator_RowChangedName="usuarioRowChanged" msprop:Generator_RowEvArgName="usuarioRowChangeEvent" msprop:Generator_RowClassName="usuarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" />
@@ -2172,7 +2211,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="V_usuario_persona_rol1" msprop:Generator_TableClassName="V_usuario_persona_rol1DataTable" msprop:Generator_TableVarName="tableV_usuario_persona_rol1" msprop:Generator_TablePropName="V_usuario_persona_rol1" msprop:Generator_RowDeletingName="V_usuario_persona_rol1RowDeleting" msprop:Generator_RowChangingName="V_usuario_persona_rol1RowChanging" msprop:Generator_RowEvHandlerName="V_usuario_persona_rol1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_usuario_persona_rol1RowDeleted" msprop:Generator_UserTableName="V_usuario_persona_rol1" msprop:Generator_RowChangedName="V_usuario_persona_rol1RowChanged" msprop:Generator_RowEvArgName="V_usuario_persona_rol1RowChangeEvent" msprop:Generator_RowClassName="V_usuario_persona_rol1Row">
+        <xs:element name="V_usuario_persona_rol1" msprop:Generator_TableClassName="V_usuario_persona_rol1DataTable" msprop:Generator_TableVarName="tableV_usuario_persona_rol1" msprop:Generator_RowChangedName="V_usuario_persona_rol1RowChanged" msprop:Generator_TablePropName="V_usuario_persona_rol1" msprop:Generator_RowDeletingName="V_usuario_persona_rol1RowDeleting" msprop:Generator_RowChangingName="V_usuario_persona_rol1RowChanging" msprop:Generator_RowEvHandlerName="V_usuario_persona_rol1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_usuario_persona_rol1RowDeleted" msprop:Generator_RowClassName="V_usuario_persona_rol1Row" msprop:Generator_UserTableName="V_usuario_persona_rol1" msprop:Generator_RowEvArgName="V_usuario_persona_rol1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
@@ -2239,7 +2278,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_TableClassName="V_SolicitudProducto_Solicitudes_Producto1DataTable" msprop:Generator_TableVarName="tableV_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_TablePropName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowDeletingName="V_SolicitudProducto_Solicitudes_Producto1RowDeleting" msprop:Generator_RowChangingName="V_SolicitudProducto_Solicitudes_Producto1RowChanging" msprop:Generator_RowEvHandlerName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_SolicitudProducto_Solicitudes_Producto1RowDeleted" msprop:Generator_UserTableName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowChangedName="V_SolicitudProducto_Solicitudes_Producto1RowChanged" msprop:Generator_RowEvArgName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEvent" msprop:Generator_RowClassName="V_SolicitudProducto_Solicitudes_Producto1Row">
+        <xs:element name="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_TableClassName="V_SolicitudProducto_Solicitudes_Producto1DataTable" msprop:Generator_TableVarName="tableV_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowChangedName="V_SolicitudProducto_Solicitudes_Producto1RowChanged" msprop:Generator_TablePropName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowDeletingName="V_SolicitudProducto_Solicitudes_Producto1RowDeleting" msprop:Generator_RowChangingName="V_SolicitudProducto_Solicitudes_Producto1RowChanging" msprop:Generator_RowEvHandlerName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEventHandler" msprop:Generator_RowDeletedName="V_SolicitudProducto_Solicitudes_Producto1RowDeleted" msprop:Generator_RowClassName="V_SolicitudProducto_Solicitudes_Producto1Row" msprop:Generator_UserTableName="V_SolicitudProducto_Solicitudes_Producto1" msprop:Generator_RowEvArgName="V_SolicitudProducto_Solicitudes_Producto1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
@@ -2264,7 +2303,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="v_detalle_solicitud" msprop:Generator_TableClassName="v_detalle_solicitudDataTable" msprop:Generator_TableVarName="tablev_detalle_solicitud" msprop:Generator_RowChangedName="v_detalle_solicitudRowChanged" msprop:Generator_TablePropName="v_detalle_solicitud" msprop:Generator_RowDeletingName="v_detalle_solicitudRowDeleting" msprop:Generator_RowChangingName="v_detalle_solicitudRowChanging" msprop:Generator_RowEvHandlerName="v_detalle_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="v_detalle_solicitudRowDeleted" msprop:Generator_RowClassName="v_detalle_solicitudRow" msprop:Generator_UserTableName="v_detalle_solicitud" msprop:Generator_RowEvArgName="v_detalle_solicitudRowChangeEvent">
+        <xs:element name="v_detalle_solicitud" msprop:Generator_TableClassName="v_detalle_solicitudDataTable" msprop:Generator_TableVarName="tablev_detalle_solicitud" msprop:Generator_TablePropName="v_detalle_solicitud" msprop:Generator_RowDeletingName="v_detalle_solicitudRowDeleting" msprop:Generator_RowChangingName="v_detalle_solicitudRowChanging" msprop:Generator_RowEvHandlerName="v_detalle_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="v_detalle_solicitudRowDeleted" msprop:Generator_UserTableName="v_detalle_solicitud" msprop:Generator_RowChangedName="v_detalle_solicitudRowChanged" msprop:Generator_RowEvArgName="v_detalle_solicitudRowChangeEvent" msprop:Generator_RowClassName="v_detalle_solicitudRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid_solicitud" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud" msprop:Generator_ColumnPropNameInRow="nid_solicitud" msprop:Generator_ColumnPropNameInTable="nid_solicitudColumn" msprop:Generator_UserColumnName="nid_solicitud" type="xs:long" minOccurs="0" />
@@ -2328,7 +2367,7 @@ WHERE (nid = ?)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="v_persona_departamento_cargo" msprop:Generator_TableClassName="v_persona_departamento_cargoDataTable" msprop:Generator_TableVarName="tablev_persona_departamento_cargo" msprop:Generator_RowChangedName="v_persona_departamento_cargoRowChanged" msprop:Generator_TablePropName="v_persona_departamento_cargo" msprop:Generator_RowDeletingName="v_persona_departamento_cargoRowDeleting" msprop:Generator_RowChangingName="v_persona_departamento_cargoRowChanging" msprop:Generator_RowEvHandlerName="v_persona_departamento_cargoRowChangeEventHandler" msprop:Generator_RowDeletedName="v_persona_departamento_cargoRowDeleted" msprop:Generator_RowClassName="v_persona_departamento_cargoRow" msprop:Generator_UserTableName="v_persona_departamento_cargo" msprop:Generator_RowEvArgName="v_persona_departamento_cargoRowChangeEvent">
+        <xs:element name="v_persona_departamento_cargo" msprop:Generator_TableClassName="v_persona_departamento_cargoDataTable" msprop:Generator_TableVarName="tablev_persona_departamento_cargo" msprop:Generator_TablePropName="v_persona_departamento_cargo" msprop:Generator_RowDeletingName="v_persona_departamento_cargoRowDeleting" msprop:Generator_RowChangingName="v_persona_departamento_cargoRowChanging" msprop:Generator_RowEvHandlerName="v_persona_departamento_cargoRowChangeEventHandler" msprop:Generator_RowDeletedName="v_persona_departamento_cargoRowDeleted" msprop:Generator_UserTableName="v_persona_departamento_cargo" msprop:Generator_RowChangedName="v_persona_departamento_cargoRowChanged" msprop:Generator_RowEvArgName="v_persona_departamento_cargoRowChangeEvent" msprop:Generator_RowClassName="v_persona_departamento_cargoRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nid" msprop:Generator_ColumnVarNameInTable="columnnid" msprop:Generator_ColumnPropNameInRow="nid" msprop:Generator_ColumnPropNameInTable="nidColumn" msprop:Generator_UserColumnName="nid" type="xs:long" minOccurs="0" />
@@ -2399,6 +2438,40 @@ WHERE (nid = ?)</CommandText>
               </xs:element>
               <xs:element name="nid_departamento" msprop:Generator_ColumnVarNameInTable="columnnid_departamento" msprop:Generator_ColumnPropNameInRow="nid_departamento" msprop:Generator_ColumnPropNameInTable="nid_departamentoColumn" msprop:Generator_UserColumnName="nid_departamento" type="xs:long" minOccurs="0" />
               <xs:element name="s_departamento" msprop:Generator_ColumnVarNameInTable="columns_departamento" msprop:Generator_ColumnPropNameInRow="s_departamento" msprop:Generator_ColumnPropNameInTable="s_departamentoColumn" msprop:Generator_UserColumnName="s_departamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="v_estado_solicitud" msprop:Generator_TableClassName="v_estado_solicitudDataTable" msprop:Generator_TableVarName="tablev_estado_solicitud" msprop:Generator_RowChangedName="v_estado_solicitudRowChanged" msprop:Generator_TablePropName="v_estado_solicitud" msprop:Generator_RowDeletingName="v_estado_solicitudRowDeleting" msprop:Generator_RowChangingName="v_estado_solicitudRowChanging" msprop:Generator_RowEvHandlerName="v_estado_solicitudRowChangeEventHandler" msprop:Generator_RowDeletedName="v_estado_solicitudRowDeleted" msprop:Generator_RowClassName="v_estado_solicitudRow" msprop:Generator_UserTableName="v_estado_solicitud" msprop:Generator_RowEvArgName="v_estado_solicitudRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nid_solicitud" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud" msprop:Generator_ColumnPropNameInRow="nid_solicitud" msprop:Generator_ColumnPropNameInTable="nid_solicitudColumn" msprop:Generator_UserColumnName="nid_solicitud" type="xs:long" minOccurs="0" />
+              <xs:element name="d_fecha_solicitud" msprop:Generator_ColumnVarNameInTable="columnd_fecha_solicitud" msprop:Generator_ColumnPropNameInRow="d_fecha_solicitud" msprop:Generator_ColumnPropNameInTable="d_fecha_solicitudColumn" msprop:Generator_UserColumnName="d_fecha_solicitud" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="estado_solicitud" msprop:Generator_ColumnVarNameInTable="columnestado_solicitud" msprop:Generator_ColumnPropNameInRow="estado_solicitud" msprop:Generator_ColumnPropNameInTable="estado_solicitudColumn" msprop:Generator_UserColumnName="estado_solicitud" type="xs:int" minOccurs="0" />
+              <xs:element name="nid_producto" msprop:Generator_ColumnVarNameInTable="columnnid_producto" msprop:Generator_ColumnPropNameInRow="nid_producto" msprop:Generator_ColumnPropNameInTable="nid_productoColumn" msprop:Generator_UserColumnName="nid_producto" type="xs:long" minOccurs="0" />
+              <xs:element name="s_descripcion" msprop:Generator_ColumnVarNameInTable="columns_descripcion" msprop:Generator_ColumnPropNameInRow="s_descripcion" msprop:Generator_ColumnPropNameInTable="s_descripcionColumn" msprop:Generator_UserColumnName="s_descripcion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_solicitud_producto" msprop:Generator_ColumnVarNameInTable="columnnid_solicitud_producto" msprop:Generator_ColumnPropNameInRow="nid_solicitud_producto" msprop:Generator_ColumnPropNameInTable="nid_solicitud_productoColumn" msprop:Generator_UserColumnName="nid_solicitud_producto" type="xs:long" minOccurs="0" />
+              <xs:element name="n_cantidad_requerida_producto" msprop:Generator_ColumnVarNameInTable="columnn_cantidad_requerida_producto" msprop:Generator_ColumnPropNameInRow="n_cantidad_requerida_producto" msprop:Generator_ColumnPropNameInTable="n_cantidad_requerida_productoColumn" msprop:Generator_UserColumnName="n_cantidad_requerida_producto" type="xs:int" minOccurs="0" />
+              <xs:element name="s_existencia_producto" msprop:Generator_ColumnVarNameInTable="columns_existencia_producto" msprop:Generator_ColumnPropNameInRow="s_existencia_producto" msprop:Generator_ColumnPropNameInTable="s_existencia_productoColumn" msprop:Generator_UserColumnName="s_existencia_producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nid_cliente" msprop:Generator_ColumnVarNameInTable="columnnid_cliente" msprop:Generator_ColumnPropNameInRow="nid_cliente" msprop:Generator_ColumnPropNameInTable="nid_clienteColumn" msprop:Generator_UserColumnName="nid_cliente" type="xs:long" minOccurs="0" />
+              <xs:element name="s_cliente" msprop:Generator_ColumnVarNameInTable="columns_cliente" msprop:Generator_ColumnPropNameInRow="s_cliente" msprop:Generator_ColumnPropNameInTable="s_clienteColumn" msprop:Generator_UserColumnName="s_cliente" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="30" />

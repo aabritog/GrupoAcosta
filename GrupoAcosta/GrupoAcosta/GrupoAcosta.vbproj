@@ -103,6 +103,12 @@
     <Compile Include="DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FAyuda.Designer.vb">
+      <DependentUpon>FAyuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FAyuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FCargo.Designer.vb">
       <DependentUpon>FCargo.vb</DependentUpon>
     </Compile>
@@ -296,6 +302,12 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="Reports\REstadoUno.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REstadoUno.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\RPersona.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -311,6 +323,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FAyuda.resx">
+      <DependentUpon>FAyuda.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FCargo.resx">
       <DependentUpon>FCargo.vb</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +422,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RDetalleSolicitud.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\REstadoUno.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REstadoUno.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RPersona.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

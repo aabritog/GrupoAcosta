@@ -217,9 +217,9 @@ Partial Class FProvincia
         Me.LBLBuscar.Location = New System.Drawing.Point(21, 188)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(119, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(112, 20)
         Me.LBLBuscar.TabIndex = 32
-        Me.LBLBuscar.Text = "Buscar (Provincia)"
+        Me.LBLBuscar.Text = "Buscar (Nombre)"
         '
         'TXTBuscar
         '

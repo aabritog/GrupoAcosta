@@ -138,7 +138,8 @@
 
     'End Sub
 
-    Private Sub TSMIProductoEntrante_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+    Private Sub TSMIAcercade_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIAcercade.Click
+        FAyuda.ShowDialog()
     End Sub
+
 End Class

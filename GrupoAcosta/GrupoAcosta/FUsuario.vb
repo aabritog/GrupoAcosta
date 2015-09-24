@@ -1,4 +1,5 @@
-﻿
+﻿Imports GrupoAcosta.CGenerica
+
 Public Class FUsuario
 
     Dim objCGenerica As CGenerica = New CGenerica
@@ -59,7 +60,6 @@ Public Class FUsuario
                 DatosBindingSourceDGVUsuario.DataSource = DatosDataTableDGVUsuario
             End Using
 
-            '
             With DGVUsuario
                 .Columns.Clear()
                 .RowHeadersVisible = False
@@ -131,9 +131,10 @@ Public Class FUsuario
 
     Private Sub FUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        DGVUsuario.ClearSelection()
         mostrarDGVUsuario()
         TXTBuscar.Enabled = True
+        DGVUsuario.ClearSelection()
+       
     End Sub
 
     Private Sub BTNNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNNuevo.Click
@@ -288,7 +289,6 @@ Public Class FUsuario
         End If
 
     End Sub
-
 
     Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
 

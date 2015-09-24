@@ -7,7 +7,7 @@ Imports CrystalDecisions.Windows
 Public Class FReporte
 
     Friend sNombre_reporte As String = ""
-    Friend nId_solicitud As Integer
+    Public nId_solicitud As Integer
     Friend nId_persona As Integer
     Dim ruta As String
     Dim rpt As New ReportDocument
@@ -25,13 +25,25 @@ Public Class FReporte
         End Try
     End Sub
 
-
     Friend Sub ListadoSolicitudes(ByVal ruta As String)
         Dim miDs As DataSet1 = New DataSet1
         Dim ta As New DataSet1TableAdapters.v_detalle_solicitudTableAdapter
 
         Try
             ta.FillByListadoSolicitudes(miDs.v_detalle_solicitud)
+            rpt.Load(ruta)
+            rpt.SetDataSource(miDs)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+    Friend Sub EstadoUno(ByVal ruta As String)
+        Dim miDs As DataSet1 = New DataSet1
+        Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
+
+        Try
+            ta.FillByEstadoUno(miDs.v_estado_solicitud)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception
@@ -66,6 +78,12 @@ Public Class FReporte
         If sNombre_reporte = "Visualizar_Solicitudes" Then
             ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitud.rpt"
             ListadoSolicitudes(ruta) : CRVVisorReportes.ReportSource = rpt
+            Exit Sub
+        End If
+
+        If sNombre_reporte = "Visualizar_Uno" Then
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\REstadoUno.rpt"
+            EstadoUno(ruta) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
         End If
 

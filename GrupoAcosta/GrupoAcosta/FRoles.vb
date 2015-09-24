@@ -150,9 +150,9 @@
 
     Private Sub BTNCrear_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCrearRol.Click
 
-        If Len(Trim(TBNuevoRol.Text)) = 0 Then
+        If Len(Trim(TXTNuevoRol.Text)) = 0 Then
             MsgBox(msj_camposObligatorios, MsgBoxStyle.Information, "Advertencia")
-            TBNuevoRol.Focus()
+            TXTNuevoRol.Focus()
             Exit Sub
         End If
 
@@ -165,7 +165,7 @@
         Dim id_nuevoRol As Integer
         Dim n_priv As Integer
 
-        SQLCrearRol = "INSERT INTO rol (s_descripcion, s_descripcioncorta,b_activo) VALUES ('" & TBNuevoRol.Text & "','',TRUE) RETURNING nid"
+        SQLCrearRol = "INSERT INTO rol (s_descripcion, s_descripcioncorta,b_activo) VALUES ('" & TXTNuevoRol.Text & "','',TRUE) RETURNING nid"
         SQLCantPrivilegios = "SELECT COUNT(nid) FROM privilegios"                            'SQLCantPrivilegios = "SELECT COUNT(DISTINCT(id_privilegio)) FROM rol_privilegio"
         SQLArray = "SELECT nid FROM privilegios ORDER BY nid"
 
@@ -218,6 +218,7 @@
     Private Sub DGVRoles_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVRoles.CellClick
         If DGVRoles.CurrentRow.Cells("nid").Value <> 1 And DGVRoles.CurrentRow.Cells("nid").Value <> 2 And DGVRoles.CurrentRow.Cells("nid").Value <> 3 Then
             BTNEliminar.Enabled = True
+            BTNCrearRol.Enabled = False
         Else
             BTNEliminar.Enabled = False
         End If
@@ -225,6 +226,7 @@
             BTNEliminar.Enabled = False
         Else
             BTNEliminar.Enabled = True
+            BTNCrearRol.Enabled = False
         End If
         If DGVRoles.CurrentRow.Cells("privilegio").Selected = True Then
             id_rol = DGVRoles.CurrentRow.Cells("nid").Value 'Variable que utilizare para hacer la consulta SQL necesaria para mostrar el rol con los privilegios respectivos
@@ -235,8 +237,8 @@
     End Sub
 
 
-    Private Sub TBNuevoRol_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TBNuevoRol.TextChanged
-        If Len(TBNuevoRol.Text) = 0 Then
+    Private Sub TBNuevoRol_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTNuevoRol.TextChanged
+        If Len(TXTNuevoRol.Text) = 0 Then
             LBValidarNuevoRol.Visible = True
         Else
             LBValidarNuevoRol.Visible = False
@@ -281,9 +283,18 @@
 
     End Sub
 
-    Private Sub TBNuevoRol_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TBNuevoRol.KeyPress
+    Private Sub TBNuevoRol_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TXTNuevoRol.KeyPress
 
         objCGenerica.SoloLetra(e)
+
+    End Sub
+
+    Private Sub BTNCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNCancelar.Click
+
+        BTNCrearRol.Enabled = True
+        BTNEliminar.Enabled = False
+        TXTNuevoRol.Clear()
+        DGVRoles.ClearSelection()
 
     End Sub
 End Class

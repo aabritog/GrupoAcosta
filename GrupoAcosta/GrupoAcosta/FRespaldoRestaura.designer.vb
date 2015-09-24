@@ -53,7 +53,7 @@ Partial Class FRespaldoRestaura
         Me.BTNRespaldar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNRespaldar.Location = New System.Drawing.Point(8, 15)
         Me.BTNRespaldar.Name = "BTNRespaldar"
-        Me.BTNRespaldar.Size = New System.Drawing.Size(75, 31)
+        Me.BTNRespaldar.Size = New System.Drawing.Size(83, 31)
         Me.BTNRespaldar.TabIndex = 2
         Me.BTNRespaldar.Text = "Respaldar"
         Me.BTNRespaldar.UseVisualStyleBackColor = True
@@ -64,7 +64,7 @@ Partial Class FRespaldoRestaura
         Me.BTNRestaurar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNRestaurar.Location = New System.Drawing.Point(8, 52)
         Me.BTNRestaurar.Name = "BTNRestaurar"
-        Me.BTNRestaurar.Size = New System.Drawing.Size(75, 32)
+        Me.BTNRestaurar.Size = New System.Drawing.Size(83, 32)
         Me.BTNRestaurar.TabIndex = 3
         Me.BTNRestaurar.Text = "Restaurar"
         Me.BTNRestaurar.UseVisualStyleBackColor = True
@@ -74,7 +74,7 @@ Partial Class FRespaldoRestaura
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSalir.Location = New System.Drawing.Point(8, 90)
         Me.BTNSalir.Name = "BTNSalir"
-        Me.BTNSalir.Size = New System.Drawing.Size(75, 29)
+        Me.BTNSalir.Size = New System.Drawing.Size(83, 29)
         Me.BTNSalir.TabIndex = 4
         Me.BTNSalir.Text = "Salir"
         Me.BTNSalir.UseVisualStyleBackColor = True
@@ -127,7 +127,7 @@ Partial Class FRespaldoRestaura
         Me.GroupBox1.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox1.Location = New System.Drawing.Point(342, 77)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(89, 128)
+        Me.GroupBox1.Size = New System.Drawing.Size(97, 128)
         Me.GroupBox1.TabIndex = 13
         Me.GroupBox1.TabStop = False
         '

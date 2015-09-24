@@ -270,9 +270,9 @@ Partial Class FMunicipio
         Me.LBLBuscar.Location = New System.Drawing.Point(27, 228)
         Me.LBLBuscar.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LBLBuscar.Name = "LBLBuscar"
-        Me.LBLBuscar.Size = New System.Drawing.Size(121, 20)
+        Me.LBLBuscar.Size = New System.Drawing.Size(112, 20)
         Me.LBLBuscar.TabIndex = 31
-        Me.LBLBuscar.Text = "Buscar (Municipio)"
+        Me.LBLBuscar.Text = "Buscar (Nombre)"
         '
         'TXTBuscar
         '

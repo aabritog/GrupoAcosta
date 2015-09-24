@@ -69,7 +69,7 @@ Partial Class FUsuario
         Me.GBUsuario.Location = New System.Drawing.Point(19, 324)
         Me.GBUsuario.Name = "GBUsuario"
         Me.GBUsuario.Size = New System.Drawing.Size(563, 205)
-        Me.GBUsuario.TabIndex = 0
+        Me.GBUsuario.TabIndex = 99
         Me.GBUsuario.TabStop = False
         '
         'DGVUsuario
@@ -79,7 +79,8 @@ Partial Class FUsuario
         Me.DGVUsuario.Location = New System.Drawing.Point(7, 12)
         Me.DGVUsuario.Name = "DGVUsuario"
         Me.DGVUsuario.Size = New System.Drawing.Size(551, 186)
-        Me.DGVUsuario.TabIndex = 0
+        Me.DGVUsuario.TabIndex = 98
+        Me.DGVUsuario.TabStop = False
         '
         'GBNuevoUsuario
         '
@@ -384,7 +385,6 @@ Partial Class FUsuario
         '
         'BTNCancelar
         '
-        Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNCancelar.Location = New System.Drawing.Point(6, 147)
         Me.BTNCancelar.Name = "BTNCancelar"
@@ -395,6 +395,7 @@ Partial Class FUsuario
         '
         'BTNEliminar
         '
+        Me.BTNEliminar.Enabled = False
         Me.BTNEliminar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNEliminar.Location = New System.Drawing.Point(6, 114)
         Me.BTNEliminar.Name = "BTNEliminar"
@@ -405,6 +406,7 @@ Partial Class FUsuario
         '
         'BTNModificar
         '
+        Me.BTNModificar.Enabled = False
         Me.BTNModificar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNModificar.Location = New System.Drawing.Point(6, 80)
         Me.BTNModificar.Name = "BTNModificar"
@@ -415,6 +417,7 @@ Partial Class FUsuario
         '
         'BTNGuardar
         '
+        Me.BTNGuardar.Enabled = False
         Me.BTNGuardar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNGuardar.Location = New System.Drawing.Point(6, 47)
         Me.BTNGuardar.Name = "BTNGuardar"
@@ -452,6 +455,7 @@ Partial Class FUsuario
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(821, 530)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LBLBuscar)

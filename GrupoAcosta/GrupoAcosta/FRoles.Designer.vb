@@ -23,7 +23,7 @@ Partial Class FRoles
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FRoles))
-        Me.TBNuevoRol = New System.Windows.Forms.TextBox()
+        Me.TXTNuevoRol = New System.Windows.Forms.TextBox()
         Me.BTNCrearRol = New System.Windows.Forms.Button()
         Me.DGVRoles = New System.Windows.Forms.DataGridView()
         Me.GBRoles = New System.Windows.Forms.GroupBox()
@@ -33,6 +33,7 @@ Partial Class FRoles
         Me.LBValidarNuevoRol = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.BTNEliminar = New System.Windows.Forms.Button()
         Me.BTNSalir = New System.Windows.Forms.Button()
         Me.LNNombreAtencion = New System.Windows.Forms.Label()
@@ -42,18 +43,18 @@ Partial Class FRoles
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TBNuevoRol
+        'TXTNuevoRol
         '
-        Me.TBNuevoRol.BackColor = System.Drawing.Color.White
-        Me.TBNuevoRol.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.TBNuevoRol.Location = New System.Drawing.Point(132, 33)
-        Me.TBNuevoRol.Name = "TBNuevoRol"
-        Me.TBNuevoRol.Size = New System.Drawing.Size(245, 25)
-        Me.TBNuevoRol.TabIndex = 1
+        Me.TXTNuevoRol.BackColor = System.Drawing.Color.White
+        Me.TXTNuevoRol.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.TXTNuevoRol.Location = New System.Drawing.Point(132, 33)
+        Me.TXTNuevoRol.Name = "TXTNuevoRol"
+        Me.TXTNuevoRol.Size = New System.Drawing.Size(245, 25)
+        Me.TXTNuevoRol.TabIndex = 1
         '
         'BTNCrearRol
         '
-        Me.BTNCrearRol.Location = New System.Drawing.Point(10, 15)
+        Me.BTNCrearRol.Location = New System.Drawing.Point(10, 13)
         Me.BTNCrearRol.Name = "BTNCrearRol"
         Me.BTNCrearRol.Size = New System.Drawing.Size(75, 29)
         Me.BTNCrearRol.TabIndex = 2
@@ -79,7 +80,7 @@ Partial Class FRoles
         Me.GBRoles.Controls.Add(Me.Label1)
         Me.GBRoles.Controls.Add(Me.LBCamposObligatorios)
         Me.GBRoles.Controls.Add(Me.LBValidarNuevoRol)
-        Me.GBRoles.Controls.Add(Me.TBNuevoRol)
+        Me.GBRoles.Controls.Add(Me.TXTNuevoRol)
         Me.GBRoles.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GBRoles.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GBRoles.Location = New System.Drawing.Point(12, 68)
@@ -147,6 +148,7 @@ Partial Class FRoles
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.White
+        Me.GroupBox2.Controls.Add(Me.BTNCancelar)
         Me.GroupBox2.Controls.Add(Me.BTNEliminar)
         Me.GroupBox2.Controls.Add(Me.BTNSalir)
         Me.GroupBox2.Controls.Add(Me.BTNCrearRol)
@@ -154,14 +156,25 @@ Partial Class FRoles
         Me.GroupBox2.ForeColor = System.Drawing.Color.MidnightBlue
         Me.GroupBox2.Location = New System.Drawing.Point(346, 203)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(96, 120)
+        Me.GroupBox2.Size = New System.Drawing.Size(96, 160)
         Me.GroupBox2.TabIndex = 19
         Me.GroupBox2.TabStop = False
+        '
+        'BTNCancelar
+        '
+        Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNCancelar.Location = New System.Drawing.Point(10, 84)
+        Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNCancelar.Name = "BTNCancelar"
+        Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
+        Me.BTNCancelar.TabIndex = 96
+        Me.BTNCancelar.Text = "Cancelar"
+        Me.BTNCancelar.UseVisualStyleBackColor = True
         '
         'BTNEliminar
         '
         Me.BTNEliminar.Enabled = False
-        Me.BTNEliminar.Location = New System.Drawing.Point(10, 50)
+        Me.BTNEliminar.Location = New System.Drawing.Point(10, 48)
         Me.BTNEliminar.Name = "BTNEliminar"
         Me.BTNEliminar.Size = New System.Drawing.Size(75, 29)
         Me.BTNEliminar.TabIndex = 4
@@ -170,7 +183,7 @@ Partial Class FRoles
         '
         'BTNSalir
         '
-        Me.BTNSalir.Location = New System.Drawing.Point(10, 85)
+        Me.BTNSalir.Location = New System.Drawing.Point(9, 124)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(75, 29)
         Me.BTNSalir.TabIndex = 3
@@ -216,7 +229,7 @@ Partial Class FRoles
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents TBNuevoRol As System.Windows.Forms.TextBox
+    Friend WithEvents TXTNuevoRol As System.Windows.Forms.TextBox
     Friend WithEvents BTNCrearRol As System.Windows.Forms.Button
     Friend WithEvents DGVRoles As System.Windows.Forms.DataGridView
     Friend WithEvents GBRoles As System.Windows.Forms.GroupBox
@@ -229,4 +242,5 @@ Partial Class FRoles
     Friend WithEvents LBCamposObligatoriosAst As System.Windows.Forms.Label
     Friend WithEvents LBCamposObligatorios As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents BTNCancelar As System.Windows.Forms.Button
 End Class

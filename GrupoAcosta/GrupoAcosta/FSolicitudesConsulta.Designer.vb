@@ -34,6 +34,9 @@ Partial Class FSolicitudesConsulta
         Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.BTNReporteSolicitudes = New System.Windows.Forms.Button()
+        Me.BTNSolicitudIniciada = New System.Windows.Forms.Button()
+        Me.BTNSolicitudProceso = New System.Windows.Forms.Button()
+        Me.BTNSolicitudFinalizada = New System.Windows.Forms.Button()
         Me.GBPersonasUsuarios.SuspendLayout()
         CType(Me.DGVConsultaSolicitudes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -182,12 +185,54 @@ Partial Class FSolicitudesConsulta
         Me.BTNReporteSolicitudes.Text = "Reporte de Solicitudes"
         Me.BTNReporteSolicitudes.UseVisualStyleBackColor = True
         '
+        'BTNSolicitudIniciada
+        '
+        Me.BTNSolicitudIniciada.Enabled = False
+        Me.BTNSolicitudIniciada.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSolicitudIniciada.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.BTNSolicitudIniciada.Location = New System.Drawing.Point(491, 177)
+        Me.BTNSolicitudIniciada.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNSolicitudIniciada.Name = "BTNSolicitudIniciada"
+        Me.BTNSolicitudIniciada.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudIniciada.TabIndex = 57
+        Me.BTNSolicitudIniciada.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Iniciada"
+        Me.BTNSolicitudIniciada.UseVisualStyleBackColor = True
+        '
+        'BTNSolicitudProceso
+        '
+        Me.BTNSolicitudProceso.Enabled = False
+        Me.BTNSolicitudProceso.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSolicitudProceso.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.BTNSolicitudProceso.Location = New System.Drawing.Point(491, 244)
+        Me.BTNSolicitudProceso.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNSolicitudProceso.Name = "BTNSolicitudProceso"
+        Me.BTNSolicitudProceso.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudProceso.TabIndex = 58
+        Me.BTNSolicitudProceso.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " en Proceso"
+        Me.BTNSolicitudProceso.UseVisualStyleBackColor = True
+        '
+        'BTNSolicitudFinalizada
+        '
+        Me.BTNSolicitudFinalizada.Enabled = False
+        Me.BTNSolicitudFinalizada.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNSolicitudFinalizada.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.BTNSolicitudFinalizada.Location = New System.Drawing.Point(491, 314)
+        Me.BTNSolicitudFinalizada.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNSolicitudFinalizada.Name = "BTNSolicitudFinalizada"
+        Me.BTNSolicitudFinalizada.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudFinalizada.TabIndex = 59
+        Me.BTNSolicitudFinalizada.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Finalizada"
+        Me.BTNSolicitudFinalizada.UseVisualStyleBackColor = True
+        '
         'FSolicitudesConsulta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
-        Me.ClientSize = New System.Drawing.Size(489, 463)
+        Me.ClientSize = New System.Drawing.Size(631, 463)
+        Me.Controls.Add(Me.BTNSolicitudFinalizada)
+        Me.Controls.Add(Me.BTNSolicitudProceso)
+        Me.Controls.Add(Me.BTNSolicitudIniciada)
         Me.Controls.Add(Me.BTNReporteSolicitudes)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -217,4 +262,7 @@ Partial Class FSolicitudesConsulta
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents BTNEliminar As System.Windows.Forms.Button
     Friend WithEvents BTNReporteSolicitudes As System.Windows.Forms.Button
+    Friend WithEvents BTNSolicitudIniciada As System.Windows.Forms.Button
+    Friend WithEvents BTNSolicitudProceso As System.Windows.Forms.Button
+    Friend WithEvents BTNSolicitudFinalizada As System.Windows.Forms.Button
 End Class

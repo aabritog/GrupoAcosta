@@ -7,6 +7,7 @@
     Public nAction As Integer
     Public cComparacion As Integer
 
+    Public nIndice As Integer = 0
     Dim nId_estado As Integer
     Dim n_orden_new As Integer
 
@@ -36,7 +37,6 @@
     End Sub
 
     Private Sub mostrarDGVProductoEntrante()
-
 
         'Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
         Dim sCadenaSQL As String = "select p.s_descripcion, p.n_cantidad_requerida_producto, p.nid_solicitud_producto, (select coalesce(sum(pe.n_cantidad_entrante),0) from producto_entrante pe where nid_solicitud_producto = p.nid_solicitud_producto) ncantidad_recibida from v_detalle_solicitud p  where(nid_solicitud = " & nIdSolicitudP & ") order by p.s_descripcion"
@@ -132,9 +132,8 @@
 
     Private Sub BTNGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNGuardar.Click
 
-        Dim SQLGuardar As String = ""
-
         Dim sSQLDatosSolicitudes As String = ""
+        Dim SQLGuardar As String = ""
         Dim nIndice As Integer = 0
         Dim nTexto As String = "0"
         Dim sSQLAux As String = ""
@@ -143,6 +142,7 @@
         If Len(TXTProveedor.Text) = 0 Then
             MsgBox("Rellene el campo Proveedor", MsgBoxStyle.Information)
             TXTProveedor.Focus()
+            Exit Sub
 
         End If
 
@@ -151,16 +151,14 @@
 
             While nIndice < DGVProductoEntrante.RowCount
 
-                If DGVProductoEntrante.Rows(nIndice).Cells("select").Value = "1" Then
-                    
-                    If Len(DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
-                        MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
+                If Len(DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value) = 0 Then
+                    MsgBox("Especifique la cantidad para todos los productos seleccionados", MsgBoxStyle.Information)
 
-                    Else
-                        If DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value > DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value Then
-                            MsgBox("La cantidad entrante del producto supera la requerida", MsgBoxStyle.Information)
+                Else
+                    If DGVProductoEntrante.Rows(nIndice).Cells("nCantidad").Value > DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value Then
+                        MsgBox("La cantidad entrante del producto supera la requerida", MsgBoxStyle.Information)
 
-                        End If
+                        Exit Sub
 
                     End If
 
@@ -295,17 +293,57 @@
         'BTNAgregar.Enabled = False
         BTNGuardar.Enabled = True
         BTNCancelar.Enabled = True
+        BTNFinalizar.Enabled = True
         TXTProveedor.Focus()
         DGVProductoEntrante.Enabled = True
         DGVProductoEntrante.ClearSelection()
 
-        'BTNAgregar_Click(sender, e)
     End Sub
 
     Private Sub DGVProductoEntrante_CellClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DGVProductoEntrante.CellClick
-        'BTNModificar.Enabled = True
-        'BTNEliminar.Enabled = True
+
         BTNCancelar.Enabled = True
+
+    End Sub
+
+    Private Sub BTNFinalizar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNFinalizar.Click
+
+        Dim SQLGuardar As String = ""
+        Dim nIndice As Integer = 0
+        Dim nContar As Integer = 1
+
+        nContar = 1
+
+        While nIndice < DGVProductoEntrante.RowCount
+
+            If (DGVProductoEntrante.Rows(nIndice).Cells("n_cantidad_requerida_producto").Value) <> (DGVProductoEntrante.Rows(nIndice).Cells("ncantidad_recibida").Value) Then
+
+                nContar = 2
+
+            End If
+
+            nIndice = 1 + nIndice
+
+        End While
+
+        If nContar = 1 Then
+
+            SQLGuardar = "UPDATE solicitudes SET nid_estado = 3 where nid = " & FSolicitudProductos.nIdSolicitud & ""
+            objCGenerica.accederBD(SQLGuardar)
+
+            SQLGuardar = "insert into solicitud_historial (nid_solicitud, nid_estado, d_fecha, n_orden) VALUES (" & FSolicitudProductos.nIdSolicitud & ", 3,'" & Date.Today.ToString("yyyy-MM-dd") & "', " & n_orden_new & ")"
+            objCGenerica.accederBD(SQLGuardar)
+
+            MsgBox("La Solicitud está Completa, ha sido Finalizada", MsgBoxStyle.Information)
+
+        Else
+
+            MsgBox("La cantidad requerida para un producto no está completa, no se puede finalizar la solicitud", MsgBoxStyle.Information)
+
+            Exit Sub
+
+        End If
+
     End Sub
 
 End Class

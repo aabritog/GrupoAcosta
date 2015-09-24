@@ -38,6 +38,7 @@ Partial Class FProductoEntrante
         Me.LBLNinguno = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.BTNFinalizar = New System.Windows.Forms.Button()
         Me.BTNSalir = New System.Windows.Forms.Button()
         Me.BTNCancelar = New System.Windows.Forms.Button()
         Me.BTNGuardar = New System.Windows.Forms.Button()
@@ -222,20 +223,33 @@ Partial Class FProductoEntrante
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
+        Me.GroupBox1.Controls.Add(Me.BTNFinalizar)
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(617, 114)
+        Me.GroupBox1.Location = New System.Drawing.Point(617, 75)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(90, 137)
+        Me.GroupBox1.Size = New System.Drawing.Size(85, 176)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
+        '
+        'BTNFinalizar
+        '
+        Me.BTNFinalizar.Enabled = False
+        Me.BTNFinalizar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BTNFinalizar.Location = New System.Drawing.Point(7, 53)
+        Me.BTNFinalizar.Margin = New System.Windows.Forms.Padding(4)
+        Me.BTNFinalizar.Name = "BTNFinalizar"
+        Me.BTNFinalizar.Size = New System.Drawing.Size(74, 33)
+        Me.BTNFinalizar.TabIndex = 42
+        Me.BTNFinalizar.Text = "Finalizar"
+        Me.BTNFinalizar.UseVisualStyleBackColor = True
         '
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(9, 96)
+        Me.BTNSalir.Location = New System.Drawing.Point(7, 133)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -247,7 +261,7 @@ Partial Class FProductoEntrante
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(7, 55)
+        Me.BTNCancelar.Location = New System.Drawing.Point(7, 93)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -358,4 +372,5 @@ Partial Class FProductoEntrante
     Friend WithEvents LBLCliente As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents BTNFinalizar As System.Windows.Forms.Button
 End Class

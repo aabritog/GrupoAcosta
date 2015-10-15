@@ -223,14 +223,13 @@ Partial Class FProductoEntrante
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.White
-        Me.GroupBox1.Controls.Add(Me.BTNFinalizar)
         Me.GroupBox1.Controls.Add(Me.BTNSalir)
         Me.GroupBox1.Controls.Add(Me.BTNCancelar)
         Me.GroupBox1.Controls.Add(Me.BTNGuardar)
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(617, 75)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(85, 176)
+        Me.GroupBox1.Size = New System.Drawing.Size(85, 133)
         Me.GroupBox1.TabIndex = 38
         Me.GroupBox1.TabStop = False
         '
@@ -238,18 +237,18 @@ Partial Class FProductoEntrante
         '
         Me.BTNFinalizar.Enabled = False
         Me.BTNFinalizar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNFinalizar.Location = New System.Drawing.Point(7, 53)
+        Me.BTNFinalizar.Location = New System.Drawing.Point(595, 262)
         Me.BTNFinalizar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNFinalizar.Name = "BTNFinalizar"
-        Me.BTNFinalizar.Size = New System.Drawing.Size(74, 33)
+        Me.BTNFinalizar.Size = New System.Drawing.Size(129, 37)
         Me.BTNFinalizar.TabIndex = 42
-        Me.BTNFinalizar.Text = "Finalizar"
+        Me.BTNFinalizar.Text = "Finalizar Solicitud"
         Me.BTNFinalizar.UseVisualStyleBackColor = True
         '
         'BTNSalir
         '
         Me.BTNSalir.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNSalir.Location = New System.Drawing.Point(7, 133)
+        Me.BTNSalir.Location = New System.Drawing.Point(7, 93)
         Me.BTNSalir.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSalir.Name = "BTNSalir"
         Me.BTNSalir.Size = New System.Drawing.Size(74, 32)
@@ -261,7 +260,7 @@ Partial Class FProductoEntrante
         '
         Me.BTNCancelar.Enabled = False
         Me.BTNCancelar.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTNCancelar.Location = New System.Drawing.Point(7, 93)
+        Me.BTNCancelar.Location = New System.Drawing.Point(7, 55)
         Me.BTNCancelar.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNCancelar.Name = "BTNCancelar"
         Me.BTNCancelar.Size = New System.Drawing.Size(74, 33)
@@ -330,6 +329,7 @@ Partial Class FProductoEntrante
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(742, 535)
+        Me.Controls.Add(Me.BTNFinalizar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.LBLBuscar)

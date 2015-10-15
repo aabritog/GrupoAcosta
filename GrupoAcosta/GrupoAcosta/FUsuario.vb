@@ -51,7 +51,9 @@ Public Class FUsuario
 
         CadenaSQL = "select u.nid, u.nid_persona, u.s_clave, u.nid_rol, u.s_seudonimo, r.s_descripcion s_rol, p.s_nombre1 || ' ' || p.s_apellido1 s_nombre from usuario u inner join rol r on u.nid_rol = r.nid inner join persona p on u.nid_persona = p.nid and u.s_activo='1'"
 
+        DGVUsuario.DataSource = Nothing
         DatosDataTableDGVUsuario.Clear()
+
 
         Using conexion As New Odbc.OdbcConnection(My.Settings.ConnectionString)
 
@@ -79,7 +81,7 @@ Public Class FUsuario
                 .HeaderText = "NID"
                 .Width = "90"
                 .DisplayIndex = "0"
-
+                .Selected = False
             End With
             With DGVUsuario.Columns("nid_persona")
                 .Visible = False
@@ -365,12 +367,11 @@ Public Class FUsuario
     End Sub
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
-
+        Dim SQLEliminarUsuario As String
         'Se declara el elemento eliminar para registros 
-        If MsgBox("¿Esta seguro de querer eliminar a este usuario?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarPersona As String = ""
-            SQLEliminarPersona = "DELETE FROM usuario WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""
-            accederBD(SQLEliminarPersona)
+        If MsgBox("¿Esta seguro de querer eliminar este usuario?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+            SQLEliminarUsuario = "DELETE FROM usuario WHERE nid=" & DGVUsuario.CurrentRow.Cells("nid").Value & ""
+            accederBD(SQLEliminarUsuario)
             mostrarDGVUsuario()
             BTNCancelar_Click(sender, e)
             MsgBox("Se ha eliminado el usuario", MsgBoxStyle.Information)
@@ -451,5 +452,9 @@ Public Class FUsuario
             LBLValidarConfirmarClave.Visible = False
         End If
 
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        mostrarDGVUsuario()
     End Sub
 End Class

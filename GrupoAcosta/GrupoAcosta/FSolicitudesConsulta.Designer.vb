@@ -190,12 +190,12 @@ Partial Class FSolicitudesConsulta
         Me.BTNSolicitudIniciada.Enabled = False
         Me.BTNSolicitudIniciada.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSolicitudIniciada.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.BTNSolicitudIniciada.Location = New System.Drawing.Point(491, 177)
+        Me.BTNSolicitudIniciada.Location = New System.Drawing.Point(491, 180)
         Me.BTNSolicitudIniciada.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSolicitudIniciada.Name = "BTNSolicitudIniciada"
-        Me.BTNSolicitudIniciada.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudIniciada.Size = New System.Drawing.Size(138, 48)
         Me.BTNSolicitudIniciada.TabIndex = 57
-        Me.BTNSolicitudIniciada.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Iniciada"
+        Me.BTNSolicitudIniciada.Text = "Reporte Solicitudes en ""Inicio"""
         Me.BTNSolicitudIniciada.UseVisualStyleBackColor = True
         '
         'BTNSolicitudProceso
@@ -203,12 +203,12 @@ Partial Class FSolicitudesConsulta
         Me.BTNSolicitudProceso.Enabled = False
         Me.BTNSolicitudProceso.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSolicitudProceso.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.BTNSolicitudProceso.Location = New System.Drawing.Point(491, 244)
+        Me.BTNSolicitudProceso.Location = New System.Drawing.Point(491, 248)
         Me.BTNSolicitudProceso.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSolicitudProceso.Name = "BTNSolicitudProceso"
-        Me.BTNSolicitudProceso.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudProceso.Size = New System.Drawing.Size(138, 48)
         Me.BTNSolicitudProceso.TabIndex = 58
-        Me.BTNSolicitudProceso.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " en Proceso"
+        Me.BTNSolicitudProceso.Text = "Reporte Solicitudes" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " en ""Proceso"""
         Me.BTNSolicitudProceso.UseVisualStyleBackColor = True
         '
         'BTNSolicitudFinalizada
@@ -216,12 +216,12 @@ Partial Class FSolicitudesConsulta
         Me.BTNSolicitudFinalizada.Enabled = False
         Me.BTNSolicitudFinalizada.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTNSolicitudFinalizada.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.BTNSolicitudFinalizada.Location = New System.Drawing.Point(491, 314)
+        Me.BTNSolicitudFinalizada.Location = New System.Drawing.Point(491, 316)
         Me.BTNSolicitudFinalizada.Margin = New System.Windows.Forms.Padding(4)
         Me.BTNSolicitudFinalizada.Name = "BTNSolicitudFinalizada"
-        Me.BTNSolicitudFinalizada.Size = New System.Drawing.Size(127, 48)
+        Me.BTNSolicitudFinalizada.Size = New System.Drawing.Size(138, 54)
         Me.BTNSolicitudFinalizada.TabIndex = 59
-        Me.BTNSolicitudFinalizada.Text = "Reporte Solicitud" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Finalizada"
+        Me.BTNSolicitudFinalizada.Text = "Reporte Solicitudes" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " ""Finalizadas"""
         Me.BTNSolicitudFinalizada.UseVisualStyleBackColor = True
         '
         'FSolicitudesConsulta

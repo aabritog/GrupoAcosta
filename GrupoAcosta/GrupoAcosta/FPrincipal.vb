@@ -142,4 +142,7 @@
         FAyuda.ShowDialog()
     End Sub
 
+    Private Sub TSMIManualdeUsuario_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSMIManualdeUsuario.Click
+        System.Diagnostics.Process.Start("C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\ManualdeUsuario\Manual de Usuario Administrador.pdf")
+    End Sub
 End Class

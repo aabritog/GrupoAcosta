@@ -281,9 +281,22 @@ Public Class FCargo
     End Sub
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
+
+        Dim SQLEliminarCargo As String
+        Dim sVerificarPersonaCargo As String
+        Dim sPersonaCargo As String = ""
+
+        'Antes de proceder a eliminar a la persona seleccionada se verifica si la misma no es usuario del sistema.
+        sVerificarPersonaCargo = "SELECT nid_cargo FROM persona where nid_cargo = " & DGVCargo.CurrentRow.Cells("nid").Value & ""
+        objCGenerica.accederBD(sVerificarPersonaCargo, sPersonaCargo)
+
+        If sPersonaCargo <> "" Then
+            MsgBox("No se puede eliminar el cargo seleccionado porque pertenece a una persona.", MsgBoxStyle.Information)
+            Exit Sub
+        End If
+
         'Se declara el elemento eliminar para registros 
         If MsgBox("¿Esta seguro de querer eliminar a este Cargo?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarCargo As String = ""
             SQLEliminarCargo = "DELETE FROM cargo WHERE nid=" & DGVCargo.CurrentRow.Cells("nid").Value & ""
             objCGenerica.accederBD(SQLEliminarCargo)
             mostrarDGVCargo()

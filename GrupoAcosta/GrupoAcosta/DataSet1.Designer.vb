@@ -9835,16 +9835,6 @@ Partial Public Class DataSet1
         
         Private columnestado_solicitud As Global.System.Data.DataColumn
         
-        Private columnnid_producto As Global.System.Data.DataColumn
-        
-        Private columns_descripcion As Global.System.Data.DataColumn
-        
-        Private columnnid_solicitud_producto As Global.System.Data.DataColumn
-        
-        Private columnn_cantidad_requerida_producto As Global.System.Data.DataColumn
-        
-        Private columns_existencia_producto As Global.System.Data.DataColumn
-        
         Private columnnid_cliente As Global.System.Data.DataColumn
         
         Private columns_cliente As Global.System.Data.DataColumn
@@ -9910,46 +9900,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property nid_productoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnid_producto
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property s_descripcionColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columns_descripcion
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property nid_solicitud_productoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnid_solicitud_producto
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property n_cantidad_requerida_productoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnn_cantidad_requerida_producto
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property s_existencia_productoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columns_existencia_producto
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property nid_clienteColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnnid_cliente
@@ -10001,9 +9951,9 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function Addv_estado_solicitudRow(ByVal nid_solicitud As Long, ByVal d_fecha_solicitud As Date, ByVal estado_solicitud As Integer, ByVal nid_producto As Long, ByVal s_descripcion As String, ByVal nid_solicitud_producto As Long, ByVal n_cantidad_requerida_producto As Integer, ByVal s_existencia_producto As String, ByVal nid_cliente As Long, ByVal s_cliente As String) As v_estado_solicitudRow
+        Public Overloads Function Addv_estado_solicitudRow(ByVal nid_solicitud As Long, ByVal d_fecha_solicitud As Date, ByVal estado_solicitud As Integer, ByVal nid_cliente As Long, ByVal s_cliente As String) As v_estado_solicitudRow
             Dim rowv_estado_solicitudRow As v_estado_solicitudRow = CType(Me.NewRow,v_estado_solicitudRow)
-            Dim columnValuesArray() As Object = New Object() {nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_producto, s_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existencia_producto, nid_cliente, s_cliente}
+            Dim columnValuesArray() As Object = New Object() {nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_cliente, s_cliente}
             rowv_estado_solicitudRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowv_estado_solicitudRow)
             Return rowv_estado_solicitudRow
@@ -10029,11 +9979,6 @@ Partial Public Class DataSet1
             Me.columnnid_solicitud = MyBase.Columns("nid_solicitud")
             Me.columnd_fecha_solicitud = MyBase.Columns("d_fecha_solicitud")
             Me.columnestado_solicitud = MyBase.Columns("estado_solicitud")
-            Me.columnnid_producto = MyBase.Columns("nid_producto")
-            Me.columns_descripcion = MyBase.Columns("s_descripcion")
-            Me.columnnid_solicitud_producto = MyBase.Columns("nid_solicitud_producto")
-            Me.columnn_cantidad_requerida_producto = MyBase.Columns("n_cantidad_requerida_producto")
-            Me.columns_existencia_producto = MyBase.Columns("s_existencia_producto")
             Me.columnnid_cliente = MyBase.Columns("nid_cliente")
             Me.columns_cliente = MyBase.Columns("s_cliente")
         End Sub
@@ -10047,22 +9992,10 @@ Partial Public Class DataSet1
             MyBase.Columns.Add(Me.columnd_fecha_solicitud)
             Me.columnestado_solicitud = New Global.System.Data.DataColumn("estado_solicitud", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnestado_solicitud)
-            Me.columnnid_producto = New Global.System.Data.DataColumn("nid_producto", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnid_producto)
-            Me.columns_descripcion = New Global.System.Data.DataColumn("s_descripcion", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columns_descripcion)
-            Me.columnnid_solicitud_producto = New Global.System.Data.DataColumn("nid_solicitud_producto", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnid_solicitud_producto)
-            Me.columnn_cantidad_requerida_producto = New Global.System.Data.DataColumn("n_cantidad_requerida_producto", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnn_cantidad_requerida_producto)
-            Me.columns_existencia_producto = New Global.System.Data.DataColumn("s_existencia_producto", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columns_existencia_producto)
             Me.columnnid_cliente = New Global.System.Data.DataColumn("nid_cliente", GetType(Long), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnnid_cliente)
             Me.columns_cliente = New Global.System.Data.DataColumn("s_cliente", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columns_cliente)
-            Me.columns_descripcion.MaxLength = 30
-            Me.columns_existencia_producto.MaxLength = 1
             Me.columns_cliente.MaxLength = 30
         End Sub
         
@@ -14500,86 +14433,6 @@ Partial Public Class DataSet1
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property nid_producto() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tablev_estado_solicitud.nid_productoColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'nid_producto' de la tabla 'v_estado_solicitud' es DBNull."& _ 
-                            "", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablev_estado_solicitud.nid_productoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property s_descripcion() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablev_estado_solicitud.s_descripcionColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 's_descripcion' de la tabla 'v_estado_solicitud' es DBNull"& _ 
-                            ".", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablev_estado_solicitud.s_descripcionColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property nid_solicitud_producto() As Long
-            Get
-                Try 
-                    Return CType(Me(Me.tablev_estado_solicitud.nid_solicitud_productoColumn),Long)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'nid_solicitud_producto' de la tabla 'v_estado_solicitud' "& _ 
-                            "es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablev_estado_solicitud.nid_solicitud_productoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property n_cantidad_requerida_producto() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tablev_estado_solicitud.n_cantidad_requerida_productoColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'n_cantidad_requerida_producto' de la tabla 'v_estado_soli"& _ 
-                            "citud' es DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablev_estado_solicitud.n_cantidad_requerida_productoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property s_existencia_producto() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tablev_estado_solicitud.s_existencia_productoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 's_existencia_producto' de la tabla 'v_estado_solicitud' e"& _ 
-                            "s DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tablev_estado_solicitud.s_existencia_productoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property nid_cliente() As Long
             Get
                 Try 
@@ -14642,66 +14495,6 @@ Partial Public Class DataSet1
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub Setestado_solicitudNull()
             Me(Me.tablev_estado_solicitud.estado_solicitudColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isnid_productoNull() As Boolean
-            Return Me.IsNull(Me.tablev_estado_solicitud.nid_productoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setnid_productoNull()
-            Me(Me.tablev_estado_solicitud.nid_productoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Iss_descripcionNull() As Boolean
-            Return Me.IsNull(Me.tablev_estado_solicitud.s_descripcionColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Sets_descripcionNull()
-            Me(Me.tablev_estado_solicitud.s_descripcionColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isnid_solicitud_productoNull() As Boolean
-            Return Me.IsNull(Me.tablev_estado_solicitud.nid_solicitud_productoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setnid_solicitud_productoNull()
-            Me(Me.tablev_estado_solicitud.nid_solicitud_productoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isn_cantidad_requerida_productoNull() As Boolean
-            Return Me.IsNull(Me.tablev_estado_solicitud.n_cantidad_requerida_productoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setn_cantidad_requerida_productoNull()
-            Me(Me.tablev_estado_solicitud.n_cantidad_requerida_productoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Iss_existencia_productoNull() As Boolean
-            Return Me.IsNull(Me.tablev_estado_solicitud.s_existencia_productoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Sets_existencia_productoNull()
-            Me(Me.tablev_estado_solicitud.s_existencia_productoColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -25256,11 +25049,6 @@ Namespace DataSet1TableAdapters
             tableMapping.ColumnMappings.Add("nid_solicitud", "nid_solicitud")
             tableMapping.ColumnMappings.Add("d_fecha_solicitud", "d_fecha_solicitud")
             tableMapping.ColumnMappings.Add("estado_solicitud", "estado_solicitud")
-            tableMapping.ColumnMappings.Add("nid_producto", "nid_producto")
-            tableMapping.ColumnMappings.Add("s_descripcion", "s_descripcion")
-            tableMapping.ColumnMappings.Add("nid_solicitud_producto", "nid_solicitud_producto")
-            tableMapping.ColumnMappings.Add("n_cantidad_requerida_producto", "n_cantidad_requerida_producto")
-            tableMapping.ColumnMappings.Add("s_existencia_producto", "s_existencia_producto")
             tableMapping.ColumnMappings.Add("nid_cliente", "nid_cliente")
             tableMapping.ColumnMappings.Add("s_cliente", "s_cliente")
             Me._adapter.TableMappings.Add(tableMapping)
@@ -25276,22 +25064,33 @@ Namespace DataSet1TableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(1) {}
+            Me._commandCollection = New Global.System.Data.Odbc.OdbcCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_producto, s"& _ 
-                "_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existenci"& _ 
-                "a_producto, nid_cliente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"
+            Me._commandCollection(0).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_cliente, s_"& _ 
+                "cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.Odbc.OdbcCommand()
             Me._commandCollection(1).Connection = Me.Connection
-            Me._commandCollection(1).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_producto, s"& _ 
-                "_descripcion, nid_solicitud_producto, n_cantidad_requerida_producto, s_existenci"& _ 
-                "a_producto, nid_cliente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where (estado_solicitud = 1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY nid_solicitud, d_fecha_solicitud, s_clie"& _ 
-                "nte, estado_solicitud,nid_producto, s_descripcion, nid_solicitud_producto, n_can"& _ 
-                "tidad_requerida_producto, s_existencia_producto, nid_cliente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER B"& _ 
-                "Y nid_solicitud, d_fecha_solicitud, s_cliente"
+            Me._commandCollection(1).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_cliente, s_"& _ 
+                "cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where (estado_solicitud = "& _ 
+                "2)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY nid_solicitud, d_fecha_solicitud, s_cliente, estado_solicitud,nid_c"& _ 
+                "liente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY nid_solicitud, d_fecha_solicitud, s_cliente"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(2) = New Global.System.Data.Odbc.OdbcCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_cliente, s_"& _ 
+                "cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where (estado_solicitud = "& _ 
+                "3)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY nid_solicitud, d_fecha_solicitud, s_cliente, estado_solicitud,nid_c"& _ 
+                "liente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY nid_solicitud, d_fecha_solicitud, s_cliente"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3) = New Global.System.Data.Odbc.OdbcCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT        nid_solicitud, d_fecha_solicitud, estado_solicitud, nid_cliente, s_"& _ 
+                "cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            ""public"".v_estado_solicitud"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"where (estado_solicitud = "& _ 
+                "1)"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"GROUP BY nid_solicitud, d_fecha_solicitud, s_cliente, estado_solicitud,nid_c"& _ 
+                "liente, s_cliente"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"ORDER BY nid_solicitud, d_fecha_solicitud, s_cliente"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -25322,7 +25121,7 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
-        Public Overloads Overridable Function FillByEstadoUno(ByVal dataTable As DataSet1.v_estado_solicitudDataTable) As Integer
+        Public Overloads Overridable Function FillByEstadoDos(ByVal dataTable As DataSet1.v_estado_solicitudDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -25335,8 +25134,56 @@ Namespace DataSet1TableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
-        Public Overloads Overridable Function GetDataByEstadoUno() As DataSet1.v_estado_solicitudDataTable
+        Public Overloads Overridable Function GetDataByEstadoDos() As DataSet1.v_estado_solicitudDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            Dim dataTable As DataSet1.v_estado_solicitudDataTable = New DataSet1.v_estado_solicitudDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByEstadoTres(ByVal dataTable As DataSet1.v_estado_solicitudDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByEstadoTres() As DataSet1.v_estado_solicitudDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Dim dataTable As DataSet1.v_estado_solicitudDataTable = New DataSet1.v_estado_solicitudDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillByEstadoUno(ByVal dataTable As DataSet1.v_estado_solicitudDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function GetDataByEstadoUno() As DataSet1.v_estado_solicitudDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(3)
             Dim dataTable As DataSet1.v_estado_solicitudDataTable = New DataSet1.v_estado_solicitudDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

@@ -208,9 +208,22 @@ Public Class FDepartamento
     End Sub
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
+
+        Dim SQLEliminarDepartamento As String
+        Dim sVerificarPersonaDepartamento As String
+        Dim sPersonaDepartamento As String = ""
+
+        'Antes de proceder a eliminar a la persona seleccionada se verifica si la misma no es usuario del sistema.
+        sVerificarPersonaDepartamento = "SELECT nid_departamento FROM cargo where nid_departamento = " & DGVDepartamento.CurrentRow.Cells("nid").Value & ""
+        objCGenerica.accederBD(sVerificarPersonaDepartamento, sPersonaDepartamento)
+
+        If sPersonaDepartamento <> "" Then
+            MsgBox("No se puede eliminar el departamento seleccionado porque existe un cargo de una persona que lo contiene", MsgBoxStyle.Information)
+            Exit Sub
+        End If
+
         'Se declara el elemento eliminar para registros 
         If MsgBox("¿Esta seguro de querer eliminar a este departamento?. No se podran recuperar los datos", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-            Dim SQLEliminarDepartamento As String = ""
             SQLEliminarDepartamento = "DELETE FROM departamento WHERE nid=" & DGVDepartamento.CurrentRow.Cells("nid").Value & ""
             objCGenerica.accederBD(SQLEliminarDepartamento)
             mostrarDGVDepartamento()

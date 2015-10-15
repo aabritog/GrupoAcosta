@@ -51,6 +51,32 @@ Public Class FReporte
         End Try
 
     End Sub
+    Friend Sub EstadoDos(ByVal ruta As String)
+        Dim miDs As DataSet1 = New DataSet1
+        Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
+
+        Try
+            ta.FillByEstadoDos(miDs.v_estado_solicitud)
+            rpt.Load(ruta)
+            rpt.SetDataSource(miDs)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
+    Friend Sub EstadoTres(ByVal ruta As String)
+        Dim miDs As DataSet1 = New DataSet1
+        Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
+
+        Try
+            ta.FillByEstadoTres(miDs.v_estado_solicitud)
+            rpt.Load(ruta)
+            rpt.SetDataSource(miDs)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+
+    End Sub
 
     Friend Sub DetalleSolicitud2(ByVal ruta As String, ByRef nIdSolicitud As Integer)
         Dim miDs As DataSet1 = New DataSet1
@@ -87,10 +113,21 @@ Public Class FReporte
             Exit Sub
         End If
 
+        If sNombre_reporte = "Visualizar_Dos" Then
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\REstadoDos.rpt"
+            EstadoDos(ruta) : CRVVisorReportes.ReportSource = rpt
+            Exit Sub
+        End If
+        If sNombre_reporte = "Visualizar_Tres" Then
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\REstadoTres.rpt"
+            EstadoTres(ruta) : CRVVisorReportes.ReportSource = rpt
+            Exit Sub
+        End If
+
         'Reporte que muestra el detalle de una solicitud especifica
-        If sNombre_reporte = "RDetalleSolicitud2" Then
+        If sNombre_reporte = "RDetalleSolicitudEspecifica" Then
             Me.Text = "Grupo Acosta C.A - Detalle de solicitud"
-            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitud2.rpt"
+            ruta = "C:\GitHub\GrupoAcosta\GrupoAcosta\GrupoAcosta\Reports\RDetalleSolicitudEspecifica.rpt"
             DetalleSolicitud2(ruta, nId_solicitud) : CRVVisorReportes.ReportSource = rpt
             Exit Sub
         End If

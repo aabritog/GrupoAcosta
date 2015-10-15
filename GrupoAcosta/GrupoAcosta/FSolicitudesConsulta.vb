@@ -14,7 +14,7 @@ Public Class FSolicitudesConsulta
         Dim CadenaSQL As String = ""
 
         'CadenaSQL = "select p.nid, p.s_nombre1 ||' '|| p.s_apellido1 ||' '|| p.s_apellido2 s_nombre, p.s_dni from persona p where p.nid not in (select nid_persona from usuario) and p.s_activo = '1'"
-        CadenaSQL = "select nid_solicitud, s_cliente, d_fecha_solicitud from v_detalle_solicitud group by nid_solicitud, s_cliente, d_fecha_solicitud order by nid_solicitud"
+        CadenaSQL = "select nid_solicitud, s_cliente, d_fecha_solicitud from v_estado_solicitud where (estado_solicitud = 1 or estado_solicitud =  2) group by nid_solicitud, s_cliente, d_fecha_solicitud order by nid_solicitud"
 
         DatosDataTableDGVConsultaSolicitudes.Clear()
 
@@ -143,7 +143,7 @@ Public Class FSolicitudesConsulta
 
     Private Sub BTNVerSolicitud_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNVerSolicitud.Click
 
-        FReporte.sNombre_reporte = "RDetalleSolicitud2"
+        FReporte.sNombre_reporte = "RDetalleSolicitudEspecifica"
         FReporte.nId_solicitud = TextBox1.Text
         FReporte.ShowDialog()
         Me.Dispose()
@@ -157,6 +157,16 @@ Public Class FSolicitudesConsulta
 
     Private Sub BTNSolicitudIniciada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudIniciada.Click
         FReporte.sNombre_reporte = "Visualizar_Uno"
+        FReporte.ShowDialog()
+    End Sub
+
+    Private Sub BTNSolicitudProceso_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudProceso.Click
+        FReporte.sNombre_reporte = "Visualizar_Dos"
+        FReporte.ShowDialog()
+    End Sub
+
+    Private Sub BTNSolicitudFinalizada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudFinalizada.Click
+        FReporte.sNombre_reporte = "Visualizar_Tres"
         FReporte.ShowDialog()
     End Sub
 End Class

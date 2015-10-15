@@ -8,11 +8,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4B406D7A-0B71-45B9-9E0B-EA27554F72FB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>GrupoAcosta.My.MyApplication</StartupObject>
+    <StartupObject>GrupoAcosta.FIngreso</StartupObject>
     <RootNamespace>GrupoAcosta</RootNamespace>
     <AssemblyName>GrupoAcosta</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -213,12 +213,6 @@
     <Compile Include="FRespaldoRestaura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FRol.Designer.vb">
-      <DependentUpon>FRol.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FRol.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FRoles.Designer.vb">
       <DependentUpon>FRoles.vb</DependentUpon>
     </Compile>
@@ -288,8 +282,8 @@
     <Compile Include="FSolicitudes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Reports\RDetalleSolicitud2.vb">
-      <DependentUpon>RDetalleSolicitud2.rpt</DependentUpon>
+    <Compile Include="Reports\RDetalleSolicitudEspecifica.vb">
+      <DependentUpon>RDetalleSolicitudEspecifica.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -301,6 +295,18 @@
       <DependentUpon>RDetalleSolicitud.rpt</DependentUpon>
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Reports\REstadoDos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REstadoDos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\REstadoTres.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REstadoTres.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\REstadoUno.vb">
       <AutoGen>True</AutoGen>
@@ -377,9 +383,6 @@
     <EmbeddedResource Include="FRespaldoRestaura.resx">
       <DependentUpon>FRespaldoRestaura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FRol.resx">
-      <DependentUpon>FRol.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FRoles.resx">
       <DependentUpon>FRoles.vb</DependentUpon>
     </EmbeddedResource>
@@ -413,15 +416,23 @@
     <EmbeddedResource Include="FSolicitudes.resx">
       <DependentUpon>FSolicitudes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RDetalleSolicitud2.rpt">
+    <EmbeddedResource Include="Reports\RDetalleSolicitudEspecifica.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RDetalleSolicitud2.vb</LastGenOutput>
+      <LastGenOutput>RDetalleSolicitudEspecifica.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDetalleSolicitud.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RDetalleSolicitud.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\REstadoDos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REstadoDos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\REstadoTres.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REstadoTres.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\REstadoUno.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

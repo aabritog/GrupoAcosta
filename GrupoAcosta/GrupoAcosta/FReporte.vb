@@ -30,7 +30,7 @@ Public Class FReporte
         Dim ta As New DataSet1TableAdapters.v_detalle_solicitudTableAdapter
 
         Try
-            ta.FillByListadoSolicitudes(miDs.v_detalle_solicitud)
+            ta.FillByListadoSolicitudes(miDs.v_detalle_solicitud, FSolicitudesConsulta.DTPUno.Value, FSolicitudesConsulta.DTPDos.Value)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception
@@ -43,7 +43,7 @@ Public Class FReporte
         Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
 
         Try
-            ta.FillByEstadoUno(miDs.v_estado_solicitud)
+            ta.FillByEstadoUno(miDs.v_estado_solicitud, FSolicitudesConsulta.DTPUno.Value, FSolicitudesConsulta.DTPDos.Value)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception
@@ -56,7 +56,7 @@ Public Class FReporte
         Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
 
         Try
-            ta.FillByEstadoDos(miDs.v_estado_solicitud)
+            ta.FillByEstadoDos(miDs.v_estado_solicitud, FSolicitudesConsulta.DTPUno.Value, FSolicitudesConsulta.DTPDos.Value)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception
@@ -69,7 +69,7 @@ Public Class FReporte
         Dim ta As New DataSet1TableAdapters.v_estado_solicitudTableAdapter
 
         Try
-            ta.FillByEstadoTres(miDs.v_estado_solicitud)
+            ta.FillByEstadoTres(miDs.v_estado_solicitud, FSolicitudesConsulta.DTPUno.Value, FSolicitudesConsulta.DTPDos.Value)
             rpt.Load(ruta)
             rpt.SetDataSource(miDs)
         Catch ex As Exception

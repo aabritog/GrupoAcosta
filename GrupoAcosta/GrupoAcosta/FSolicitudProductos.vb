@@ -89,22 +89,30 @@
 
     End Sub
 
-  
     Private Sub BTNSiguiente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSiguiente.Click
 
-        nIdSolicitud = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
+        If DGVSolicitudesSistema.SelectedRows.Count > 0 Then
 
-        'FUsuarios.TBValidarIdPersona.Text = DGVPersonasNoUsuarios.CurrentRow.Cells("id").Value
+            nIdSolicitud = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
 
-        TXTSoliictudesSistema.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
-        FProductoEntrante.LBLNinguno.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
-        FProductoEntrante.LBLCliente.Text = DGVSolicitudesSistema.CurrentRow.Cells("s_cliente").Value
-        'sIdSolicitud()
+            'FUsuarios.TBValidarIdPersona.Text = DGVPersonasNoUsuarios.CurrentRow.Cells("id").Value
 
-        'Me.Close()
+            TXTSoliictudesSistema.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
+            FProductoEntrante.LBLNinguno.Text = DGVSolicitudesSistema.CurrentRow.Cells("nid_solicitud").Value
+            FProductoEntrante.LBLCliente.Text = DGVSolicitudesSistema.CurrentRow.Cells("s_cliente").Value
+            'sIdSolicitud()
 
-        FProductoEntrante.ShowDialog()
+            'Me.Close()
 
+            FProductoEntrante.ShowDialog()
+
+        Else
+
+            MsgBox("Debe Seleccionar una Solicitud para que sea Procesada", MsgBoxStyle.Information)
+
+            Exit Sub
+
+        End If
     End Sub
 
 End Class

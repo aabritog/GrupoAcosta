@@ -74,10 +74,16 @@ Public Class FSolicitudesConsulta
         BTNVerSolicitud.Enabled = False
         BTNReporteSolicitudes.Enabled = True
         BTNSolicitudIniciada.Enabled = True
+        TXTDTPUno.Clear()
+        TXTDTPDos.Clear()
 
         BTNSolicitudProceso.Enabled = True
 
         BTNSolicitudFinalizada.Enabled = True
+        DTPUno.Enabled = True
+        DTPDos.Enabled = True
+        DTPUno.Value = "01-01-1940"
+        DTPDos.Value = "01-01-1940"
 
     End Sub
 
@@ -125,6 +131,9 @@ Public Class FSolicitudesConsulta
 
         BTNSolicitudFinalizada.Enabled = False
 
+        DTPUno.Enabled = False
+        DTPDos.Enabled = False
+
     End Sub
 
     Private Sub BTNEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNEliminar.Click
@@ -151,25 +160,119 @@ Public Class FSolicitudesConsulta
     End Sub
 
     Private Sub BTNReporteSolicitudes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNReporteSolicitudes.Click
+
+        BTNCancelar.Enabled = True
+
+        If Len(TXTDTPUno.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Inicia", MsgBoxStyle.Information)
+            TXTDTPUno.Focus()
+            Exit Sub
+        End If
+
+
+        If Len(TXTDTPDos.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Final", MsgBoxStyle.Information)
+            TXTDTPDos.Focus()
+            Exit Sub
+        End If
+
         FReporte.sNombre_reporte = "Visualizar_Solicitudes"
         FReporte.ShowDialog()
+        Me.Dispose()
     End Sub
 
     Private Sub BTNSolicitudIniciada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudIniciada.Click
+
+        BTNCancelar.Enabled = True
+
+        If Len(TXTDTPUno.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Inicia", MsgBoxStyle.Information)
+            TXTDTPUno.Focus()
+            Exit Sub
+        End If
+
+
+        If Len(TXTDTPDos.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Final", MsgBoxStyle.Information)
+            TXTDTPDos.Focus()
+            Exit Sub
+        End If
         FReporte.sNombre_reporte = "Visualizar_Uno"
         FReporte.ShowDialog()
+        Me.Dispose()
     End Sub
 
     Private Sub BTNSolicitudProceso_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudProceso.Click
+
+        BTNCancelar.Enabled = True
+
+        If Len(TXTDTPUno.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Inicia", MsgBoxStyle.Information)
+            TXTDTPUno.Focus()
+            Exit Sub
+        End If
+
+
+        If Len(TXTDTPDos.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Final", MsgBoxStyle.Information)
+            TXTDTPDos.Focus()
+            Exit Sub
+        End If
+
         FReporte.sNombre_reporte = "Visualizar_Dos"
         FReporte.ShowDialog()
+        Me.Dispose()
     End Sub
 
     Private Sub BTNSolicitudFinalizada_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BTNSolicitudFinalizada.Click
+
+        BTNCancelar.Enabled = True
+
+        If Len(TXTDTPUno.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Inicia", MsgBoxStyle.Information)
+            TXTDTPUno.Focus()
+            Exit Sub
+        End If
+
+
+        If Len(TXTDTPDos.Text) = 0 Then
+            MsgBox("Selecciona la Fecha Final", MsgBoxStyle.Information)
+            TXTDTPDos.Focus()
+            Exit Sub
+        End If
+
         FReporte.sNombre_reporte = "Visualizar_Tres"
         FReporte.ShowDialog()
+        Me.Dispose()
     End Sub
+
+    Private Sub DTPUno_CloseUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPUno.CloseUp
+        TXTDTPUno.Text = DTPUno.Value.Date
+    End Sub
+
+    Private Sub DTPDos_CloseUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPDos.CloseUp
+        TXTDTPDos.Text = DTPDos.Value.Date
+    End Sub
+
+    Private Sub TXTDTPUno_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDTPUno.TextChanged
+        objCGenerica.valCampoObligatorio(Me.TXTDTPUno, LBLValidar1)
+    End Sub
+
+    Private Sub TXTDTPDos_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TXTDTPDos.TextChanged
+        objCGenerica.valCampoObligatorio(Me.TXTDTPDos, LBLValidar2)
+    End Sub
+
+    Private Sub DTPUno_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPUno.Leave
+        DTPUno_CloseUp(sender, e)
+    End Sub
+
+    Private Sub DTPDos_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DTPDos.Leave
+        DTPDos_CloseUp(sender, e)
+    End Sub
+
 End Class
+
+
 
 
 

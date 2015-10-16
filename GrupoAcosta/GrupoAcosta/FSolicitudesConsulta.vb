@@ -9,6 +9,10 @@ Public Class FSolicitudesConsulta
     Public nIndice As Integer = 0
     Friend nId_solicitud As Integer
 
+
+    Private maxValue As Date = #1/1/1900#
+    Private minValue As Date = #1/1/2100#
+
     Private Sub mostrarDGVConsultaSolicitudes()
 
         Dim CadenaSQL As String = ""
@@ -82,8 +86,8 @@ Public Class FSolicitudesConsulta
         BTNSolicitudFinalizada.Enabled = True
         DTPUno.Enabled = True
         DTPDos.Enabled = True
-        DTPUno.Value = "01-01-1940"
-        DTPDos.Value = "01-01-1940"
+        '        DTPUno.Value = "01-01-1940"
+        '       DTPDos.Value = "01-01-1940"
 
     End Sub
 
@@ -102,6 +106,28 @@ Public Class FSolicitudesConsulta
         BTNSolicitudProceso.Enabled = True
 
         BTNSolicitudFinalizada.Enabled = True
+
+        '----------------------------------
+        Dim contador As Integer = 0
+        'cargarDGVConsultasFecha()
+
+        For contador = 0 To DGVConsultaSolicitudes.RowCount - 1
+            If DGVConsultaSolicitudes.Rows(contador).Cells("d_fecha_solicitud").Value < minValue Then
+                minValue = DGVConsultaSolicitudes.Rows(contador).Cells("d_fecha_solicitud").Value
+            End If
+        Next
+        DTPUno.MinDate = minValue
+        DTPDos.MinDate = minValue
+        DTPUno.Value = minValue
+        For contador = 0 To DGVConsultaSolicitudes.RowCount - 1
+            If DGVConsultaSolicitudes.Rows(contador).Cells("d_fecha_solicitud").Value > maxValue Then
+                maxValue = DGVConsultaSolicitudes.Rows(contador).Cells("d_fecha_solicitud").Value
+            End If
+        Next
+        DTPUno.MaxDate = maxValue
+        DTPDos.MaxDate = maxValue
+        DTPDos.Value = maxValue
+        '--------------------------------------------
 
     End Sub
 
@@ -270,6 +296,9 @@ Public Class FSolicitudesConsulta
         DTPDos_CloseUp(sender, e)
     End Sub
 
+    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
+
+    End Sub
 End Class
 
 

@@ -45,6 +45,7 @@ Partial Class FSolicitudesConsulta
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LBLValidar2 = New System.Windows.Forms.Label()
         Me.LBLValidar1 = New System.Windows.Forms.Label()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GBPersonasUsuarios.SuspendLayout()
         CType(Me.DGVConsultaSolicitudes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -244,7 +245,7 @@ Partial Class FSolicitudesConsulta
         'TXTDTPUno
         '
         Me.TXTDTPUno.BackColor = System.Drawing.Color.DarkOrange
-        Me.TXTDTPUno.Location = New System.Drawing.Point(387, 112)
+        Me.TXTDTPUno.Location = New System.Drawing.Point(461, 12)
         Me.TXTDTPUno.Name = "TXTDTPUno"
         Me.TXTDTPUno.Size = New System.Drawing.Size(42, 20)
         Me.TXTDTPUno.TabIndex = 61
@@ -252,18 +253,20 @@ Partial Class FSolicitudesConsulta
         '
         'DTPUno
         '
-        Me.DTPUno.Location = New System.Drawing.Point(387, 38)
+        Me.DTPUno.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPUno.Location = New System.Drawing.Point(476, 49)
         Me.DTPUno.MaxDate = New Date(2050, 12, 31, 0, 0, 0, 0)
         Me.DTPUno.MinDate = New Date(1940, 1, 1, 0, 0, 0, 0)
         Me.DTPUno.Name = "DTPUno"
-        Me.DTPUno.Size = New System.Drawing.Size(200, 20)
+        Me.DTPUno.Size = New System.Drawing.Size(111, 20)
         Me.DTPUno.TabIndex = 62
         '
         'DTPDos
         '
-        Me.DTPDos.Location = New System.Drawing.Point(387, 84)
+        Me.DTPDos.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTPDos.Location = New System.Drawing.Point(476, 84)
         Me.DTPDos.Name = "DTPDos"
-        Me.DTPDos.Size = New System.Drawing.Size(200, 20)
+        Me.DTPDos.Size = New System.Drawing.Size(111, 20)
         Me.DTPDos.TabIndex = 63
         '
         'Label1
@@ -272,7 +275,7 @@ Partial Class FSolicitudesConsulta
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label1.Location = New System.Drawing.Point(299, 38)
+        Me.Label1.Location = New System.Drawing.Point(405, 49)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 20)
@@ -285,7 +288,7 @@ Partial Class FSolicitudesConsulta
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Narrow", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.Label3.Location = New System.Drawing.Point(299, 84)
+        Me.Label3.Location = New System.Drawing.Point(404, 84)
         Me.Label3.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 20)
@@ -310,11 +313,22 @@ Partial Class FSolicitudesConsulta
         Me.LBLValidar1.BackColor = System.Drawing.Color.Transparent
         Me.LBLValidar1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LBLValidar1.ForeColor = System.Drawing.Color.Red
-        Me.LBLValidar1.Location = New System.Drawing.Point(605, 38)
+        Me.LBLValidar1.Location = New System.Drawing.Point(605, 49)
         Me.LBLValidar1.Name = "LBLValidar1"
         Me.LBLValidar1.Size = New System.Drawing.Size(14, 18)
         Me.LBLValidar1.TabIndex = 67
         Me.LBLValidar1.Text = "*"
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Location = New System.Drawing.Point(288, 26)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.TabIndex = 68
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'FSolicitudesConsulta
         '
@@ -322,6 +336,7 @@ Partial Class FSolicitudesConsulta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.GrupoAcosta.My.Resources.Resources.LOGO_actual_12_ANIVERSARIO_GAMSCA_hoy1
         Me.ClientSize = New System.Drawing.Size(648, 463)
+        Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.LBLValidar1)
         Me.Controls.Add(Me.LBLValidar2)
         Me.Controls.Add(Me.Label3)
@@ -373,4 +388,5 @@ Partial Class FSolicitudesConsulta
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents LBLValidar2 As System.Windows.Forms.Label
     Friend WithEvents LBLValidar1 As System.Windows.Forms.Label
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
 End Class
